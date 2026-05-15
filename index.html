@@ -5,20 +5,301 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="The Poem Room is coming soon."
+      content="The Poem Room is a quiet home for poems, notes, collections, and reflective reading."
     >
-    <title>The Poem Room | Coming Soon</title>
+    <title>The Poem Room</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
   </head>
-  <body>
-    <main class="page-shell" aria-labelledby="page-title">
-      <section class="coming-soon">
-        <p class="eyebrow">The Poem Room</p>
-        <h1 id="page-title">Coming soon</h1>
-        <p class="intro">
-          A quiet new space is being prepared. Check back soon.
-        </p>
+  <body id="top">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="The Poem Room home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>The Poem Room</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#top">Home</a>
+        <a href="#purpose">Core Functionality</a>
+        <a href="#bio">Bio</a>
+        <a href="#poems">Archive</a>
+        <a href="#library">My Library</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span aria-hidden="true">☾</span>
+        <span>Dark</span>
+      </button>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy" id="welcome">
+          <p class="eyebrow">a quiet room</p>
+          <h1 id="page-title">The Poem Room</h1>
+          <p class="hero-intro">
+            Welcome to <em>The Poetry Room</em>, an archive of my poetry.<br>
+            I hope you find something here that stays with you.
+          </p>
+          <div class="hero-actions" aria-label="Page shortcuts">
+            <a class="button primary" href="#poems">Read poems</a>
+            <a class="button secondary" href="#bio">About me</a>
+          </div>
+        </div>
       </section>
+
+      <section class="section" id="purpose" aria-labelledby="purpose-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">what this is</p>
+            <h2 id="purpose-title">Core Functionality</h2>
+          </div>
+          <p>
+            The Poetry Room is an archive of my poetry. You can use it to:
+          </p>
+        </div>
+
+        <div class="feature-grid" aria-label="Core site features">
+          <article class="feature-card">
+            <span aria-hidden="true">to wander</span>
+            <h3>Read</h3>
+            <p>
+              Poems are displayed in calm, book-like reading pages with
+              generous spacing and minimal distractions, designed for slow
+              reading and reflection.
+            </p>
+          </article>
+          <article class="feature-card">
+            <span aria-hidden="true">to return</span>
+            <h3>Keep</h3>
+            <p>
+              Poems can be favourited, labelled, and organised into personal
+              collections, making it easy to revisit pieces that feel
+              meaningful or memorable.
+            </p>
+          </article>
+          <article class="feature-card">
+            <span aria-hidden="true">to understand</span>
+            <h3>Reflect</h3>
+            <p>
+              Some poems include notes about their meaning, inspirations,
+              writing process, or the thoughts and experiences behind them.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section bio-section" id="bio" aria-labelledby="bio-title">
+        <div class="bio-copy bio-intro">
+          <p class="eyebrow">about me</p>
+          <h2 id="bio-title">Bio</h2>
+          <p>
+            My name is Lilith Foxcroft. I'm a poet and musician from
+            Stoke-on-Trent. I compose, perform, and spend a probably
+            unreasonable amount of time thinking about art and sound.
+          </p>
+          <p>
+            In 2025, I won the Wells Young Poets Competition for a poem
+            originally titled <cite>A Field Guide to Focus</cite>, later renamed
+            <cite>FIELD GUIDE</cite>. The poem was published under my deadname,
+            Ben.
+          </p>
+          <p>
+            Most of what there is to know about me can probably be found
+            somewhere in my poetry, but here are a few recurring little
+            obsessions, interests, and facts I tend to mention when introducing
+            myself, as well as a preview of my competition-winning poem.
+          </p>
+        </div>
+
+        <div class="bio-card-stack">
+          <aside class="bio-note" aria-label="Bio highlights">
+            <h3>Recurring little obsessions</h3>
+            <ul>
+              <li>I’ve been vegan since July 23rd, 2025, mostly for ethical reasons.</li>
+              <li>I love quiet walks, philosophy, and poetry that feels emotionally honest.</li>
+              <li>
+                Favourite poets include Emily Dickinson, Sylvia Plath, Ocean
+                Vuong, Mary Oliver, Rainer Maria Rilke, T. S. Eliot, Emily
+                Brontë, Walt Whitman, Anne Carson, and Richard Siken.
+              </li>
+              <li>I’m home-educated.</li>
+              <li>
+                I occasionally upload videos to a YouTube channel called Lilith
+                (@LilithHive).
+              </li>
+              <li>
+                I love philosophy, especially existentialism, ethics, and
+                questions surrounding identity and consciousness. Some of my
+                favourite philosophers include Arthur Schopenhauer, Derek
+                Parfit, Albert Camus, A. J. Ayer, Peter Singer, Bertrand
+                Russell, and Ludwig Wittgenstein.
+              </li>
+            </ul>
+          </aside>
+
+          <figure class="portrait-card" aria-labelledby="portrait-title">
+            <div class="portrait-placeholder" role="img" aria-label="Portrait placeholder">
+              <span aria-hidden="true">✧</span>
+            </div>
+            <figcaption id="portrait-title">
+              Portrait image space
+            </figcaption>
+          </figure>
+        </div>
+
+        <article class="featured-poem" aria-labelledby="field-guide-title">
+          <p class="eyebrow">competion-winning poem</p>
+          <h3 id="field-guide-title">FIELD GUIDE</h3>
+          <div class="poem-text">
+            <p>
+              my body's a room with every light on.<br>
+              a radio tuuned to all stations at once.<br>
+              i'm trying to sit still<br>
+              but my thoughts spin chairs.
+            </p>
+            <p>
+              in year seven, i learned<br>
+              how to pretend i was listening.<br>
+              nod at the right time,<br>
+              underline the date,<br>
+              draw galaxies on the margins.
+            </p>
+            <p>
+              i feel my mother's worry in my jaw,<br>
+              my father's restlessness in my knees.<br>
+              some days i dance without music.<br>
+              some days i forget to eat.
+            </p>
+            <p>
+              i once told a teacher:<br>
+              i couldn't remember what she just said.<br>
+              she frowned like i'd confessed to sin.<br>
+              i swallowed my "sorry"<br>
+              and it rattled for hours.
+            </p>
+            <p>sometimes, my breath forgets itself.</p>
+            <p>sometimes, my limbs wander off mid-sentence.</p>
+            <p>
+              i lose whole hours<br>
+              and still feel late.
+            </p>
+            <p>
+              i do not how to say<br>
+              "i'm trying"<br>
+              without hearing it as an excuse.<br>
+              but i try.
+            </p>
+            <p>
+              today i lie deep down in the grass<br>
+              and allow my thoughts to go wherever they please.<br>
+              the sky doesn't scold me<br>
+              for being everything at once.
+            </p>
+          </div>
+          <footer><em>— Lilith</em></footer>
+        </article>
+
+        <div class="bio-copy bio-outro">
+          <p>
+            A lot of my work explores memory, uncertainty, identity, tenderness,
+            philosophy, ethics, overstimulation, and the strange experience
+            of trying to understand yourself in a world that rarely slows down.
+          </p>
+          <p>
+            Outside of writing, I spend much of my time making music,
+            overthinking things, and caring deeply about people, animals,
+            honesty, and art that feels sincere.
+          </p>
+          <p>
+            More than anything, I hope this little room of poems gives you
+            something meaningful to return to.
+          </p>
+          <p>
+            also meow !!! :3
+          </p>
+        </div>
+      </section>
+
+      <section class="section poems-intro" id="poems" aria-labelledby="poems-title">
+        <div>
+          <p class="eyebrow">poem by poem</p>
+          <h2 id="poems-title">Archive</h2>
+        </div>
+      </section>
+
+      <section class="archive-panel" aria-label="Poem archive">
+        <ol class="archive-list" data-archive-list></ol>
+      </section>
+
+      <section
+        class="section library-section"
+        id="library"
+        aria-labelledby="library-title"
+        tabindex="-1"
+      >
+        <div>
+          <p class="eyebrow">things returned to</p>
+          <h2 id="library-title">My Library</h2>
+        </div>
+        <div class="library-copy">
+          <p>
+            Favourite poems from the archive to keep them here on this device.
+          </p>
+          <h3 id="library-favourites" tabindex="-1">Favourites</h3>
+          <ol class="library-list" data-library-list></ol>
+          <p class="library-empty" data-library-empty>
+            No favourites yet.
+          </p>
+          <div class="collections-area">
+            <h3>Collections</h3>
+            <form class="collection-form" data-collection-form>
+              <label for="collection-name">New collection</label>
+              <div>
+                <input
+                  id="collection-name"
+                  name="collection-name"
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Collection name"
+                  required
+                >
+                <button type="submit">Create</button>
+              </div>
+            </form>
+            <div class="collections-list" data-collections-list></div>
+            <p class="library-empty" data-collections-empty>
+              No collections yet.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <article
+        class="reading-page"
+        id="poem-reader"
+        aria-labelledby="reader-title"
+        hidden
+        tabindex="-1"
+      >
+        <a class="back-link" href="#poems" data-reader-close>Back to archive</a>
+        <p class="eyebrow">reading room</p>
+        <h2 id="reader-title" data-reader-title></h2>
+        <div class="reader-actions" data-reader-actions></div>
+        <div class="reader-poem" data-reader-poem></div>
+      </article>
     </main>
+
+    <footer class="site-footer">
+      <p>
+        © 2026 Lilith Foxcroft. All poems and original writing are all rights
+        reserved.
+      </p>
+      <nav aria-label="Footer navigation">
+        <a href="COPYRIGHT.md">Copyright</a>
+        <a href="#top">Back to top</a>
+      </nav>
+    </footer>
+    <div class="toast-region" data-toast-region aria-live="polite"></div>
   </body>
 </html>
