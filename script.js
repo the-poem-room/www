@@ -296,7 +296,10 @@ const poems = [
       "— Lilith",
     ],
   },
-  { title: "Definition" },
+  {
+    title: "Definition",
+    lines: ["Art is preference.\nArt is mere existence.\nArt is me.\nArt is you.\nEverything else is marketing.", "— Lilith"],
+  },
   { title: "Draft" },
   { title: "Errata" },
   { title: "Eulogy for the Melting Giant" },
