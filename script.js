@@ -32,7 +32,7 @@ const poems = [
     subtitle: "(Instructions by Elon Musk)",
     lines: [
       "Build a rocket.\nBurn the sky.\nPreach green—\nthen mine cobalt \nwith Congolese hands\nyou'll never see.",
-      "Sell freedom\n140 characters at a time—\nbut silence dissent,\nboost bots,\nfire thousands by email\nwhile tweeting memes\nabout \"grindset.\"",
+      "Sell freedom\n140 characters at a time—\nbut silence dissent,\nboost bots,\nfire thousands by email\nwhile tweeting memes\nabout grindset.",
       "Claim you're not political—\nthen salute beside fascists,\nmock pronouns,\nparrot conspiracy,\nblame the ADL\nfor pulling ads\nfrom your tantrum machine.",
       "Propose tunnels,\ndrill dreams—\na single lane\nfor millionaires\nto sit in Teslas\nin traffic,\nbut underground.",
       "Say Autopilot saves lives.\nPay $243 million\nto the dead.\nMarket Level 2 as Full—\nthe future,\nwith legal fine print.",
