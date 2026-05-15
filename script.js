@@ -2,6 +2,7 @@ const themeToggle = document.querySelector("[data-theme-toggle]");
 const archiveList = document.querySelector("[data-archive-list]");
 const reader = document.querySelector("#poem-reader");
 const readerTitle = document.querySelector("[data-reader-title]");
+const readerSubtitle = document.querySelector("[data-reader-subtitle]");
 const readerPoem = document.querySelector("[data-reader-poem]");
 const readerClose = document.querySelector("[data-reader-close]");
 const readerActions = document.querySelector("[data-reader-actions]");
@@ -28,8 +29,8 @@ const poems = [
   },
   {
     title: "A Manual for the Modern Messiah",
+    subtitle: "(Instructions by Elon Musk)",
     lines: [
-      "(Instructions by Elon Musk)",
       "Build a rocket.\nBurn the sky.\nPreach green—\nthen mine cobalt \nwith Congolese hands\nyou'll never see.",
       "Sell freedom\n140 characters at a time—\nbut silence dissent,\nboost bots,\nfire thousands by email\nwhile tweeting memes\nabout \"grindset.\"",
       "Claim you're not political—\nthen salute beside fascists,\nmock pronouns,\nparrot conspiracy,\nblame the ADL\nfor pulling ads\nfrom your tantrum machine.",
@@ -759,6 +760,10 @@ function renderPoem(poem) {
   const slug = slugify(poem.title);
   reader.hidden = false;
   readerTitle.textContent = poem.title;
+  if (readerSubtitle) {
+    readerSubtitle.hidden = !poem.subtitle;
+    readerSubtitle.textContent = poem.subtitle || "";
+  }
   readerPoem.innerHTML = "";
   readerActions.innerHTML = "";
   readerActions.append(createFavouriteButton(slug, poem.title));
@@ -802,6 +807,11 @@ function refreshReaderActions() {
 
   if (!poem || !reader || reader.hidden) {
     return;
+  }
+
+  if (readerSubtitle) {
+    readerSubtitle.hidden = !poem.subtitle;
+    readerSubtitle.textContent = poem.subtitle || "";
   }
 
   readerActions.innerHTML = "";

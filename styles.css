@@ -352,6 +352,14 @@ h1 {
   line-height: 1.12;
 }
 
+.poem-subtitle {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: clamp(1.05rem, 1.35vw, 1.22rem);
+  line-height: 1.55;
+}
+
 h2 {
   font-size: clamp(1.82rem, 4vw, 3.35rem);
   line-height: 1.12;
