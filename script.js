@@ -326,7 +326,22 @@ const poems = [
       "— Lilith",
     ],
   },
-  { title: "Eulogy for the Melting Giant" },
+  {
+    title: "Eulogy for the Melting Giant",
+    lines: [
+      "I was born your calendars,\nbefore the word \"beginning\" found its breath.\nSnow upon snow,\nlayered like sleep over centuries—\nI remembered silence long after you forgot it.",
+      "I carved valleys with the patience of gods.\nSpoke only in pressure.\nTaught rivers how to walk.\nHeld time in my blue-lit belly,\nwhile stars blinked\nthrough the slow dance of ages.",
+      "You named me \"resource.\"\n\"Scenic view.\"\nYou framed my dying breath in brochures.",
+      "I heard the engines first—\na distant growl beneath the clouds.\nThen came your warmth,\nlike a lie that lingers.\nYou fed the air to flames\nand call it progress.",
+      "You brought smoke to my snow.\nHeat in my marrow.\nI cracked, I wept, I shrank—\nand still\nyou looked away...\nholding your phones\nlike shields against grief.",
+      "I do not die easily.\nI am not a puddle.\nI am memory liquefied.\nI am centuries collapsing\ninto soundless flood.",
+      "Still—\nbeneath my grief,\nI carry awe.",
+      "For the fox that danced across my spine.\nFor the child who touched me with reverence.\nFor the whisper of wind\nstill singing lullabies to the peaks I once kissed.",
+      "And when I am gone,\nyou may not remember my name,\nbut you will remember\nwhat the world was like\nwhen I still held it cold and clean.",
+      "If this is a eulogy,\nthen let it also be a warning—\nyou do not survive\nby forgetting your giants,\nnor do they forgive\nbeing forgotten.",
+      "— Lilith",
+    ],
+  },
   { title: "Factory Hits" },
   { title: "Fictions We Carry" },
   {
