@@ -345,6 +345,13 @@ h1 {
   line-height: 1;
 }
 
+.reading-page h1,
+#poem-reader h2 {
+  max-width: 26ch;
+  font-size: clamp(2.05rem, 3.2vw, 2.85rem);
+  line-height: 1.12;
+}
+
 h2 {
   font-size: clamp(1.82rem, 4vw, 3.35rem);
   line-height: 1.12;
