@@ -22,9 +22,7 @@ const poems = [
   {
     title: "a broken metronome",
     lines: [
-      "click. click—\nthen silence.",
-      "A room holds its breath like a barline stretched thin.\nI count with my ribs, find four in the flutter of three.\nThe lamp hums a shaky tempo; rain plays triplets on glass.\nI pencil a beat on the desk, wood answering skin.\nTime is elastic when no one's watching.",
-      "I practice the piece that won't still\nuntil the ending learns to arrive\nFashionably late, but exactly right.",
+      "click. click—\nthen silence.\nA room holds its breath like a barline stretched thin.\nI count with my ribs, find four in the flutter of three.\nThe lamp hums a shaky tempo; rain plays triplets on glass.\nI pencil a beat on the desk, wood answering skin.\nTime is elastic when no one's watching.\nI practice the piece that won't still\nuntil the ending learns to arrive\nFashionably late, but exactly right.",
       "— Lilith",
     ],
   },
