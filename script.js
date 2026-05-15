@@ -391,7 +391,7 @@ const poems = [
   {
     title: "Foil, Barcode, Tongue",
     lines: [
-      "Arthur twists the shaker.\nNot king—\n\u00a0\u00a0\u00a0\u00a0not man\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0just a barcode etched\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0into the foil of a snack pack\n\u00a0\u00a0\u00a0\u00a0beside the word *potassium*.",
+      "Arthur twists the shaker.\nNot king—\n\u00a0\u00a0\u00a0\u00a0~~not man~~\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0just a barcode etched\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0into the foil of a snack pack\n\u00a0\u00a0\u00a0\u00a0beside the word *potassium*.",
       "It glints in static.\nClean hands.\nClean mouth.\nThe book opens on the wrong page\nand says,\n\u00a0\u00a0\u00a0\u00a0\u201cThis is the journey.\u201d\n\u00a0\u00a0\u00a0\u00a0(*it lies in perfect grammar.*)",
       "The ape cradles a spoon like a relic.\nHe cannot read,\nbut draws constellations in the dirt\nwith stolen scissors\nfrom a child who dreamed in cut-out stars.",
       "PEGI warns: *mild fear. suggestive confusion.*\nThe tongue is unsaved—\n\u00a0a slug,\n\u00a0a map,\n\u00a0a weapon once named.",
@@ -530,20 +530,29 @@ function appendFormattedText(container, text) {
   // Minimal inline formatting:
   // - *italic*
   // - **bold**
+  // - ~~strikethrough~~
   // Everything else is treated as plain text.
   let i = 0;
 
   while (i < text.length) {
+    const nextStrike = text.indexOf("~~", i);
     const nextBold = text.indexOf("**", i);
     const nextItalic = text.indexOf("*", i);
 
     let next = -1;
     let kind = null;
 
-    if (nextBold !== -1 && (nextItalic === -1 || nextBold <= nextItalic)) {
+    next = nextStrike;
+    kind = nextStrike !== -1 ? "strike" : null;
+
+    if (
+      nextBold !== -1 &&
+      (next === -1 || nextBold < next) &&
+      (nextItalic === -1 || nextBold <= nextItalic)
+    ) {
       next = nextBold;
       kind = "bold";
-    } else if (nextItalic !== -1) {
+    } else if (nextItalic !== -1 && (next === -1 || nextItalic < next)) {
       next = nextItalic;
       kind = "italic";
     }
@@ -566,6 +575,19 @@ function appendFormattedText(container, text) {
       const strong = document.createElement("strong");
       strong.append(document.createTextNode(text.slice(next + 2, end)));
       container.append(strong);
+      i = end + 2;
+      continue;
+    }
+
+    if (kind === "strike") {
+      const end = text.indexOf("~~", next + 2);
+      if (end === -1) {
+        container.append(document.createTextNode(text.slice(next)));
+        return;
+      }
+      const del = document.createElement("s");
+      del.append(document.createTextNode(text.slice(next + 2, end)));
+      container.append(del);
       i = end + 2;
       continue;
     }
