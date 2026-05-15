@@ -31,7 +31,7 @@ function renderPoemBody(poem) {
       const escaped = escapeHtml(stanza).replace(/\n/g, "<br>\n              ");
       const isSignature = stanza.trim().startsWith("— ");
       return `            <p${isSignature ? ' class="poem-signature"' : ""}>
-              ${escaped}
+              ${isSignature ? `<em>${escaped}</em>` : escaped}
             </p>`;
     })
     .join("\n");
@@ -151,4 +151,3 @@ function main() {
 }
 
 main();
-

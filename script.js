@@ -19,7 +19,15 @@ const favouritesKey = "poem-room-favourites";
 const collectionsKey = "poem-room-collections";
 
 const poems = [
-  { title: "a broken metronome" },
+  {
+    title: "a broken metronome",
+    lines: [
+      "click. click—\nthen silence.",
+      "A room holds its breath like a barline stretched thin.\nI count with my ribs, find four in the flutter of three.\nThe lamp hums a shaky tempo; rain plays triplets on glass.\nI pencil a beat on the desk, wood answering skin.\nTime is elastic when no one's watching.",
+      "I practice the piece that won't still\nuntil the ending learns to arrive\nFashionably late, but exactly right.",
+      "— Lilith",
+    ],
+  },
   { title: "A Manual for the Modern Messiah" },
   { title: "A Note Outside the Scale" },
   { title: "A Practical Guide to My Pronouns" },
@@ -747,16 +755,20 @@ function renderPoem(poem) {
   if (poem.lines?.length) {
     poem.lines.forEach((stanza, index) => {
       const paragraph = document.createElement("p");
+      const isSignature = index === poem.lines.length - 1 && stanza.startsWith("— ");
+      const target = isSignature ? document.createElement("em") : paragraph;
+
       stanza.split("\n").forEach((line, lineIndex) => {
         if (lineIndex > 0) {
-          paragraph.append(document.createElement("br"));
+          target.append(document.createElement("br"));
         }
 
-        paragraph.append(document.createTextNode(line));
+        target.append(document.createTextNode(line));
       });
 
-      if (index === poem.lines.length - 1 && stanza.startsWith("— ")) {
+      if (isSignature) {
         paragraph.classList.add("poem-signature");
+        paragraph.append(target);
       }
 
       readerPoem.append(paragraph);
