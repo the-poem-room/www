@@ -329,7 +329,7 @@ const poems = [
   {
     title: "Eulogy for the Melting Giant",
     lines: [
-      "I was born your calendars,\nbefore the word \"beginning\" found its breath.\nSnow upon snow,\nlayered like sleep over centuries—\nI remembered silence long after you forgot it.",
+      "I was born before your calendars,\nbefore the word \"beginning\" found its breath.\nSnow upon snow,\nlayered like sleep over centuries—\nI remembered silence long after you forgot it.",
       "I carved valleys with the patience of gods.\nSpoke only in pressure.\nTaught rivers how to walk.\nHeld time in my blue-lit belly,\nwhile stars blinked\nthrough the slow dance of ages.",
       "You named me \"resource.\"\n\"Scenic view.\"\nYou framed my dying breath in brochures.",
       "I heard the engines first—\na distant growl beneath the clouds.\nThen came your warmth,\nlike a lie that lingers.\nYou fed the air to flames\nand call it progress.",
