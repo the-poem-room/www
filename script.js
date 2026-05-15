@@ -218,7 +218,8 @@ const poems = [
     ],
   },
   {
-    title: "Breaking: Politce Notices During Catastrophe",
+    title: "BREAKING: Polite Notices During Catastrophe",
+    slug: "breaking-politce-notices-during-catastrophe",
     lines: [
       "The ticker reads like a shopping list—\nArsenal 3-1,\nactor \"sorry if anyone was offended,\"\nsix thousand confirmed,\nsunny spells by Sunday.",
       "A bell over some door does its small, correct duty.\nManners arrive on time; grief waits in the lobby.",
@@ -374,7 +375,11 @@ function slugify(title) {
     .replace(/^-|-$/g, "");
 }
 
-const poemBySlug = new Map(sortedPoems.map((poem) => [slugify(poem.title), poem]));
+function getPoemSlug(poem) {
+  return poem.slug || slugify(poem.title);
+}
+
+const poemBySlug = new Map(sortedPoems.map((poem) => [getPoemSlug(poem), poem]));
 const favouriteSlugs = new Set(JSON.parse(localStorage.getItem(favouritesKey) || "[]"));
 let collections = JSON.parse(localStorage.getItem(collectionsKey) || "[]");
 
@@ -469,7 +474,7 @@ function renderArchive() {
   archiveList.innerHTML = "";
 
   sortedPoems.forEach((poem) => {
-    const slug = slugify(poem.title);
+    const slug = getPoemSlug(poem);
     const item = document.createElement("li");
     item.className = "archive-item";
     item.dataset.poemSlug = slug;
@@ -748,11 +753,11 @@ function renderLibrary() {
 
   libraryList.innerHTML = "";
 
-  const favourites = sortedPoems.filter((poem) => favouriteSlugs.has(slugify(poem.title)));
+  const favourites = sortedPoems.filter((poem) => favouriteSlugs.has(getPoemSlug(poem)));
   libraryEmpty.hidden = favourites.length > 0;
 
   favourites.forEach((poem) => {
-    const slug = slugify(poem.title);
+    const slug = getPoemSlug(poem);
     const item = document.createElement("li");
     item.className = "archive-item";
     item.dataset.poemSlug = slug;
@@ -995,7 +1000,7 @@ function renderPoem(poem) {
     return;
   }
 
-  const slug = slugify(poem.title);
+  const slug = getPoemSlug(poem);
   reader.hidden = false;
   readerTitle.textContent = poem.title;
   if (readerSubtitle) {
