@@ -61,7 +61,7 @@ const poems = [
       "Shall they say *he*?\nWell, yes, they shall, and I'll twitch like a smoke alarm\ncatching whiffs of burnt toast,\nbut not burst into flames.",
       "Shall they say *she*?\nThat one feels like wearing shoes two sizes off:\ntight in the toes, loose in the heel,\nclumsy to walk in, but walkable.",
       "Shall they say *they*?\nFine, though I can hear the grammar polic\nloading their rifles in the distance.",
-      "Shall they instead\nrecite the full inverntory: *citizen, taxpayer,*\n*carbon-based biped,*\n*entity formerly known as male,*\nuntil language itself is\nexhausted.",
+      "Shall they instead\nrecite the full inventory: *citizen, taxpayer,*\n*carbon-based biped,*\n*entity formerly known as male,*\nuntil language itself is\nexhausted.",
       "It's l ike asking for bread\nand being offered gluten-free, yeast-free,\nair-fried, paleo-adjacent flact circles of despair—\nwhen all I wanted was bread.",
       "And what of my girlfriend?\nMust she introduce me as boyfriend, partner,\n\"significant other,\"\nor *the individual currently under contract\nto hold her hand at parties?*\nFor heavan's sake, just let us be!",
       "And no—\nI do not wander into boy's changing rooms,\npretending I belong there.\nSome lines I won't cross.\nSome spaces are too heavy with other people's certainty,\ntoo sharp with stares\nto make my small compromises worth it.",
