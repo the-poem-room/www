@@ -58,17 +58,17 @@ const poems = [
   {
     title: "A Practical Guide to My Pronouns",
     lines: [
-      "Shall they say he?\nWell, yes, they shall, and I'll twitch like a smoke alarm\ncatching whiffs of burnt toast,\nbut not burst into flames.",
-      "Shall they say she?\nThat one feels like wearing shoes two sizes off:\ntight in the toes, loose in the heel,\nclumsy to walk in, but walkable.",
-      "Shall they say they?\nFine, though I can hear the grammar polic\nloading their rifles in the distance.",
-      "Shall they instead\nrecite the full inverntory: citizen, taxpayer,\ncarbon-based biped,\nentity formerly known as male,\nuntil language itself is\nexhausted.",
+      "Shall they say *he*?\nWell, yes, they shall, and I'll twitch like a smoke alarm\ncatching whiffs of burnt toast,\nbut not burst into flames.",
+      "Shall they say *she*?\nThat one feels like wearing shoes two sizes off:\ntight in the toes, loose in the heel,\nclumsy to walk in, but walkable.",
+      "Shall they say *they*?\nFine, though I can hear the grammar polic\nloading their rifles in the distance.",
+      "Shall they instead\nrecite the full inverntory: *citizen, taxpayer,*\n*carbon-based biped,*\n*entity formerly known as male,*\nuntil language itself is\nexhausted.",
       "It's l ike asking for bread\nand being offered gluten-free, yeast-free,\nair-fried, paleo-adjacent flact circles of despair—\nwhen all I wanted was bread.",
-      "And what of my girlfriend?\nMust she introduce me as boyfriend, partner,\n\"significant other,\"\nor the individual currently under contract\nto hold her hand at parties?\nFor heavan's sake, just let us be!",
+      "And what of my girlfriend?\nMust she introduce me as boyfriend, partner,\n\"significant other,\"\nor *the individual currently under contract\nto hold her hand at parties?*\nFor heavan's sake, just let us be!",
       "And no—\nI do not wander into boy's changing rooms,\npretending I belong there.\nSome lines I won't cross.\nSome spaces are too heavy with other people's certainty,\ntoo sharp with stares\nto make my small compromises worth it.",
-      "Avoidance is its own form of survival.",
-      "Because here is the truth:\nit isn't the words themselves,\nsharp little stones in my boot,\nthat trouble me most.\nIt's the smile that says I'm humouring you,\nthe silence that says you're not real,\nthe pause that says why can't you just pick one?",
+      "**Avoidance is its own form of survival.**",
+      "Because here is the truth:\nit isn't the words themselves,\nsharp little stones in my boot,\nthat trouble me most.\nIt's the smile that says *I'm humouring you,*\nthe silence that says *you're not real,*\nthe pause that says *why can't you just pick one?*",
       "Language is a tool,\nsometimes a cage,\nsometimes a joke stretched too long,\nbut always a mirror polished\nby whoever holds it.\nI could demand every reflection\nmatch me exactly—\nbut then I'd become the archivist of labels,\ndusting shelves no one reads\nwhile the world keeps moving.",
-      "So call me he,\nand I'll wince, but keep walking.\nCall me she,\nand I'll sigh, but not collapse.\nCall me they,\nand I'll nod at your effort,\nthough English would rather\nsplit its own infinitives\nthan loosen its grip on gender.",
+      "So call me *he*,\nand I'll wince, but keep walking.\nCall me *she*,\nand I'll sigh, but not collapse.\nCall me *they*,\nand I'll nod at your effort,\nthough English would rather\nsplit its own infinitives\nthan loosen its grip on gender.",
       "Because I am not here\nto drill obedience into your tongue.\nI am here to live,\nto speak,\nto matter.\nAnd if I must choose\nbetween a life where words are pristine\nand a life where words are messy but mine,\nI'll take the twinge,\nthe pinch,\nthe occasional semantic glitch.",
       "Because I know the surface can bruise me,\nbut the depths—\nthe depths decide everything.",
       "— Lilith",
@@ -225,6 +225,62 @@ function slugify(title) {
 const poemBySlug = new Map(sortedPoems.map((poem) => [slugify(poem.title), poem]));
 const favouriteSlugs = new Set(JSON.parse(localStorage.getItem(favouritesKey) || "[]"));
 let collections = JSON.parse(localStorage.getItem(collectionsKey) || "[]");
+
+function appendFormattedText(container, text) {
+  // Minimal inline formatting:
+  // - *italic*
+  // - **bold**
+  // Everything else is treated as plain text.
+  let i = 0;
+
+  while (i < text.length) {
+    const nextBold = text.indexOf("**", i);
+    const nextItalic = text.indexOf("*", i);
+
+    let next = -1;
+    let kind = null;
+
+    if (nextBold !== -1 && (nextItalic === -1 || nextBold <= nextItalic)) {
+      next = nextBold;
+      kind = "bold";
+    } else if (nextItalic !== -1) {
+      next = nextItalic;
+      kind = "italic";
+    }
+
+    if (next === -1) {
+      container.append(document.createTextNode(text.slice(i)));
+      return;
+    }
+
+    if (next > i) {
+      container.append(document.createTextNode(text.slice(i, next)));
+    }
+
+    if (kind === "bold") {
+      const end = text.indexOf("**", next + 2);
+      if (end === -1) {
+        container.append(document.createTextNode(text.slice(next)));
+        return;
+      }
+      const strong = document.createElement("strong");
+      strong.append(document.createTextNode(text.slice(next + 2, end)));
+      container.append(strong);
+      i = end + 2;
+      continue;
+    }
+
+    const end = text.indexOf("*", next + 1);
+    if (end === -1) {
+      container.append(document.createTextNode(text.slice(next)));
+      return;
+    }
+    const em = document.createElement("em");
+    em.append(document.createTextNode(text.slice(next + 1, end)));
+    container.append(em);
+    i = end + 1;
+  }
+}
 
 function setTheme(theme) {
   document.documentElement.dataset.theme = theme;
@@ -810,7 +866,7 @@ function renderPoem(poem) {
           target.append(document.createElement("br"));
         }
 
-        target.append(document.createTextNode(line));
+        appendFormattedText(target, line);
       });
 
       if (isSignature) {
