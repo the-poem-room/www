@@ -55,7 +55,7 @@ function poemPageTemplate(poem) {
     <link rel="stylesheet" href="../styles.css">
     <script src="../script.js" defer></script>
   </head>
-  <body data-poem-slug="${escapeHtml(slug)}">
+  <body id="top" data-poem-slug="${escapeHtml(slug)}">
     <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="site-header">
@@ -113,7 +113,7 @@ ${renderPoemBody(poem)}
       </p>
       <nav aria-label="Footer navigation">
         <a href="../COPYRIGHT.md">Copyright</a>
-        <a href="../index.html#top">Back to top</a>
+        <a href="#top">Back to top</a>
       </nav>
     </footer>
     <div class="toast-region" data-toast-region aria-live="polite"></div>
