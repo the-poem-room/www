@@ -872,9 +872,13 @@ h3 {
 }
 
 .reading-page {
-  width: min(100%, 860px);
-  padding: clamp(44px, 7vw, 82px) 0;
-  margin: 0 auto;
+  width: min(100% - 2 * clamp(16px, 4vw, 42px), 980px);
+  margin: clamp(18px, 3vw, 32px) auto 0;
+  padding: clamp(44px, 6vw, 78px) clamp(20px, 5vw, 72px);
+  background: color-mix(in srgb, var(--panel-solid) 88%, transparent);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 .back-link {
@@ -886,12 +890,14 @@ h3 {
 
 .reader-poem {
   display: grid;
-  gap: 28px;
-  margin-top: clamp(32px, 5vw, 54px);
+  gap: 34px;
+  width: min(100%, 62ch);
+  margin: clamp(26px, 4vw, 44px) auto 0;
   color: var(--ink);
   font-family: var(--serif);
-  font-size: clamp(1.18rem, 2vw, 1.48rem);
-  line-height: 1.78;
+  font-size: clamp(1.16rem, 1.65vw, 1.42rem);
+  line-height: 1.92;
+  letter-spacing: 0;
 }
 
 .reader-actions {
