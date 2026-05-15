@@ -235,7 +235,17 @@ const poems = [
       "— Lilith",
     ],
   },
-  { title: "Cartography of Shadows" },
+  {
+    title: "Cartography of Shadows",
+    lines: [
+      "In Pyongyang,\navenues wide as silence,\nmonuments rehearsed into stone.\nFrom above, the city glows with borrowed light,\nbut inside the dark,\nfamilies barter rice for whispers of truth.\nYet on festival days,\ndrums ripple through the streets,\nneighbours share rice cakes,\nlaughter rising louder than fear.\nAnd still—\neverywhere, a heartbeat resists.",
+      "In Gaza,\nwalls rise higher than sky,\na child knots a kite from plastic bags,\nlaunches it above the rubble,\na sky more forgiving than the earth.\nEven here, weddings weave music through alleys,\nchildren race between broken stones,\ntheir joy as defiant as the kite.\nAnd still—\neverywhere, a heartbeat resists.",
+      "In Xinjiang,\nprayers are confiscated,\nlanguages folded shut,\nidentity stored in files\nno one is meant to read.\nStill, in secret, mothers hum old lullabies,\nfathers pass down forbidden words,\nfamilies gather in hidden rooms\nto mark the new year with flame and song.\nAnd still—\neverywhere, a heartbeat resists.",
+      "In Myanmar,\nvoices vanish into cells,\nwhere time is rationed like stale bread\nand hope is contraband.\nYet lanterns rise each season,\nfloating like prayers no soldier can catch,\ncarrying the wishes of those\nwho refuse to stop dreaming.\nAnd still—\neverywhere, a heartbeat resists.",
+      "Across oceans,\nrefugees cling to rafts,\nsaltwater carving psalms into skin.\nIn deserts,\nbones whiten beneath an indifferent sun.\nAnd when rafts reach shore,\nstrangers embrace as kin,\nbuilding homes from nothing\nbut shared survival and song.\nAnd still—\neverywhere, a heartbeat resists.",
+      "Not borders, not monuments,\nnot the silence of power—\nonly the pulse,\nquiet as a drum beneath the floor of the world,\nthe same rhythm in every chest,\nrefusing to stop.",
+    ],
+  },
   { title: "Children See More" },
   { title: "Compulsory Existence" },
   { title: "Definition" },
