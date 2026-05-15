@@ -117,7 +117,17 @@ const poems = [
       "— Lilith",
     ],
   },
-  { title: "Alpha by Algorithm" },
+  {
+    title: "Alpha by Algorithm",
+    lines: [
+      "He speaks in clips, in kicks, in clicks,\nin hustler creeds and party tricks.\nHe growls of war, of weight, of wealth—\nbut shouts the loudest at himself.",
+      "He barks \"You're weak!\"—a schoolyard sneer,\nfrom behind sunglasses and fear.\nA temple built on abs and flash,\na god of protein shakes and cash.",
+      "His kingdom's carved in comment threads,\nwhere angry boys quote what he says.\nWhere nuance dies and girls are prey,\nand kindness means you've lost the way.",
+      "He sells a dream in pixel skin:\nyou either win, or die within.\nA man, he claims, must dominate —\nor else, my friend, your Andrew's bait.",
+      "But real strength whispers, not performs.\nIt breaks, it bends, it weathers storms.\nNot every king rides Bugatti-red —\nsome just tuck a kid into bed.",
+      "— Lilith",
+    ],
+  },
   { title: "Before the Screens" },
   { title: "Beneath Permanent Shelter" },
   { title: "Between Hours" },
