@@ -244,6 +244,7 @@ const poems = [
       "In Myanmar,\nvoices vanish into cells,\nwhere time is rationed like stale bread\nand hope is contraband.\nYet lanterns rise each season,\nfloating like prayers no soldier can catch,\ncarrying the wishes of those\nwho refuse to stop dreaming.\nAnd still—\neverywhere, a heartbeat resists.",
       "Across oceans,\nrefugees cling to rafts,\nsaltwater carving psalms into skin.\nIn deserts,\nbones whiten beneath an indifferent sun.\nAnd when rafts reach shore,\nstrangers embrace as kin,\nbuilding homes from nothing\nbut shared survival and song.\nAnd still—\neverywhere, a heartbeat resists.",
       "Not borders, not monuments,\nnot the silence of power—\nonly the pulse,\nquiet as a drum beneath the floor of the world,\nthe same rhythm in every chest,\nrefusing to stop.",
+      "— Lilith",
     ],
   },
   { title: "Children See More" },
