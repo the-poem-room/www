@@ -354,7 +354,25 @@ const poems = [
       "— Lilith",
     ],
   },
-  { title: "Fictions We Carry" },
+  {
+    title: "Fictions We Carry",
+    lines: [
+      "He learns desire from pixels:\nmute bodies on command,\nclips like templates,\neach pause a chance to swap her out\nfor the next.\nNo backstory,\nno mess,\njust fragments—\nand slowly,\nthe fragments replace the person.",
+      "She learns intimacy from pages:\nthe villain with soft eyes,\nthe captor who secretly loves,\nthe man who bruises, then apologises\nwith roses.\nEach chapter whispers:\ndevotion is proven by suffering,\nromance is waiting for cruelty\nto turn into care—\nand slowly, \nthe cage replaces the comfort.",
+      "Both step back into the world\nwith their lessons in hand.",
+      "He carries them to the bedroom,\nexpects her to moan on cue,\nto look like a composite\nstitched together by search tags.\nHe misses her hesitation,\nthe way her body stiffens\nwhen she feels graded\ninstead of held.",
+      "She carries them to the kitchen,\nexpects him to snap, to dominate,\nto fit the mould of the wounded tyrant\nwho breaks the world but spares her.\nShe misses his confusion,\nthe way his kindness feels invisible\nbecause he does not play the part.",
+      "And both complain:\nthat sex is broken,\nthat love is thin,\nthat something essential is missing.",
+      "What's missing in the human—\nthe laugh that interrupts a kiss,\nthe body that does not match the fantasy,\nthe awkward pauses,\nthe imperfect,\nthe real.",
+      "We condemn his addiction:\nsay porn has rewired his brain,\nsay he no longer sees women as people.\nBut we sell her stacks of paperbacks,\napps with whispered audio,\nfeeds where every scroll is\na jawline sharpened to perfection,\na promise too polished to trust.\nWe call it harmless.\nWe call it romance.\nWe forget it rewires her too.",
+      "He reduces women to objects.\nShe reduces men to saviours or monsters.\nAnd in between,\nreal people collapse beneath the weight\nof roles they never agreed to play.",
+      "The lesson is not that desire is wrong.\nThe lesson is that when we let fiction\nbecome instruction,\nwhen we crown it truth\nand demand it in bed,\nin love,\nin life—\nwe break the very thing we hoped to deepen.",
+      "Pixels and pages,\nvideos and verses,\nclips and chapters,\nall teach the same lie:\n\nthat love is a script,\nthat sex is a role,\nthat people are props,\nthat bodies are toys.",
+      "But people are not props.\nBodies are not toys.\nLove is not a script.",
+      "And until we learn\nto want what is here,\nto touch the imperfect with reverence,\nto love what is human instead of what is sold—\nwe will go on starving forever,\nin a world full of open hands.",
+      "— Lilith",
+    ],
+  },
   {
     title: "FIELD GUIDE",
     lines: [
