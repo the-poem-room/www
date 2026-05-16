@@ -411,7 +411,7 @@ button {
   top: calc(100% + 10px);
   right: 0;
   z-index: 25;
-  width: min(84vw, 320px);
+  width: min(88vw, 360px);
   padding: 12px;
   color: var(--ink);
   background: color-mix(in srgb, var(--panel-solid) 94%, transparent);
@@ -455,13 +455,13 @@ button {
 }
 
 .nav-mode-control {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .font-size-control button,
 .nav-mode-control button {
   min-height: 34px;
-  padding: 6px 10px;
+  padding: 6px 8px;
   color: var(--muted);
   background: transparent;
   border: 0;
@@ -469,6 +469,7 @@ button {
   cursor: pointer;
   font: inherit;
   line-height: 1.15;
+  white-space: nowrap;
 }
 
 .font-size-control button[aria-pressed="true"],
@@ -1331,7 +1332,7 @@ h3 {
   }
 
   .settings-panel {
-    width: min(88vw, 286px);
+    width: min(92vw, 360px);
   }
 
   .theme-toggle {

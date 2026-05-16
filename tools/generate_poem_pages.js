@@ -204,6 +204,7 @@ function poemPageTemplate(poem) {
             <div class="nav-mode-control" role="group" aria-label="Navigation bar">
               <button type="button" data-nav-mode-option="always-visible" aria-pressed="true">Always visible</button>
               <button type="button" data-nav-mode-option="auto-hide" aria-pressed="false">Auto-hide</button>
+              <button type="button" data-nav-mode-option="hover-top" aria-pressed="false">Hover top</button>
             </div>
           </div>
           <div class="settings-row settings-row-stacked">

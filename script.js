@@ -26,7 +26,9 @@ const collectionsKey = "poem-room-collections";
 const fontSizeKey = "poem-room-font-size";
 const navModeKey = "poem-room-nav-mode";
 const fontSizeOptions = new Set(["small", "normal", "big"]);
-const navModeOptions = new Set(["always-visible", "auto-hide"]);
+const navModeOptions = new Set(["always-visible", "auto-hide", "hover-top"]);
+const navRevealZone = 18;
+let lastPointerY = Number.POSITIVE_INFINITY;
 
 const poems = [
   {
@@ -1404,13 +1406,25 @@ function isSettingsMenuOpen() {
 }
 
 function shouldHideHeader() {
-  return (
-    Boolean(siteHeader) &&
-    document.documentElement.dataset.navMode === "auto-hide" &&
-    window.scrollY > 0 &&
-    !isSettingsMenuOpen() &&
-    !siteHeader.matches(":focus-within")
-  );
+  if (!siteHeader || isSettingsMenuOpen() || siteHeader.matches(":focus-within")) {
+    return false;
+  }
+
+  const mode = document.documentElement.dataset.navMode;
+  if (mode === "always-visible") {
+    return false;
+  }
+
+  if (mode === "auto-hide") {
+    return window.scrollY > 0;
+  }
+
+  if (mode === "hover-top") {
+    const headerHeight = siteHeader.offsetHeight || 76;
+    return !(lastPointerY <= navRevealZone || lastPointerY <= headerHeight + 12);
+  }
+
+  return false;
 }
 
 function updateHeaderVisibility() {
@@ -1424,6 +1438,28 @@ function updateHeaderVisibility() {
 if (siteHeader) {
   window.addEventListener("scroll", updateHeaderVisibility, { passive: true });
   window.addEventListener("resize", updateHeaderVisibility, { passive: true });
+  document.addEventListener(
+    "mousemove",
+    (event) => {
+      lastPointerY = event.clientY;
+      updateHeaderVisibility();
+    },
+    { passive: true }
+  );
+  window.addEventListener("blur", () => {
+    lastPointerY = Number.POSITIVE_INFINITY;
+    updateHeaderVisibility();
+  });
+  window.addEventListener(
+    "mouseout",
+    (event) => {
+      if (!event.relatedTarget) {
+        lastPointerY = Number.POSITIVE_INFINITY;
+        updateHeaderVisibility();
+      }
+    },
+    { passive: true }
+  );
   updateHeaderVisibility();
 }
 
@@ -1435,6 +1471,7 @@ function closeSettingsMenu() {
   settingsPanel.hidden = true;
   settingsToggle.setAttribute("aria-expanded", "false");
   siteHeader?.classList.remove("is-settings-open");
+  settingsToggle.blur?.();
   updateHeaderVisibility();
 }
 
