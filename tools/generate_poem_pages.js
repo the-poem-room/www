@@ -186,12 +186,10 @@ function poemPageTemplate(poem) {
           class="settings-button"
           type="button"
           data-settings-toggle
-          aria-label="Settings"
           aria-expanded="false"
           aria-controls="settings-panel"
-          title="Settings"
         >
-          <span class="settings-icon" aria-hidden="true">⚙</span>
+          Settings
         </button>
         <div class="settings-panel" id="settings-panel" data-settings-panel hidden>
           <div class="settings-row">

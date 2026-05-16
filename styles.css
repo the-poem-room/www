@@ -280,22 +280,14 @@ button {
 }
 
 .settings-button {
-  justify-content: center;
-  width: 42px;
-  padding: 0;
   font-family: var(--sans);
-  font-size: 1rem;
-  line-height: 1;
+  font-size: 0.92rem;
 }
 
 .settings-button[aria-expanded="true"],
 .settings-button:hover,
 .theme-toggle:hover {
   background: color-mix(in srgb, var(--panel-solid) 96%, var(--pink));
-}
-
-.settings-icon {
-  transform: translateY(-0.5px);
 }
 
 .settings-panel {
@@ -1168,9 +1160,8 @@ h3 {
   }
 
   .settings-button {
-    width: 40px;
     min-height: 40px;
-    padding: 0;
+    padding: 8px 12px;
   }
 
   .settings-panel {
