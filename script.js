@@ -808,7 +808,13 @@ const poems = [
     ],
   },
   { title: "Somewhere", slug: "somewhere" },
-  { title: "Memory" },
+  {
+    title: "Memory",
+    lines: [
+      "seed\nroot\nleaf\nforest\nriver\nbird\ncloud\nrain\nsun\ngrowth\nfootprint\nsmoke\nwaste\nfire\nstorm\ndust\nsilence\necho\nrenewal\nmemory",
+      "— Lilith",
+    ],
+  },
   { title: "Middle Ground" },
   { title: "Mind Dust" },
   { title: "Myopic" },
