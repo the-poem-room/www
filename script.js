@@ -14,6 +14,9 @@ const collectionsEmpty = document.querySelector("[data-collections-empty]");
 const toastRegion = document.querySelector("[data-toast-region]");
 const siteHeader = document.querySelector(".site-header");
 const navLinks = document.querySelectorAll(".site-nav a[href^='#']");
+const settingsMenu = document.querySelector("[data-settings-menu]");
+const settingsToggle = document.querySelector("[data-settings-toggle]");
+const settingsPanel = document.querySelector("[data-settings-panel]");
 
 const poemPageSlug = document.body?.dataset?.poemSlug || "";
 const favouritesKey = "poem-room-favourites";
@@ -1334,6 +1337,36 @@ if (themeToggle) {
   themeToggle.addEventListener("click", () => {
     const current = document.documentElement.dataset.theme;
     setTheme(current === "dark" ? "light" : "dark");
+  });
+}
+
+function closeSettingsMenu() {
+  if (!settingsToggle || !settingsPanel) {
+    return;
+  }
+
+  settingsPanel.hidden = true;
+  settingsToggle.setAttribute("aria-expanded", "false");
+}
+
+if (settingsToggle && settingsPanel) {
+  settingsToggle.addEventListener("click", () => {
+    const shouldOpen = settingsPanel.hidden;
+    settingsPanel.hidden = !shouldOpen;
+    settingsToggle.setAttribute("aria-expanded", String(shouldOpen));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!settingsMenu?.contains(event.target)) {
+      closeSettingsMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeSettingsMenu();
+      settingsToggle.focus();
+    }
   });
 }
 

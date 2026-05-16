@@ -181,10 +181,26 @@ function poemPageTemplate(poem) {
         <a href="../index.html#poems">Archive</a>
         <a href="../index.html#library">My Library</a>
       </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
-        <span aria-hidden="true">☾</span>
-        <span>Dark</span>
-      </button>
+      <div class="settings-menu" data-settings-menu>
+        <button
+          class="settings-button"
+          type="button"
+          data-settings-toggle
+          aria-expanded="false"
+          aria-controls="settings-panel"
+        >
+          Settings
+        </button>
+        <div class="settings-panel" id="settings-panel" data-settings-panel hidden>
+          <div class="settings-row">
+            <span>Appearance</span>
+            <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+              <span aria-hidden="true">☾</span>
+              <span>Dark</span>
+            </button>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main id="main-content">
