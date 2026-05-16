@@ -1398,9 +1398,11 @@ function restoreArchiveScrollPosition() {
       );
       const clamped = Math.min(Math.max(0, y), maxY);
       window.scrollTo(0, clamped);
-      // Some browsers only repaint the background/content after a scroll event;
-      // nudging a scroll event helps avoid "blank until wheel" glitches.
+      // Some browsers (notably Safari) can fail to repaint after programmatic
+      // scroll until the user interacts. A tiny scroll "nudge" forces paint.
       window.dispatchEvent(new Event("scroll"));
+      window.scrollBy(0, 1);
+      window.scrollBy(0, -1);
     } catch {
       // Ignore: never let scroll restoration break rendering.
     }
@@ -2101,12 +2103,18 @@ function initializePoemPageControls() {
 renderArchive();
 renderLibrary();
 handleRoute();
-restoreArchiveScrollPosition();
 updateFavouriteButtons();
 handlePendingLibraryTarget();
 initializePoemPageControls();
 
 window.addEventListener("hashchange", handleRoute);
+
+// Restore archive scroll on initial load and also on bfcache restores
+// (Safari/Firefox may bring pages back without re-running scripts).
+restoreArchiveScrollPosition();
+window.addEventListener("pageshow", () => {
+  restoreArchiveScrollPosition();
+});
 
 if (collectionForm) {
   collectionForm.addEventListener("submit", (event) => {
