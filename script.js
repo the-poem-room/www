@@ -645,7 +645,16 @@ const poems = [
       "— Lilith",
     ],
   },
-  { title: "I Cherish Fully" },
+  {
+    title: "I Cherish Fully",
+    lines: [
+      "I cherish, fully—\nnot in halves or borrowed time—\nbut like the hush of turning pages\nin the books you've left behind.",
+      "I believe\nin dog-eared truths\ncreased between the moments\nwe dared to read each other out loud.",
+      "Together,\nwe underlined silence,\nhighlighted every almost,\nand made margins of what we couldn't say.",
+      "You,\nyou are the footnote I return to—\nsmall, certain,\nthe kind that makes the whole thing make sense.",
+      "— Lilith",
+    ],
+  },
   { title: "I Don't Owe My Time To Anyone" },
   { title: "I love you" },
   { title: "I, The Dictator of the Universe" },
