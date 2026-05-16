@@ -475,7 +475,17 @@ const poems = [
       "— Lilith",
     ],
   },
-  { title: "Glitch in the Static" },
+  {
+    title: "Glitch in the Static",
+    lines: [
+      "Statistically,\nI shouldn't be here.\nIt's harder to make a whole universe\nthan one stray mind in the dark.\nGiven infinite time,\nbrains like mine\noutnumber planets.",
+      "And yet here I am,\ntrying to remember\nif I left the light on in the kitchen\nbefore the cold claims its final flicker.",
+      "Somewhere,\nafter infinity's worth of disorder,\nentropy has stumbled into\nthis exact thought:\nme,\nhalf-remembering my own name,\ncounting the cracks in the pavement.",
+      "It's all noise—\nevery life just a glitch in the static—\nbut mine wasn't even supposed to tune in:\nan accident,\nof an accident,\nof an accident.",
+      "Seems fine.",
+      "— Lilith",
+    ],
+  },
   { title: "Group Chat (Muted)" },
   { title: "Half the World Away, Yet Here" },
   { title: "Hedonic Calculus" },
