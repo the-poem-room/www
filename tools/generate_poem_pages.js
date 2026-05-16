@@ -171,7 +171,7 @@ function poemPageTemplate(poem) {
 
     <main id="main-content">
       <article class="reading-page" aria-labelledby="poem-title">
-        <a class="back-link" href="../index.html#poems">Back to archive</a>
+        <a class="back-link" href="../index.html#poems">Back to Archive</a>
         <p class="eyebrow">reading room</p>
         <h1 id="poem-title">${escapeHtml(title)}</h1>
         ${subtitle ? `<p class="poem-subtitle">${escapeHtml(subtitle)}</p>` : ""}
