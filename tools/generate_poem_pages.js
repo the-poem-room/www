@@ -157,7 +157,7 @@ function poemPageTemplate(poem) {
   const subtitle = poem.subtitle ? String(poem.subtitle) : "";
 
   return `<!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -194,9 +194,9 @@ function poemPageTemplate(poem) {
         <div class="settings-panel" id="settings-panel" data-settings-panel hidden>
           <div class="settings-row">
             <span>Appearance</span>
-            <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
-              <span aria-hidden="true">☾</span>
-              <span>Dark</span>
+            <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="true">
+              <span aria-hidden="true">☼</span>
+              <span>Light</span>
             </button>
           </div>
           <div class="settings-row settings-row-stacked">

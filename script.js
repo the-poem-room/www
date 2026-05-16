@@ -1335,8 +1335,7 @@ function setTheme(theme) {
 
 function initializeTheme() {
   const savedTheme = localStorage.getItem("poem-room-theme");
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  setTheme(savedTheme || (prefersDark ? "dark" : "light"));
+  setTheme(savedTheme === "light" ? "light" : "dark");
 }
 
 initializeTheme();
