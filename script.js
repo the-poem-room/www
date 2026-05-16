@@ -906,7 +906,7 @@ const poems = [
       "If you expect a *man*—\n(whatever that means)\n—you will be\ndevastatingly.\ndisappointment.",
       "What is a *man*?\na jawline.\na silence.\na violence.\n[none of the above].",
       "And what is a *woman*?\nsoftness, sweetness,\nfertility, fashion,\nthe choreography of deference.\n(I decline the role\nthe costume itches.)",
-      "So what's the value\nof words that shift like sand?\nman. *woman*.\npush them, and they collapse.\nno weight. no measure.\njust stage directions,\ncolours tipped from a child's crayon box,\nstubby sticks of blue and pink,\nbreaking in my hand.",
+      "So what's the value\nof words that shift like sand?\n*man*. *woman*.\npush them, and they collapse.\nno weight. no measure.\njust stage directions,\ncolours tipped from a child's crayon box,\nstubby sticks of blue and pink,\nbreaking in my hand.",
       "Maybe you want absolutism—\na checklist of roles and traits\nto separate the *man* from the women.",
       "A man provides.\nA man protects.\nA man speaks last,\nloudest,\nleast about his feelings.",
       "A woman tends.\nA woman softens.\nA woman shapes herself\nto fit the room she's given.",
