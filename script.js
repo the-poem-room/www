@@ -798,7 +798,15 @@ const poems = [
       "— Lilith",
     ],
   },
-  { title: "me" },
+  {
+    title: "me",
+    lines: [
+      "I don't chase bottles\nor blue-lit feeds;\nmy fix is thought.",
+      "I crave the friction\nwhere two ideas\ngrind until they spark,\nand something almost true\nbegins to smoke.",
+      "While others chase stillness,\nI stay awake in the storm:\nburned, alive,\nand endlessly thinking.",
+      "— Lilith",
+    ],
+  },
   { title: "Meditation on the B and C Theories of Time" },
   { title: "Memory" },
   { title: "Middle Ground" },
