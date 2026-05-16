@@ -215,20 +215,18 @@ button {
     transform 220ms ease,
     background 180ms ease,
     box-shadow 180ms ease;
+  transform: translateY(calc(-100% + 8px));
   will-change: transform;
 }
 
-.site-header.is-header-hidden {
-  transform: translateY(calc(-100% + 8px));
-}
-
-.site-header.is-header-hidden:hover,
-.site-header.is-header-hidden:focus-within,
+.site-header:hover,
+.site-header:focus-within,
+.site-header.is-header-revealed,
 .site-header.is-settings-open {
   transform: translateY(0);
 }
 
-.site-header.is-header-hidden:hover {
+.site-header:hover {
   box-shadow: var(--shadow);
 }
 

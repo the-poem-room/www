@@ -1340,51 +1340,46 @@ if (themeToggle) {
   });
 }
 
-let lastHeaderScrollY = window.scrollY || 0;
-let headerScrollTicking = false;
-
-function setHeaderHidden(isHidden) {
-  if (!siteHeader) {
-    return;
-  }
-
-  siteHeader.classList.toggle("is-header-hidden", isHidden);
+function isSettingsMenuOpen() {
+  return Boolean(settingsPanel && !settingsPanel.hidden);
 }
 
-function updateHeaderVisibility() {
-  if (!siteHeader) {
+function revealHeader() {
+  siteHeader?.classList.add("is-header-revealed");
+}
+
+function hideHeader() {
+  if (isSettingsMenuOpen() || siteHeader?.matches(":focus-within")) {
     return;
   }
 
-  const currentScrollY = Math.max(0, window.scrollY || 0);
-  const delta = currentScrollY - lastHeaderScrollY;
-  const settingsOpen = settingsPanel && !settingsPanel.hidden;
-
-  if (settingsOpen || currentScrollY < 36 || delta < -5) {
-    setHeaderHidden(false);
-  } else if (delta > 5 && currentScrollY > 120) {
-    setHeaderHidden(true);
-  }
-
-  lastHeaderScrollY = currentScrollY;
+  siteHeader?.classList.remove("is-header-revealed");
 }
 
 if (siteHeader) {
-  window.addEventListener(
-    "scroll",
-    () => {
-      if (headerScrollTicking) {
+  document.addEventListener(
+    "mousemove",
+    (event) => {
+      const revealZone = 18;
+      const headerHeight = siteHeader.offsetHeight || 76;
+
+      if (event.clientY <= revealZone) {
+        revealHeader();
         return;
       }
 
-      headerScrollTicking = true;
-      requestAnimationFrame(() => {
-        updateHeaderVisibility();
-        headerScrollTicking = false;
-      });
+      if (siteHeader.classList.contains("is-header-revealed") && event.clientY > headerHeight + 12) {
+        hideHeader();
+      }
     },
     { passive: true }
   );
+
+  siteHeader.addEventListener("mouseleave", (event) => {
+    if (event.clientY > (siteHeader.offsetHeight || 76)) {
+      hideHeader();
+    }
+  });
 }
 
 function closeSettingsMenu() {
@@ -1395,6 +1390,7 @@ function closeSettingsMenu() {
   settingsPanel.hidden = true;
   settingsToggle.setAttribute("aria-expanded", "false");
   siteHeader?.classList.remove("is-settings-open");
+  hideHeader();
 }
 
 if (settingsToggle && settingsPanel) {
@@ -1404,7 +1400,7 @@ if (settingsToggle && settingsPanel) {
     settingsToggle.setAttribute("aria-expanded", String(shouldOpen));
     siteHeader?.classList.toggle("is-settings-open", shouldOpen);
     if (shouldOpen) {
-      setHeaderHidden(false);
+      revealHeader();
     }
   });
 
