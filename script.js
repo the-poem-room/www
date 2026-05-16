@@ -728,7 +728,7 @@ const poems = [
       "Be reactive.\nHear the note, then answer.\nTurn your head when laughter rings\nand let your feet decide the street.\nA weathervane is wiser than a map\nwhen the wind is honest.",
       "Tear up the checklist.\nFold it into a paper boat\nand float it down whatever river\nyou find together.\nIf it sinks, that's an answer too.\nIf it keeps floating, walk beside it.",
       "Let touch be an instrument, not the conductor.\nLet plans arrive late and delighted,\nlike friends who bring bread unasked.\nTrust the unscripted—\nthe way hands learn which cupboard holds the cups,\nthe way two clocks start keeping the same time.",
-      "Don't force reality to wear your outline.\nRelax the pencil.\nTrace what appears.\nCall it love only when the word\nfits like a shirt you forgot you were wearing—\nnot because you bright it for the label.\nnot because it feels like your skin.",
+      "Don't force reality to wear your outline.\nRelax the pencil.\nTrace what appears.\nCall it love only when the word\nfits like a shirt you forgot you were wearing—\nnot because you bought it for the label.\nnot because it feels like your skin.",
       "— Lilith",
     ],
   },
