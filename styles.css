@@ -620,6 +620,24 @@ h3 {
     box-shadow 180ms ease;
 }
 
+.archive-item:hover,
+.archive-item:focus-within {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--pink) 14%, transparent),
+      color-mix(in srgb, var(--lavender) 10%, transparent)
+    );
+  box-shadow:
+    0 8px 20px color-mix(in srgb, var(--soft) 9%, transparent),
+    inset 0 0 0 1px color-mix(in srgb, var(--soft) 18%, transparent);
+}
+
+.archive-item:hover a,
+.archive-item:focus-within a {
+  color: color-mix(in srgb, var(--ink) 84%, var(--soft));
+}
+
 .archive-item:target {
   background:
     linear-gradient(
