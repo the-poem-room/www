@@ -828,7 +828,13 @@ const poems = [
       "— Lilith",
     ],
   },
-  { title: "Mind Dust" },
+  {
+    title: "Mind Dust",
+    lines: [
+      "Thought is unsettled mind dust,\nrestless in its shimmer,\nswirling through the dark between selves.\nWhen it settles, it becomes feeling—\na brief constellation of calm.\nBut feelings, left to drift alone,\nstir the dust once more—\neach grain naming itself,\ncalling the others *other*.\nAnd so thought returns,\nturbulent, tender,\na storm inside the stillness.",
+      "— Lilith",
+    ],
+  },
   { title: "Myopic" },
   { title: "NEUROSPAGHETTI" },
   { title: "None of the Above" },
