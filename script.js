@@ -13,7 +13,9 @@ const collectionsList = document.querySelector("[data-collections-list]");
 const collectionsEmpty = document.querySelector("[data-collections-empty]");
 const toastRegion = document.querySelector("[data-toast-region]");
 const siteHeader = document.querySelector(".site-header");
+const navToggle = document.querySelector("[data-nav-toggle]");
 const navLinks = document.querySelectorAll(".site-nav a[href^='#']");
+const siteNavLinks = document.querySelectorAll(".site-nav a");
 const settingsMenu = document.querySelector("[data-settings-menu]");
 const settingsToggle = document.querySelector("[data-settings-toggle]");
 const settingsPanel = document.querySelector("[data-settings-panel]");
@@ -28,6 +30,7 @@ const navModeKey = "poem-room-nav-mode";
 const fontSizeOptions = new Set(["small", "normal", "big"]);
 const navModeOptions = new Set(["always-visible", "auto-hide", "hover-top"]);
 const navRevealZone = 18;
+const mobileNavQuery = window.matchMedia("(max-width: 920px)");
 let lastPointerY = Number.POSITIVE_INFINITY;
 
 const poems = [
@@ -1381,6 +1384,56 @@ function initializeNavMode() {
 
 initializeNavMode();
 
+function isMobileNavOpen() {
+  return Boolean(siteHeader?.classList.contains("is-mobile-nav-open"));
+}
+
+function updateNavToggle() {
+  if (!navToggle) {
+    return;
+  }
+
+  const open = isMobileNavOpen();
+  navToggle.setAttribute("aria-expanded", String(open));
+  navToggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+}
+
+function closeMobileNav({ focusToggle = false } = {}) {
+  if (!siteHeader || !navToggle) {
+    return;
+  }
+
+  const wasOpen = isMobileNavOpen();
+  siteHeader.classList.remove("is-mobile-nav-open");
+  updateNavToggle();
+
+  if (focusToggle && wasOpen) {
+    navToggle.focus();
+  }
+
+  if (wasOpen) {
+    updateHeaderVisibility();
+  }
+}
+
+function setMobileNavOpen(open) {
+  if (!siteHeader || !navToggle) {
+    return;
+  }
+
+  const nextOpen = Boolean(open);
+  siteHeader.classList.toggle("is-mobile-nav-open", nextOpen);
+  updateNavToggle();
+
+  if (nextOpen) {
+    closeSettingsMenu();
+  }
+
+  updateHeaderVisibility();
+}
+
+updateNavToggle();
+
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
     const current = document.documentElement.dataset.theme;
@@ -1405,7 +1458,12 @@ function isSettingsMenuOpen() {
 }
 
 function shouldHideHeader() {
-  if (!siteHeader || isSettingsMenuOpen() || siteHeader.matches(":focus-within")) {
+  if (
+    !siteHeader ||
+    isSettingsMenuOpen() ||
+    isMobileNavOpen() ||
+    siteHeader.matches(":focus-within")
+  ) {
     return false;
   }
 
@@ -1437,6 +1495,11 @@ function updateHeaderVisibility() {
 if (siteHeader) {
   window.addEventListener("scroll", updateHeaderVisibility, { passive: true });
   window.addEventListener("resize", updateHeaderVisibility, { passive: true });
+  mobileNavQuery.addEventListener("change", (event) => {
+    if (!event.matches) {
+      closeMobileNav();
+    }
+  });
   document.addEventListener(
     "mousemove",
     (event) => {
@@ -1462,6 +1525,12 @@ if (siteHeader) {
   updateHeaderVisibility();
 }
 
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    setMobileNavOpen(!isMobileNavOpen());
+  });
+}
+
 function closeSettingsMenu() {
   if (!settingsToggle || !settingsPanel) {
     return;
@@ -1477,6 +1546,9 @@ function closeSettingsMenu() {
 if (settingsToggle && settingsPanel) {
   settingsToggle.addEventListener("click", () => {
     const shouldOpen = settingsPanel.hidden;
+    if (shouldOpen) {
+      closeMobileNav();
+    }
     settingsPanel.hidden = !shouldOpen;
     settingsToggle.setAttribute("aria-expanded", String(shouldOpen));
     siteHeader?.classList.toggle("is-settings-open", shouldOpen);
@@ -1489,12 +1561,23 @@ if (settingsToggle && settingsPanel) {
     if (!settingsMenu?.contains(event.target)) {
       closeSettingsMenu();
     }
+
+    if (!siteHeader?.contains(event.target)) {
+      closeMobileNav();
+    }
   });
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
+      const navWasOpen = isMobileNavOpen();
       closeSettingsMenu();
-      settingsToggle.focus();
+      closeMobileNav();
+
+      if (settingsPanel.hidden && navWasOpen) {
+        navToggle?.focus();
+      } else if (settingsPanel.hidden) {
+        settingsToggle.focus();
+      }
     }
   });
 }
@@ -2238,6 +2321,13 @@ function scrollToSectionLabel(hash) {
 navLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
+    closeMobileNav();
     scrollToSectionLabel(link.getAttribute("href"));
+  });
+});
+
+siteNavLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    closeMobileNav();
   });
 });
