@@ -19,12 +19,32 @@
   --serif: Georgia, "Times New Roman", serif;
   --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
+  --site-copy-size: 1rem;
+  --brand-size: 1.08rem;
+  --brand-mobile-size: 1rem;
+  --nav-size: 0.9rem;
+  --settings-button-size: 0.92rem;
+  --settings-row-size: 0.9rem;
+  --label-size: 0.84rem;
+  --caption-size: 0.94rem;
+  --hero-title-size: clamp(3.55rem, 10vw, 7.1rem);
+  --reader-title-size: clamp(2.05rem, 3.2vw, 2.85rem);
+  --subtitle-size: clamp(1.05rem, 1.35vw, 1.22rem);
+  --section-title-size: clamp(1.82rem, 4vw, 3.35rem);
+  --subheading-size: 1.32rem;
   --body-copy-size: clamp(1rem, 1.45vw, 1.16rem);
   --archive-title-size: clamp(1.04rem, 1.45vw, 1.3rem);
   --preview-poem-size: clamp(0.98rem, 1.35vw, 1.12rem);
+  --featured-footer-size: 1.08rem;
+  --portrait-mark-size: 2rem;
+  --icon-button-size: 1.1rem;
+  --collection-menu-button-size: 1.25rem;
+  --remove-button-size: 1.35rem;
+  --menu-text-size: 0.94rem;
   --reader-poem-size: clamp(1.16rem, 1.65vw, 1.42rem);
   --collection-title-size: clamp(1.05rem, 1.8vw, 1.32rem);
   --collection-poem-size: 1.12rem;
+  --reader-placeholder-size: 1.04rem;
 }
 
 [data-theme="dark"] {
@@ -47,21 +67,61 @@
 }
 
 [data-font-size="small"] {
+  --site-copy-size: 0.94rem;
+  --brand-size: 1rem;
+  --brand-mobile-size: 0.94rem;
+  --nav-size: 0.84rem;
+  --settings-button-size: 0.86rem;
+  --settings-row-size: 0.84rem;
+  --label-size: 0.78rem;
+  --caption-size: 0.88rem;
+  --hero-title-size: clamp(3.1rem, 8.5vw, 6.35rem);
+  --reader-title-size: clamp(1.82rem, 2.8vw, 2.48rem);
+  --subtitle-size: clamp(0.98rem, 1.12vw, 1.08rem);
+  --section-title-size: clamp(1.62rem, 3.3vw, 2.85rem);
+  --subheading-size: 1.18rem;
   --body-copy-size: clamp(0.94rem, 1.2vw, 1.04rem);
   --archive-title-size: clamp(0.96rem, 1.2vw, 1.12rem);
   --preview-poem-size: clamp(0.92rem, 1.1vw, 1rem);
+  --featured-footer-size: 1rem;
+  --portrait-mark-size: 1.78rem;
+  --icon-button-size: 1rem;
+  --collection-menu-button-size: 1.12rem;
+  --remove-button-size: 1.22rem;
+  --menu-text-size: 0.88rem;
   --reader-poem-size: clamp(1.02rem, 1.3vw, 1.18rem);
   --collection-title-size: clamp(1rem, 1.45vw, 1.16rem);
   --collection-poem-size: 1.02rem;
+  --reader-placeholder-size: 0.96rem;
 }
 
 [data-font-size="big"] {
+  --site-copy-size: 1.08rem;
+  --brand-size: 1.2rem;
+  --brand-mobile-size: 1.08rem;
+  --nav-size: 1rem;
+  --settings-button-size: 1.02rem;
+  --settings-row-size: 1rem;
+  --label-size: 0.94rem;
+  --caption-size: 1.04rem;
+  --hero-title-size: clamp(4rem, 11vw, 7.8rem);
+  --reader-title-size: clamp(2.28rem, 3.65vw, 3.2rem);
+  --subtitle-size: clamp(1.18rem, 1.55vw, 1.36rem);
+  --section-title-size: clamp(2.05rem, 4.5vw, 3.8rem);
+  --subheading-size: 1.48rem;
   --body-copy-size: clamp(1.08rem, 1.65vw, 1.28rem);
   --archive-title-size: clamp(1.16rem, 1.75vw, 1.44rem);
   --preview-poem-size: clamp(1.06rem, 1.55vw, 1.28rem);
+  --featured-footer-size: 1.2rem;
+  --portrait-mark-size: 2.24rem;
+  --icon-button-size: 1.22rem;
+  --collection-menu-button-size: 1.4rem;
+  --remove-button-size: 1.52rem;
+  --menu-text-size: 1.04rem;
   --reader-poem-size: clamp(1.3rem, 2vw, 1.62rem);
   --collection-title-size: clamp(1.16rem, 2vw, 1.48rem);
   --collection-poem-size: 1.24rem;
+  --reader-placeholder-size: 1.16rem;
 }
 
 * {
@@ -130,6 +190,7 @@ body {
     auto,
     auto;
   font-family: var(--sans);
+  font-size: var(--site-copy-size);
   line-height: 1.6;
 }
 
@@ -276,7 +337,7 @@ button {
 .brand {
   gap: 10px;
   font-family: var(--serif);
-  font-size: 1.08rem;
+  font-size: var(--brand-size);
   text-decoration: none;
 }
 
@@ -295,7 +356,7 @@ button {
   justify-content: center;
   gap: clamp(10px, 3vw, 32px);
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: var(--nav-size);
 }
 
 .site-nav a,
@@ -328,7 +389,7 @@ button {
 
 .settings-button {
   font-family: var(--sans);
-  font-size: 0.92rem;
+  font-size: var(--settings-button-size);
 }
 
 .settings-button[aria-expanded="true"],
@@ -356,7 +417,7 @@ button {
   justify-content: space-between;
   gap: 14px;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: var(--settings-row-size);
 }
 
 .settings-row + .settings-row {
@@ -444,7 +505,7 @@ main {
 .eyebrow {
   margin: 0 0 14px;
   color: var(--soft);
-  font-size: 0.84rem;
+  font-size: var(--label-size);
   font-weight: 650;
   letter-spacing: 0.04em;
   text-transform: lowercase;
@@ -469,14 +530,14 @@ h3 {
 
 h1 {
   max-width: 11ch;
-  font-size: clamp(3.55rem, 10vw, 7.1rem);
+  font-size: var(--hero-title-size);
   line-height: 1;
 }
 
 .reading-page h1,
 #poem-reader h2 {
   max-width: 26ch;
-  font-size: clamp(2.05rem, 3.2vw, 2.85rem);
+  font-size: var(--reader-title-size);
   line-height: 1.12;
 }
 
@@ -484,17 +545,17 @@ h1 {
   margin: 12px 0 0;
   color: var(--muted);
   font-family: var(--serif);
-  font-size: clamp(1.05rem, 1.35vw, 1.22rem);
+  font-size: var(--subtitle-size);
   line-height: 1.55;
 }
 
 h2 {
-  font-size: clamp(1.82rem, 4vw, 3.35rem);
+  font-size: var(--section-title-size);
   line-height: 1.12;
 }
 
 h3 {
-  font-size: 1.32rem;
+  font-size: var(--subheading-size);
 }
 
 .hero-intro,
@@ -562,12 +623,12 @@ h3 {
   background: linear-gradient(135deg, rgba(255, 249, 251, 0.74), rgba(241, 184, 204, 0.32));
   border: 1px solid var(--line);
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: var(--portrait-mark-size);
 }
 
 .portrait-card figcaption {
   color: color-mix(in srgb, var(--ink) 72%, transparent);
-  font-size: 0.94rem;
+  font-size: var(--caption-size);
 }
 
 .section {
@@ -626,7 +687,7 @@ h3 {
 
 .feature-card span {
   color: var(--soft);
-  font-size: 0.84rem;
+  font-size: var(--label-size);
   font-weight: 650;
   letter-spacing: 0.03em;
   text-transform: lowercase;
@@ -710,7 +771,7 @@ h3 {
   margin-top: 26px;
   color: var(--soft);
   font-family: var(--serif);
-  font-size: 1.08rem;
+  font-size: var(--featured-footer-size);
 }
 
 .archive-panel,
@@ -820,7 +881,7 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 50%;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: var(--icon-button-size);
   line-height: 1;
 }
 
@@ -830,11 +891,11 @@ h3 {
 }
 
 .collection-menu-button {
-  font-size: 1.25rem;
+  font-size: var(--collection-menu-button-size);
 }
 
 .remove-poem-button {
-  font-size: 1.35rem;
+  font-size: var(--remove-button-size);
 }
 
 .icon-button:disabled {
@@ -865,7 +926,7 @@ h3 {
 .collection-menu-panel p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.94rem;
+  font-size: var(--menu-text-size);
 }
 
 .collection-menu-panel button {
@@ -921,7 +982,7 @@ h3 {
 
 .collection-form label {
   color: var(--soft);
-  font-size: 0.84rem;
+  font-size: var(--label-size);
   font-weight: 650;
   letter-spacing: 0.04em;
   text-transform: lowercase;
@@ -1096,7 +1157,7 @@ h3 {
 .reader-placeholder {
   color: var(--muted);
   font-family: var(--sans);
-  font-size: 1.04rem;
+  font-size: var(--reader-placeholder-size);
 }
 
 .poem-signature {
@@ -1241,7 +1302,7 @@ h3 {
   }
 
   .brand {
-    font-size: 1rem;
+    font-size: var(--brand-mobile-size);
   }
 
   .settings-button {
