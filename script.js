@@ -1375,34 +1375,20 @@ function restoreArchiveScrollPosition() {
   const targetSection = document.querySelector("#poems");
   if (!targetSection) return;
 
-  function computeTargetY() {
-    if (parsed.type === "relative" && Number.isFinite(parsed.offset)) {
-      const base = targetSection.getBoundingClientRect().top + window.scrollY;
-      return Math.max(0, base + parsed.offset);
-    }
-
-    if (parsed.type === "absolute" && Number.isFinite(parsed.y)) {
-      return Math.max(0, parsed.y);
-    }
-
-    return null;
-  }
-
   function jumpToTarget() {
-    const y = computeTargetY();
-    if (y == null) return;
     try {
-      const maxY = Math.max(
-        0,
-        (document.documentElement?.scrollHeight || 0) - (window.innerHeight || 0)
-      );
-      const clamped = Math.min(Math.max(0, y), maxY);
-      window.scrollTo(0, clamped);
-      // Some browsers (notably Safari) can fail to repaint after programmatic
-      // scroll until the user interacts. A tiny scroll "nudge" forces paint.
-      window.dispatchEvent(new Event("scroll"));
-      window.scrollBy(0, 1);
-      window.scrollBy(0, -1);
+      if (parsed.type === "relative" && Number.isFinite(parsed.offset)) {
+        // Stabilize by anchoring to the section first, then applying the offset.
+        targetSection.scrollIntoView({ block: "start" });
+        window.scrollBy(0, parsed.offset);
+      } else if (parsed.type === "absolute" && Number.isFinite(parsed.y)) {
+        const maxY = Math.max(
+          0,
+          (document.documentElement?.scrollHeight || 0) - (window.innerHeight || 0)
+        );
+        const clamped = Math.min(Math.max(0, parsed.y), maxY);
+        window.scrollTo(0, clamped);
+      }
     } catch {
       // Ignore: never let scroll restoration break rendering.
     }
@@ -1415,18 +1401,28 @@ function restoreArchiveScrollPosition() {
     setTimeout(jumpToTarget, 600);
   }
 
-  // Restore after layout + fonts settle.
-  requestAnimationFrame(() => {
+  const runWhenReady = () => {
     const fontsReady = document.fonts && typeof document.fonts.ready?.then === "function";
     if (fontsReady) {
-      document.fonts.ready.then(() => {
-        scheduleRestores();
-      });
+      document.fonts.ready.then(scheduleRestores);
       return;
     }
-
     scheduleRestores();
-  });
+  };
+
+  // Defer until the page is fully loaded to avoid Safari "blank until scroll"
+  // issues that can occur when restoring during initial paint.
+  if (document.readyState === "complete") {
+    requestAnimationFrame(runWhenReady);
+  } else {
+    window.addEventListener(
+      "load",
+      () => {
+        requestAnimationFrame(runWhenReady);
+      },
+      { once: true }
+    );
+  }
 }
 
 function renderArchive() {
@@ -2109,12 +2105,11 @@ initializePoemPageControls();
 
 window.addEventListener("hashchange", handleRoute);
 
-// Restore archive scroll on initial load and also on bfcache restores
-// (Safari/Firefox may bring pages back without re-running scripts).
+// Restore archive scroll on bfcache restores (Safari/Firefox may bring pages
+// back without re-running scripts). We also restore on initial load, but the
+// restore function defers work until after `load`.
+window.addEventListener("pageshow", () => restoreArchiveScrollPosition());
 restoreArchiveScrollPosition();
-window.addEventListener("pageshow", () => {
-  restoreArchiveScrollPosition();
-});
 
 if (collectionForm) {
   collectionForm.addEventListener("submit", (event) => {
