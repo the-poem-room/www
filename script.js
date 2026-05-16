@@ -732,7 +732,21 @@ const poems = [
       "— Lilith",
     ],
   },
-  { title: "Interactive Learning" },
+  {
+    title: "Interactive Learning",
+    lines: [
+      "My philosophy teacher said,\nI should be more *interactive*,\nso I threw a paper ball at him.",
+      "He caught it.\nPaused.\n*sighed*.",
+      "As though he'd just been handed\nthe meaning of life\nin a crumpled form.",
+      "\"Why?\" He asked.",
+      "I said,\n\"Because action\nis the manifestation of thought.\"",
+      "He nodded,\nwrote *existential crisis* on the board,\nand told me to explain.",
+      "So I told him\nthe ball represented\nthe duality of idea and matter,\nthat knowledge,\nto be real,\nmust strike someone in the face.",
+      "He gave me detention.",
+      "I called it \n***empirical proof***.",
+      "*— Lilith*",
+    ],
+  },
   { title: "Is there life on Mars?" },
   { title: "Lilith" },
   { title: "Make Him a Sandwich (Episode 69)" },
@@ -844,6 +858,7 @@ function appendFormattedText(container, text) {
   // Minimal inline formatting:
   // - *italic*
   // - **bold**
+  // - ***bold+italic***
   // - ~~strikethrough~~
   // Everything else is treated as plain text.
   let i = 0;
@@ -851,6 +866,7 @@ function appendFormattedText(container, text) {
   while (i < text.length) {
     const nextStrike = text.indexOf("~~", i);
     const nextBold = text.indexOf("**", i);
+    const nextBoldItalic = text.indexOf("***", i);
     const nextItalic = text.indexOf("*", i);
 
     let next = -1;
@@ -858,6 +874,11 @@ function appendFormattedText(container, text) {
 
     next = nextStrike;
     kind = nextStrike !== -1 ? "strike" : null;
+
+    if (nextBoldItalic !== -1 && (next === -1 || nextBoldItalic < next)) {
+      next = nextBoldItalic;
+      kind = "boldItalic";
+    }
 
     if (
       nextBold !== -1 &&
@@ -890,6 +911,21 @@ function appendFormattedText(container, text) {
       strong.append(document.createTextNode(text.slice(next + 2, end)));
       container.append(strong);
       i = end + 2;
+      continue;
+    }
+
+    if (kind === "boldItalic") {
+      const end = text.indexOf("***", next + 3);
+      if (end === -1) {
+        container.append(document.createTextNode(text.slice(next)));
+        return;
+      }
+      const strong = document.createElement("strong");
+      const em = document.createElement("em");
+      em.append(document.createTextNode(text.slice(next + 3, end)));
+      strong.append(em);
+      container.append(strong);
+      i = end + 3;
       continue;
     }
 

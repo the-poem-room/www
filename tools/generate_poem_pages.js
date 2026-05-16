@@ -26,6 +26,7 @@ function renderInlineHtml(text) {
   // Supports:
   // - *italic*
   // - **bold**
+  // - ***bold+italic***
   // - ~~strikethrough~~
   let i = 0;
   let out = "";
@@ -33,10 +34,16 @@ function renderInlineHtml(text) {
   while (i < text.length) {
     const nextStrike = text.indexOf("~~", i);
     const nextBold = text.indexOf("**", i);
+    const nextBoldItalic = text.indexOf("***", i);
     const nextItalic = text.indexOf("*", i);
 
     let next = nextStrike;
     let kind = nextStrike !== -1 ? "strike" : null;
+
+    if (nextBoldItalic !== -1 && (next === -1 || nextBoldItalic < next)) {
+      next = nextBoldItalic;
+      kind = "boldItalic";
+    }
 
     if (
       nextBold !== -1 &&
@@ -67,6 +74,17 @@ function renderInlineHtml(text) {
       }
       out += `<strong>${escapeHtml(text.slice(next + 2, end))}</strong>`;
       i = end + 2;
+      continue;
+    }
+
+    if (kind === "boldItalic") {
+      const end = text.indexOf("***", next + 3);
+      if (end === -1) {
+        out += escapeHtml(text.slice(next));
+        return out;
+      }
+      out += `<strong><em>${escapeHtml(text.slice(next + 3, end))}</em></strong>`;
+      i = end + 3;
       continue;
     }
 
