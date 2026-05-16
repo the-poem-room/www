@@ -18,7 +18,7 @@ const navLinks = document.querySelectorAll(".site-nav a[href^='#']");
 const poemPageSlug = document.body?.dataset?.poemSlug || "";
 const favouritesKey = "poem-room-favourites";
 const collectionsKey = "poem-room-collections";
-const archiveScrollKey = "poem-room-archive-scrollY";
+const archiveScrollKey = "poem-room-archive-scroll";
 
 const poems = [
   {
@@ -1347,25 +1347,62 @@ function restoreArchiveScrollPosition() {
   const raw = sessionStorage.getItem(archiveScrollKey);
   if (!raw) return;
 
-  const y = Number(raw);
-  if (!Number.isFinite(y) || y < 0) {
+  let parsed = null;
+  try {
+    parsed = JSON.parse(raw);
+  } catch {
+    // Back-compat: older builds stored a raw number.
+    const y = Number(raw);
+    parsed = Number.isFinite(y) ? { type: "absolute", y } : null;
+  }
+
+  if (!parsed) {
     sessionStorage.removeItem(archiveScrollKey);
     return;
   }
 
   sessionStorage.removeItem(archiveScrollKey);
 
-  // Wait a tick so layout/sections are in place, then jump back.
+  const targetSection = document.querySelector("#poems");
+  if (!targetSection) return;
+
+  function computeTargetY() {
+    if (parsed.type === "relative" && Number.isFinite(parsed.offset)) {
+      const base = targetSection.getBoundingClientRect().top + window.scrollY;
+      return Math.max(0, base + parsed.offset);
+    }
+
+    if (parsed.type === "absolute" && Number.isFinite(parsed.y)) {
+      return Math.max(0, parsed.y);
+    }
+
+    return null;
+  }
+
+  function jumpToTarget() {
+    const y = computeTargetY();
+    if (y == null) return;
+    try {
+      window.scrollTo(0, y);
+    } catch {
+      // Ignore: never let scroll restoration break rendering.
+    }
+  }
+
+  // Restore after layout + fonts settle, then do a small retry a moment later
+  // to avoid "blank until scroll" issues on some browsers.
   requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      // Use the simplest API here for maximum cross-browser compatibility.
-      // (Some browsers only accept "auto" or "smooth" in ScrollToOptions.)
-      try {
-        window.scrollTo(0, y);
-      } catch {
-        // Ignore: never let scroll restoration break rendering.
-      }
-    });
+    const fontsReady = document.fonts && typeof document.fonts.ready?.then === "function";
+    if (fontsReady) {
+      document.fonts.ready.then(() => {
+        jumpToTarget();
+        setTimeout(jumpToTarget, 120);
+      });
+      return;
+    }
+
+    jumpToTarget();
+    setTimeout(jumpToTarget, 120);
   });
 }
 
@@ -1386,8 +1423,17 @@ function renderArchive() {
     link.href = `Poems/${slug}.html`;
     link.textContent = poem.title;
     link.addEventListener("click", () => {
-      // Save the current scroll position before leaving the page.
-      sessionStorage.setItem(archiveScrollKey, String(window.scrollY || 0));
+      // Save position relative to the Archive section to make it resilient to
+      // layout shifts (fonts, responsive wrapping) when returning.
+      const poemsSection = document.querySelector("#poems");
+      if (!poemsSection) {
+        sessionStorage.setItem(archiveScrollKey, JSON.stringify({ type: "absolute", y: window.scrollY || 0 }));
+        return;
+      }
+
+      const base = poemsSection.getBoundingClientRect().top + window.scrollY;
+      const offset = (window.scrollY || 0) - base;
+      sessionStorage.setItem(archiveScrollKey, JSON.stringify({ type: "relative", offset }));
     });
 
     item.append(link);
