@@ -21,6 +21,78 @@ function escapeHtml(value) {
     .replace(/'/g, "&#39;");
 }
 
+function renderInlineHtml(text) {
+  // Keep in sync with appendFormattedText() in script.js
+  // Supports:
+  // - *italic*
+  // - **bold**
+  // - ~~strikethrough~~
+  let i = 0;
+  let out = "";
+
+  while (i < text.length) {
+    const nextStrike = text.indexOf("~~", i);
+    const nextBold = text.indexOf("**", i);
+    const nextItalic = text.indexOf("*", i);
+
+    let next = nextStrike;
+    let kind = nextStrike !== -1 ? "strike" : null;
+
+    if (
+      nextBold !== -1 &&
+      (next === -1 || nextBold < next) &&
+      (nextItalic === -1 || nextBold <= nextItalic)
+    ) {
+      next = nextBold;
+      kind = "bold";
+    } else if (nextItalic !== -1 && (next === -1 || nextItalic < next)) {
+      next = nextItalic;
+      kind = "italic";
+    }
+
+    if (next === -1) {
+      out += escapeHtml(text.slice(i));
+      return out;
+    }
+
+    if (next > i) {
+      out += escapeHtml(text.slice(i, next));
+    }
+
+    if (kind === "bold") {
+      const end = text.indexOf("**", next + 2);
+      if (end === -1) {
+        out += escapeHtml(text.slice(next));
+        return out;
+      }
+      out += `<strong>${escapeHtml(text.slice(next + 2, end))}</strong>`;
+      i = end + 2;
+      continue;
+    }
+
+    if (kind === "strike") {
+      const end = text.indexOf("~~", next + 2);
+      if (end === -1) {
+        out += escapeHtml(text.slice(next));
+        return out;
+      }
+      out += `<s>${escapeHtml(text.slice(next + 2, end))}</s>`;
+      i = end + 2;
+      continue;
+    }
+
+    const end = text.indexOf("*", next + 1);
+    if (end === -1) {
+      out += escapeHtml(text.slice(next));
+      return out;
+    }
+    out += `<em>${escapeHtml(text.slice(next + 1, end))}</em>`;
+    i = end + 1;
+  }
+
+  return out;
+}
+
 function renderPoemBody(poem) {
   if (!poem.lines || !poem.lines.length) {
     return `<p class="reader-placeholder">Poem text coming soon.</p>`;
@@ -28,7 +100,10 @@ function renderPoemBody(poem) {
 
   const stanzas = poem.lines
     .map((stanza) => {
-      const escaped = escapeHtml(stanza).replace(/\n/g, "<br>\n              ");
+      const escaped = stanza
+        .split("\n")
+        .map((line) => renderInlineHtml(line))
+        .join("<br>\n              ");
       const isSignature = stanza.trim().startsWith("— ");
       return `            <p${isSignature ? ' class="poem-signature"' : ""}>
               ${isSignature ? `<em>${escaped}</em>` : escaped}
