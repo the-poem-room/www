@@ -970,7 +970,7 @@ const poems = [
       "But underneath\nthere's the hum—\nthe low current that says:\nstill powered,\nstill unnecessary.",
       "Joy does not accumulate.\nIt flashes, clears cache.\nNo saved data.\nNo resume later.\nThe moment works.\nI am not altered.",
       "The anguish isn't loud.\nThat's what makes it unbearable.\nIt's a constant, narrow pressure—\nlike holding your breath\nlong after you've forgotten\nwhy you started.",
-      "Every thought ends\nat the same closed door:\nhow long can a person stay conscious\npurely out of decency?",
+      "Every thought ends\nat the same closed door:\n*how long can a person stay conscious*\n*purely out of decency?*",
       "Remaining awake\nhas become an ethical performance.",
       "I stay alert\nso other people don't have to grieve.",
       "My endurance is harm reduction.\nMy presence, preventative care—\nfor everyone except me.",
