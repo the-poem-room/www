@@ -1344,6 +1344,15 @@ function restoreArchiveScrollPosition() {
   if (!archiveList) return;
   if (window.location.hash !== "#poems") return;
 
+  // Prevent the browser's own scroll restoration from fighting our manual restore.
+  try {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+  } catch {
+    // ignore
+  }
+
   const raw = sessionStorage.getItem(archiveScrollKey);
   if (!raw) return;
 
@@ -1383,26 +1392,38 @@ function restoreArchiveScrollPosition() {
     const y = computeTargetY();
     if (y == null) return;
     try {
-      window.scrollTo(0, y);
+      const maxY = Math.max(
+        0,
+        (document.documentElement?.scrollHeight || 0) - (window.innerHeight || 0)
+      );
+      const clamped = Math.min(Math.max(0, y), maxY);
+      window.scrollTo(0, clamped);
+      // Some browsers only repaint the background/content after a scroll event;
+      // nudging a scroll event helps avoid "blank until wheel" glitches.
+      window.dispatchEvent(new Event("scroll"));
     } catch {
       // Ignore: never let scroll restoration break rendering.
     }
   }
 
-  // Restore after layout + fonts settle, then do a small retry a moment later
-  // to avoid "blank until scroll" issues on some browsers.
+  function scheduleRestores() {
+    // A few retries cover late layout shifts (images, font swaps, mobile URL bar).
+    jumpToTarget();
+    setTimeout(jumpToTarget, 200);
+    setTimeout(jumpToTarget, 600);
+  }
+
+  // Restore after layout + fonts settle.
   requestAnimationFrame(() => {
     const fontsReady = document.fonts && typeof document.fonts.ready?.then === "function";
     if (fontsReady) {
       document.fonts.ready.then(() => {
-        jumpToTarget();
-        setTimeout(jumpToTarget, 120);
+        scheduleRestores();
       });
       return;
     }
 
-    jumpToTarget();
-    setTimeout(jumpToTarget, 120);
+    scheduleRestores();
   });
 }
 
