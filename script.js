@@ -18,6 +18,7 @@ const navLinks = document.querySelectorAll(".site-nav a[href^='#']");
 const poemPageSlug = document.body?.dataset?.poemSlug || "";
 const favouritesKey = "poem-room-favourites";
 const collectionsKey = "poem-room-collections";
+const archiveScrollKey = "poem-room-archive-scrollY";
 
 const poems = [
   {
@@ -1337,6 +1338,31 @@ if (themeToggle) {
   });
 }
 
+function restoreArchiveScrollPosition() {
+  // When returning from a poem reading room back to #poems, restore the user's
+  // previous scroll position so it feels like you're returning to a book shelf.
+  if (!archiveList) return;
+  if (window.location.hash !== "#poems") return;
+
+  const raw = sessionStorage.getItem(archiveScrollKey);
+  if (!raw) return;
+
+  const y = Number(raw);
+  if (!Number.isFinite(y) || y < 0) {
+    sessionStorage.removeItem(archiveScrollKey);
+    return;
+  }
+
+  sessionStorage.removeItem(archiveScrollKey);
+
+  // Wait a tick so layout/sections are in place, then jump back.
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: y, left: 0, behavior: "instant" });
+    });
+  });
+}
+
 function renderArchive() {
   if (!archiveList) {
     return;
@@ -1353,6 +1379,10 @@ function renderArchive() {
     const link = document.createElement("a");
     link.href = `Poems/${slug}.html`;
     link.textContent = poem.title;
+    link.addEventListener("click", () => {
+      // Save the current scroll position before leaving the page.
+      sessionStorage.setItem(archiveScrollKey, String(window.scrollY || 0));
+    });
 
     item.append(link);
     item.append(createArchiveActions(slug, poem.title));
@@ -1998,6 +2028,7 @@ function initializePoemPageControls() {
 renderArchive();
 renderLibrary();
 handleRoute();
+restoreArchiveScrollPosition();
 updateFavouriteButtons();
 handlePendingLibraryTarget();
 initializePoemPageControls();
