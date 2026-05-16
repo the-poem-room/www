@@ -807,7 +807,7 @@ const poems = [
       "— Lilith",
     ],
   },
-  { title: "Meditation on the B and C Theories of Time" },
+  { title: "Somewhere", slug: "somewhere" },
   { title: "Memory" },
   { title: "Middle Ground" },
   { title: "Mind Dust" },
@@ -906,9 +906,53 @@ function getPoemSlug(poem) {
   return poem.slug || slugify(poem.title);
 }
 
+const slugMigrations = {
+  "meditation-on-the-b-and-c-theories-of-time": "somewhere",
+};
+
 const poemBySlug = new Map(sortedPoems.map((poem) => [getPoemSlug(poem), poem]));
 const favouriteSlugs = new Set(JSON.parse(localStorage.getItem(favouritesKey) || "[]"));
 let collections = JSON.parse(localStorage.getItem(collectionsKey) || "[]");
+
+function migrateLibrarySlugs() {
+  let changed = false;
+
+  const migratedFavourites = new Set();
+  favouriteSlugs.forEach((slug) => {
+    const next = slugMigrations[slug] || slug;
+    if (next !== slug) changed = true;
+    migratedFavourites.add(next);
+  });
+
+  if (changed) {
+    favouriteSlugs.clear();
+    migratedFavourites.forEach((slug) => favouriteSlugs.add(slug));
+    localStorage.setItem(favouritesKey, JSON.stringify([...favouriteSlugs]));
+  }
+
+  const migratedCollections = collections.map((collection) => {
+    const nextPoems = (collection.poems || []).map((slug) => {
+      const next = slugMigrations[slug] || slug;
+      if (next !== slug) changed = true;
+      return next;
+    });
+    // de-dupe while keeping order
+    const seen = new Set();
+    const deduped = nextPoems.filter((slug) => {
+      if (seen.has(slug)) return false;
+      seen.add(slug);
+      return true;
+    });
+    return { ...collection, poems: deduped };
+  });
+
+  if (changed) {
+    collections = migratedCollections;
+    localStorage.setItem(collectionsKey, JSON.stringify(collections));
+  }
+}
+
+migrateLibrarySlugs();
 
 function appendFormattedText(container, text) {
   // Minimal inline formatting:
