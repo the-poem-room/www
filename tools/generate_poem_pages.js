@@ -199,6 +199,14 @@ function poemPageTemplate(poem) {
               <span>Dark</span>
             </button>
           </div>
+          <div class="settings-row settings-row-stacked">
+            <span>Font size</span>
+            <div class="font-size-control" role="group" aria-label="Font size">
+              <button type="button" data-font-size-option="small" aria-pressed="false">Small</button>
+              <button type="button" data-font-size-option="normal" aria-pressed="true">Normal</button>
+              <button type="button" data-font-size-option="big" aria-pressed="false">Big</button>
+            </div>
+          </div>
         </div>
       </div>
     </header>

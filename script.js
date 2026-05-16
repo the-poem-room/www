@@ -17,10 +17,13 @@ const navLinks = document.querySelectorAll(".site-nav a[href^='#']");
 const settingsMenu = document.querySelector("[data-settings-menu]");
 const settingsToggle = document.querySelector("[data-settings-toggle]");
 const settingsPanel = document.querySelector("[data-settings-panel]");
+const fontSizeButtons = document.querySelectorAll("[data-font-size-option]");
 
 const poemPageSlug = document.body?.dataset?.poemSlug || "";
 const favouritesKey = "poem-room-favourites";
 const collectionsKey = "poem-room-collections";
+const fontSizeKey = "poem-room-font-size";
+const fontSizeOptions = new Set(["small", "normal", "big"]);
 
 const poems = [
   {
@@ -1333,12 +1336,34 @@ function initializeTheme() {
 
 initializeTheme();
 
+function setFontSize(size) {
+  const nextSize = fontSizeOptions.has(size) ? size : "normal";
+  document.documentElement.dataset.fontSize = nextSize;
+  localStorage.setItem(fontSizeKey, nextSize);
+
+  fontSizeButtons.forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.fontSizeOption === nextSize));
+  });
+}
+
+function initializeFontSize() {
+  setFontSize(localStorage.getItem(fontSizeKey) || "normal");
+}
+
+initializeFontSize();
+
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
     const current = document.documentElement.dataset.theme;
     setTheme(current === "dark" ? "light" : "dark");
   });
 }
+
+fontSizeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setFontSize(button.dataset.fontSizeOption || "normal");
+  });
+});
 
 function isSettingsMenuOpen() {
   return Boolean(settingsPanel && !settingsPanel.hidden);
