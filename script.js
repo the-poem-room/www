@@ -1358,7 +1358,13 @@ function restoreArchiveScrollPosition() {
   // Wait a tick so layout/sections are in place, then jump back.
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
-      window.scrollTo({ top: y, left: 0, behavior: "instant" });
+      // Use the simplest API here for maximum cross-browser compatibility.
+      // (Some browsers only accept "auto" or "smooth" in ScrollToOptions.)
+      try {
+        window.scrollTo(0, y);
+      } catch {
+        // Ignore: never let scroll restoration break rendering.
+      }
     });
   });
 }
