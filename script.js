@@ -1340,6 +1340,53 @@ if (themeToggle) {
   });
 }
 
+let lastHeaderScrollY = window.scrollY || 0;
+let headerScrollTicking = false;
+
+function setHeaderHidden(isHidden) {
+  if (!siteHeader) {
+    return;
+  }
+
+  siteHeader.classList.toggle("is-header-hidden", isHidden);
+}
+
+function updateHeaderVisibility() {
+  if (!siteHeader) {
+    return;
+  }
+
+  const currentScrollY = Math.max(0, window.scrollY || 0);
+  const delta = currentScrollY - lastHeaderScrollY;
+  const settingsOpen = settingsPanel && !settingsPanel.hidden;
+
+  if (settingsOpen || currentScrollY < 36 || delta < -5) {
+    setHeaderHidden(false);
+  } else if (delta > 5 && currentScrollY > 120) {
+    setHeaderHidden(true);
+  }
+
+  lastHeaderScrollY = currentScrollY;
+}
+
+if (siteHeader) {
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (headerScrollTicking) {
+        return;
+      }
+
+      headerScrollTicking = true;
+      requestAnimationFrame(() => {
+        updateHeaderVisibility();
+        headerScrollTicking = false;
+      });
+    },
+    { passive: true }
+  );
+}
+
 function closeSettingsMenu() {
   if (!settingsToggle || !settingsPanel) {
     return;
@@ -1347,6 +1394,7 @@ function closeSettingsMenu() {
 
   settingsPanel.hidden = true;
   settingsToggle.setAttribute("aria-expanded", "false");
+  siteHeader?.classList.remove("is-settings-open");
 }
 
 if (settingsToggle && settingsPanel) {
@@ -1354,6 +1402,10 @@ if (settingsToggle && settingsPanel) {
     const shouldOpen = settingsPanel.hidden;
     settingsPanel.hidden = !shouldOpen;
     settingsToggle.setAttribute("aria-expanded", String(shouldOpen));
+    siteHeader?.classList.toggle("is-settings-open", shouldOpen);
+    if (shouldOpen) {
+      setHeaderHidden(false);
+    }
   });
 
   document.addEventListener("click", (event) => {

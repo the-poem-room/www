@@ -211,6 +211,31 @@ button {
   background: color-mix(in srgb, var(--paper) 78%, transparent);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(20px);
+  transition:
+    transform 220ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+  will-change: transform;
+}
+
+.site-header.is-header-hidden {
+  transform: translateY(calc(-100% + 8px));
+}
+
+.site-header.is-header-hidden:hover,
+.site-header.is-header-hidden:focus-within,
+.site-header.is-settings-open {
+  transform: translateY(0);
+}
+
+.site-header.is-header-hidden:hover {
+  box-shadow: var(--shadow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header {
+    transition: none;
+  }
 }
 
 .brand,
