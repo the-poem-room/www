@@ -152,7 +152,7 @@ function renderPoemBody(poem) {
 
 function poemPageTemplate(poem) {
   const title = poem.title;
-  const slug = slugify(title);
+  const slug = poem.slug || slugify(title);
   const description = `Read "${title}" in The Poem Room.`;
   const subtitle = poem.subtitle ? String(poem.subtitle) : "";
 
@@ -189,7 +189,7 @@ function poemPageTemplate(poem) {
 
     <main id="main-content">
       <article class="reading-page" aria-labelledby="poem-title">
-        <a class="back-link" href="../index.html#poems">Back to Archive</a>
+        <a class="back-link" href="../index.html#archive-${escapeHtml(slug)}">Back to Archive</a>
         <p class="eyebrow">reading room</p>
         <h1 id="poem-title">${escapeHtml(title)}</h1>
         ${subtitle ? `<p class="poem-subtitle">${escapeHtml(subtitle)}</p>` : ""}
@@ -253,7 +253,7 @@ function main() {
 
   let written = 0;
   poems.forEach((poem) => {
-    const slug = slugify(poem.title);
+    const slug = poem.slug || slugify(poem.title);
     const filename = `${slug}.html`;
     const outPath = path.join(outDir, filename);
     fs.writeFileSync(outPath, poemPageTemplate(poem), "utf8");

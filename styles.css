@@ -610,6 +610,12 @@ h3 {
   gap: 14px;
   align-items: center;
   border-bottom: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
+  scroll-margin-top: 132px;
+}
+
+.archive-item:target {
+  background: color-mix(in srgb, var(--panel-solid) 48%, transparent);
+  box-shadow: inset 3px 0 0 var(--soft);
 }
 
 .archive-list a,

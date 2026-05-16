@@ -18,7 +18,6 @@ const navLinks = document.querySelectorAll(".site-nav a[href^='#']");
 const poemPageSlug = document.body?.dataset?.poemSlug || "";
 const favouritesKey = "poem-room-favourites";
 const collectionsKey = "poem-room-collections";
-const archiveScrollKey = "poem-room-archive-scroll";
 
 const poems = [
   {
@@ -1338,93 +1337,6 @@ if (themeToggle) {
   });
 }
 
-function restoreArchiveScrollPosition() {
-  // When returning from a poem reading room back to #poems, restore the user's
-  // previous scroll position so it feels like you're returning to a book shelf.
-  if (!archiveList) return;
-  if (window.location.hash !== "#poems") return;
-
-  // Prevent the browser's own scroll restoration from fighting our manual restore.
-  try {
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
-    }
-  } catch {
-    // ignore
-  }
-
-  const raw = sessionStorage.getItem(archiveScrollKey);
-  if (!raw) return;
-
-  let parsed = null;
-  try {
-    parsed = JSON.parse(raw);
-  } catch {
-    // Back-compat: older builds stored a raw number.
-    const y = Number(raw);
-    parsed = Number.isFinite(y) ? { type: "absolute", y } : null;
-  }
-
-  if (!parsed) {
-    sessionStorage.removeItem(archiveScrollKey);
-    return;
-  }
-
-  sessionStorage.removeItem(archiveScrollKey);
-
-  const targetSection = document.querySelector("#poems");
-  if (!targetSection) return;
-
-  function jumpToTarget() {
-    try {
-      if (parsed.type === "relative" && Number.isFinite(parsed.offset)) {
-        // Stabilize by anchoring to the section first, then applying the offset.
-        targetSection.scrollIntoView({ block: "start" });
-        window.scrollBy(0, parsed.offset);
-      } else if (parsed.type === "absolute" && Number.isFinite(parsed.y)) {
-        const maxY = Math.max(
-          0,
-          (document.documentElement?.scrollHeight || 0) - (window.innerHeight || 0)
-        );
-        const clamped = Math.min(Math.max(0, parsed.y), maxY);
-        window.scrollTo(0, clamped);
-      }
-    } catch {
-      // Ignore: never let scroll restoration break rendering.
-    }
-  }
-
-  function scheduleRestores() {
-    // A few retries cover late layout shifts (images, font swaps, mobile URL bar).
-    jumpToTarget();
-    setTimeout(jumpToTarget, 200);
-    setTimeout(jumpToTarget, 600);
-  }
-
-  const runWhenReady = () => {
-    const fontsReady = document.fonts && typeof document.fonts.ready?.then === "function";
-    if (fontsReady) {
-      document.fonts.ready.then(scheduleRestores);
-      return;
-    }
-    scheduleRestores();
-  };
-
-  // Defer until the page is fully loaded to avoid Safari "blank until scroll"
-  // issues that can occur when restoring during initial paint.
-  if (document.readyState === "complete") {
-    requestAnimationFrame(runWhenReady);
-  } else {
-    window.addEventListener(
-      "load",
-      () => {
-        requestAnimationFrame(runWhenReady);
-      },
-      { once: true }
-    );
-  }
-}
-
 function renderArchive() {
   if (!archiveList) {
     return;
@@ -1436,28 +1348,36 @@ function renderArchive() {
     const slug = getPoemSlug(poem);
     const item = document.createElement("li");
     item.className = "archive-item";
+    item.id = `archive-${slug}`;
     item.dataset.poemSlug = slug;
 
     const link = document.createElement("a");
     link.href = `Poems/${slug}.html`;
     link.textContent = poem.title;
-    link.addEventListener("click", () => {
-      // Save position relative to the Archive section to make it resilient to
-      // layout shifts (fonts, responsive wrapping) when returning.
-      const poemsSection = document.querySelector("#poems");
-      if (!poemsSection) {
-        sessionStorage.setItem(archiveScrollKey, JSON.stringify({ type: "absolute", y: window.scrollY || 0 }));
-        return;
-      }
-
-      const base = poemsSection.getBoundingClientRect().top + window.scrollY;
-      const offset = (window.scrollY || 0) - base;
-      sessionStorage.setItem(archiveScrollKey, JSON.stringify({ type: "relative", offset }));
-    });
 
     item.append(link);
     item.append(createArchiveActions(slug, poem.title));
     archiveList.append(item);
+  });
+}
+
+function scrollToArchiveItemFromHash() {
+  if (!archiveList) {
+    return;
+  }
+
+  const hash = decodeURIComponent(window.location.hash || "");
+  if (!hash.startsWith("#archive-")) {
+    return;
+  }
+
+  const target = document.getElementById(hash.slice(1));
+  if (!target) {
+    return;
+  }
+
+  requestAnimationFrame(() => {
+    target.scrollIntoView({ block: "center", inline: "nearest" });
   });
 }
 
@@ -2099,17 +2019,15 @@ function initializePoemPageControls() {
 renderArchive();
 renderLibrary();
 handleRoute();
+scrollToArchiveItemFromHash();
 updateFavouriteButtons();
 handlePendingLibraryTarget();
 initializePoemPageControls();
 
-window.addEventListener("hashchange", handleRoute);
-
-// Restore archive scroll on bfcache restores (Safari/Firefox may bring pages
-// back without re-running scripts). We also restore on initial load, but the
-// restore function defers work until after `load`.
-window.addEventListener("pageshow", () => restoreArchiveScrollPosition());
-restoreArchiveScrollPosition();
+window.addEventListener("hashchange", () => {
+  handleRoute();
+  scrollToArchiveItemFromHash();
+});
 
 if (collectionForm) {
   collectionForm.addEventListener("submit", (event) => {
