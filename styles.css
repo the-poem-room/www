@@ -19,6 +19,54 @@
   --serif: Georgia, "Times New Roman", serif;
   --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
+  --site-copy-size: 1.08rem;
+  --brand-size: 1.2rem;
+  --brand-mobile-size: 1.08rem;
+  --nav-size: 1rem;
+  --settings-button-size: 1.02rem;
+  --settings-row-size: 1rem;
+  --label-size: 0.94rem;
+  --caption-size: 1.04rem;
+  --hero-title-size: clamp(4rem, 11vw, 7.8rem);
+  --reader-title-size: clamp(2.28rem, 3.65vw, 3.2rem);
+  --subtitle-size: clamp(1.18rem, 1.55vw, 1.36rem);
+  --section-title-size: clamp(2.05rem, 4.5vw, 3.8rem);
+  --subheading-size: 1.48rem;
+  --body-copy-size: clamp(1.08rem, 1.65vw, 1.28rem);
+  --archive-title-size: clamp(1.16rem, 1.75vw, 1.44rem);
+  --preview-poem-size: clamp(1.06rem, 1.55vw, 1.28rem);
+  --featured-footer-size: 1.2rem;
+  --portrait-mark-size: 2.24rem;
+  --icon-button-size: 1.22rem;
+  --collection-menu-button-size: 1.4rem;
+  --remove-button-size: 1.52rem;
+  --menu-text-size: 1.04rem;
+  --reader-poem-size: clamp(1.3rem, 2vw, 1.62rem);
+  --collection-title-size: clamp(1.16rem, 2vw, 1.48rem);
+  --collection-poem-size: 1.24rem;
+  --reader-placeholder-size: 1.16rem;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #faedf4;
+  --muted: #d8becb;
+  --soft: #f2aac5;
+  --paper: #211722;
+  --paper-deep: #302334;
+  --panel: rgba(54, 40, 56, 0.78);
+  --panel-solid: #362838;
+  --pink: #b66b8a;
+  --rose: #d084a4;
+  --mauve: #a986b3;
+  --sage: #7f907c;
+  --lavender: #9a82bb;
+  --line: rgba(250, 237, 244, 0.14);
+  --shadow: 0 18px 54px rgba(0, 0, 0, 0.24);
+  --grain: rgba(255, 240, 248, 0.035);
+}
+
+[data-font-size="small"] {
   --site-copy-size: 1rem;
   --brand-size: 1.08rem;
   --brand-mobile-size: 1rem;
@@ -47,81 +95,33 @@
   --reader-placeholder-size: 1.04rem;
 }
 
-[data-theme="dark"] {
-  color-scheme: dark;
-  --ink: #faedf4;
-  --muted: #d8becb;
-  --soft: #f2aac5;
-  --paper: #211722;
-  --paper-deep: #302334;
-  --panel: rgba(54, 40, 56, 0.78);
-  --panel-solid: #362838;
-  --pink: #b66b8a;
-  --rose: #d084a4;
-  --mauve: #a986b3;
-  --sage: #7f907c;
-  --lavender: #9a82bb;
-  --line: rgba(250, 237, 244, 0.14);
-  --shadow: 0 18px 54px rgba(0, 0, 0, 0.24);
-  --grain: rgba(255, 240, 248, 0.035);
-}
-
-[data-font-size="small"] {
-  --site-copy-size: 0.94rem;
-  --brand-size: 1rem;
-  --brand-mobile-size: 0.94rem;
-  --nav-size: 0.84rem;
-  --settings-button-size: 0.86rem;
-  --settings-row-size: 0.84rem;
-  --label-size: 0.78rem;
-  --caption-size: 0.88rem;
-  --hero-title-size: clamp(3.1rem, 8.5vw, 6.35rem);
-  --reader-title-size: clamp(1.82rem, 2.8vw, 2.48rem);
-  --subtitle-size: clamp(0.98rem, 1.12vw, 1.08rem);
-  --section-title-size: clamp(1.62rem, 3.3vw, 2.85rem);
-  --subheading-size: 1.18rem;
-  --body-copy-size: clamp(0.94rem, 1.2vw, 1.04rem);
-  --archive-title-size: clamp(0.96rem, 1.2vw, 1.12rem);
-  --preview-poem-size: clamp(0.92rem, 1.1vw, 1rem);
-  --featured-footer-size: 1rem;
-  --portrait-mark-size: 1.78rem;
-  --icon-button-size: 1rem;
-  --collection-menu-button-size: 1.12rem;
-  --remove-button-size: 1.22rem;
-  --menu-text-size: 0.88rem;
-  --reader-poem-size: clamp(1.02rem, 1.3vw, 1.18rem);
-  --collection-title-size: clamp(1rem, 1.45vw, 1.16rem);
-  --collection-poem-size: 1.02rem;
-  --reader-placeholder-size: 0.96rem;
-}
-
 [data-font-size="big"] {
-  --site-copy-size: 1.08rem;
-  --brand-size: 1.2rem;
-  --brand-mobile-size: 1.08rem;
-  --nav-size: 1rem;
-  --settings-button-size: 1.02rem;
-  --settings-row-size: 1rem;
-  --label-size: 0.94rem;
-  --caption-size: 1.04rem;
-  --hero-title-size: clamp(4rem, 11vw, 7.8rem);
-  --reader-title-size: clamp(2.28rem, 3.65vw, 3.2rem);
-  --subtitle-size: clamp(1.18rem, 1.55vw, 1.36rem);
-  --section-title-size: clamp(2.05rem, 4.5vw, 3.8rem);
-  --subheading-size: 1.48rem;
-  --body-copy-size: clamp(1.08rem, 1.65vw, 1.28rem);
-  --archive-title-size: clamp(1.16rem, 1.75vw, 1.44rem);
-  --preview-poem-size: clamp(1.06rem, 1.55vw, 1.28rem);
-  --featured-footer-size: 1.2rem;
-  --portrait-mark-size: 2.24rem;
-  --icon-button-size: 1.22rem;
-  --collection-menu-button-size: 1.4rem;
-  --remove-button-size: 1.52rem;
-  --menu-text-size: 1.04rem;
-  --reader-poem-size: clamp(1.3rem, 2vw, 1.62rem);
-  --collection-title-size: clamp(1.16rem, 2vw, 1.48rem);
-  --collection-poem-size: 1.24rem;
-  --reader-placeholder-size: 1.16rem;
+  --site-copy-size: 1.18rem;
+  --brand-size: 1.28rem;
+  --brand-mobile-size: 1.18rem;
+  --nav-size: 1.08rem;
+  --settings-button-size: 1.1rem;
+  --settings-row-size: 1.08rem;
+  --label-size: 1rem;
+  --caption-size: 1.12rem;
+  --hero-title-size: clamp(4.45rem, 12vw, 8.65rem);
+  --reader-title-size: clamp(2.55rem, 4vw, 3.62rem);
+  --subtitle-size: clamp(1.3rem, 1.7vw, 1.5rem);
+  --section-title-size: clamp(2.28rem, 5vw, 4.2rem);
+  --subheading-size: 1.64rem;
+  --body-copy-size: clamp(1.18rem, 1.8vw, 1.38rem);
+  --archive-title-size: clamp(1.26rem, 1.92vw, 1.6rem);
+  --preview-poem-size: clamp(1.14rem, 1.7vw, 1.4rem);
+  --featured-footer-size: 1.32rem;
+  --portrait-mark-size: 2.48rem;
+  --icon-button-size: 1.34rem;
+  --collection-menu-button-size: 1.56rem;
+  --remove-button-size: 1.68rem;
+  --menu-text-size: 1.12rem;
+  --reader-poem-size: clamp(1.44rem, 2.25vw, 1.8rem);
+  --collection-title-size: clamp(1.28rem, 2.2vw, 1.64rem);
+  --collection-poem-size: 1.36rem;
+  --reader-placeholder-size: 1.24rem;
 }
 
 * {
