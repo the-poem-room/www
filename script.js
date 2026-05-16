@@ -658,7 +658,6 @@ const poems = [
   {
     title: "I Don't Owe My Time To Anyone",
     lines: [
-      "I Don’t Owe My Time To Anyone",
       "I don’t owe my time to anyone.\nNot the bells that split the morning like ritual,\nnot the collar biting at my neck like penance,\nnot the white walls that smell of bleach and silence,\nnot the corridor clocks that sermonise in seconds,\ncounting out my youth in fluorescent faith.\nThe hum of lights tunnels through thought,\nAnd every tick feels like confession.",
       "They say we earn our freedom by degrees.\nGCSEs: a fraction of choice.\nA Levels: a little more.\nLike believers reward for obedience.\nAs if liberty were salvation,\nnot birthright.",
       "I do not blame the hands that hold the chalk,\nor the mouths that repeat the rules.\nThey are just voices of another creed,\ncaught in the same echoing vaults of command.\nIt is the architects I name,\nthe ones who built the pulpit\nand called it a nation’s future.",
