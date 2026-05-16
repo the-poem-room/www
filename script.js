@@ -824,7 +824,7 @@ const poems = [
       "We watch.\nNot to learn, maybe—\nbut to witness the collision,\nthe carefully curated chaos\nof identity turned spectactle.",
       "The moderators smile like neutral gods,\ncuing the empathy arc,\nwatching the views climb\nas nuance drowns in jump cuts\nand monetised discomfort.",
       "Yes, it's good,\nkind of.\nLike fast food for the conscience:\ndiverse, digestible,\nsponsored by headphones.",
-      "They title it **Human**,\nand maybe it is—\nif being humans means\nholding hands with your ideological nemesis\nwhile YouTube counts the ad revenue.",
+      "They title it **\"Human\"**,\nand maybe it is—\nif being humans means\nholding hands with your ideological nemesis\nwhile YouTube counts the ad revenue.",
       "— Lilith",
     ],
   },
