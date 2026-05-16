@@ -30,7 +30,7 @@ const navModeKey = "poem-room-nav-mode";
 const fontSizeOptions = new Set(["small", "normal", "big"]);
 const navModeOptions = new Set(["always-visible", "auto-hide", "hover-top"]);
 const navRevealZone = 18;
-const mobileNavQuery = window.matchMedia("(max-width: 920px)");
+const mobileNavQuery = window.matchMedia("(max-width: 760px)");
 let lastPointerY = Number.POSITIVE_INFINITY;
 
 const poems = [
