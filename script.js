@@ -502,7 +502,7 @@ const poems = [
       "**Emotion:**\nor kindness",
       "**Logic:**\nor sleep",
       "**Impulse:**\nor a sandwich\nwe were emotionally invested in",
-      "**IEthics:**\ncan we not joke every time\nsomething matters",
+      "**Ethics:**\ncan we not joke every time\nsomething matters",
       "**Impulse:**\ni joke *because* it matters",
       "**Emotion:**\ni don't want to be efficient\ni want to be understood",
       "**Logic:**\nthose are not mutually exclusive",
