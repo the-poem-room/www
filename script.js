@@ -18,12 +18,15 @@ const settingsMenu = document.querySelector("[data-settings-menu]");
 const settingsToggle = document.querySelector("[data-settings-toggle]");
 const settingsPanel = document.querySelector("[data-settings-panel]");
 const fontSizeButtons = document.querySelectorAll("[data-font-size-option]");
+const navModeButtons = document.querySelectorAll("[data-nav-mode-option]");
 
 const poemPageSlug = document.body?.dataset?.poemSlug || "";
 const favouritesKey = "poem-room-favourites";
 const collectionsKey = "poem-room-collections";
 const fontSizeKey = "poem-room-font-size";
+const navModeKey = "poem-room-nav-mode";
 const fontSizeOptions = new Set(["small", "normal", "big"]);
+const navModeOptions = new Set(["always-visible", "auto-hide"]);
 
 const poems = [
   {
@@ -1352,6 +1355,31 @@ function initializeFontSize() {
 
 initializeFontSize();
 
+function updateNavModeButtons(mode) {
+  navModeButtons.forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.navModeOption === mode));
+  });
+}
+
+function getSavedNavMode() {
+  const savedMode = localStorage.getItem(navModeKey);
+  return navModeOptions.has(savedMode) ? savedMode : "always-visible";
+}
+
+function setNavMode(mode) {
+  const nextMode = navModeOptions.has(mode) ? mode : "always-visible";
+  document.documentElement.dataset.navMode = nextMode;
+  localStorage.setItem(navModeKey, nextMode);
+  updateNavModeButtons(nextMode);
+  updateHeaderVisibility();
+}
+
+function initializeNavMode() {
+  setNavMode(getSavedNavMode());
+}
+
+initializeNavMode();
+
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
     const current = document.documentElement.dataset.theme;
@@ -1365,46 +1393,38 @@ fontSizeButtons.forEach((button) => {
   });
 });
 
+navModeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setNavMode(button.dataset.navModeOption || "always-visible");
+  });
+});
+
 function isSettingsMenuOpen() {
   return Boolean(settingsPanel && !settingsPanel.hidden);
 }
 
-function revealHeader() {
-  siteHeader?.classList.add("is-header-revealed");
+function shouldHideHeader() {
+  return (
+    Boolean(siteHeader) &&
+    document.documentElement.dataset.navMode === "auto-hide" &&
+    window.scrollY > 0 &&
+    !isSettingsMenuOpen() &&
+    !siteHeader.matches(":focus-within")
+  );
 }
 
-function hideHeader() {
-  if (isSettingsMenuOpen() || siteHeader?.matches(":focus-within")) {
+function updateHeaderVisibility() {
+  if (!siteHeader) {
     return;
   }
 
-  siteHeader?.classList.remove("is-header-revealed");
+  siteHeader.classList.toggle("is-nav-hidden", shouldHideHeader());
 }
 
 if (siteHeader) {
-  document.addEventListener(
-    "mousemove",
-    (event) => {
-      const revealZone = 18;
-      const headerHeight = siteHeader.offsetHeight || 76;
-
-      if (event.clientY <= revealZone) {
-        revealHeader();
-        return;
-      }
-
-      if (siteHeader.classList.contains("is-header-revealed") && event.clientY > headerHeight + 12) {
-        hideHeader();
-      }
-    },
-    { passive: true }
-  );
-
-  siteHeader.addEventListener("mouseleave", (event) => {
-    if (event.clientY > (siteHeader.offsetHeight || 76)) {
-      hideHeader();
-    }
-  });
+  window.addEventListener("scroll", updateHeaderVisibility, { passive: true });
+  window.addEventListener("resize", updateHeaderVisibility, { passive: true });
+  updateHeaderVisibility();
 }
 
 function closeSettingsMenu() {
@@ -1415,7 +1435,7 @@ function closeSettingsMenu() {
   settingsPanel.hidden = true;
   settingsToggle.setAttribute("aria-expanded", "false");
   siteHeader?.classList.remove("is-settings-open");
-  hideHeader();
+  updateHeaderVisibility();
 }
 
 if (settingsToggle && settingsPanel) {
@@ -1425,7 +1445,7 @@ if (settingsToggle && settingsPanel) {
     settingsToggle.setAttribute("aria-expanded", String(shouldOpen));
     siteHeader?.classList.toggle("is-settings-open", shouldOpen);
     if (shouldOpen) {
-      revealHeader();
+      updateHeaderVisibility();
     }
   });
 

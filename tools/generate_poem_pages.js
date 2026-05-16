@@ -200,6 +200,13 @@ function poemPageTemplate(poem) {
             </button>
           </div>
           <div class="settings-row settings-row-stacked">
+            <span>Navigation bar</span>
+            <div class="nav-mode-control" role="group" aria-label="Navigation bar">
+              <button type="button" data-nav-mode-option="always-visible" aria-pressed="true">Always visible</button>
+              <button type="button" data-nav-mode-option="auto-hide" aria-pressed="false">Auto-hide</button>
+            </div>
+          </div>
+          <div class="settings-row settings-row-stacked">
             <span>Font size</span>
             <div class="font-size-control" role="group" aria-label="Font size">
               <button type="button" data-font-size-option="small" aria-pressed="false">Small</button>
