@@ -14,8 +14,9 @@ const collectionsEmpty = document.querySelector("[data-collections-empty]");
 const toastRegion = document.querySelector("[data-toast-region]");
 const siteHeader = document.querySelector(".site-header");
 const navToggle = document.querySelector("[data-nav-toggle]");
-const navLinks = document.querySelectorAll(".site-nav a[href^='#']");
-const siteNavLinks = document.querySelectorAll(".site-nav a");
+const sectionJumpLinks = document.querySelectorAll(
+  ".site-nav a[href^='#'], .hero-actions a[href^='#']"
+);
 const settingsMenu = document.querySelector("[data-settings-menu]");
 const settingsToggle = document.querySelector("[data-settings-toggle]");
 const settingsPanel = document.querySelector("[data-settings-panel]");
@@ -2289,7 +2290,7 @@ if (readerClose && reader) {
   });
 }
 
-function scrollToSectionLabel(hash) {
+function scrollToSectionTarget(hash) {
   if (!siteHeader) {
     return;
   }
@@ -2302,32 +2303,28 @@ function scrollToSectionLabel(hash) {
   }
 
   const section = document.querySelector(hash);
-  const label = section?.querySelector(".eyebrow") || section;
 
-  if (!label) {
+  if (!section) {
     return;
   }
 
-  const headerBottom = siteHeader.getBoundingClientRect().bottom;
-  const desiredGap = 42;
-  const targetTop =
-    window.scrollY + label.getBoundingClientRect().top - headerBottom - desiredGap;
+  const targetTop = window.scrollY + section.getBoundingClientRect().top;
 
   window.history.pushState(null, "", hash);
   handleRoute();
   window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
 }
 
-navLinks.forEach((link) => {
+sectionJumpLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
+    const hash = link.getAttribute("href");
+
+    if (!hash || !hash.startsWith("#")) {
+      return;
+    }
+
     event.preventDefault();
     closeMobileNav();
-    scrollToSectionLabel(link.getAttribute("href"));
-  });
-});
-
-siteNavLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    closeMobileNav();
+    scrollToSectionTarget(hash);
   });
 });
