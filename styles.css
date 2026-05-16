@@ -605,17 +605,35 @@ h3 {
 }
 
 .archive-item {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 14px;
   align-items: center;
+  padding-inline: 10px;
+  margin-inline: -10px;
   border-bottom: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
+  border-radius: 7px;
   scroll-margin-top: 132px;
+  transition:
+    background 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .archive-item:target {
-  background: color-mix(in srgb, var(--panel-solid) 48%, transparent);
-  box-shadow: inset 3px 0 0 var(--soft);
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--pink) 22%, transparent),
+      color-mix(in srgb, var(--lavender) 16%, transparent)
+    );
+  box-shadow:
+    0 12px 28px color-mix(in srgb, var(--soft) 14%, transparent),
+    inset 0 0 0 1px color-mix(in srgb, var(--soft) 28%, transparent);
+}
+
+.archive-item:target a {
+  color: color-mix(in srgb, var(--ink) 78%, var(--soft));
 }
 
 .archive-list a,
