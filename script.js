@@ -747,7 +747,15 @@ const poems = [
       "*— Lilith*",
     ],
   },
-  { title: "Is there life on Mars?" },
+  {
+    title: "Is there life on Mars?",
+    lines: [
+      "Not with mortgages\nor milk left out.",
+      "Maybe a microbe\nclinging to dust.",
+      "Or maybe just here —\nin the question,\nin the asking.",
+      "— Lilith",
+    ],
+  },
   { title: "Lilith" },
   { title: "Make Him a Sandwich (Episode 69)" },
   { title: "me" },
