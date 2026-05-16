@@ -116,11 +116,29 @@ function renderPoemBody(poem) {
     return `<p class="reader-placeholder">Poem text coming soon.</p>`;
   }
 
+  function isAllCapsHeading(line) {
+    const trimmed = String(line || "").trim();
+    if (!trimmed) return false;
+    // Keep this conservative: only treat short, all-caps lines as section headers.
+    if (trimmed.length > 64) return false;
+    if (/[a-z]/.test(trimmed)) return false;
+    if (!/[A-Z]/.test(trimmed)) return false;
+    // Avoid bolding signatures or anything that looks like a normal sentence.
+    if (trimmed.startsWith("—")) return false;
+    return true;
+  }
+
   const stanzas = poem.lines
     .map((stanza) => {
       const escaped = stanza
         .split("\n")
-        .map((line) => renderInlineHtml(line))
+        .map((line, idx) => {
+          const rendered = renderInlineHtml(line);
+          if (idx === 0 && isAllCapsHeading(line)) {
+            return `<strong>${rendered}</strong>`;
+          }
+          return rendered;
+        })
         .join("<br>\n              ");
       const isSignature = stanza.trim().startsWith("— ");
       return `            <p${isSignature ? ' class="poem-signature"' : ""}>
