@@ -3838,6 +3838,7 @@ function updateArchiveSearchState() {
     : items;
   const matchSet = new Set(matches);
   const matchCount = matches.length;
+  const totalCount = items.length;
 
   items.forEach((item) => {
     item.hidden = hasQuery ? !matchSet.has(item) : false;
@@ -3846,7 +3847,7 @@ function updateArchiveSearchState() {
   archiveEmpty.hidden = !(hasQuery && matchCount === 0);
   archiveSearchStatus.textContent = hasQuery
     ? `${matchCount} match${matchCount === 1 ? "" : "es"} found.`
-    : "";
+    : `${totalCount} poem${totalCount === 1 ? "" : "s"} in the archive.`;
 
   if (archiveSearchResults) {
     archiveSearchResults.hidden = !(hasQuery && matchCount > 0);
