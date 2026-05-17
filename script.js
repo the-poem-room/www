@@ -2013,7 +2013,50 @@ too.`,
       `— Lilith`,
     ],
   },
-  { title: "The Experience Machine" },
+  {
+    title: "The Experience Machine",
+    subtitle: "(with apologies to Bob Nozick)",
+    lines: [
+      `Step right up, reality for hire!
+Wires spun like candyfloss,
+a vending machine of happiness
+that takes non coins, only consent.`,
+      `Bob, in his second-hand suit,
+shouts *"Guaranteed bliss, no refunds!"*
+But I glance at my half-eaten falafel wrap,
+the essay draft that refuses to behave,
+the text from a mate that made me laugh
+so hard I nearly choked—
+and think:
+I'm already here.`,
+      `I don't care if the world is *"real,"*
+only that it runs consistently,
+like a dream confident enough
+not to explain its own plot.
+Give me growth,
+give me debates that bruise my brain,
+give me love sharp enough
+to sting as well as soothe.
+Keep your drip.`,
+      `Yes, if everyone climbs in together,
+if no one waits outside missing me,
+I'll ride your candyfloss cosmos,
+loop-the-loop flourishing.
+But if it's just my current life,
+re-skinned and rebooted,
+why bother pressing play?`,
+      `Maybe I'm already wired in,
+this poem just neon code scrolling,
+the machine smirking at its own joke.`,
+      `Still—
+if the programmer's listening:
+not bad.`,
+      `Machines are easy to build.
+It's the humans
+that keep glitching.`,
+      `*— Lilith*`,
+    ],
+  },
   { title: "The Garden After" },
   { title: "The Garden of Youth" },
   { title: "The Goldbergs, Everywhere-" },
