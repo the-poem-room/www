@@ -5396,6 +5396,21 @@ const poemIndexBySlug = new Map(sortedPoems.map((poem, index) => [getPoemSlug(po
 
 const featuredCollections = [
   {
+    title: "Memory Liquefied",
+    description:
+      "Identity, grief, and memory refracted through humour, lyricism, and loss.",
+    poems: [
+      "SADBOY",
+      "FIELD GUIDE",
+      "Two Shores",
+      "Should I?",
+      "Before the Screens",
+      "Twelve Pounds and a Dream",
+      "Eulogy for the Melting Giant",
+      "You Live in Colour, I Dream in Green",
+    ],
+  },
+  {
     title: "—no walls",
     description:
       "Neurodivergent selfhood, language, and time expanding beyond fixed walls.",
@@ -5411,21 +5426,6 @@ const featuredCollections = [
       "The Weightless Hour",
       "We're All Dogmatic Because We Aren't Inactive",
       "We Already Know the Song",
-    ],
-  },
-  {
-    title: "Memory Liquefied",
-    description:
-      "Identity, grief, and memory refracted through humour, lyricism, and loss.",
-    poems: [
-      "SADBOY",
-      "FIELD GUIDE",
-      "Two Shores",
-      "Should I?",
-      "Before the Screens",
-      "Twelve Pounds and a Dream",
-      "Eulogy for the Melting Giant",
-      "You Live in Colour, I Dream in Green",
     ],
   },
   {
