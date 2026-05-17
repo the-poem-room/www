@@ -5143,14 +5143,21 @@ const poemIndexBySlug = new Map(sortedPoems.map((poem, index) => [getPoemSlug(po
 
 const featuredCollections = [
   {
-    title: "Identity, Unfixed",
+    title: "—no walls",
     description:
-      "Poems about naming yourself, refusing tidy categories, and letting the self keep moving.",
+      "Poems that move through selfhood, language, uncertainty, and the spaces between categories.",
     poems: [
+      "The Way of No Lesson",
       "Temporary Coördinates",
-      "To anyone confused",
-      "Unassigned",
-      "You Don't Have to Earn Your Pulse",
+      "Small Things",
+      "Where Is the Triangle?",
+      "Two Chairs",
+      "The Third Room",
+      "NEUROSPAGHETTI",
+      "Productivity Guilt",
+      "The Weightless Hour",
+      "We're All Dogmatic Because We Aren't Inactive",
+      "We Already Know the Song",
     ],
   },
   {
