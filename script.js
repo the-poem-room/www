@@ -4686,7 +4686,42 @@ and breathing anyway.`,
       `— Lilith`,
     ],
   },
-  { title: "You Live in Colour, I Dream in Green" },
+  {
+    title: "You Live in Colour, I Dream in Green",
+    lines: [
+      `You live in colour—
+sunset hues etched upon your skin,
+a canvas vibrant, endless, loud.`,
+      `I dream in green,
+a meadow I visit
+only when music plays—
+soft moss beneath my feet,
+the hum of leaves
+like whispered chords.`,
+      `Your lips glossed with ultraviolet light,
+dancing in neon beats,
+while I breathe chlorophyll dreams,
+rooted in silence,
+growing in shadows.`,
+      `For one moment
+of stillness—
+in a world
+too loud`,
+      `And I,
+I was born
+with chlorophyll in my lungs
+with melodies woven
+through my veins,
+a song in every breath.`,
+      `I flinch—`,
+      `Not from you—
+but from the fear
+you'll pull me out
+before I'm ready
+to wake from this dream`,
+      `— Lilith`,
+    ],
+  },
 ];
 
 const sortedPoems = [...poems].sort((a, b) =>
