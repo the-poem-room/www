@@ -2670,7 +2670,82 @@ with minds precise, and hearts set free.`,
       `— Lilith`,
     ],
   },
-  { title: "The Real Curriculum" },
+  {
+    title: "The Real Curriculum",
+    lines: [
+      `Wagwan, mandem.`,
+      `Corridor loud with flex and bravado,
+gyatt rated liked JD stock,
+mocking bruv's stammer,
+skin shade spun as "banter."
+Disability is a punchline.`,
+      `Say less? Never that.`,
+      `That chat don't pause—
+racism dropped like background beat,
+sexism disguised as clout,
+homophobia served as dare,
+ableism ad-libbed till it sticks.`,
+      `This is the real curriculum,
+no teacher needed.`,
+      `TikTok tutorials in cruelty.
+Snapchat sermons in shame.`,
+      `Algorithms feed the ends
+like corner-shop shicken:
+greasy, cheap, addictive,
+poison in grease.`,
+      `In Stoke, boys scroll till 3am,
+tower blocks breathing damp through the walls,
+Wi-Fi stronger than the ftures outside.`,
+      `They learn that "safe" means silence,
+that manhood means no tears,
+that loyalty runs mandem-only,
+and galdem are stories,
+props in a punchline.`,
+      `In Stoke, galdem swap truths in whispers—
+on buses, in toilets,
+on cracked screens under duvets.`,
+      `They learn to walk fast,
+hoods up, headphones in,
+to mask pain with filters,
+to measure worth in likes,
+to play along or be bait.`,
+      `And when you call it out?`,
+      `"Bruv, allow it,
+man's just joking."`,
+      `But jokes chain ankles.
+Shares sharpen knives.
+Likes load the clips.`,
+      `Every meme is scripture,
+every repost a sermon,
+every "say less"
+a gag on truth.`,
+      `Ends call it culture.`,
+      `But it's inheritance—
+passed on like hand-me-down tracksuits,
+frayed hood pulled tighter with each new face.`,
+      `Hear me, mandem.
+Hear me, galdem.`,
+      `The road ain't freedom
+if the tarmac's laid with slurs.`,
+      `Another language is possible:
+respect without mockery,
+strength without silence,
+jokes that don't wound.`,
+      `The algorithm won't teach it.
+The block won't preach it.`,
+      `But we can—
+right here, right now:
+
+rewrite the script,
+bin the banter,
+teach a different end.`,
+      `Because culture ain't cage,
+unless we lock it.`,
+      `And bruv—
+the keys are in our hands.`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Real Divide" },
   { title: "The Second Zapruder" },
   { title: "The Stars Said So" },
