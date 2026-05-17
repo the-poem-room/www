@@ -290,7 +290,27 @@
       </section>
 
       <section class="archive-panel" aria-label="Poem archive">
+        <div class="archive-search">
+          <label class="archive-search-label" for="archive-search">Search poems</label>
+          <input
+            id="archive-search"
+            class="archive-search-input"
+            type="search"
+            placeholder="Search the archive"
+            autocomplete="off"
+            spellcheck="false"
+            data-archive-search
+            aria-describedby="archive-search-status"
+          >
+          <p
+            class="archive-search-status"
+            id="archive-search-status"
+            data-archive-search-status
+            aria-live="polite"
+          ></p>
+        </div>
         <ol class="archive-list" data-archive-list></ol>
+        <p class="archive-empty" data-archive-empty hidden>No poems match your search.</p>
       </section>
 
       <section

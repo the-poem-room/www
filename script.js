@@ -1,4 +1,7 @@
 const themeToggle = document.querySelector("[data-theme-toggle]");
+const archiveSearch = document.querySelector("[data-archive-search]");
+const archiveSearchStatus = document.querySelector("[data-archive-search-status]");
+const archiveEmpty = document.querySelector("[data-archive-empty]");
 const archiveList = document.querySelector("[data-archive-list]");
 const reader = document.querySelector("#poem-reader");
 const readerTitle = document.querySelector("[data-reader-title]");
@@ -2255,6 +2258,7 @@ function renderArchive() {
     item.className = "archive-item";
     item.id = `archive-${slug}`;
     item.dataset.poemSlug = slug;
+    item.dataset.searchValue = normalizeArchiveSearchValue([poem.title, poem.subtitle || ""].join(" "));
 
     const link = document.createElement("a");
     link.href = `Poems/${slug}.html`;
@@ -2264,6 +2268,51 @@ function renderArchive() {
     item.append(createArchiveActions(slug, poem.title));
     archiveList.append(item);
   });
+}
+
+function normalizeArchiveSearchValue(value) {
+  return String(value || "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function updateArchiveSearchState() {
+  if (!archiveList || !archiveSearchStatus || !archiveEmpty) {
+    return;
+  }
+
+  const query = normalizeArchiveSearchValue(archiveSearch?.value || "");
+  let visibleCount = 0;
+
+  archiveList.querySelectorAll(".archive-item").forEach((item) => {
+    const searchable = item.dataset.searchValue || "";
+    const matches = !query || searchable.includes(query);
+    item.hidden = !matches;
+    if (matches) {
+      visibleCount += 1;
+    }
+  });
+
+  const hasQuery = Boolean(query);
+  archiveEmpty.hidden = !(hasQuery && visibleCount === 0);
+  archiveSearchStatus.textContent = hasQuery
+    ? visibleCount === 0
+      ? "No poems match."
+      : `${visibleCount} poem${visibleCount === 1 ? "" : "s"} found.`
+    : "";
+}
+
+function initializeArchiveSearch() {
+  if (!archiveSearch) {
+    return;
+  }
+
+  archiveSearch.addEventListener("input", updateArchiveSearchState);
+  archiveSearch.addEventListener("search", updateArchiveSearchState);
+  updateArchiveSearchState();
 }
 
 function scrollToArchiveItemFromHash() {
@@ -3185,6 +3234,7 @@ function initializePoemPageControls() {
 }
 
 renderArchive();
+initializeArchiveSearch();
 renderLibrary();
 handleRoute();
 scrollToArchiveItemFromHash();
