@@ -3846,7 +3846,52 @@ unsure`,
       `— Lilith`,
     ],
   },
-  { title: "Twelve Pounds and a Dream" },
+  {
+    title: "Twelve Pounds and a Dream",
+    lines: [
+      `We gathered the world's greatest minds —
+and gave them a budget of twelve pounds.
+They asked for resources.
+We gave them synergy workshops.
+They asked for data.
+We offered an 'inspirational quote'
+screen-printed on a tote.`,
+      `The think tank was a rusted tank.
+The briefing came handwritten
+on the back of a Tesco receipt.
+It smelled faintly of despair.`,
+      `Someone asked for change.
+We jingled coins in our pockets
+and said, "We're working on it."`,
+      `The forests burned.
+We launched a hashtag campaign —
+#EcoVibesOnly, with a baby panda
+and a QR code that linked to merch.
+The oceans rose.
+We held brunch on a rooftop terrace,
+posted it with the caption 'Rise Above.'`,
+      `Someone mentioned the children.
+We dimmed the lights for dramatic effect.
+Ran a PowerPoint in italics.
+Rebranded it 'Vision 2030.'
+Applauded the clipart.`,
+      `Someone proposed feeding the poor.
+We issued a cvoucher
+for one (1) smile
+and a slightly bruised avocado.`,
+      `Morale hit an all-time low.
+We launched a podcast,
+brought in a mindfulness goat,
+in a government-issued suit.`,
+      `Someone asked what the future looks like.
+We passed around a mirror,
+framed in recycled plastic,
+blamed the lighting, the government,
+then each other —
+and called it progress.`,
+      `— Lilith`,
+    ],
+  },
   { title: "Two Chairs" },
   { title: "Unassigned" },
   { title: "We Already Know the Song" },
