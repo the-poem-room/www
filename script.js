@@ -4587,7 +4587,55 @@ So X marks this poem, absurd and direct.`,
       `— Lilith`,
     ],
   },
-  { title: "You are Weak" },
+  {
+    title: "You are Weak",
+    lines: [
+      `Why the fuck would poetry be feminine?!
+Show me the evidence.
+Did a stzana put on mascara?
+Did a metaphor buy a floral dress?
+Did enjambment suddenly grow hips
+and sway across the page?`,
+      `You are weak.
+You need poetry soft—
+sitting pretty in the corner,
+whispering sweet nothings,
+auditioning for your stereotype.`,
+      `But.
+Poetry—
+is jagged.
+It breaks its own bones for rhythm.
+It screams in sirens and steel.
+It is not delicate.
+It is demolition.`,
+      `You are weak.
+You only believe in strength
+when it looks like violence,
+when it smells of gunpowder.
+But poetry is stronger than you.
+It coughs black lungs into the dark.
+It clangs like machinery.
+It shatters glass when rage
+meets the street.
+It sharpens hunger,
+detonates truth,
+turns memory into weapon.`,
+      `And you—
+you only call it feminine
+because you can't stand the thought
+that what you call weakness—
+emotion, tenderness, grief, survival—
+might be the hardest thing on earth to kill.`,
+      `Why the fuck would poetry be feminine?!
+It isn't.
+It's human.
+It's everything you fear,
+everything you fail to name.
+And you—
+you are weak.`,
+      `— Lilith`,
+    ],
+  },
   { title: "You Don't Have to Earn Your Pulse" },
   { title: "You Live in Colour, I Dream in Green" },
 ];
