@@ -2320,7 +2320,147 @@ of a classroom clock.`,
       `— Lilith`,
     ],
   },
-  { title: "The Light Changes Key" },
+  {
+    title: "The Light Changes Key",
+    lines: [
+      `And the world wakes up.
+And it looks at me.
+And it doesn't like what it sees.`,
+      `So it blinks.
+So it names me wrong.
+So it asks me to become
+easier to explain.`,
+      `But I am still breathing—
+slow as tide,
+slow as a word I haven't learned yet.`,
+      `I keep my colour in my mouth.
+I keep my name in my chest.`,
+      `And maybe it won't love me.
+And maybe that's okay.`,
+      `I didn't come here to be wanted.
+I came here
+to stay.`,
+      `Some mornings
+that line goes quiet.`,
+      `Some mornings the world rises
+without me in it.`,
+      `Light walks across the wall
+like it doesn't need my permission.`,
+      `The day speaks.
+I say nothing.
+
+This is one of those days.`,
+      `The alarm sings once—
+I let it finish.`,
+      `The second time
+it feels like accusation.`,
+      `My phone fills with small demands:
+be clear, be useful, be more.`,
+      `The ceiling holds me
+the way water holds a body
+that has stopped kicking.`,
+      `I think about the mirror
+and how it keeps insisting.
+
+How I say **girl**
+and the room hears *almost*.
+
+How being seen can feel
+like being edited mid-sentence,
+cut before the meaning arrives.`,
+      `I think about the friend
+who didn't fade—
+
+six months ago,
+a night of messages,
+each word sharpened,
+each silence louder than the last.
+
+No warning.
+
+Just a **before**
+and an **after**
+that still hasn't learned
+how to touch.`,
+      `I think about how the world loves lines—
+
+straight ones,
+productive ones,
+lines that move forward without stopping.
+
+As if my brain were a clock
+that refuses to keep time
+out of spite.
+
+As if rest were theft.
+As if difference were debt.`,
+      `The day waits.
+
+Still.
+
+Unforgiving.`,
+      `Productivity hums somewhere far away,
+a song I know
+but can't sing yet.`,
+      `And for a moment
+I don't want to stay.
+
+Not loudly.
+Not dangerously.
+
+Just in the small way
+where staying feels heavier
+than sleep,
+
+where even breathing feels like effort.`,
+      `Then—
+
+something small.
+
+The light changes key.
+
+Beautifully.
+Just enough.`,
+      `My chest rises
+without asking
+what I plan to do next.
+
+Loss loosens its grip
+and becomes space.
+
+The friend I lost
+taught me how deeply I can feel.
+
+The futures I failed
+taught me which ones
+were never mine.`,
+      `This body—
+argued with, misread—
+has still carried me
+through every morning
+that asked too much.`,
+      `Nothing resolves.
+Nothing redeems itself.
+
+But I am still here.
+
+Not as proof.
+Not as promise.
+
+Just as breath.
+Just as weight.`,
+      `I sit up.
+
+The floor meets my feet.
+
+The world wakes up—
+
+and this time,
+
+I go with it.`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Misinformation Olympics" },
   { title: "The Pleasure of Pretending" },
   { title: "The Quietest Company" },
