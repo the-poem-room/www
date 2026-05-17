@@ -3016,7 +3016,28 @@ the unseen wall.`,
       `— Lilith`,
     ],
   },
-  { title: "The Weightless Hour" },
+  {
+    title: "The Weightless Hour",
+    lines: [
+      `We drift through hours like wind through lace,
+No clocks, no questions—just skin, just breath.
+The world forgets its need to chase,
+And in your arms, I unlearn death.`,
+      `No clocks, no questions—just skin, just breath.
+The sheets unfold into a weightless sky.
+And in your arms, I unlearn death,
+Where even silence doesn't ask why.`,
+      `The sheets unfold into a weightless sky,
+Where thought dissolves before it finds a name.
+Where even silence doesn't ask why,
+We float beneath the ceiling's frame.`,
+      `Where thought dissolves before it finds name,
+The world forgets its need to chase.
+We float beneath the ceiling's frame—
+We drift through hours like wind through lace.`,
+      `— Lilith`,
+    ],
+  },
   {
     title: "The Weight of Air",
     lines: [
