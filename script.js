@@ -1293,7 +1293,66 @@ Case closed.)`,
       "— Lilith",
     ],
   },
-  { title: "She Said Men Only Want One Thing" },
+  {
+    title: "She Said Men Only Want One Thing",
+    subtitle: "(but then rewatched *Bridgerton* twice)",
+    lines: [
+      `She said,
+*"Men are animals."*
+As she paused *Pride and Prejudice*
+to sigh at Darcy's wet shirt.
+Said I only want sex—
+while clutching a candle
+named *Sultry Nights*
+and dreaming up a chapter
+where the brooding assassin kisses her neck
+before asking about her trauma.`,
+      `She said,
+*"Porn is for men."*
+Then bit her lip at a vampire
+saying *"You smell like home."*
+Her bookshelf groaned beneath
+*The Billionaire's Baby Secret*
+and *Touch Me Until I Heal*.`,
+      `She said,
+*"You just want to conquer me."*
+As if I'm the knight
+and she's the castle.
+But she's the one
+who built the tower
+and whispered
+*"Come save me, stud."*`,
+      `Funny,
+I wanted
+slow mornings,
+shared playlists,
+hands on backs in silence.
+She want
+dripping wax,
+breathless moans,
+and to be thrown against the wall
+in the rain.`,
+      `She said,
+*"Men see women as objects."*
+While she photoshopped herself
+for the algorithm's lust.
+Built her worth
+from double taps and corsets,
+called herself a prize
+and then blamed me for the hunt.`,
+      `Truth is,
+not all men are dogs.
+Some of us
+are too busy holding space
+to bark.
+Too busy wondering
+how to be enough
+in a world that only sees us
+when we perform
+desire.`,
+      "— Lilith",
+    ],
+  },
   { title: "Should I?" },
   { title: "Small Things" },
   { title: "Softness Was Always His" },
@@ -2336,7 +2395,10 @@ function renderPoem(poem) {
   readerTitle.textContent = poem.title;
   if (readerSubtitle) {
     readerSubtitle.hidden = !poem.subtitle;
-    readerSubtitle.textContent = poem.subtitle || "";
+    readerSubtitle.innerHTML = "";
+    if (poem.subtitle) {
+      appendFormattedText(readerSubtitle, poem.subtitle);
+    }
   }
   readerPoem.innerHTML = "";
   readerActions.innerHTML = "";
@@ -2392,7 +2454,10 @@ function refreshReaderActions() {
 
   if (readerSubtitle) {
     readerSubtitle.hidden = !poem.subtitle;
-    readerSubtitle.textContent = poem.subtitle || "";
+    readerSubtitle.innerHTML = "";
+    if (poem.subtitle) {
+      appendFormattedText(readerSubtitle, poem.subtitle);
+    }
   }
 
   readerActions.innerHTML = "";

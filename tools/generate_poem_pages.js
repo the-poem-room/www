@@ -167,7 +167,7 @@ function poemPageTemplate(poem) {
   const title = poem.title;
   const slug = poem.slug || slugify(title);
   const description = `Read "${title}" in The Poem Room.`;
-  const subtitle = poem.subtitle ? String(poem.subtitle) : "";
+  const subtitle = poem.subtitle ? renderInlineHtml(String(poem.subtitle)) : "";
 
   return `<!doctype html>
 <html lang="en" data-theme="dark">
@@ -251,7 +251,7 @@ function poemPageTemplate(poem) {
         <a class="back-link" href="../index.html#archive-${escapeHtml(slug)}">Back to Archive</a>
         <p class="eyebrow">reading room</p>
         <h1 id="poem-title">${escapeHtml(title)}</h1>
-        ${subtitle ? `<p class="poem-subtitle">${escapeHtml(subtitle)}</p>` : ""}
+        ${subtitle ? `<p class="poem-subtitle">${subtitle}</p>` : ""}
         <div class="reader-actions">
           <button
             class="favourite-button"
