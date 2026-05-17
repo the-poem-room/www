@@ -2279,27 +2279,20 @@ function normalizeArchiveSearchValue(value) {
     .replace(/[^a-z0-9]+/g, "");
 }
 
-function matchesArchiveSearch(query, candidate) {
+function matchesArchiveSearchPrefix(query, candidate) {
   if (!query) {
     return true;
   }
 
-  if (!candidate) {
-    return false;
+  return Boolean(candidate) && candidate.startsWith(query);
+}
+
+function matchesArchiveSearchAnywhere(query, candidate) {
+  if (!query) {
+    return true;
   }
 
-  let candidateIndex = 0;
-
-  for (const char of candidate) {
-    if (char === query[candidateIndex]) {
-      candidateIndex += 1;
-      if (candidateIndex === query.length) {
-        return true;
-      }
-    }
-  }
-
-  return false;
+  return Boolean(candidate) && candidate.includes(query);
 }
 
 function updateArchiveSearchState() {
@@ -2308,19 +2301,32 @@ function updateArchiveSearchState() {
   }
 
   const query = normalizeArchiveSearchValue(archiveSearch?.value || "");
-  const matches = [];
+  const items = Array.from(archiveList.querySelectorAll(".archive-item"));
+  const prefixMatches = [];
+  const fallbackMatches = [];
 
-  archiveList.querySelectorAll(".archive-item").forEach((item) => {
+  items.forEach((item) => {
     const searchable = item.dataset.searchValue || "";
-    const isMatch = matchesArchiveSearch(query, searchable);
-    item.hidden = !isMatch;
-    if (isMatch) {
-      matches.push(item);
+    const prefixMatch = matchesArchiveSearchPrefix(query, searchable);
+    const fallbackMatch = !prefixMatch && matchesArchiveSearchAnywhere(query, searchable);
+
+    if (prefixMatch) {
+      prefixMatches.push(item);
+    } else if (fallbackMatch) {
+      fallbackMatches.push(item);
     }
   });
 
   const hasQuery = Boolean(query);
+  const matches = hasQuery
+    ? (prefixMatches.length > 0 ? prefixMatches : fallbackMatches)
+    : items;
+  const matchSet = new Set(matches);
   const matchCount = matches.length;
+
+  items.forEach((item) => {
+    item.hidden = hasQuery ? !matchSet.has(item) : false;
+  });
 
   archiveEmpty.hidden = !(hasQuery && matchCount === 0);
   archiveSearchStatus.textContent = hasQuery
