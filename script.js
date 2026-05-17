@@ -3915,7 +3915,109 @@ while things touch.`,
       `— Lilith`,
     ],
   },
-  { title: "Unassigned" },
+  {
+    title: "Unassigned",
+    lines: [
+      `There's so much love
+inside me—
+but who is it for?`,
+      `It doesn't arrive as tenderness.
+It arrives as pressure—
+a sentence forming faster than etiquette
+can intervene,
+my mouth already saying *I love you*
+before my mind has checked
+whether that's allowed.`,
+      `Sometimes it is a person.
+A laugh on a Discord call,
+a pause where no one rushes to fill the silence,
+a kindness that lands with no intention
+of being important.
+The phrase escapes me
+like a reflex test I didn't consent to.`,
+      `Sometimes it is not a person at all.
+Just the sensation—
+static without a source,
+a warmth that isnt gentle,
+a memory misfiring
+and hitting someone who no longer exists
+except as atmosphere.`,
+      `What am I meant to do
+with this surplus?`,
+      `I have tried
+and failed
+to swallow it.`,
+      `Love moves through me
+like a system doing its job too well,
+converting laughter into devotion,
+gratitude into something
+people flinch back from,
+leaving me on read
+without explanation,
+calling it boundaries.
+I try smaller words—
+*thank you, I appreciate you*—
+but they come out underpowered,
+spoken at half the voltage
+my body is running on.`,
+      `I don't mean permanence.
+I don't mean ownership.
+I don't mean romance, or sex,
+or the slow architecture of a future.`,
+      `I mean:
+this reached me—
+and I didn't look away.`,
+      `They say love should be directed,
+aimed,
+spent carefully.
+Kept in labelled containers,
+away from heat.
+No one tells you what happens
+when it's ambient.
+When it leaks into friendships,
+ruins the mood,
+makes sincerity feel suspicious.`,
+      `I have lost people this way.
+Not dramatically.
+Just quietly—
+the way you lose objects
+you were holding too tightly
+without realising.`,
+      `Sometimes I think
+this love is not a message at all
+but a condition—
+not for anyone,
+not about anyone,
+just the way my nervous system
+reacts to meaning
+before it asks permission.`,
+      `A girl frinding herself
+and realising he volume knob
+was never installed.`,
+      `If this love has nowhere to go,
+maybe that's the point.
+Maybe it doesn't need a subject
+to be real.`,
+      `There's so much love
+inside me—
+unassigned,
+relentless,
+uncontained,
+awake.`,
+      `If it doesn't belong to you,
+or to anyone,
+maybe that doesn't make it wasted.`,
+      `Maybe it belongs
+to attention.
+To survival.`,
+      `To the simple, dangerous fact
+that I am here,
+and the world
+keeps reaching me—
+and I keep responding`,
+      `— Lilith`,
+    ],
+  },
   { title: "We Already Know the Song" },
   { title: "We're All Dogmatic Because We Aren't Inactive" },
   { title: "Where Is the Triangle?" },
