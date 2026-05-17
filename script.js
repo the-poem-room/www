@@ -2057,7 +2057,112 @@ that keep glitching.`,
       `*— Lilith*`,
     ],
   },
-  { title: "The Garden After" },
+  {
+    title: "The Garden After",
+    lines: [
+      `I take the high seat—
+not on a cloud, just above the aisle,
+the exact shape of my body in light.`,
+      `The bell tests its throat.
+Someone coughs into their sleeve.
+My name lands like a hat on a hook.
+It stays.`,
+      `They came: the neighbour who braught my bins in on windy nights,
+the friend who never let me pay,
+the teacher who wrote in the margin *good question*,
+a cousin who laughs half a second late and cries at adverts,
+someone who once sold me a perfect peach on a too-bright day,
+And the few who knew the soft, stubborn animal of my mornings—
+Three alarms, two snoozes, tea before verbs,
+A dull-pencil list, started in the dark, finished on the train.`,
+      `An organ warms up—
+electrons yawn through the cables,
+and the hymn does that rising thing that makes
+even unbelievers tidy their spines.`,
+      `I watch my absence sit among them
+like a coat left on the back of a chair—
+useful, warm, and not in need of anything.`,
+      `Eulogies:
+how I argued kindly about commas,
+how I let the day slow to match the rain,
+how I kept time the way my brain does—
+offbeat then sudden and exact,
+hands tapping private rhythms,
+fluorescents a little too loud, the hym a little too close,
+whole hours vanishing into one bright task—
+and how I believed in small rituals:
+a window seat, a desk briefly cleared,
+friendship you could pause and resume mid-sentence.`,
+      `Someone says I wasn't afraid of much.
+They're wrong and right.
+I feared the wrong things: alarms, exams,
+the day's thin glass;
+not the evening that follows all days.`,
+      `The priest tries a net of text;
+some fish flip through and glitter on the carpet.
+A child drops an order of service, picks it up,
+looks inside as if there might be a secret map.
+There is, but not there.`,
+      `If I could interrupt, I'd keep it short:
+Don't fear the gods—they are busy being sky.
+Don't fear my death—I don't have it; you do.
+What is good was easy to obtain;
+you watched me do it—
+a walk, a pond, a step, your hand.
+What hurts is usually endurable—
+and when it isn't, it ends.`,
+      `At the door, lilies flank the day like white parantheses.
+Inside them, talk begins to loosen.
+Someone remembers the joke about the two philosophers in a lift.
+Someone checks the time, then doesn't.`,
+      `We walk—yes, I say we though my walking is the quiet kind—
+to the hall with the silver urn and the paper cups,
+absolutely convinced they're china.
+Breath fogs the low windows;
+grief drums a teaspoon once.`,
+      `My friends build a small republic around a plastic table.
+They legislate mercy:
+Tell the story where I tripped and bowed.
+Tell the one where I cried at a busker's song.
+Tell the one where the power went out and we kept talking,
+faces lit by the cold blue aquarium of our phones
+turned screen-down to make a little night.`,
+      `A breeze makes the noticeboard creak—
+that small swerve—clinamen—
+atoms choosing new neighbours:
+my breath diffused in fern, in dust motes, in the warm air
+that softens the eyelids of a stranger.`,
+      `I stand—as much as standing applies—
+by the neat line of cups waiting in rows.
+There it is again: the good that is easy—
+time, company, quiet.
+Someone said, *you'd have liked this.*
+I do, in the only way left:
+by not needing to be anything at all.`,
+      `What will they say? They say it.
+What will it be like? It is this:
+a room where the light rearranges shadows,
+where sorrow loosens its tie,
+where laughter arrives late and is welcomed anyway.`,
+      `When they go, chairs push back with small polite groans.
+The floor keeps the imprint of their shoes a moment,
+then forgets.`,
+      `I watch the last light fold the afternoon between stations.
+No throne, no verdict—just plenty:
+the world continuing to be the world,
+and my place in it, a clean subtraction,
+leaving space enough for another chair.`,
+      `Take it.
+Eat if you're hungry.
+Call each other later, and then actually call.
+Leave the lilies; keep the promise to text back.
+If you must keep something of me,
+keep the habit of pausing at ripe fruit you *do* love,
+and the way we looked at one another
+as if there were time.`,
+      `*— Lilith*`,
+    ],
+  },
   { title: "The Garden of Youth" },
   { title: "The Goldbergs, Everywhere-" },
   { title: "The Good Teacher" },
