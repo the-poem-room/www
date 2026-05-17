@@ -4346,7 +4346,51 @@ the river moves.`,
     ],
   },
   { title: "Where Is the Triangle?" },
-  { title: "What the Hand Remembers" },
+  {
+    title: "What the Hand Remembers",
+    lines: [
+      `I wake with a stain on my trembling **hand**,
+The dream still wet on the cold-tiled **floor**.
+I cover my ears, but there is your **voice**,
+Pressed like breath into the folds of **night**.
+You never scream, only whisper **blood**,
+And I cannot stop it from coming **again**.`,
+      `I swore it would never happen **again**,
+But the knife remembers the shape of my **hand**.
+It calls me back to the slip of **blood**,
+Back to the curve of your shadow on the **floor**,
+Back to the echoless grip of that **night**,
+Where I stood still beneath your falling **voice**.`,
+      `You're gone, but I still hear your **voice**—
+In water pipes, in clocks, in dreams **again**.
+It threads through the seams of the **night**,
+Finds its way back to my guilty **hand**,
+Leaves fingerprints on the kitchen **floor**,
+And stains my silence with the colour of **blood**.`,
+      `I try to forget the heat of your **blood**,
+The stammer it left in your final **voice**,
+The way your shoulder folded to the **flor**.
+But every time I blink, it begins **again**—
+The flick of the wrist, the weight in the **hand**,
+The hush that swallowed the whole of the **night**.`,
+      `Even the walls remember that **night**.
+Even the drains speak of **blood**.
+Even the light recoils from my **hand**
+Even now, I mistake wind for your **voice**,
+Still whispering, still coming back **again**,
+Still slipping beneath the cracks in the **floor**.`,
+      `I've scrubbed every inch of the **floor**,
+But I can't clean the breath from the **night**,
+Or the sound of your ribs breaking **again**,
+Or the guilt that clots beneath my **hand**,
+Or the syllables lodged inside your **voice**,
+Or the pulse that spilled into your **blood**.`,
+      `I hear your **voice** in the breath of the **blood**,
+A shadow circled on the kitchen **floor** at **night**,
+Still clinging to the tremble of my **hand** — **again**.`,
+      `— Lilith`,
+    ],
+  },
   { title: "When No One Knows" },
   { title: "When's the Last Time?" },
   { title: "Wobblefluff and Bumblebee's Moonlit Jig" },
