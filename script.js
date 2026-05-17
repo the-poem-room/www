@@ -2899,7 +2899,44 @@ but the algorithm might.`,
       `— Lilith`,
     ],
   },
-  { title: "The Third Room" },
+  {
+    title: "The Third Room",
+    lines: [
+      `I ate a banana and some raisins
+and the world blinked.`,
+      `Not loudly,
+not with thunder or colour,
+but with that quiet click
+of something new arriving,
+like stepping into
+the third room.`,
+      `I know banana.
+I know raisin.
+Soft curve of yellow,
+wrinkled sweetness of dried sun.
+Two rooms in my mind
+I've visited before.`,
+      `But together,
+they made a third room
+with no door I could have pictured.`,
+      `My tongue learned something
+my brain could not rehearse:
+a small, uncanny future
+inside my own mouth.`,
+      `I thought imagination
+was a wide enough field
+to hold every outcome.`,
+      `But the flavour said —
+no.`,
+      `There are things you only meet
+when they happen.`,
+      `And for a moment,
+I wasn't just tasting fruit,
+I was tasting the limit
+of being human.`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Unseen Wall" },
   { title: "The Weightless Hour" },
   { title: "The Weight of Air" },
