@@ -5404,24 +5404,20 @@ function updateHeaderLayoutMode() {
     return;
   }
 
+  if (siteHeader.classList.contains("is-nav-compact") || siteHeader.classList.contains("is-brand-stacked")) {
+    siteHeader.classList.remove("is-nav-compact", "is-brand-stacked");
+  }
+
   const shouldCompact = shouldCompactHeaderLayout();
   const shouldStackBrand = !shouldCompact && shouldStackBrandHeader();
-  const isCompact = siteHeader.classList.contains("is-nav-compact");
-  const isStacked = siteHeader.classList.contains("is-brand-stacked");
 
-  if (shouldCompact !== isCompact) {
-    siteHeader.classList.toggle("is-nav-compact", shouldCompact);
+  if (shouldCompact) {
+    siteHeader.classList.add("is-nav-compact");
     closeMobileNav();
-  }
-
-  if (shouldStackBrand !== isStacked) {
-    siteHeader.classList.toggle("is-brand-stacked", shouldStackBrand);
-    if (shouldStackBrand) {
-      closeMobileNav();
-    }
-  }
-
-  if (!shouldCompact && !shouldStackBrand) {
+  } else if (shouldStackBrand) {
+    siteHeader.classList.add("is-brand-stacked");
+    closeMobileNav();
+  } else {
     siteHeader.classList.remove("is-nav-compact", "is-brand-stacked");
   }
 }
