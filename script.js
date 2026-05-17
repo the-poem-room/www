@@ -1144,7 +1144,7 @@ const poems = [
     title: "Productivity Guilt",
     lines: [
       "There's an ache in my chest.\nWhen I sit still.\nNot pain—just the quiet pulse\nof a world I've swalloed whole.",
-      "**metric**\n**motion**\n**minutes**\n**meaningless**",
+      "metric\nmotion\nminutes\n***meaningless***",
       "I tell myself it's fine,\nthat rest is part of the process,\nthat even stillness can be *sacred*.",
       "Yet somewhere between my ribs\nand the back of my throat\na voice whispers:\n*move. create. produce.*",
       "I play the game anyway.\nPixel by pixel, block by block.\nMy body buffering.\nEach action deliberate, each motion clean—\na tiny illusion of completion.",
