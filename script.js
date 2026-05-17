@@ -3412,7 +3412,7 @@ just breath in the margins and a small, certain note:
   {
     title: "tolerate",
     lines: [
-      `tolerate is an ugly word.
+      `*tolerate* is an ugly word.
 it chews on itself.
 it stares through glass and calls it empathy.`,
       `accept, though—
@@ -3434,11 +3434,11 @@ in the architecture of cruelty.`,
       `but theory drips when held too tightly.
 and the scream becomes a language
 I cannot mistranslate.`,
-      `tolerate.
+      `*tolerate*.
 the world keeps crawling back.
 it smells like disinfectant,
 like a peace treaty written in smog.`,
-      `I don't want to tolerate.
+      `I don't want to *tolerate*.
 I want to accept the chaos of existing—
 to bow to difference
 without bowing to harm.`,
@@ -3451,7 +3451,7 @@ autonomy, non-negotiable.
 I mean it.
 and I hate that I mean it
 with the same fervour 
-I hate the word tolerate.`,
+I hate the word *tolerate*.`,
       `ethical emotivism—
 a nice label
 for a heart that argues with itself.`,
