@@ -302,40 +302,46 @@
         <div class="featured-collections-list" data-featured-collections-list></div>
       </section>
 
-      <section class="section poems-intro" id="poems" aria-labelledby="poems-title">
-        <div>
-          <p class="eyebrow">poem by poem</p>
-          <h2 id="poems-title">Archive</h2>
-        </div>
-      </section>
-
-      <section class="archive-panel" aria-label="Poem archive">
-        <div class="archive-search">
-          <label class="archive-search-label" for="archive-search">Search the archive</label>
-          <input
-            id="archive-search"
-            class="archive-search-input"
-            type="search"
-            placeholder="Search poem titles"
-            autocomplete="off"
-            spellcheck="false"
-            data-archive-search
-            aria-describedby="archive-search-status"
-          >
-          <div class="archive-search-mode" role="group" aria-label="Search mode">
-            <button type="button" data-archive-search-mode-option="titles" aria-pressed="true">Titles</button>
-            <button type="button" data-archive-search-mode-option="poem-text" aria-pressed="false">Poem text</button>
+      <section class="section archive-section" id="poems" aria-labelledby="poems-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">poem by poem</p>
+            <h2 id="poems-title">Archive</h2>
           </div>
-          <p
-            class="archive-search-status"
-            id="archive-search-status"
-            data-archive-search-status
-            aria-live="polite"
-          ></p>
-          <div class="archive-search-results" data-archive-search-results hidden></div>
+          <p>
+            Browse by title or poem text, then open a reading room to move
+            through the poems one by one.
+          </p>
         </div>
-        <ol class="archive-list" data-archive-list></ol>
-        <p class="archive-empty" data-archive-empty hidden>No poems match your search.</p>
+
+        <div class="archive-panel" aria-label="Poem archive">
+          <div class="archive-search">
+            <label class="archive-search-label" for="archive-search">Search the archive</label>
+            <input
+              id="archive-search"
+              class="archive-search-input"
+              type="search"
+              placeholder="Search poem titles"
+              autocomplete="off"
+              spellcheck="false"
+              data-archive-search
+              aria-describedby="archive-search-status"
+            >
+            <div class="archive-search-mode" role="group" aria-label="Search mode">
+              <button type="button" data-archive-search-mode-option="titles" aria-pressed="true">Titles</button>
+              <button type="button" data-archive-search-mode-option="poem-text" aria-pressed="false">Poem text</button>
+            </div>
+            <p
+              class="archive-search-status"
+              id="archive-search-status"
+              data-archive-search-status
+              aria-live="polite"
+            ></p>
+            <div class="archive-search-results" data-archive-search-results hidden></div>
+          </div>
+          <ol class="archive-list" data-archive-list></ol>
+          <p class="archive-empty" data-archive-empty hidden>No poems match your search.</p>
+        </div>
       </section>
 
       <section
