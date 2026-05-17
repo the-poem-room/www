@@ -4543,7 +4543,40 @@ As noise spun like a loony balloon.`,
       `— Lilith`,
     ],
   },
-  { title: "Work Hard" },
+  {
+    title: "Work Hard",
+    lines: [
+      `What does work hard even mean?
+Hard like fracture.
+Hard like body bent into profit.
+Hard like lungs learning to breathe in shifts.`,
+      `Work becomes worship.
+Sleep becomes weakness.
+Silence becomes compliance.`,
+      `They dress commands as compliments.
+They sell us endurance
+like it's dignity
+when it's just obedience in perfume.`,
+      `Our hands crack.
+Their pockets fill.`,
+      `Our backs curve.
+Their towers climb.`,
+      `We trade hours for survival,
+call it opportunity,
+and thank the system
+for letting us exist inside it.`,
+      `"Hard" is not virtue.
+It is a leash.
+A choke chain.
+A pretty word for slow erosion.`,
+      `We are not lazy.
+We are exhausted by design.`,
+      `And still, we are told:
+Work.
+Harder.`,
+      `— Lilith`,
+    ],
+  },
   { title: "X." },
   { title: "You are Weak" },
   { title: "You Don't Have to Earn Your Pulse" },
