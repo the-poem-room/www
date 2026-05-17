@@ -3017,7 +3017,137 @@ the unseen wall.`,
     ],
   },
   { title: "The Weightless Hour" },
-  { title: "The Weight of Air" },
+  {
+    title: "The Weight of Air",
+    lines: [
+      `I.
+I used to think gravity was cruel.
+Now I know it only wants me home.
+The bridge hums above the road,
+steel bones holding the ache of staying.
+Below, headlights drift like thoughts unfinished,
+each one dissolving into somewhere else.
+
+The air opens its palms.
+It doesn't argue.
+It holds me the way exhaustion holds sleep.
+
+But the air is not mercy.
+It measures conviction.
+Sometimes it spares you,
+halts the descent mid-dream,
+asking what it is you're falling from.
+It wants truth, not rehearsal,
+a faith that risks remaining.
+
+The night folds close,
+not tender, only inevitable.
+For a moment the world forgets language,
+no metaphor, no performance,
+only pressure, only motion, exact and certain.
+
+Each morning I put on a voice
+that sounds almost like mine.
+The body releases its grammar.
+I become a sentence
+that no one finishes.
+
+And for that instant,
+between decision and the inevitable,
+I feel lighter than mercy,
+heavier than grace.`,
+      `II.
+The air forgets me by morning.
+At the lake, it begins again.
+Water waits at the seam of worlds,
+quiet, patient, familiar.
+Light fractures, forgetting its colour.
+The air above it trembles, undecided,
+whether to hold or let go.
+
+Sometimes I imagine stepping in,
+letting it rewrite me
+in syntax only silence knows.
+No name to pronounce wrong,
+no shape to disguise.
+
+It would take what it's given
+and call it complete.
+I envy that logic,
+a blur without shame,
+to rest inside one's own disappearance.
+
+But the thought of their grief
+tightens around my ribs.
+So I stay where the air is heavy,
+breathing for them,
+for the ones who never ask
+what it costs.`,
+      `III.
+The air inside is thinner.
+Some days the vanishing was slower,
+no form, no sound,
+only the mind folding inward.
+The body learned obedience:
+wait, hush, reduce.
+
+Paperwork of living.
+Sign here. Continue.
+Each pulse signs its name again.
+
+Then a quiet began to move,
+not from outside but from within,
+a slow turning inward,
+light fading toward the centre
+until stillness took its shape.
+It felt as though the world were receding
+from my skin, deliberate, patient,
+testing how much of me would remain.
+
+The calm grew dense around me,
+a listener without question.
+The air outside kept its distance.
+
+I wanted to say
+how heavy pretending becomes,
+how masking grinds the mind smooth.
+I think it already knew.`,
+      `IV.
+Survival is aftermath.
+The pulse renews its contract.
+The lungs stamp the form again.
+Outside, engines repeat their prayer.
+
+I pass the bridge.
+Its hum is the same note
+the world plays when no one listens.
+The road below keeps shining,
+a river of repetition.
+
+I don't fear the places anymore.
+They were never promises,
+only mirrors for the weight I carried.
+
+If rest is still waiting,
+if it waits without impatience,
+the air before rain,
+and hush before a name is spoken.
+
+Tonight I keep the body,
+its tremor, its noise, its ache to appease.
+I breathe, slow and deliberate,
+and feel the weight ease by degrees.
+
+The air loosens.
+It lets me stay,
+not because I've earned it,
+but because it has learned patience.
+
+Between us,
+something merciful holds.`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Wheel Doesn't Know Why You're Here" },
   { title: "To anyone confused" },
   { title: "To-Be List" },
