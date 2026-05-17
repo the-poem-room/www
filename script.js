@@ -5797,6 +5797,15 @@ function renderArchive() {
   });
 }
 
+function clearArchiveSearchInput() {
+  if (!archiveSearch || !archiveSearch.value) {
+    return;
+  }
+
+  archiveSearch.value = "";
+  updateArchiveSearchState();
+}
+
 function renderFeaturedCollections() {
   if (!featuredCollectionsList) {
     return;
@@ -6081,22 +6090,26 @@ function initializeArchiveSearchMode() {
   });
 }
 
-function applyArchiveSearchQueryFromUrl() {
-  if (!archiveSearch) {
+function handleArchivePoemSelection(event) {
+  if (!archiveSearch || event.defaultPrevented) {
     return;
   }
 
-  const highlightQuery = getActivePoemTextHighlightQuery();
+  const link = event.target.closest(".archive-item a, .archive-search-result");
 
-  if (!highlightQuery) {
+  if (!link) {
     return;
   }
 
-  archiveSearchMode = "poem-text";
-  archiveSearch.value = highlightQuery;
-  updateArchiveSearchModeButtons(archiveSearchMode);
-  updateArchiveSearchPlaceholder(archiveSearchMode);
-  updateArchiveSearchState();
+  if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+    return;
+  }
+
+  event.preventDefault();
+
+  const href = link.href;
+  clearArchiveSearchInput();
+  window.location.assign(href);
 }
 
 function scrollToArchiveItemFromHash() {
@@ -7124,13 +7137,8 @@ function initializePoemPageSearchHighlighting() {
   }
 
   const highlightQuery = getActivePoemTextHighlightQuery();
-  const backLink = document.querySelector(".back-link");
   const prevLink = document.querySelector(".reader-prev-link");
   const nextLink = document.querySelector(".reader-next-link");
-
-  if (backLink) {
-    backLink.href = appendQueryParam(backLink.getAttribute("href") || "", "highlight", highlightQuery);
-  }
 
   [prevLink, nextLink].forEach((link) => {
     if (!link) {
@@ -7146,7 +7154,6 @@ function initializePoemPageSearchHighlighting() {
 renderArchive();
 initializeArchiveSearchMode();
 initializeArchiveSearch();
-applyArchiveSearchQueryFromUrl();
 renderFeaturedCollections();
 renderLibrary();
 handleRoute();
@@ -7157,6 +7164,9 @@ initializePoemPageControls();
 mountReadingRoomNavigation(readerPoem);
 initializePoemPageSearchHighlighting();
 handleSectionTargetFromHash();
+
+archiveList?.addEventListener("click", handleArchivePoemSelection);
+archiveSearchResults?.addEventListener("click", handleArchivePoemSelection);
 
 window.addEventListener("hashchange", () => {
   handleRoute();
