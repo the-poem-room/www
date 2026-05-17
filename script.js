@@ -2259,7 +2259,7 @@ function renderArchive() {
     item.className = "archive-item";
     item.id = `archive-${slug}`;
     item.dataset.poemSlug = slug;
-    item.dataset.searchValue = normalizeArchiveSearchValue([poem.title, poem.subtitle || ""].join(" "));
+    item.dataset.searchValue = normalizeArchiveSearchValue(poem.title || "");
 
     const link = document.createElement("a");
     link.href = `Poems/${slug}.html`;
@@ -2324,7 +2324,7 @@ function updateArchiveSearchState() {
 
   archiveEmpty.hidden = !(hasQuery && matchCount === 0);
   archiveSearchStatus.textContent = hasQuery
-    ? `${matchCount} poem${matchCount === 1 ? "" : "s"} found.`
+    ? `${matchCount} match${matchCount === 1 ? "" : "es"} found.`
     : "";
 
   if (archiveSearchResults) {
