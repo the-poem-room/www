@@ -3847,7 +3847,7 @@ function updateArchiveSearchState() {
   archiveEmpty.hidden = !(hasQuery && matchCount === 0);
   archiveSearchStatus.textContent = hasQuery
     ? `${matchCount} match${matchCount === 1 ? "" : "es"} found.`
-    : `${totalCount} poem${totalCount === 1 ? "" : "s"} in the archive.`;
+    : `${totalCount} poem${totalCount === 1 ? "" : "s"} in the Archive.`;
 
   if (archiveSearchResults) {
     archiveSearchResults.hidden = !(hasQuery && matchCount > 0);
