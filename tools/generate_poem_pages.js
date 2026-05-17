@@ -129,8 +129,11 @@ function renderPoemBody(poem) {
   }
 
   const stanzas = poem.lines
-    .map((stanza) => {
-      const escaped = stanza
+    .map((stanza, index) => {
+      const stanzaText = typeof stanza === "string" ? stanza : String(stanza.text || "");
+      const stanzaClassName =
+        typeof stanza === "string" ? "" : String(stanza.className || "").trim();
+      const escaped = stanzaText
         .split("\n")
         .map((line, idx) => {
           const rendered = renderInlineHtml(line);
@@ -140,8 +143,18 @@ function renderPoemBody(poem) {
           return rendered;
         })
         .join("<br>\n              ");
-      const isSignature = stanza.trim().startsWith("— ");
-      return `            <p${isSignature ? ' class="poem-signature"' : ""}>
+      const isSignature = index === poem.lines.length - 1 && stanzaText.startsWith("— ");
+      const classes = [];
+
+      if (stanzaClassName) {
+        classes.push(...stanzaClassName.split(/\s+/));
+      }
+
+      if (isSignature) {
+        classes.push("poem-signature");
+      }
+
+      return `            <p${classes.length ? ` class="${classes.join(" ")}"` : ""}>
               ${isSignature ? `<em>${escaped}</em>` : escaped}
             </p>`;
     })

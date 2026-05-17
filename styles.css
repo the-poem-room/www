@@ -1236,6 +1236,10 @@ h3 {
   margin: 0;
 }
 
+.reader-poem p.poem-stanza--indented {
+  margin-left: clamp(28px, 7vw, 96px);
+}
+
 .reader-placeholder {
   color: var(--muted);
   font-family: var(--sans);

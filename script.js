@@ -1148,7 +1148,10 @@ const poems = [
       "I tell myself it's fine,\nthat rest is part of the process,\nthat even stillness can be *sacred*.",
       "Yet somewhere between my ribs\nand the back of my throat\na voice whispers:\n*move. create. produce.*",
       "I play the game anyway.\nPixel by pixel, block by block.\nMy body buffering.\nEach action deliberate, each motion clean—\na tiny illusion of completion.",
-      "click.\npace.\nrepeat.\nheart.\nhand.\nhalt.\nheartbeat.\na loop of soft defeat.",
+      {
+        text: "click.\npace.\nrepeat.\nheart.\nhand.\nhalt.\nheartbeat.\na loop of soft defeat.",
+        className: "poem-stanza--indented",
+      },
       "**...**",
       "Has capitalist society ruined me,\nor have I ruined myself?\nI can't tell\nwhere the echo ends\nand the original thought begins.",
       "**I am both worker and warden**\nrestless mind and trembling hand.\nI build cages out of should.\nI polish them.\nI polish them until they shine.\nEven my joy must justify itself\nas efficient recovery,\nas rest with **receipts**.",
@@ -2214,11 +2217,18 @@ function renderPoem(poem) {
 
   if (poem.lines?.length) {
     poem.lines.forEach((stanza, index) => {
+      const stanzaText = typeof stanza === "string" ? stanza : String(stanza.text || "");
+      const stanzaClassName =
+        typeof stanza === "string" ? "" : String(stanza.className || "").trim();
       const paragraph = document.createElement("p");
-      const isSignature = index === poem.lines.length - 1 && stanza.startsWith("— ");
+      const isSignature = index === poem.lines.length - 1 && stanzaText.startsWith("— ");
       const target = isSignature ? document.createElement("em") : paragraph;
 
-      stanza.split("\n").forEach((line, lineIndex) => {
+      if (stanzaClassName) {
+        stanzaClassName.split(/\s+/).forEach((className) => paragraph.classList.add(className));
+      }
+
+      stanzaText.split("\n").forEach((line, lineIndex) => {
         if (lineIndex > 0) {
           target.append(document.createElement("br"));
         }
