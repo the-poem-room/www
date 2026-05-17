@@ -3020,6 +3020,105 @@ the unseen wall.`,
     ],
   },
   {
+    title: "The Way of No Lesson",
+    lines: [
+      `**I. The Palace of Perfection**`,
+      `Every morning, the uniform waited,
+same collar, same colour,
+the fabric itching where my pulse began.
+The day started before my spirit did.
+The bells rang not for truth
+but for time.`,
+      `The masters spoke of excellence,
+of destiny written in a syllabus.
+They said, Follow the steps, and you will rise.
+So I climbed,
+careful, obedient, afraid to slip.`,
+      `I built knowledge like a tree I didn't choose,
+branches everywhere
+but no root to hold me.
+My hands smelled of graphite and worry,
+the skin rubbed thin from erasing myself.
+Ten hours gone, twelve on the worst of days.
+The train windows blurred
+with other people's dreams.`,
+      `The palace was bright,
+but I was fading.`,
+      `**II. The Scroll of Nothing**`,
+      `When I opened the scroll,
+there was only my reflection,
+creased, uncertain,
+a shimmer of ink that would not stay still.`,
+      `And I laughed—
+not loudly, just the kind that lifts you,
+like when Po finally sees
+there was never a secret ingredient at all.`,
+      `The paper gold offered no lesson,
+but the wind did.
+It said, There is no path. Only the walking.
+It moved through the blinds,
+laying sunlight on tired desks,
+a golden grid that flickered
+like water in the Valley of Peace.`,
+      `I thought of the river,
+how it teaches by yielding,
+how it never asked permission to flow.`,
+      `The palace stood high and perfect,
+but the valley below
+was full of laughter,
+and falling,
+and life,
+and light.`,
+      `I stepped into the air.
+So I fell,
+and in the falling, I found stillness.`,
+      `**III. The Valley of Becoming**`,
+      `Now I learn as Po learned,
+through motion and mistake,
+through joy disguised as clumsiness.`,
+      `I learn as water learns,
+as the sky learns its own reflection,
+by touching everything,
+by taking the shape of what I love.`,
+      `There is no secret ingredient.
+Only the quiet quiver
+that whispers,
+learn because you live,
+not live because you learn.`,
+      `Here I rise with my own sun,
+eat when I am hungry,
+practice until the rhythm hums like breath.`,
+      `Here AI and people and music
+weave together like voices in a chord,
+each a different whisper
+of the same old truth:
+the universe folds inward,
+quiet as breath between notes.`,
+      `I learn to balance stillness and motion,
+to hold both question and quiet in the same hand.
+I stumble often,
+yet somehow keep landing where I'm meant to be.`,
+      `The jade palace was never built
+for every kind of warrior.
+Some of us fight with melody and moonlight,
+with questions that never need an answer.`,
+      `I am not a student now,
+but a learner still becoming,
+a musician rehearsing the art of living.`,
+      `Unschooling, self-study,
+whatever name it takes,
+I have simply returned to the scroll,
+unrolled and shimmering,
+its blankness no longer empty
+but infinite,
+a mirror of sky,
+a breath returnnig home.`,
+      `And tomorrow,
+I will begin again.`,
+      `— Lilith`,
+    ],
+  },
+  {
     title: "The Weightless Hour",
     lines: [
       `We drift through hours like wind through lace,
