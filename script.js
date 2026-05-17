@@ -1156,9 +1156,18 @@ const poems = [
       "Has capitalist society ruined me,\nor have I ruined myself?\nI can't tell\nwhere the echo ends\nand the original thought begins.",
       "**I am both worker and warden**\nrestless mind and trembling hand.\nI build cages out of should.\nI polish them.\nI polish them until they shine.\nEven my joy must justify itself\nas efficient recovery,\nas rest with **receipts**.",
       "But *guilt, I think,*\nis the conscience of a system\nthat forgot how to love *silence.*",
-      "And maybe the bravest act\nis to refuse that ache,\nto let the world rush on\nwithout me.",
-      "To let stillness\nstand\nunapologetically\nbeautiful.",
-      "No hum.\nNo metric.\nOnly breath.",
+      {
+        text: "And maybe the bravest act\nis to refuse that ache,\nto let the world rush on\nwithout me.",
+        className: "poem-stanza--italic",
+      },
+      {
+        text: "To let stillness\nstand\nunapologetically\nbeautiful.",
+        className: "poem-stanza--italic",
+      },
+      {
+        text: "No hum.\nNo metric.\nOnly breath.",
+        className: "poem-stanza--italic",
+      },
       "*— Lilith*",
     ],
   },

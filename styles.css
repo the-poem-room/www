@@ -1240,6 +1240,10 @@ h3 {
   margin-left: clamp(28px, 7vw, 96px);
 }
 
+.reader-poem p.poem-stanza--italic {
+  font-style: italic;
+}
+
 .reader-placeholder {
   color: var(--muted);
   font-family: var(--sans);
