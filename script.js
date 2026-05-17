@@ -3306,7 +3306,53 @@ is really there.`,
       `— Lilith`,
     ],
   },
-  { title: "To anyone confused" },
+  {
+    title: "To anyone confused",
+    lines: [
+      `I am not undecided.
+I am uninterested in your maps.
+You say *male*, *female*, *non-binary*,
+as though I must plant a flag—
+as though the terrain of my being
+were yours to label.`,
+      `You hold your compass
+to my hair,
+my tone,
+the way I lift or soften a hand,
+and tell me where North lives.
+But the needle points to you.`,
+      `I am not an experiment in your taxonomy.
+I am not an exception
+to the categories you love to name.
+I am the silence between your definitions—
+the pause after *he*,
+the question before *she*,
+the unspoken in *they*.`,
+      `I don't reject the bodies we're born in;
+I reject the way you think
+they should move.
+I reject your quiet mathematics
+of softness and steel,
+of what laughter belongs to whom,
+of how a sentence wear its clothes.`,
+      `Call it **Gender-Non-Participating**.
+It isn't absence;
+it's authorship.
+It's the refusal to be written
+by every passerby with a pen.
+It's not that I lack a role;
+it's that I am tired of auditions
+for plays I never agreed to join.`,
+      `So to anyone confused:
+you can keep your categories.
+I'll keep my autonomy.
+And maybe one day,
+we'll both stop needing
+to be understood
+to be real.`,
+      `— Lilith`,
+    ],
+  },
   { title: "To-Be List" },
   { title: "tolerate" },
   { title: "Too Much Company" },
