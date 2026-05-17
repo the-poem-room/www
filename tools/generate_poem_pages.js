@@ -342,7 +342,9 @@ function poemPageTemplate(poem, previousPoem, nextPoem) {
 
     <main id="main-content">
       <article class="reading-page" aria-labelledby="poem-title">
-${previousLink}${nextLink}        <a class="back-link" href="../index.html#archive-${escapeHtml(slug)}">Back to Archive</a>
+${previousLink}${nextLink}        <div class="reader-top-links">
+          <a class="back-link" href="../index.html#archive-${escapeHtml(slug)}">Back to Archive</a>
+        </div>
         <p class="eyebrow">reading room</p>
         <h1 id="poem-title">${escapeHtml(title)}</h1>
         ${subtitle ? `<p class="poem-subtitle">${subtitle}</p>` : ""}
