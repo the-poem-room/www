@@ -30,6 +30,7 @@ const fontSizeKey = "poem-room-font-size";
 const navModeKey = "poem-room-nav-mode";
 const fontSizeOptions = new Set(["small", "normal", "big"]);
 const navModeOptions = new Set(["always-visible", "auto-hide", "hover-top"]);
+const sectionTargetHashes = new Set(["#top", "#purpose", "#bio", "#poems", "#library"]);
 const navRevealZone = 18;
 const mobileNavQuery = window.matchMedia("(max-width: 760px)");
 let lastPointerY = Number.POSITIVE_INFINITY;
@@ -2269,10 +2270,12 @@ scrollToArchiveItemFromHash();
 updateFavouriteButtons();
 handlePendingLibraryTarget();
 initializePoemPageControls();
+handleSectionTargetFromHash();
 
 window.addEventListener("hashchange", () => {
   handleRoute();
   scrollToArchiveItemFromHash();
+  handleSectionTargetFromHash();
 });
 
 if (collectionForm) {
@@ -2290,7 +2293,7 @@ if (readerClose && reader) {
   });
 }
 
-function scrollToSectionTarget(hash) {
+function scrollToSectionTarget(hash, { updateHistory = true } = {}) {
   if (!siteHeader) {
     return;
   }
@@ -2308,11 +2311,25 @@ function scrollToSectionTarget(hash) {
     return;
   }
 
-  const targetTop = window.scrollY + section.getBoundingClientRect().top;
+  const navMode = document.documentElement.dataset.navMode;
+  const headerOffset = navMode === "always-visible" ? siteHeader.offsetHeight : 0;
+  const targetTop = window.scrollY + section.getBoundingClientRect().top - headerOffset;
 
-  window.history.pushState(null, "", hash);
+  if (updateHistory) {
+    window.history.pushState(null, "", hash);
+  }
   handleRoute();
   window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
+}
+
+function handleSectionTargetFromHash() {
+  const hash = decodeURIComponent(window.location.hash || "");
+
+  if (!sectionTargetHashes.has(hash)) {
+    return;
+  }
+
+  scrollToSectionTarget(hash, { updateHistory: false });
 }
 
 sectionJumpLinks.forEach((link) => {
