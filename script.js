@@ -1398,7 +1398,12 @@ desire.`,
       "*— Lilith*",
     ],
   },
-  { title: "Split-Screen World" },
+  {
+    title: "Split-Screen World",
+    lines: [
+      "Two rectangles of glass,\nstacked one on top of the other—\nyour half and mine.\nThe TV hums like a campfire,\ncasting mountain light across our living room.\n\nWe built our home into the cliffs,\nwindows cut in stone\nlike watchful eyes\nover the blocky valleys.\nA cobblestone staircase spiralled\ndown to the little town\nwe made from nothing—\noak doors creaking\nas we pushed them open,\ntorches swaying in their pixel wind.\n\nWheat grew slow in our square plots,\nrows neat under our care,\nno redstone, no automation—\njust the rhythm of hands,\nhoe striking dirt,\nseeds placed one by one.\n\nI can still see your smile\nwhen I baked you a cake—\nour own small joke,\nfunnier each time—\nstill hear rain patter\non our spruce-slab roof,\nstill feel the weight of the controller\nand the quiet comfort of knowing\nthat whatever the Creepers took,\nwe would rebuild.\n\nSomewhere,\non a save file sleeping in a dusty hard drive,\nour mountain house waits—\ntorches still burning,\nwheat still swaying,\nour blocky selves\nforever side by side.\n\n— Lilith",
+    ],
+  },
   { title: "Spoonful" },
   { title: "Taking Off the Label" },
   { title: "Technoblade Never Dies" },
