@@ -4118,6 +4118,34 @@ while things touch.`,
     ],
   },
   {
+    title: "Two Shores",
+    lines: [
+      {
+        text: `Between the ache to drift and need to stay,
+I float where silence meets the edge of day.`,
+        className: "poem-stanza--italic",
+      },
+      `You ask for all; I give you what I can—
+a breath, a glance, a hand to feel and more.
+But part of me still haunts a distant land,
+where solitude and hunger claim the shore.`,
+      `You light the quiet room, yet still I chase
+the spark of something built alone, apart.
+Some nights I breathe and write in my own space,
+but miss the shape of you within my heart.`,
+      `I crave the weightless climb; the dream unshared,
+the version of myself that stands alone.
+Yet when you hold me still, I'm unprepared
+to find your quiet touch feels just like home.`,
+      {
+        text: `So let me walk, and seek what's true and new—
+but now: *my steps still long to lead to you*`,
+        className: "poem-stanza--indented",
+      },
+      `— Lilith`,
+    ],
+  },
+  {
     title: "Unassigned",
     lines: [
       `There's so much love
