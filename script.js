@@ -2197,7 +2197,53 @@ wild, deliberate, immense.`,
       `— Lilith`,
     ],
   },
-  { title: "The Goldbergs, Everywhere-" },
+  {
+    title: "The Goldbergs, Everywhere-",
+    lines: [
+      `Is it the ink,
+delicate as a spider's geometry,
+stretched across the page—
+each black dot a promise of sound
+that never fully exists?`,
+      `Is it the thought
+inside Bach's head
+on some long-forgotten Leipzig morning,
+his fingers ghosting a keyboard
+that exists only in his mind,
+hearing the aria before it was real?`,
+      `Is it Glenn Gould at twenty-two,
+tapping his foot
+and humming in a key all his own,
+or Glenn Gould, nearly fifty,
+the hum lower, the silences longer,
+as if the years had learned the notes too—
+or perhaps learned a different piece entirely?`,
+      `Is it Angela Hewitt's poise,
+András Schiff's quiet smile,
+Dinnerstein's sigh at the cadence,
+Perahia's patience between variations—
+each one an argument with the same text,
+each one swearing they've met the truth,
+each one naming a different thing?`,
+      `Perhaps it is not the dots,
+nor the fingers,
+nor the air vibrating between your ears.`,
+      `Perhaps the Goldbergs are
+a shape made of all their shapes,
+or of none at all—
+a link of ink you cannot hold,
+a hum you cannot record,
+a hand you cannot see playing.`,
+      `And if you take away
+the page, the mind, the instrument, the sound—
+what is left?`,
+      `Only the pause
+before the first note is struck,
+and the knowing
+something will begin.`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Good Teacher" },
   { title: "The Light Changes Key" },
   { title: "The Misinformation Olympics" },
