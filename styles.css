@@ -1355,6 +1355,15 @@ h3 {
   white-space: nowrap;
 }
 
+html[data-font-size="big"] .featured-collections-section .section-heading {
+  grid-template-columns: 1fr;
+  gap: clamp(18px, 3vw, 32px);
+}
+
+html[data-font-size="big"] #featured-collections-title {
+  white-space: normal;
+}
+
 .featured-collections-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
