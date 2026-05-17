@@ -3409,7 +3409,73 @@ just breath in the margins and a small, certain note:
       `— Lilith`,
     ],
   },
-  { title: "tolerate" },
+  {
+    title: "tolerate",
+    lines: [
+      `tolerate is an ugly word.
+it chews on itself.
+it stares through glass and calls it empathy.`,
+      `accept, though—
+that one breathes.
+that one smells of rain and static electricity.
+it doesn't ask the air for permission.`,
+      `but—
+what if the air burns?`,
+      `I tell myself: be open
+listen.
+no, not like that—
+listen like a scientist dissecting kindness.`,
+      `in theory,
+I could discuss the ethics of pain
+while someone screams.
+in theory,
+I could find beauty
+in the architecture of cruelty.`,
+      `but theory drips when held too tightly.
+and the scream becomes a language
+I cannot mistranslate.`,
+      `tolerate.
+the world keeps crawling back.
+it smells like disinfectant,
+like a peace treaty written in smog.`,
+      `I don't want to tolerate.
+I want to accept the chaos of existing—
+to bow to difference
+without bowing to harm.`,
+      `(you can't, says a voice.
+you must draw lines.)`,
+      `so I do.
+I say: murder is wrong.
+freedom is sacred.
+autonomy, non-negotiable.
+I mean it.
+and I hate that I mean it
+with the same fervour 
+I hate the word tolerate.`,
+      `ethical emotivism—
+a nice label
+for a heart that argues with itself.`,
+      `sometimes I imagine
+morality as an organ humming in my chest,
+detuned, self-aware.
+it keeps playing the wrong note
+and calling it compassion.`,
+      `I want to be kind.
+I want to be right.
+I want to stop wanting both.`,
+      `but the truth is—
+different doesn't need my consent.
+the world will go on fracturing
+whether I forgive it or not.`,
+      `so I practice acceptance,
+not of all things,
+but of this:
+that I am not the centre
+and still,
+I burn like one.`,
+      `— Lilith`,
+    ],
+  },
   { title: "Too Much Company" },
   { title: "Trying Not to Disappear" },
   { title: "Trying to Bite Your Own Teeth" },
