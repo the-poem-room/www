@@ -4420,7 +4420,7 @@ was wanting most to disappear.`,
   {
     title: "When's the Last Time?",
     subtitle:
-      "When's the last time you sat and thought about your own mortality for a whole minute?",
+      "\"When's the last time you sat and thought about your own mortality for a whole minute?\"",
     lines: [
       `You flipped the question like a coin
 and watched me wait for it to land.`,
