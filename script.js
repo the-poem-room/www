@@ -4345,7 +4345,51 @@ the river moves.`,
       `— Lilith`,
     ],
   },
-  { title: "Where Is the Triangle?" },
+  {
+    title: "Where Is the Triangle?",
+    lines: [
+      `I close my eyes,
+and there it is—
+three sides behaving perfectly,
+sharper than reason itself.`,
+      `No chalk, no light,
+no whisper of graphite—
+no dust, not trace,
+just a thought-place.`,
+      `It floats in the room behind my eyes,
+a ghost that knows geometry.`,
+      `If I rotate it,
+nothing in my skull moves.
+If I stretch one side,
+the air stays calm.
+If I split it in two:
+no scissors, no sound.`,
+      `So where is it?
+Not in the brain's warm maze,
+not outside,
+balanced on the lip of a ruler.`,
+      `It lives in a nowhere
+that feels like somewhere—
+where silence sketches outlines,
+where absence hums with meaning,
+where thought forgets its boundaries
+and still knows what it's seeing.`,
+      `Between the seen and the unseen—
+a shimmer of design—
+the triangle sit quietly,
+pretending to be mine.`,
+      `Descartes said *clear and distinct*,
+but even clarity has a shadow:
+what shape does thought have
+when it isn't thinking?`,
+      `Perhaps the triangle is hiding there—
+not drawn,
+not seen,
+just *possible*,
+and impossibly real.`,
+      `— Lilith`,
+    ],
+  },
   {
     title: "What the Hand Remembers",
     lines: [
