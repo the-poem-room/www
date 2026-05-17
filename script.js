@@ -2,6 +2,9 @@ const themeToggle = document.querySelector("[data-theme-toggle]");
 const archiveSearch = document.querySelector("[data-archive-search]");
 const archiveSearchStatus = document.querySelector("[data-archive-search-status]");
 const archiveSearchResults = document.querySelector("[data-archive-search-results]");
+const archiveTextSearch = document.querySelector("[data-archive-text-search]");
+const archiveTextSearchStatus = document.querySelector("[data-archive-text-search-status]");
+const archiveTextSearchResults = document.querySelector("[data-archive-text-search-results]");
 const archiveEmpty = document.querySelector("[data-archive-empty]");
 const archiveList = document.querySelector("[data-archive-list]");
 const reader = document.querySelector("#poem-reader");
@@ -4178,6 +4181,8 @@ function renderArchive() {
     item.id = `archive-${slug}`;
     item.dataset.poemSlug = slug;
     item.dataset.searchValue = normalizeArchiveSearchValue(poem.title || "");
+    item.dataset.textSearchValue = buildArchiveTextSearchValue(poem);
+    item.dataset.poemSubtitle = poem.subtitle || "";
 
     const link = document.createElement("a");
     link.href = `Poems/${slug}.html`;
@@ -4197,6 +4202,41 @@ function normalizeArchiveSearchValue(value) {
     .replace(/[^a-z0-9]+/g, "");
 }
 
+function stripArchiveFormatting(value) {
+  return String(value || "")
+    .replace(/\*\*(.*?)\*\*/g, "$1")
+    .replace(/\*(.*?)\*/g, "$1")
+    .replace(/__(.*?)__/g, "$1")
+    .replace(/_(.*?)_/g, "$1")
+    .replace(/`(.*?)`/g, "$1");
+}
+
+function normalizeArchiveTextSearchValue(value) {
+  return stripArchiveFormatting(value)
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[’‘‛]/g, "'")
+    .replace(/[“”„‟]/g, '"')
+    .replace(/[–—―]/g, "-")
+    .replace(/…/g, "...")
+    .replace(/\u00a0/g, " ")
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function buildArchiveTextSearchValue(poem) {
+  const parts = [poem.title || "", poem.subtitle || ""];
+
+  if (Array.isArray(poem.lines)) {
+    poem.lines.forEach((line) => {
+      parts.push(String(line || ""));
+    });
+  }
+
+  return normalizeArchiveTextSearchValue(parts.join(" "));
+}
+
 function matchesArchiveSearchPrefix(query, candidate) {
   if (!query) {
     return true;
@@ -4211,6 +4251,28 @@ function matchesArchiveSearchAnywhere(query, candidate) {
   }
 
   return Boolean(candidate) && candidate.includes(query);
+}
+
+function appendArchiveSearchResult(resultList, href, title, subtitle = "") {
+  const resultItem = document.createElement("li");
+  const result = document.createElement("a");
+  result.className = "archive-search-result";
+  result.href = href;
+
+  const resultTitle = document.createElement("span");
+  resultTitle.className = "archive-search-result-title";
+  resultTitle.textContent = title;
+  result.append(resultTitle);
+
+  if (subtitle) {
+    const resultSubtitle = document.createElement("span");
+    resultSubtitle.className = "archive-search-result-subtitle";
+    resultSubtitle.textContent = subtitle;
+    result.append(resultSubtitle);
+  }
+
+  resultItem.append(result);
+  resultList.append(resultItem);
 }
 
 function updateArchiveSearchState() {
@@ -4264,17 +4326,51 @@ function updateArchiveSearchState() {
       matches.forEach((item) => {
         const slug = item.dataset.poemSlug || "";
         const title = item.querySelector("a")?.textContent || slug;
-        const resultItem = document.createElement("li");
-        const result = document.createElement("a");
-        result.className = "archive-search-result";
-        result.href = `#archive-${slug}`;
-        result.textContent = title;
-        resultItem.append(result);
-        resultList.append(resultItem);
+        const subtitle = item.dataset.poemSubtitle || "";
+        appendArchiveSearchResult(resultList, `#archive-${slug}`, title, subtitle);
       });
 
       archiveSearchResults.append(resultList);
     }
+  }
+}
+
+function updateArchiveTextSearchState() {
+  if (!archiveList || !archiveTextSearchStatus || !archiveTextSearchResults) {
+    return;
+  }
+
+  const query = normalizeArchiveTextSearchValue(archiveTextSearch?.value || "");
+  const items = Array.from(archiveList.querySelectorAll(".archive-item"));
+  const matches = query
+    ? items.filter((item) => (item.dataset.textSearchValue || "").includes(query))
+    : [];
+  const matchCount = matches.length;
+  const totalCount = items.length;
+  const hasQuery = Boolean(query);
+
+  archiveTextSearchStatus.textContent = hasQuery
+    ? matchCount > 0
+      ? `${matchCount} match${matchCount === 1 ? "" : "es"} found.`
+      : "No poems match that text search."
+    : `Search words, phrases, punctuation, or letters across ${totalCount} poem${totalCount === 1 ? "" : "s"} in the Archive.`;
+
+  archiveTextSearchResults.hidden = !(hasQuery && matchCount > 0);
+  archiveTextSearchResults.innerHTML = "";
+
+  if (hasQuery && matchCount > 0) {
+    const resultList = document.createElement("ul");
+    resultList.className = "archive-search-results-list";
+    resultList.setAttribute("role", "list");
+
+    matches.forEach((item) => {
+      const slug = item.dataset.poemSlug || "";
+      const title = item.querySelector("a")?.textContent || slug;
+      const subtitle = item.dataset.poemSubtitle || "";
+      appendArchiveSearchResult(resultList, `Poems/${slug}.html`, title, subtitle);
+    });
+
+    archiveTextSearchResults.append(resultList);
   }
 }
 
@@ -4286,6 +4382,16 @@ function initializeArchiveSearch() {
   archiveSearch.addEventListener("input", updateArchiveSearchState);
   archiveSearch.addEventListener("search", updateArchiveSearchState);
   updateArchiveSearchState();
+}
+
+function initializeArchiveTextSearch() {
+  if (!archiveTextSearch) {
+    return;
+  }
+
+  archiveTextSearch.addEventListener("input", updateArchiveTextSearchState);
+  archiveTextSearch.addEventListener("search", updateArchiveTextSearchState);
+  updateArchiveTextSearchState();
 }
 
 function scrollToArchiveItemFromHash() {
@@ -5308,6 +5414,7 @@ function initializePoemPageControls() {
 
 renderArchive();
 initializeArchiveSearch();
+initializeArchiveTextSearch();
 renderLibrary();
 handleRoute();
 scrollToArchiveItemFromHash();

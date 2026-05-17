@@ -291,12 +291,12 @@
 
       <section class="archive-panel" aria-label="Poem archive">
         <div class="archive-search">
-          <label class="archive-search-label" for="archive-search">Search poems</label>
+          <label class="archive-search-label" for="archive-search">Search titles</label>
           <input
             id="archive-search"
             class="archive-search-input"
             type="search"
-            placeholder="Search the archive"
+            placeholder="Search poem titles"
             autocomplete="off"
             spellcheck="false"
             data-archive-search
@@ -309,6 +309,26 @@
             aria-live="polite"
           ></p>
           <div class="archive-search-results" data-archive-search-results hidden></div>
+        </div>
+        <div class="archive-search archive-search--text">
+          <label class="archive-search-label" for="archive-text-search">Search poem text</label>
+          <input
+            id="archive-text-search"
+            class="archive-search-input"
+            type="search"
+            placeholder="Search words, phrases, punctuation, or letters"
+            autocomplete="off"
+            spellcheck="false"
+            data-archive-text-search
+            aria-describedby="archive-text-search-status"
+          >
+          <p
+            class="archive-search-status"
+            id="archive-text-search-status"
+            data-archive-text-search-status
+            aria-live="polite"
+          ></p>
+          <div class="archive-search-results" data-archive-text-search-results hidden></div>
         </div>
         <ol class="archive-list" data-archive-list></ol>
         <p class="archive-empty" data-archive-empty hidden>No poems match your search.</p>
