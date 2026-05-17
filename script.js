@@ -1852,7 +1852,49 @@ and saved me anyway.`,
       `— Lilith`,
     ],
   },
-  { title: "The Cruella Within" },
+  {
+    title: "The Cruella Within",
+    lines: [
+      `She runs her fingers through the fur.
+Each hairi holds the trace of warmth.
+The mirror watches
+without judgment.
+Beauty was never kind.`,
+      `The room is patterned
+in black and white —
+a moral split mistaken for design.
+Elegance sewn across the evidence.
+The coat fits.
+The silence fits better.`,
+      `I've worn the same comfort,
+though mine came packaged,
+not skinned.
+Cotton bled into rivers,
+plastic outliving its makers,
+a parcel on my doorstep
+someone else paid for.`,
+      `I don't eat flesh anymore,
+but my shoes remember it.
+My money sleeps in a bank
+while hunger keeps moving.
+Every choice I make
+leaves a smaller wound somewhere else,
+far enough that I don't feel it.`,
+      `No one lives untouched.
+Even breath
+borrows from what it cannot see.
+Still, she keeps living for luxury,
+others only for living.
+Theh distance matters,
+though it never absolves.`,
+      `Cruella is not the monster.
+She is the mirror.
+And the mirror,
+if you look long enough,
+learns your name.`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Daily Whine" },
   { title: "The End" },
   { title: "The Experience Machine" },
