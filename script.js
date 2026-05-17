@@ -1,6 +1,7 @@
 const themeToggle = document.querySelector("[data-theme-toggle]");
 const archiveSearch = document.querySelector("[data-archive-search]");
 const archiveSearchStatus = document.querySelector("[data-archive-search-status]");
+const archiveSearchResults = document.querySelector("[data-archive-search-results]");
 const archiveEmpty = document.querySelector("[data-archive-empty]");
 const archiveList = document.querySelector("[data-archive-list]");
 const reader = document.querySelector("#poem-reader");
@@ -2275,8 +2276,30 @@ function normalizeArchiveSearchValue(value) {
     .normalize("NFKD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, " ")
-    .trim();
+    .replace(/[^a-z0-9]+/g, "");
+}
+
+function matchesArchiveSearch(query, candidate) {
+  if (!query) {
+    return true;
+  }
+
+  if (!candidate) {
+    return false;
+  }
+
+  let candidateIndex = 0;
+
+  for (const char of candidate) {
+    if (char === query[candidateIndex]) {
+      candidateIndex += 1;
+      if (candidateIndex === query.length) {
+        return true;
+      }
+    }
+  }
+
+  return false;
 }
 
 function updateArchiveSearchState() {
@@ -2285,24 +2308,49 @@ function updateArchiveSearchState() {
   }
 
   const query = normalizeArchiveSearchValue(archiveSearch?.value || "");
-  let visibleCount = 0;
+  const matches = [];
 
   archiveList.querySelectorAll(".archive-item").forEach((item) => {
     const searchable = item.dataset.searchValue || "";
-    const matches = !query || searchable.includes(query);
-    item.hidden = !matches;
-    if (matches) {
-      visibleCount += 1;
+    const isMatch = matchesArchiveSearch(query, searchable);
+    item.hidden = !isMatch;
+    if (isMatch) {
+      matches.push(item);
     }
   });
 
   const hasQuery = Boolean(query);
-  archiveEmpty.hidden = !(hasQuery && visibleCount === 0);
+  const matchCount = matches.length;
+
+  archiveEmpty.hidden = !(hasQuery && matchCount === 0);
   archiveSearchStatus.textContent = hasQuery
-    ? visibleCount === 0
-      ? "No poems match."
-      : `${visibleCount} poem${visibleCount === 1 ? "" : "s"} found.`
+    ? `${matchCount} poem${matchCount === 1 ? "" : "s"} found.`
     : "";
+
+  if (archiveSearchResults) {
+    archiveSearchResults.hidden = !(hasQuery && matchCount > 0);
+    archiveSearchResults.innerHTML = "";
+
+    if (hasQuery && matchCount > 0) {
+      const resultList = document.createElement("ul");
+      resultList.className = "archive-search-results-list";
+      resultList.setAttribute("role", "list");
+
+      matches.forEach((item) => {
+        const slug = item.dataset.poemSlug || "";
+        const title = item.querySelector("a")?.textContent || slug;
+        const resultItem = document.createElement("li");
+        const result = document.createElement("a");
+        result.className = "archive-search-result";
+        result.href = `#archive-${slug}`;
+        result.textContent = title;
+        resultItem.append(result);
+        resultList.append(resultItem);
+      });
+
+      archiveSearchResults.append(resultList);
+    }
+  }
 }
 
 function initializeArchiveSearch() {

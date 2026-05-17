@@ -937,6 +937,58 @@ h3 {
   font-size: var(--menu-text-size);
 }
 
+.archive-search-results {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+  background: color-mix(in srgb, var(--panel-solid) 80%, transparent);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--soft) 4%, transparent);
+}
+
+.archive-search-results[hidden] {
+  display: none;
+}
+
+.archive-search-results-list {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  max-height: 18rem;
+  overflow: auto;
+  list-style: none;
+}
+
+.archive-search-results-list > li {
+  margin: 0;
+}
+
+.archive-search-result {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 7px 10px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: var(--archive-title-size);
+  line-height: 1.24;
+  text-decoration: none;
+  border-radius: 10px;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.archive-search-result:hover,
+.archive-search-result:focus-visible {
+  color: var(--soft);
+  background: color-mix(in srgb, var(--pink) 12%, transparent);
+  transform: translateX(2px);
+}
+
 .archive-empty {
   margin: 16px auto 0;
   color: var(--muted);
