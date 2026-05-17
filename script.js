@@ -1505,13 +1505,13 @@ too loud,
 too bright,
 too unbuffered.`,
       `**Noun:** autistic
-Still.`,
+*Still.*`,
       `**Verb:** noticing until the room shows its cracks.`,
       `**Noun:** gender.
-Still.`,
+*Still.*`,
       `**Verb:** becoming despite the grid.`,
       `**Noun:** race.
-Still.`,
+*Still.*`,
       `**Verb:** surviving systems that prefer stillness.`,
       `Forms prefer **nouns**.
 Because **verbs** **move** too much.
