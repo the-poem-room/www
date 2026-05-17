@@ -5173,7 +5173,7 @@ const featuredCollections = [
   {
     title: "—no walls",
     description:
-      "Poems that move through selfhood, language, uncertainty, and the spaces between categories.",
+      "Neurodivergent selfhood, language, and time expanding beyond fixed walls.",
     poems: [
       "The Way of No Lesson",
       "Temporary Coördinates",
