@@ -2785,7 +2785,69 @@ A map drawn from data,
       `— Lilith`,
     ],
   },
-  { title: "The Second Zapruder" },
+  {
+    title: "The Second Zapruder",
+    lines: [
+      `The podium grins,
+its plastic smile lit fluorescent white.
+"Do you know how many mass shooters there have been in America over the last 10 years?"
+he's asked.
+He leans into the mic—
+"Counting or not counting gang violence?" he quips,
+and before the applause can land,
+the punctuation arrives.`,
+      `A sound sharper than his slogans.
+Irony delivered faster than thought.
+The banner behind him trembles,
+patriotic fabric swallowing his shadow whole.`,
+      `Phones rise like communion wafers,
+history live-streamed.
+Hearts and fire emojis flicker,
+digital rosaries clutched in panic and glee.
+Already, the clip is immortal—
+frame by frame dissected,
+the Zapruder film of our generation,
+but drained of gravity,
+bloated with absurdity.`,
+      `And while his body chools behind the podium,
+across town glass shatters in a classroom.
+Children press against the floor,
+their backpacks blooming crimson.
+One minute, two headlines,
+but only one story commands the spotlight.`,
+      `How American:
+that bullets finished sentences
+debate never could.
+How predictable:
+that extremism's sharpest dialect
+is still gunfire.`,
+      `But hear this clearly:
+Charlie Kirk was horrid—
+a man who traded empathy for venom,
+who feasted on division.
+His death is not justice.
+It is a mirror,
+showing us what we have become:
+a country rehearsed in killing,
+fluent in shrugging,
+drunk on the myth that violence
+is a form of truth.`,
+      `The tragedy is not his silence,
+but our acceptance.
+Not the fall of one despicable man,
+but the ritual of blood answering speech,
+of children's screams dimmed beneath applause.`,
+      `Another villain.
+Another victim.
+Another classroom erased.
+And the country shrugs again,
+as if the anthem itself
+were scored in gunfire.`,
+      `The blood dries quickly,
+but the irony does not.`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Stars Said So" },
   { title: "The Third Room" },
   { title: "The Unseen Wall" },
