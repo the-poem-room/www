@@ -1902,25 +1902,25 @@ learns your name.`,
 Where facts take a nap and opinions opine,
 Where "liberty" means that you hurt your mouth,
 And truth takes a train going rapidly south.`,
-      `*Ben Shapiro* talks fast to conceal the half-baked,
+      `**Ben Shapiro** talks fast to conceal the half-baked,
 As if logic means much when compassion's at stake.
 His voice like a squireel with something to prove,
 He'll outtalk your heartbeat, but not make you move.
 Hey says, "Facts don't care"—but here's what is odd:
 His "facts" all align with the views of his God.`,
-      `*Matt Walsh*, self-declared what-a-woman-is king,
+      `**Matt Walsh**, self-declared what-a-woman-is king,
 Wears gender like armour and bigotry bling.
 He's bravely crusading through bathrooms and skirts,
 While dodging real problems where someone gets hurt.
 A man so obsessed with who pees where and when—
 You'd think he was twelve. Or eleven. Or ten.`,
-      `*Michael Knowles* wants your novels all banned,
+      `**Michael Knowles** wants your novels all banned,
 Unless they were ghostwritten by Ayn Rand.
 He smiles like a priest at a book-burning fair,
 Preaching free speech, but don't you dare swear.
 He'll quote Cicero, Plato, and Reagan,
 While stirring a pot that's thoroughly pagan.`,
-      `*Charlie Kirk*, with a forehead of awe,
+      `**Charlie Kirk**, with a forehead of awe,
 Declares college evil, then sues with the law.
 He tweets with the fury of twelve caffeinated
 Boomers whose timelines are race-saturated.
