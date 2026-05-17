@@ -2,9 +2,7 @@ const themeToggle = document.querySelector("[data-theme-toggle]");
 const archiveSearch = document.querySelector("[data-archive-search]");
 const archiveSearchStatus = document.querySelector("[data-archive-search-status]");
 const archiveSearchResults = document.querySelector("[data-archive-search-results]");
-const archiveTextSearch = document.querySelector("[data-archive-text-search]");
-const archiveTextSearchStatus = document.querySelector("[data-archive-text-search-status]");
-const archiveTextSearchResults = document.querySelector("[data-archive-text-search-results]");
+const archiveSearchModeButtons = document.querySelectorAll("[data-archive-search-mode-option]");
 const archiveEmpty = document.querySelector("[data-archive-empty]");
 const archiveList = document.querySelector("[data-archive-list]");
 const reader = document.querySelector("#poem-reader");
@@ -40,10 +38,12 @@ const fontSizeKey = "poem-room-font-size";
 const navModeKey = "poem-room-nav-mode";
 const lineNumbersKey = "poem-room-line-numbers";
 const miniMapKey = "poem-room-mini-map";
+const archiveSearchModeKey = "poem-room-archive-search-mode";
 const fontSizeOptions = new Set(["small", "normal", "big"]);
 const navModeOptions = new Set(["always-visible", "auto-hide", "hover-top"]);
 const lineNumberOptions = new Set(["show", "hide"]);
 const miniMapOptions = new Set(["show", "hide"]);
+const archiveSearchModeOptions = new Set(["titles", "poem-text"]);
 const sectionTargetHashes = new Set(["#top", "#purpose", "#bio", "#poems", "#library"]);
 const navRevealZone = 18;
 const mobileNavQuery = window.matchMedia("(max-width: 760px)");
@@ -4275,18 +4275,71 @@ function appendArchiveSearchResult(resultList, href, title, subtitle = "") {
   resultList.append(resultItem);
 }
 
+let archiveSearchMode = "titles";
+
+function updateArchiveSearchModeButtons(mode) {
+  archiveSearchModeButtons.forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.archiveSearchModeOption === mode));
+  });
+}
+
+function updateArchiveSearchPlaceholder(mode) {
+  if (!archiveSearch) {
+    return;
+  }
+
+  archiveSearch.placeholder =
+    mode === "poem-text"
+      ? "Search words, phrases, punctuation, or letters"
+      : "Search poem titles";
+}
+
+function getSavedArchiveSearchMode() {
+  const savedMode = localStorage.getItem(archiveSearchModeKey);
+  return archiveSearchModeOptions.has(savedMode) ? savedMode : "titles";
+}
+
+function setArchiveSearchMode(mode) {
+  archiveSearchMode = archiveSearchModeOptions.has(mode) ? mode : "titles";
+  localStorage.setItem(archiveSearchModeKey, archiveSearchMode);
+  updateArchiveSearchModeButtons(archiveSearchMode);
+  updateArchiveSearchPlaceholder(archiveSearchMode);
+  updateArchiveSearchState();
+}
+
 function updateArchiveSearchState() {
   if (!archiveList || !archiveSearchStatus || !archiveEmpty) {
     return;
   }
 
-  const query = normalizeArchiveSearchValue(archiveSearch?.value || "");
+  const rawQuery = archiveSearch?.value || "";
+  const query =
+    archiveSearchMode === "poem-text"
+      ? normalizeArchiveTextSearchValue(rawQuery)
+      : normalizeArchiveSearchValue(rawQuery);
   const items = Array.from(archiveList.querySelectorAll(".archive-item"));
   const prefixMatches = [];
   const fallbackMatches = [];
+  const textMatches = [];
 
   items.forEach((item) => {
-    const searchable = item.dataset.searchValue || "";
+    const searchable =
+      archiveSearchMode === "poem-text"
+        ? item.dataset.textSearchValue || ""
+        : item.dataset.searchValue || "";
+
+    if (!query) {
+      textMatches.push(item);
+      return;
+    }
+
+    if (archiveSearchMode === "poem-text") {
+      if (searchable.includes(query)) {
+        textMatches.push(item);
+      }
+      return;
+    }
+
     const prefixMatch = matchesArchiveSearchPrefix(query, searchable);
     const fallbackMatch = !prefixMatch && matchesArchiveSearchAnywhere(query, searchable);
 
@@ -4298,9 +4351,14 @@ function updateArchiveSearchState() {
   });
 
   const hasQuery = Boolean(query);
-  const matches = hasQuery
-    ? (prefixMatches.length > 0 ? prefixMatches : fallbackMatches)
-    : items;
+  const matches =
+    !hasQuery
+      ? items
+      : archiveSearchMode === "poem-text"
+        ? textMatches
+        : prefixMatches.length > 0
+          ? prefixMatches
+          : fallbackMatches;
   const matchSet = new Set(matches);
   const matchCount = matches.length;
   const totalCount = items.length;
@@ -4335,63 +4393,33 @@ function updateArchiveSearchState() {
   }
 }
 
-function updateArchiveTextSearchState() {
-  if (!archiveList || !archiveTextSearchStatus || !archiveTextSearchResults) {
-    return;
-  }
-
-  const query = normalizeArchiveTextSearchValue(archiveTextSearch?.value || "");
-  const items = Array.from(archiveList.querySelectorAll(".archive-item"));
-  const matches = query
-    ? items.filter((item) => (item.dataset.textSearchValue || "").includes(query))
-    : [];
-  const matchCount = matches.length;
-  const totalCount = items.length;
-  const hasQuery = Boolean(query);
-
-  archiveTextSearchStatus.textContent = hasQuery
-    ? matchCount > 0
-      ? `${matchCount} match${matchCount === 1 ? "" : "es"} found.`
-      : "No poems match that text search."
-    : `Search words, phrases, punctuation, or letters across ${totalCount} poem${totalCount === 1 ? "" : "s"} in the Archive.`;
-
-  archiveTextSearchResults.hidden = !(hasQuery && matchCount > 0);
-  archiveTextSearchResults.innerHTML = "";
-
-  if (hasQuery && matchCount > 0) {
-    const resultList = document.createElement("ul");
-    resultList.className = "archive-search-results-list";
-    resultList.setAttribute("role", "list");
-
-    matches.forEach((item) => {
-      const slug = item.dataset.poemSlug || "";
-      const title = item.querySelector("a")?.textContent || slug;
-      const subtitle = item.dataset.poemSubtitle || "";
-      appendArchiveSearchResult(resultList, `Poems/${slug}.html`, title, subtitle);
-    });
-
-    archiveTextSearchResults.append(resultList);
-  }
-}
-
 function initializeArchiveSearch() {
   if (!archiveSearch) {
     return;
   }
 
+  updateArchiveSearchModeButtons(archiveSearchMode);
+  updateArchiveSearchPlaceholder(archiveSearchMode);
   archiveSearch.addEventListener("input", updateArchiveSearchState);
   archiveSearch.addEventListener("search", updateArchiveSearchState);
   updateArchiveSearchState();
 }
 
-function initializeArchiveTextSearch() {
-  if (!archiveTextSearch) {
+function initializeArchiveSearchMode() {
+  if (!archiveSearchModeButtons.length) {
     return;
   }
 
-  archiveTextSearch.addEventListener("input", updateArchiveTextSearchState);
-  archiveTextSearch.addEventListener("search", updateArchiveTextSearchState);
-  updateArchiveTextSearchState();
+  archiveSearchMode = getSavedArchiveSearchMode();
+  updateArchiveSearchModeButtons(archiveSearchMode);
+  updateArchiveSearchPlaceholder(archiveSearchMode);
+
+  archiveSearchModeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      setArchiveSearchMode(button.dataset.archiveSearchModeOption || "titles");
+      archiveSearch?.focus();
+    });
+  });
 }
 
 function scrollToArchiveItemFromHash() {
@@ -5413,8 +5441,8 @@ function initializePoemPageControls() {
 }
 
 renderArchive();
+initializeArchiveSearchMode();
 initializeArchiveSearch();
-initializeArchiveTextSearch();
 renderLibrary();
 handleRoute();
 scrollToArchiveItemFromHash();
