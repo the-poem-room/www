@@ -1724,7 +1724,134 @@ and does not kneel.`,
       `— Lilith`,
     ],
   },
-  { title: "The Butterfly's Lover" },
+  {
+    title: "The Butterfly's Lover",
+    subtitle: "after Lorenz, after you",
+    lines: [
+      `It didn't begin with love.
+Not fate. Not fate.
+Just a staggered queue.
+Just air being air.
+A door left ajar.
+A half-stirred coffee.
+A cloud dragging too slowly over a supermarket car park.
+The decision to wear blue instead of green.
+A gust of wind rerouted by scaffolding.
+A mother forgetting her keys.
+A boy choosing to walk.`,
+      `It began with evrything
+that didn't know
+it was beginning us.`,
+      `You,
+three streets away,
+looked up at a sound you'll never remember.
+I knelt to tie my shoe;
+someone crossed instead of me.
+The weather recalculated.
+The system found a new attractor
+in the sliver of space between
+your path and mine.`,
+      `We like to think
+love is a clean story—
+two dots,
+connected by desire and timing.
+But desire is just data.
+Timing is turbulence.
+And the dots
+have always been infinite—
+looping in fractals,
+never settling,
+patterns nearly resolving
+then splitting again.`,
+      `I have loved you
+through weather reports
+and missed buses,
+through forgotten umbrellas
+and delays at junction four,
+through the soft migration
+of monarchs
+and the tremble of a coin
+landing on its edge.`,
+      `Chaos means the world cannot be rewound.
+It means a shift in the sixth decimal
+can tilt a system
+toward drought,
+toward music,
+toward you.
+It means feedback loops
+where a sigh
+in an elevator
+becomes a revolution.
+A glance
+becomes a war.
+A breath
+becomes a sonata.
+A blush
+becomes a decade.`,
+      `You sat beside me
+on a bench
+that didn't know it would be holy.
+You laughed—
+like a wind chime
+finally catching the note
+it had waited for all winter.`,
+      `When your fingers brushed mine,
+the cuture collapsed inward.
+Somewhere,
+a glacier moved a fraction slower.
+A fire delayed its ignition.
+A stranger picked up the phone.
+A child was spared.`,
+      `I only know
+how your palm
+made a cathedral of my hand.
+How your voice
+rewrote my breath
+without asking.
+You are
+the strange attractor
+of my every future.
+I orbit you
+the way tide obeys moon—
+not from love,
+but pull.`,
+      `There are versions of this life
+where you leave the café
+five seconds earlier—
+and I pass the bench alone.
+Versions
+where I never speak,
+where I only dream
+of the echo
+of a laugh
+I never heard.`,
+      `And even in the one
+where the butterfly
+chooses the tulip,
+where the scaffolding holds the wind
+a little longer than it should—
+I like to think
+some part of me
+still turns,
+still waits,
+still knows
+that something,
+somewhere,
+almost began.`,
+      `So I will spend
+every heartbeat I am given
+leaving offerings
+at the altar of every almost—
+
+for the door left ajar,
+for the coin that wobbled,
+for the storm that never came,
+for the butterfly
+that never knew my name
+and saved me anyway.`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Cruella Within" },
   { title: "The Daily Whine" },
   { title: "The End" },
