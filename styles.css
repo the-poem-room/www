@@ -50,9 +50,9 @@
   --section-heading-gap: clamp(22px, 6vw, 68px);
   --featured-collections-heading-columns: minmax(0, 1fr) minmax(0, 1fr);
   --featured-collections-grid-columns: repeat(auto-fit, minmax(320px, 1fr));
-  --featured-collections-grid-gap: clamp(14px, 2vw, 18px);
-  --featured-collections-grid-margin-top: clamp(22px, 3vw, 30px);
-  --featured-collections-card-gap: clamp(14px, 2vw, 18px);
+  --featured-collections-grid-gap: clamp(16px, 2.4vw, 22px);
+  --featured-collections-grid-margin-top: clamp(26px, 3.5vw, 36px);
+  --featured-collections-card-gap: clamp(16px, 2.4vw, 22px);
   --featured-collections-title-whitespace: nowrap;
   --archive-panel-width: 760px;
   --reader-page-width: 980px;
@@ -1406,6 +1406,7 @@ h3 {
 
 .featured-collections-section .section-heading {
   grid-template-columns: var(--featured-collections-heading-columns);
+  gap: clamp(22px, 5vw, 54px);
 }
 
 #featured-collections-title {
@@ -1447,12 +1448,12 @@ h3 {
   margin: 0;
   color: var(--muted);
   font-size: var(--body-copy-size);
-  line-height: 1.52;
+  line-height: 1.58;
 }
 
 .featured-collection-poem-list {
   display: grid;
-  gap: 9px;
+  gap: 11px;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -1461,11 +1462,11 @@ h3 {
 
 .featured-collection-poem-list li {
   display: grid;
-  grid-template-columns: minmax(3.35em, auto) minmax(0, 1fr);
-  gap: 14px;
+  grid-template-columns: minmax(3.45em, auto) minmax(0, 1fr);
+  gap: 16px;
   align-items: start;
-  padding: 0 10px;
-  margin: 0 -10px;
+  padding: 0 12px;
+  margin: 0 -12px;
   border-radius: 7px;
   counter-increment: featured-collection-poem;
   transition:
