@@ -111,6 +111,16 @@ function renderInlineHtml(text) {
   return out;
 }
 
+function isSignatureLine(text) {
+  const trimmed = String(text || "").trim();
+  if (!trimmed) {
+    return false;
+  }
+
+  const unwrapped = trimmed.replace(/^[*_]+/, "").replace(/[*_]+$/, "");
+  return unwrapped.startsWith("— ");
+}
+
 function renderPoemBody(poem) {
   if (!poem.lines || !poem.lines.length) {
     return `<p class="reader-placeholder">Poem text coming soon.</p>`;
@@ -135,19 +145,15 @@ function renderPoemBody(poem) {
       const stanzaText = typeof stanza === "string" ? stanza : String(stanza.text || "");
       const stanzaClassName =
         typeof stanza === "string" ? "" : String(stanza.className || "").trim();
-      const isSignature = index === poem.lines.length - 1 && stanzaText.startsWith("— ");
       const classes = ["poem-stanza"];
 
       if (stanzaClassName) {
         classes.push(...stanzaClassName.split(/\s+/));
       }
 
-      if (isSignature) {
-        classes.push("poem-signature");
-      }
+      const stanzaLines = stanzaText.split("\n");
 
-      const lines = stanzaText
-        .split("\n")
+      const lines = stanzaLines
         .map((line, idx) => {
           if (!String(line || "").trim()) {
             return `              <span class="poem-line poem-line--blank" aria-hidden="true"></span>`;
@@ -155,12 +161,22 @@ function renderPoemBody(poem) {
 
           const rendered = renderInlineHtml(line);
           const content = idx === 0 && isAllCapsHeading(line) ? `<strong>${rendered}</strong>` : rendered;
-          const lineMarkup = `              <span class="poem-line${isSignature ? " poem-line--signature" : ""}">
+          const isSignature =
+            index === poem.lines.length - 1 &&
+            idx === stanzaLines.length - 1 &&
+            isSignatureLine(line);
+          const lineMarkup = isSignature
+            ? `              <span class="poem-line poem-line--signature">
+                <span class="poem-line-content">${content}</span>
+              </span>`
+            : `              <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">${lineNumber}</span>
                 <span class="poem-line-content">${content}</span>
               </span>`;
 
-          lineNumber += 1;
+          if (!isSignature) {
+            lineNumber += 1;
+          }
           return lineMarkup;
         })
         .join("\n");

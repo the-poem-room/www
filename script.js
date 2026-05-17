@@ -2614,6 +2614,16 @@ function isAllCapsHeading(line) {
   return !trimmed.startsWith("—");
 }
 
+function isSignatureLine(line) {
+  const trimmed = String(line || "").trim();
+  if (!trimmed) {
+    return false;
+  }
+
+  const unwrapped = trimmed.replace(/^[*_]+/, "").replace(/[*_]+$/, "");
+  return unwrapped.startsWith("— ");
+}
+
 function createPoemLineElement(lineText, lineNumber, { isSignature = false, isHeading = false } = {}) {
   const trimmedLine = String(lineText || "");
 
@@ -2630,11 +2640,6 @@ function createPoemLineElement(lineText, lineNumber, { isSignature = false, isHe
     line.classList.add("poem-line--signature");
   }
 
-  const number = document.createElement("span");
-  number.className = "poem-line-number";
-  number.setAttribute("aria-hidden", "true");
-  number.textContent = String(lineNumber);
-
   const content = document.createElement("span");
   content.className = "poem-line-content";
   appendFormattedText(content, trimmedLine);
@@ -2647,7 +2652,15 @@ function createPoemLineElement(lineText, lineNumber, { isSignature = false, isHe
     content.append(strong);
   }
 
-  line.append(number, content);
+  if (!isSignature) {
+    const number = document.createElement("span");
+    number.className = "poem-line-number";
+    number.setAttribute("aria-hidden", "true");
+    number.textContent = String(lineNumber);
+    line.append(number);
+  }
+
+  line.append(content);
   return line;
 }
 
@@ -2669,7 +2682,6 @@ function createPoemBody(poem) {
     const stanzaClassName =
       typeof stanza === "string" ? "" : String(stanza.className || "").trim();
     const paragraph = document.createElement("p");
-    const isSignature = index === poem.lines.length - 1 && stanzaText.startsWith("— ");
 
     paragraph.classList.add("poem-stanza");
 
@@ -2677,18 +2689,23 @@ function createPoemBody(poem) {
       stanzaClassName.split(/\s+/).forEach((className) => paragraph.classList.add(className));
     }
 
-    if (isSignature) {
-      paragraph.classList.add("poem-signature");
-    }
+    const stanzaLines = stanzaText.split("\n");
 
-    stanzaText.split("\n").forEach((line, lineIndex) => {
+    stanzaLines.forEach((line, lineIndex) => {
+      const hasText = Boolean(String(line || "").trim());
+      const isSignature =
+        index === poem.lines.length - 1 &&
+        lineIndex === stanzaLines.length - 1 &&
+        isSignatureLine(line);
+
       paragraph.append(
         createPoemLineElement(line, lineNumber, {
           isSignature,
           isHeading: lineIndex === 0 && isAllCapsHeading(line),
         })
       );
-      if (line.trim()) {
+
+      if (hasText && !isSignature) {
         lineNumber += 1;
       }
     });

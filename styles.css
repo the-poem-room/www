@@ -45,7 +45,7 @@
   --collection-title-size: clamp(1.16rem, 2vw, 1.48rem);
   --collection-poem-size: 1.24rem;
   --reader-placeholder-size: 1.16rem;
-  --poem-line-number-width: 2.25ch;
+  --poem-line-number-width: 3ch;
 }
 
 [data-theme="dark"] {
@@ -94,7 +94,7 @@
   --collection-title-size: clamp(1.05rem, 1.8vw, 1.32rem);
   --collection-poem-size: 1.12rem;
   --reader-placeholder-size: 1.04rem;
-  --poem-line-number-width: 2.05ch;
+  --poem-line-number-width: 2.7ch;
 }
 
 [data-font-size="big"] {
@@ -124,7 +124,7 @@
   --collection-title-size: clamp(1.28rem, 2.2vw, 1.64rem);
   --collection-poem-size: 1.36rem;
   --reader-placeholder-size: 1.24rem;
-  --poem-line-number-width: 2.4ch;
+  --poem-line-number-width: 3.25ch;
 }
 
 * {
@@ -1341,16 +1341,31 @@ body[data-poem-slug="sadboy"] .reader-poem {
 .poem-line-number {
   width: var(--poem-line-number-width);
   color: color-mix(in srgb, var(--muted) 62%, var(--line));
-  font-family: var(--sans);
-  font-size: 0.61em;
-  font-variant-numeric: tabular-nums;
+  font-family: var(--serif);
+  font-size: 0.66em;
+  font-variant-numeric: normal;
+  font-feature-settings: normal;
   line-height: 1.28;
   font-style: normal;
   text-align: right;
-  letter-spacing: 0.02em;
-  transform: translateY(0.05em);
+  letter-spacing: 0;
+  white-space: nowrap;
+  transform: translateY(0.03em);
   user-select: none;
   pointer-events: none;
+}
+
+.poem-line--signature {
+  display: block;
+}
+
+.poem-line--signature .poem-line-content {
+  display: inline-block;
+  font-style: italic;
+}
+
+html[data-line-numbers="show"] .poem-line--signature {
+  margin-left: calc(var(--poem-line-number-width) + 0.5rem);
 }
 
 .poem-line-content {
@@ -1365,10 +1380,6 @@ body[data-poem-slug="sadboy"] .reader-poem {
   font-style: italic;
 }
 
-.poem-signature .poem-line-number {
-  color: color-mix(in srgb, var(--soft) 50%, var(--muted));
-}
-
 .poem-line--blank {
   display: block;
   min-height: 1em;
@@ -1380,6 +1391,10 @@ html[data-line-numbers="hide"] .poem-line {
 
 html[data-line-numbers="hide"] .poem-line-number {
   display: none;
+}
+
+html[data-line-numbers="hide"] .poem-line--signature {
+  margin-left: 0;
 }
 
 .reader-placeholder {
