@@ -5189,14 +5189,18 @@ const featuredCollections = [
     ],
   },
   {
-    title: "Quiet Durations",
+    title: "Memory Liquefied",
     description:
-      "Small rooms, soft weather, and the moments that make time feel almost human.",
+      "Identity, grief, and memory refracted through humour, lyricism, and loss.",
     poems: [
-      "The Weightless Hour",
-      "The Light Changes Key",
-      "Spoonful",
-      "When No One Knows",
+      "SADBOY",
+      "FIELD GUIDE",
+      "Two Shores",
+      "Should I?",
+      "Before the Screens",
+      "Twelve Pounds and a Dream",
+      "Eulogy for the Melting Giant",
+      "You Live in Colour, I Dream in Green",
     ],
   },
   {
