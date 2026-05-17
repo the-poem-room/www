@@ -387,6 +387,44 @@ button {
   box-shadow: var(--shadow);
 }
 
+.site-header.is-brand-stacked {
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "brand settings"
+    "nav nav";
+  align-items: start;
+  row-gap: 10px;
+  box-shadow: var(--shadow);
+}
+
+.site-header.is-brand-stacked .brand {
+  grid-area: brand;
+  min-width: 0;
+}
+
+.site-header.is-brand-stacked .nav-toggle {
+  display: none;
+}
+
+.site-header.is-brand-stacked .settings-menu {
+  grid-area: settings;
+  justify-self: end;
+}
+
+.site-header.is-brand-stacked .site-nav {
+  grid-area: nav;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  gap: clamp(10px, 2.6vw, 28px);
+  white-space: nowrap;
+}
+
+.site-header.is-brand-stacked .site-nav a {
+  padding: 0;
+}
+
 .site-header.is-nav-compact {
   grid-template-columns: minmax(0, 1fr) auto;
   grid-template-areas:
@@ -483,6 +521,7 @@ button {
   font-family: var(--serif);
   font-size: var(--brand-size);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .brand-mark {

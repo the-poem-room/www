@@ -5332,13 +5332,9 @@ function isSettingsMenuOpen() {
   return Boolean(settingsPanel && !settingsPanel.hidden);
 }
 
-function shouldCompactHeaderLayout() {
-  if (!siteHeader || !siteBrand || !siteNav || !settingsMenu || !navToggle) {
-    return false;
-  }
-
-  if (mobileNavQuery.matches) {
-    return true;
+function getHeaderLayoutMetrics() {
+  if (!siteHeader || !siteBrand || !siteNav || !settingsMenu) {
+    return null;
   }
 
   const headerRect = siteHeader.getBoundingClientRect();
@@ -5349,10 +5345,58 @@ function shouldCompactHeaderLayout() {
   const columnGap = parseFloat(headerStyles.columnGap || headerStyles.gap || "0") || 0;
   const paddingLeft = parseFloat(headerStyles.paddingLeft || "0") || 0;
   const paddingRight = parseFloat(headerStyles.paddingRight || "0") || 0;
-  const availableWidth = headerRect.width - paddingLeft - paddingRight;
-  const requiredWidth = brandRect.width + navWidth + settingsRect.width + columnGap * 2;
+
+  return {
+    availableWidth: Math.max(0, headerRect.width - paddingLeft - paddingRight),
+    brandWidth: brandRect.width,
+    navWidth,
+    settingsWidth: settingsRect.width,
+    gap: columnGap,
+  };
+}
+
+function shouldCompactHeaderLayout() {
+  if (!siteHeader || !siteBrand || !siteNav || !settingsMenu || !navToggle) {
+    return false;
+  }
+
+  if (mobileNavQuery.matches) {
+    return true;
+  }
+
+  const metrics = getHeaderLayoutMetrics();
+  if (!metrics) {
+    return false;
+  }
+
+  const { availableWidth, brandWidth, navWidth, settingsWidth, gap } = metrics;
+  const requiredWidth = brandWidth + navWidth + settingsWidth + gap * 2;
 
   return requiredWidth > availableWidth + headerFitSlack;
+}
+
+function shouldStackBrandHeader() {
+  if (!siteHeader || !siteBrand || !siteNav || !settingsMenu || !navToggle) {
+    return false;
+  }
+
+  if (mobileNavQuery.matches) {
+    return false;
+  }
+
+  const metrics = getHeaderLayoutMetrics();
+  if (!metrics) {
+    return false;
+  }
+
+  const { availableWidth, brandWidth, navWidth, settingsWidth, gap } = metrics;
+  const singleRowWidth = brandWidth + navWidth + settingsWidth + gap * 2;
+  const stackedBrandWidth = brandWidth + settingsWidth + gap;
+  const fitsSingleRow = singleRowWidth <= availableWidth + headerFitSlack;
+  const fitsStackedRow = stackedBrandWidth <= availableWidth + headerFitSlack;
+  const navFits = navWidth <= availableWidth + headerFitSlack;
+
+  return !fitsSingleRow && fitsStackedRow && navFits;
 }
 
 function updateHeaderLayoutMode() {
@@ -5361,11 +5405,24 @@ function updateHeaderLayoutMode() {
   }
 
   const shouldCompact = shouldCompactHeaderLayout();
+  const shouldStackBrand = !shouldCompact && shouldStackBrandHeader();
   const isCompact = siteHeader.classList.contains("is-nav-compact");
+  const isStacked = siteHeader.classList.contains("is-brand-stacked");
 
   if (shouldCompact !== isCompact) {
     siteHeader.classList.toggle("is-nav-compact", shouldCompact);
     closeMobileNav();
+  }
+
+  if (shouldStackBrand !== isStacked) {
+    siteHeader.classList.toggle("is-brand-stacked", shouldStackBrand);
+    if (shouldStackBrand) {
+      closeMobileNav();
+    }
+  }
+
+  if (!shouldCompact && !shouldStackBrand) {
+    siteHeader.classList.remove("is-nav-compact", "is-brand-stacked");
   }
 }
 
