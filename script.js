@@ -56,6 +56,7 @@ const sectionTargetHashes = new Set([
   "#library",
 ]);
 const navRevealZone = 18;
+const headerFitSlack = 28;
 const mobileNavQuery = window.matchMedia("(max-width: 760px)");
 let lastPointerY = Number.POSITIVE_INFINITY;
 let activeReadingRoomNavigation = null;
@@ -5351,7 +5352,7 @@ function shouldCompactHeaderLayout() {
   const availableWidth = headerRect.width - paddingLeft - paddingRight;
   const requiredWidth = brandRect.width + navWidth + settingsRect.width + columnGap * 2;
 
-  return requiredWidth > availableWidth;
+  return requiredWidth > availableWidth + headerFitSlack;
 }
 
 function updateHeaderLayoutMode() {
