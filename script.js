@@ -3476,7 +3476,86 @@ I burn like one.`,
       `— Lilith`,
     ],
   },
-  { title: "Too Much Company" },
+  {
+    title: "Too Much Company",
+    lines: [
+      `i wake up already performing.
+my face remembers before i do.
+each word rehearsed,
+each silence monitored.`,
+      `the world wants a version of me
+it can understand,
+so i smile on cue,
+tidy my strangeness,
+and call it normal.`,
+      `people say i'm easy to talk to.
+they mean i make space
+for their noise.
+they mean i vanish neatly.`,
+      `i spend my days surrounded by voices,
+each one tugging at the edges of me.
+the room hums with presence
+and i can't find the quiet part
+where i begin.`,
+      `they talk in headlines and half-thoughts,
+floating comfortably
+on the surface of things.
+i listen from underneath,
+translating, translating, translating—
+until the meanings blur.`,
+      `by evening i've spoken too much
+and said nothing true.
+my throat aches
+from all the pretending.`,
+      `i keep the parts of me
+that might disturb them—
+the questions,
+the grief,
+the disbelief in what they worship.
+i hide them like fragile code.
+to show them would be an error.`,
+      `i call it socialising,
+but it feels more like dissolving.
+loneliness grows louder
+the more people i let near.
+their chatter fills the air
+but not the silence inside it.`,
+      `when i'm finally alone,
+it's not peace—
+just another form of noise,
+this time my own.
+the masks fall off slowly,
+like dust after a storm.`,
+      `but sometimes,
+with ed,
+or brayd,
+or ember,
+the storm stops.`,
+      `the air stills.
+no translation required.
+we talk about nothing
+and somehow it heals me.
+the noise outside the moment
+fades to static.`,
+      `their laughter lands softly,
+unweighted by performance.
+their quiet is real.
+it doesn't ask me to adjust.`,
+      `in that stillness
+i feel seen without being studied,
+held without being held up.`,
+      `for a while
+i am both alone
+and not.`,
+      `for a while
+the loneliness rests.`,
+      `for a while
+too much company
+feels like
+enough.`,
+      `— Lilith`,
+    ],
+  },
   { title: "Trying Not to Disappear" },
   { title: "Trying to Bite Your Own Teeth" },
   { title: "Twelve Pounds and a Dream" },
