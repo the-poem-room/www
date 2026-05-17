@@ -163,11 +163,15 @@ function renderPoemBody(poem) {
   return stanzas;
 }
 
-function poemPageTemplate(poem) {
+function poemPageTemplate(poem, nextPoem) {
   const title = poem.title;
   const slug = poem.slug || slugify(title);
   const description = `Read "${title}" in The Poem Room.`;
   const subtitle = poem.subtitle ? renderInlineHtml(String(poem.subtitle)) : "";
+  const nextSlug = nextPoem ? (nextPoem.slug || slugify(nextPoem.title)) : "";
+  const nextLink = nextPoem
+    ? `        <a class="reader-next-link" href="./${escapeHtml(nextSlug)}.html" rel="next" aria-label="Next poem: ${escapeHtml(nextPoem.title)}" title="Next poem: ${escapeHtml(nextPoem.title)}"><span aria-hidden="true">→</span></a>\n`
+    : "";
 
   return `<!doctype html>
 <html lang="en" data-theme="dark">
@@ -248,7 +252,7 @@ function poemPageTemplate(poem) {
 
     <main id="main-content">
       <article class="reading-page" aria-labelledby="poem-title">
-        <a class="back-link" href="../index.html#archive-${escapeHtml(slug)}">Back to Archive</a>
+${nextLink}        <a class="back-link" href="../index.html#archive-${escapeHtml(slug)}">Back to Archive</a>
         <p class="eyebrow">reading room</p>
         <h1 id="poem-title">${escapeHtml(title)}</h1>
         ${subtitle ? `<p class="poem-subtitle">${subtitle}</p>` : ""}
@@ -306,16 +310,20 @@ function main() {
   }
 
   const poems = Function(`"use strict"; return (${match[1]});`)();
+  const sortedPoems = [...poems].sort((a, b) =>
+    a.title.localeCompare(b.title, undefined, { sensitivity: "base" })
+  );
   const outDir = path.join(repoRoot, "Poems");
 
   fs.mkdirSync(outDir, { recursive: true });
 
   let written = 0;
-  poems.forEach((poem) => {
+  sortedPoems.forEach((poem, index) => {
+    const nextPoem = sortedPoems[(index + 1) % sortedPoems.length];
     const slug = poem.slug || slugify(poem.title);
     const filename = `${slug}.html`;
     const outPath = path.join(outDir, filename);
-    fs.writeFileSync(outPath, poemPageTemplate(poem), "utf8");
+    fs.writeFileSync(outPath, poemPageTemplate(poem, nextPoem), "utf8");
     written += 1;
   });
 

@@ -1519,11 +1519,78 @@ function getPoemSlug(poem) {
   return poem.slug || slugify(poem.title);
 }
 
+function getNextPoem(poemOrSlug) {
+  const slug = typeof poemOrSlug === "string" ? poemOrSlug : getPoemSlug(poemOrSlug);
+  const index = poemIndexBySlug.get(slug);
+
+  if (index === undefined || !sortedPoems.length) {
+    return null;
+  }
+
+  return sortedPoems[(index + 1) % sortedPoems.length] || null;
+}
+
+function getPoemPageHref(slug) {
+  return `Poems/${slug}.html`;
+}
+
+function createNextPoemLink(currentSlug) {
+  const nextPoem = getNextPoem(currentSlug);
+
+  if (!nextPoem) {
+    return null;
+  }
+
+  const nextSlug = getPoemSlug(nextPoem);
+  const link = document.createElement("a");
+  link.className = "reader-next-link";
+  link.href = getPoemPageHref(nextSlug);
+  link.rel = "next";
+  link.title = `Next poem: ${nextPoem.title}`;
+  link.setAttribute("aria-label", `Next poem: ${nextPoem.title}`);
+  link.dataset.readerNext = "true";
+  link.innerHTML = '<span aria-hidden="true">→</span>';
+  return link;
+}
+
+function updateReaderNextLink(currentSlug) {
+  if (!reader) {
+    return;
+  }
+
+  const existing = reader.querySelector("[data-reader-next]");
+  const nextPoem = getNextPoem(currentSlug);
+
+  if (!nextPoem) {
+    existing?.remove();
+    return;
+  }
+
+  const nextSlug = getPoemSlug(nextPoem);
+  const nextLabel = `Next poem: ${nextPoem.title}`;
+  const link = existing || createNextPoemLink(currentSlug);
+
+  if (!link) {
+    return;
+  }
+
+  link.href = getPoemPageHref(nextSlug);
+  link.rel = "next";
+  link.title = nextLabel;
+  link.setAttribute("aria-label", nextLabel);
+
+  if (!existing) {
+    const eyebrow = reader.querySelector(".eyebrow");
+    reader.insertBefore(link, eyebrow || reader.firstChild);
+  }
+}
+
 const slugMigrations = {
   "meditation-on-the-b-and-c-theories-of-time": "somewhere",
 };
 
 const poemBySlug = new Map(sortedPoems.map((poem) => [getPoemSlug(poem), poem]));
+const poemIndexBySlug = new Map(sortedPoems.map((poem, index) => [getPoemSlug(poem), index]));
 const favouriteSlugs = new Set(JSON.parse(localStorage.getItem(favouritesKey) || "[]"));
 let collections = JSON.parse(localStorage.getItem(collectionsKey) || "[]");
 
@@ -2494,6 +2561,7 @@ function renderPoem(poem) {
   readerActions.innerHTML = "";
   readerActions.append(createFavouriteButton(slug, poem.title));
   readerActions.append(createCollectionControl(slug));
+  updateReaderNextLink(slug);
 
   if (poem.lines?.length) {
     poem.lines.forEach((stanza, index) => {
@@ -2553,6 +2621,7 @@ function refreshReaderActions() {
   readerActions.innerHTML = "";
   readerActions.append(createFavouriteButton(slug, poem.title));
   readerActions.append(createCollectionControl(slug));
+  updateReaderNextLink(slug);
 }
 
 function handleRoute() {

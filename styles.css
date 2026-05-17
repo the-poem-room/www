@@ -1200,6 +1200,7 @@ h3 {
 }
 
 .reading-page {
+  position: relative;
   width: min(100% - 2 * clamp(16px, 4vw, 42px), 980px);
   margin: clamp(18px, 3vw, 32px) auto 0;
   padding: clamp(44px, 6vw, 78px) clamp(20px, 5vw, 72px);
@@ -1214,6 +1215,39 @@ h3 {
   margin-bottom: 34px;
   color: var(--muted);
   text-underline-offset: 0.36em;
+}
+
+.reader-next-link {
+  position: absolute;
+  top: clamp(18px, 3vw, 28px);
+  right: clamp(18px, 3vw, 28px);
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--panel-solid) 92%, transparent);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  z-index: 2;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.reader-next-link:hover,
+.reader-next-link:focus-visible {
+  transform: translateX(2px);
+  border-color: color-mix(in srgb, var(--soft) 46%, var(--line));
+  background: var(--panel-solid);
+}
+
+.reader-next-link span {
+  font-size: 1.25rem;
+  line-height: 1;
 }
 
 .reader-poem {
