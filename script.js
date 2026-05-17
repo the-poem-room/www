@@ -2848,7 +2848,57 @@ but the irony does not.`,
       `— Lilith`,
     ],
   },
-  { title: "The Stars Said So" },
+  {
+    title: "The Stars Said So",
+    lines: [
+      `Let me guess.
+You've been feeling a bit off lately,
+like you're searching for something
+but you're not sure what.
+(How'd I know? I'm gifted like that.)`,
+      `You're kind, but people take advantage of you.
+You overthink things, but only because you care too much.
+You love being around others,
+but also need your alone time.
+You're unique —
+just like everyone else in February.`,
+      `You've got big dreams.
+Not too big — just the right size for me to sound relatable.
+And deep down, you know something amazing is coming soon...
+unless it doesn't.`,
+      `You, with the cracked phone,
+you hide your pain behind jokes.
+You, who checks the door twice,
+you crave control (and maybe snacks).
+You, who skipped that one boring paragraph,
+you're spontaneous, brave,
+a true legend of short attention spans.`,
+      `Mercury's been in retrograde,
+but so have your sleep habits.
+It's okay, the stars understand.
+They've been spinning in circles for billions of years
+and still haven't sorted their lives out either.`,
+      `Now listen closely:
+your rising sign is tired,
+your moon is hungry,
+and your aura just subscribed to Disney+.`,
+      `If any of this felt *deep*
+if you nodded like, "wow, that's so me,"
+then congratulations —
+you've just experienced
+the sacred power of guessing.`,
+      `Because I could've said *anything*,
+and your brain would've built a home around it.
+Thaht's how horoscopes work.
+That's how ads work.
+That's how preachers work.
+That's how your uncle on FaceBook works.`,
+      `If you fell for that, good luck.
+The stars won't save you,
+but the algorithm might.`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Third Room" },
   { title: "The Unseen Wall" },
   { title: "The Weightless Hour" },
