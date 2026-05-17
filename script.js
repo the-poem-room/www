@@ -4867,13 +4867,34 @@ function getPreviousPoem(poemOrSlug) {
   return sortedPoems[(index - 1 + sortedPoems.length) % sortedPoems.length] || null;
 }
 
-function getPoemPageHref(slug) {
-  return `Poems/${slug}.html`;
+function appendQueryParam(href, key, value) {
+  const [pathAndQuery, hash = ""] = String(href || "").split("#");
+  const [path, search = ""] = pathAndQuery.split("?");
+  const params = new URLSearchParams(search);
+
+  if (value) {
+    params.set(key, value);
+  } else {
+    params.delete(key);
+  }
+
+  const nextSearch = params.toString();
+  return `${path}${nextSearch ? `?${nextSearch}` : ""}${hash ? `#${hash}` : ""}`;
+}
+
+function getPoemPageHref(slug, highlightQuery = "") {
+  return appendQueryParam(`Poems/${slug}.html`, "highlight", highlightQuery);
+}
+
+function getActivePoemTextHighlightQuery() {
+  const params = new URLSearchParams(window.location.search);
+  return String(params.get("highlight") || "").trim();
 }
 
 function createReaderArrowLink(currentSlug, direction) {
   const isNext = direction === "next";
   const poem = isNext ? getNextPoem(currentSlug) : getPreviousPoem(currentSlug);
+  const highlightQuery = getActivePoemTextHighlightQuery();
 
   if (!poem) {
     return null;
@@ -4882,7 +4903,7 @@ function createReaderArrowLink(currentSlug, direction) {
   const slug = getPoemSlug(poem);
   const link = document.createElement("a");
   link.className = `reader-${direction}-link`;
-  link.href = getPoemPageHref(slug);
+  link.href = getPoemPageHref(slug, highlightQuery);
   link.rel = direction;
   link.title = `${isNext ? "Next" : "Previous"} poem: ${poem.title}`;
   link.setAttribute("aria-label", `${isNext ? "Next" : "Previous"} poem: ${poem.title}`);
@@ -4898,6 +4919,7 @@ function updateReaderArrowLink(currentSlug, direction) {
 
   const existing = reader.querySelector(`[data-reader-arrow="${direction}"]`);
   const poem = direction === "next" ? getNextPoem(currentSlug) : getPreviousPoem(currentSlug);
+  const highlightQuery = getActivePoemTextHighlightQuery();
 
   if (!poem) {
     existing?.remove();
@@ -4912,7 +4934,7 @@ function updateReaderArrowLink(currentSlug, direction) {
     return;
   }
 
-  link.href = getPoemPageHref(slug);
+  link.href = getPoemPageHref(slug, highlightQuery);
   link.rel = direction;
   link.title = label;
   link.setAttribute("aria-label", label);
@@ -4926,6 +4948,190 @@ function updateReaderArrowLink(currentSlug, direction) {
 function updateReaderNavLinks(currentSlug) {
   updateReaderArrowLink(currentSlug, "prev");
   updateReaderArrowLink(currentSlug, "next");
+}
+
+function normalizePoemHighlightValue(value) {
+  return String(value || "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[’‘‛]/g, "'")
+    .replace(/[“”„‟]/g, '"')
+    .replace(/[–—―]/g, "-")
+    .replace(/…/g, "...")
+    .replace(/\u00a0/g, " ")
+    .toLowerCase();
+}
+
+function normalizePoemHighlightQuery(value) {
+  return normalizePoemHighlightValue(value).replace(/\s+/g, " ").trim();
+}
+
+function buildPoemHighlightIndex(value) {
+  const source = String(value || "");
+  let normalized = "";
+  const map = [];
+  let offset = 0;
+
+  for (const char of Array.from(source)) {
+    const charLength = char.length;
+    const expanded = normalizePoemHighlightValue(char);
+
+    for (const normalizedChar of expanded) {
+      normalized += normalizedChar;
+      map.push({ start: offset, end: offset + charLength });
+    }
+
+    offset += charLength;
+  }
+
+  return { normalized, map, source };
+}
+
+function clearPoemSearchHighlights(root) {
+  if (!root) {
+    return;
+  }
+
+  root.querySelectorAll("mark.poem-search-highlight").forEach((mark) => {
+    mark.replaceWith(document.createTextNode(mark.textContent || ""));
+  });
+
+  root.normalize();
+}
+
+function highlightPoemTextNode(textNode, query) {
+  const normalizedQuery = normalizePoemHighlightQuery(query);
+
+  if (!normalizedQuery) {
+    return false;
+  }
+
+  const source = textNode.nodeValue || "";
+  if (!source.trim()) {
+    return false;
+  }
+
+  const { normalized, map } = buildPoemHighlightIndex(source);
+  if (!normalized) {
+    return false;
+  }
+
+  const matches = [];
+  let searchIndex = 0;
+
+  while (searchIndex <= normalized.length - normalizedQuery.length) {
+    const matchIndex = normalized.indexOf(normalizedQuery, searchIndex);
+
+    if (matchIndex === -1) {
+      break;
+    }
+
+    const startMap = map[matchIndex];
+    const endMap = map[matchIndex + normalizedQuery.length - 1];
+
+    if (!startMap || !endMap || endMap.end <= startMap.start) {
+      searchIndex = matchIndex + Math.max(1, normalizedQuery.length);
+      continue;
+    }
+
+    matches.push([startMap.start, endMap.end]);
+    searchIndex = matchIndex + Math.max(1, normalizedQuery.length);
+  }
+
+  if (!matches.length) {
+    return false;
+  }
+
+  const fragment = document.createDocumentFragment();
+  let cursor = 0;
+
+  matches.forEach(([start, end]) => {
+    if (start > cursor) {
+      fragment.append(document.createTextNode(source.slice(cursor, start)));
+    }
+
+    const mark = document.createElement("mark");
+    mark.className = "poem-search-highlight";
+    mark.append(document.createTextNode(source.slice(start, end)));
+    fragment.append(mark);
+    cursor = end;
+  });
+
+  if (cursor < source.length) {
+    fragment.append(document.createTextNode(source.slice(cursor)));
+  }
+
+  textNode.parentNode?.replaceChild(fragment, textNode);
+  return true;
+}
+
+function highlightPoemSearchInRoot(root, query) {
+  if (!root) {
+    return;
+  }
+
+  const normalizedQuery = normalizePoemHighlightQuery(query);
+
+  clearPoemSearchHighlights(root);
+
+  if (!normalizedQuery) {
+    return;
+  }
+
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      const parentElement = node.parentElement;
+
+      if (!parentElement || !node.nodeValue || !node.nodeValue.trim()) {
+        return NodeFilter.FILTER_REJECT;
+      }
+
+      if (parentElement.closest(".poem-line-number, .poem-navigation, .reader-actions, .reader-top-links")) {
+        return NodeFilter.FILTER_REJECT;
+      }
+
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  });
+
+  const textNodes = [];
+
+  while (walker.nextNode()) {
+    textNodes.push(walker.currentNode);
+  }
+
+  textNodes.forEach((node) => {
+    highlightPoemTextNode(node, normalizedQuery);
+  });
+}
+
+function getPoemHighlightRoots() {
+  const roots = [];
+  const title = readerTitle || document.querySelector("#poem-title");
+  const subtitle = readerSubtitle || document.querySelector(".poem-subtitle");
+  const poemBody = readerPoem?.querySelector("[data-reader-poem-body]");
+
+  if (title) {
+    roots.push(title);
+  }
+
+  if (subtitle) {
+    roots.push(subtitle);
+  }
+
+  if (poemBody) {
+    roots.push(poemBody);
+  }
+
+  return roots;
+}
+
+function applyActivePoemTextHighlight() {
+  const highlightQuery = getActivePoemTextHighlightQuery();
+
+  getPoemHighlightRoots().forEach((root) => {
+    highlightPoemSearchInRoot(root, highlightQuery);
+  });
 }
 
 const slugMigrations = {
@@ -5582,7 +5788,7 @@ function renderArchive() {
     item.dataset.poemSubtitle = poem.subtitle || "";
 
     const link = document.createElement("a");
-    link.href = `Poems/${slug}.html`;
+    link.href = getPoemPageHref(slug);
     link.textContent = poem.title;
 
     item.append(link);
@@ -5752,6 +5958,7 @@ function updateArchiveSearchState() {
   }
 
   const rawQuery = archiveSearch?.value || "";
+  const highlightQuery = archiveSearchMode === "poem-text" ? rawQuery.trim() : "";
   const query =
     archiveSearchMode === "poem-text"
       ? normalizeArchiveTextSearchValue(rawQuery)
@@ -5766,9 +5973,14 @@ function updateArchiveSearchState() {
       archiveSearchMode === "poem-text"
         ? item.dataset.textSearchValue || ""
         : item.dataset.searchValue || "";
+    const slug = item.dataset.poemSlug || "";
+    const link = item.querySelector("a");
 
     if (!query) {
       textMatches.push(item);
+      if (link) {
+        link.href = getPoemPageHref(slug);
+      }
       return;
     }
 
@@ -5776,11 +5988,18 @@ function updateArchiveSearchState() {
       if (searchable.includes(query)) {
         textMatches.push(item);
       }
+      if (link) {
+        link.href = getPoemPageHref(slug, highlightQuery);
+      }
       return;
     }
 
     const prefixMatch = matchesArchiveSearchPrefix(query, searchable);
     const fallbackMatch = !prefixMatch && matchesArchiveSearchAnywhere(query, searchable);
+
+    if (link) {
+      link.href = getPoemPageHref(slug);
+    }
 
     if (prefixMatch) {
       prefixMatches.push(item);
@@ -5824,7 +6043,8 @@ function updateArchiveSearchState() {
         const slug = item.dataset.poemSlug || "";
         const title = item.querySelector("a")?.textContent || slug;
         const subtitle = item.dataset.poemSubtitle || "";
-        appendArchiveSearchResult(resultList, `#archive-${slug}`, title, subtitle);
+        const href = getPoemPageHref(slug, highlightQuery);
+        appendArchiveSearchResult(resultList, href, title, subtitle);
       });
 
       archiveSearchResults.append(resultList);
@@ -5859,6 +6079,24 @@ function initializeArchiveSearchMode() {
       archiveSearch?.focus();
     });
   });
+}
+
+function applyArchiveSearchQueryFromUrl() {
+  if (!archiveSearch) {
+    return;
+  }
+
+  const highlightQuery = getActivePoemTextHighlightQuery();
+
+  if (!highlightQuery) {
+    return;
+  }
+
+  archiveSearchMode = "poem-text";
+  archiveSearch.value = highlightQuery;
+  updateArchiveSearchModeButtons(archiveSearchMode);
+  updateArchiveSearchPlaceholder(archiveSearchMode);
+  updateArchiveSearchState();
 }
 
 function scrollToArchiveItemFromHash() {
@@ -6789,6 +7027,7 @@ function renderPoem(poem) {
   updateReaderNavLinks(slug);
   readerPoem.append(createPoemNavigation(poem), createPoemBody(poem));
   mountReadingRoomNavigation(readerPoem);
+  applyActivePoemTextHighlight();
 
   reader.scrollIntoView({ behavior: "smooth", block: "start" });
   reader.focus({ preventScroll: true });
@@ -6879,9 +7118,35 @@ function initializePoemPageControls() {
   }
 }
 
+function initializePoemPageSearchHighlighting() {
+  if (!poemPageSlug) {
+    return;
+  }
+
+  const highlightQuery = getActivePoemTextHighlightQuery();
+  const backLink = document.querySelector(".back-link");
+  const prevLink = document.querySelector(".reader-prev-link");
+  const nextLink = document.querySelector(".reader-next-link");
+
+  if (backLink) {
+    backLink.href = appendQueryParam(backLink.getAttribute("href") || "", "highlight", highlightQuery);
+  }
+
+  [prevLink, nextLink].forEach((link) => {
+    if (!link) {
+      return;
+    }
+
+    link.href = appendQueryParam(link.getAttribute("href") || "", "highlight", highlightQuery);
+  });
+
+  applyActivePoemTextHighlight();
+}
+
 renderArchive();
 initializeArchiveSearchMode();
 initializeArchiveSearch();
+applyArchiveSearchQueryFromUrl();
 renderFeaturedCollections();
 renderLibrary();
 handleRoute();
@@ -6890,6 +7155,7 @@ updateFavouriteButtons();
 handlePendingLibraryTarget();
 initializePoemPageControls();
 mountReadingRoomNavigation(readerPoem);
+initializePoemPageSearchHighlighting();
 handleSectionTargetFromHash();
 
 window.addEventListener("hashchange", () => {

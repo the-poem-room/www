@@ -1796,6 +1796,16 @@ html[data-line-numbers="show"] .poem-line--signature {
   min-width: 0;
 }
 
+.poem-search-highlight {
+  color: inherit;
+  background: color-mix(in srgb, var(--soft) 18%, transparent);
+  border-radius: 0.18em;
+  box-shadow: inset 0 -0.18em 0 color-mix(in srgb, var(--soft) 18%, transparent);
+  padding: 0 0.08em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
 .poem-line--biblical .poem-verse-number,
 .poem-line--biblical .poem-line-content > strong:first-child {
   display: inline-block;
