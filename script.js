@@ -2937,7 +2937,85 @@ of being human.`,
       `— Lilith`,
     ],
   },
-  { title: "The Unseen Wall" },
+  {
+    title: "The Unseen Wall",
+    lines: [
+      `They say:
+This is how it is.
+And the wall builds itself—
+not of brick,
+but of words left unchallenged.
+A truth spoken once,
+echoed until it hardens.`,
+      `No face commands it,
+yet every silence obeys.
+No hands laid the mortar,
+yet still I feel
+its weight.`,
+      `At first,
+it seemed harmless—
+a sacred rhythm,
+a polished rule,
+a story wrapped in gold.
+But one day,
+something slipped—
+a crack,
+a contradiction,
+a name we weren't allowed to say.`,
+      `*Why?*
+The smallest word—
+soft as breath—
+is met with steel.
+Do not ask.
+You already know.
+You must already know.`,
+      `But I do not.
+Not really.
+I only know the hush that falls
+when doubt enters the room.
+Eyes lower.
+Words stall.
+And truth holds its breath.`,
+      `I touched the wall once—
+no stone,
+no edge,
+only declarations stacked on silence.
+Each rule sealed with fear,
+each command fused by shame.`,
+      `Still,
+I felt beyond it—
+a warmth,
+a shimmer,
+the wild scent of unscripted thought.
+I reached—
+but reverence held the leash.`,
+      `They call this peace:
+to kneel in rows drawn by vanish lands,
+to trade wonder for obedience,
+to wear certainty like armour
+and call it faith`,
+      `But what is peace,
+if it costs the truth?
+What is order,
+if it crushes the question?`,
+      `There is danger,
+not in chaos,
+but in answers too holy to touch.
+The unseen wall does not crumble with time—
+It thickens with silence.
+And those who sit too long in its shadow
+forget the sky was ever blue.`,
+      `Yet still—
+somewhere beneath that sacred hush
+the question glows,
+faint as embers,
+waiting for breath,
+for voice,
+to burn through
+the unseen wall.`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Weightless Hour" },
   { title: "The Weight of Air" },
   { title: "The Wheel Doesn't Know Why You're Here" },
