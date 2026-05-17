@@ -4417,7 +4417,70 @@ was wanting most to disappear.`,
       `— Lilith`,
     ],
   },
-  { title: "When's the Last Time?" },
+  {
+    title: "When's the Last Time?",
+    subtitle:
+      "When's the last time you sat and thought about your own mortality for a whole minute?",
+    lines: [
+      `You flipped the question like a coin
+and watched me wait for it to land.`,
+      `So I did.`,
+      `One minute.
+Long enough for tea to cool.
+Short enough for a heart to stop.`,
+      `At first—
+a box.
+Not wood. Not stone.
+Just absence,
+shaped by my mother's voice cracking.`,
+      `Then the seconds began to drop.
+Sixty.
+Each a leaf spiralling down.`,
+      `0:10
+my dog, still warm in the earth`,
+      `0:23
+the bruise I swore was nothing.`,
+      `0:37
+the fast of fear—
+metal and milk.`,
+      `0:42
+bargaining
+into nothing.`,
+      `0:49
+clocks grow wings.
+hover above me,
+ticking like insects.
+one lands.
+counts down.
+evaporates.`,
+      `0:57
+I remembered something
+my grandmother once said—
+that the soul lingers,
+just for a moment,
+to see if it mattered.`,
+      `Maybe this was that moment.
+Or its rehearsal.`,
+      `1:00
+I didn't cry.
+Not until later,
+when I looked up
+and saw the world still scrolling,
+laughing,
+not counting at all.`,
+      `I had just spent
+a whole minute dying,
+and no one noticed.`,
+      `3:14
+the timer glitched.
+or I did.
+I stood.
+the chair
+still held
+my outline.`,
+      `— Lilith`,
+    ],
+  },
   { title: "Wobblefluff and Bumblebee's Moonlit Jig" },
   { title: "Work Hard" },
   { title: "X." },
