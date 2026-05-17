@@ -2623,7 +2623,53 @@ was conducting.`,
       `— Lilith`,
     ],
   },
-  { title: "The Rationalist's Shadow" },
+  {
+    title: "The Rationalist's Shadow",
+    subtitle: "A Lament for Richard Dawkins",
+    lines: [
+      `He showed us how the gene might speak,
+its selfish whisper, cold and sleek.
+He stripped the myth from sacred law
+with reason's blade and skeptic's awe.`,
+      `He lit the minds of searching youth,
+a priest of logic, proof, and truth.
+He taught us how to doubt belief—
+to search for cause in fact, not grief.`,
+      `But reason, too, can lose its way,
+when pride refuses light of day.
+The path that once was sharp and straight
+now wind through bitterness and hate.`,
+      `He clasped the binary in biology:
+sex defined by gamete ontology—
+"truly binary" he declared,
+as if the rest need not be spared.`,
+      `He questioned how one might be trans,
+then linked it to transracial plans—
+a parallel some find sincere,
+but one he used to mock, not hear.`,
+      `His medal stripped, his praises hushed,
+by those whose hopes he once had brushed.
+The humanism he professed
+now falters where it's needed best.`,
+      `For once he soared on reason's wing—
+noe clipped, he joins the echoing
+of voices cold to human plight,
+who wield the facts but not the light.`,
+      `He rails at "gender self-assigned,"
+as if the soul were ill-defined.
+He grants the pronounces, "courtesy"—
+but not from faith in dignity.`,
+      `O Dawkins, how your truths once burned,
+but now we drive how little you've learned.
+For what is reason, sharp and bare,
+if it forgets the weight of care?`,
+      `Truth isn't just what can be shown
+through microscope or chart alone.
+It's also how we choose to be—
+with minds precise, and hearts set free.`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Real Curriculum" },
   { title: "The Real Divide" },
   { title: "The Second Zapruder" },
