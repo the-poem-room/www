@@ -5360,16 +5360,51 @@ function initializeTheme() {
 
 initializeTheme();
 
-function setFontSize(size) {
-  const nextSize = fontSizeOptions.has(size) ? size : "normal";
-  document.documentElement.dataset.fontSize = nextSize;
-  localStorage.setItem(fontSizeKey, nextSize);
+function preserveWindowScrollPosition(applyUpdate) {
+  const scrollX = window.scrollX;
+  const scrollY = window.scrollY;
 
-  fontSizeButtons.forEach((button) => {
-    button.setAttribute("aria-pressed", String(button.dataset.fontSizeOption === nextSize));
+  applyUpdate();
+
+  const root = document.documentElement;
+  const previousScrollBehavior = root.style.scrollBehavior;
+  const previousOverflowAnchor = root.style.overflowAnchor;
+  root.style.scrollBehavior = "auto";
+  root.style.overflowAnchor = "none";
+
+  const restoreScroll = () => {
+    window.scrollTo({ left: scrollX, top: scrollY, behavior: "auto" });
+  };
+
+  requestAnimationFrame(() => {
+    restoreScroll();
+    requestAnimationFrame(() => {
+      restoreScroll();
+      root.style.scrollBehavior = previousScrollBehavior;
+      root.style.overflowAnchor = previousOverflowAnchor;
+    });
   });
+}
 
-  scheduleHeaderLayoutModeUpdate();
+function setFontSize(size, { preserveScrollPosition = false } = {}) {
+  const nextSize = fontSizeOptions.has(size) ? size : "normal";
+  const applyFontSize = () => {
+    document.documentElement.dataset.fontSize = nextSize;
+    localStorage.setItem(fontSizeKey, nextSize);
+
+    fontSizeButtons.forEach((button) => {
+      button.setAttribute("aria-pressed", String(button.dataset.fontSizeOption === nextSize));
+    });
+
+    scheduleHeaderLayoutModeUpdate();
+  };
+
+  if (preserveScrollPosition) {
+    preserveWindowScrollPosition(applyFontSize);
+    return;
+  }
+
+  applyFontSize();
 }
 
 function initializeFontSize() {
@@ -5512,7 +5547,7 @@ if (themeToggle) {
 
 fontSizeButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    setFontSize(button.dataset.fontSizeOption || "normal");
+    setFontSize(button.dataset.fontSizeOption || "normal", { preserveScrollPosition: true });
   });
 });
 
