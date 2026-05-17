@@ -4577,7 +4577,16 @@ Harder.`,
       `— Lilith`,
     ],
   },
-  { title: "X." },
+  {
+    title: "X.",
+    lines: [
+      `I've never begun with an X before—
+It never gets picked in the alphabet's draw.
+But rules must be broken, and boxes unchecked:
+So X marks this poem, absurd and direct.`,
+      `— Lilith`,
+    ],
+  },
   { title: "You are Weak" },
   { title: "You Don't Have to Earn Your Pulse" },
   { title: "You Live in Colour, I Dream in Green" },
