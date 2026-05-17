@@ -292,8 +292,8 @@ function poemPageTemplate(poem, previousPoem, nextPoem) {
         <a href="../index.html#top">Home</a>
         <a href="../index.html#purpose">Core Functionality</a>
         <a href="../index.html#bio">Bio</a>
-        <a href="../index.html#poems">Archive</a>
         <a href="../index.html#featured-collections">Featured Collections</a>
+        <a href="../index.html#poems">Archive</a>
         <a href="../index.html#library">My Library</a>
       </nav>
       <div class="settings-menu" data-settings-menu>
