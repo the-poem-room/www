@@ -4636,7 +4636,56 @@ you are weak.`,
       `— Lilith`,
     ],
   },
-  { title: "You Don't Have to Earn Your Pulse" },
+  {
+    title: "You Don't Have to Earn Your Pulse",
+    lines: [
+      `You are not something to complete.
+There is no final form waiting in the distance,
+tapping its foot.`,
+      `Your heart keeps tempo
+better than any metronome
+you've ever argued with,
+even when your thoughts rush ahead
+or stray.`,
+      `Your lungs keep working
+on the days you forget how to,
+without asking permission.`,
+      `No one is born
+with a checklist pinned to their chest
+or rules explaining
+how not to feel so much.`,
+      `You arrive in the morning
+before ambition wakes up,
+hair making its own decisions,
+mind halfway through a sentence,
+and still the light finds you.`,
+      `There is a hush
+between thoughts colliding,
+a small room
+where the Playstation fan hums
+and — for a moment —
+nthing is required
+except that you exist.`,
+      `It appears in odd places,
+the warmth of a mug
+held with both hands,
+the pause before answering a question,
+the soft ache of caring
+more than you planned to.`,
+      `That space stays open
+whether or not you think you deserve it.`,
+      `Every breath is simply happening,
+the body voting yes
+again and again.`,
+      `Humanity is not an achievement.
+It is the everyday miracle
+of being here,
+confused,
+alive,
+and breathing anyway.`,
+      `— Lilith`,
+    ],
+  },
   { title: "You Live in Colour, I Dream in Green" },
 ];
 
