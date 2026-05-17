@@ -2461,7 +2461,96 @@ I go with it.`,
       `— Lilith`,
     ],
   },
-  { title: "The Misinformation Olympics" },
+  {
+    title: "The Misinformation Olympics",
+    lines: [
+      `*\"I'm told\"*
+I'll fade without meat —
+usually by someone halfway through a drive-thru,
+confidence dripping with grease,
+arteries rehearing their last act.`,
+      `*\"You're not getting enough protein.\"*
+*\"You're iron-deficient.\"*
+*\"You need B12.\"*
+*\"That vegan food's too artificial.\"*`,
+      `*Artificial.*
+Theh word lands heavy
+from people whose meals
+were factory-made
+before the cow was born.`,
+      `They bite into burgers
+with twelve grams of protein
+and twice the saturated fat,
+then lecture me
+while I've had nineteen before noon —
+from pumpkin seeds, not pork —
+and tofu waiting 
+like quiet triumph
+in the fridge for later.`,
+      `It's a not a competition,
+but if it were,
+I'd win.
+Mine's the only diet
+with maths, not myths;
+with fibre that feeds the gut,
+not grease that feeds disease.`,
+      `They call my food fake,
+but theirs is built on needles and nerves —
+animals swollen with antibiotics,
+force-fed soy,
+their flesh marbled
+with the same saturated fat
+that builds walls
+around the human heart.`,
+      `They call my food *unnatural*
+while their sausages
+are stitched from scraps and salt,
+their eggs from hens
+who never saw daylight,
+their plates loaded
+with sodium and denial.`,
+      `I eat colour,
+fibre,
+sunlight pressed into leaves.
+They eat nostalgia —
+battered, fried,
+and seasoned with excuses.`,
+      `Yet somehow, *I'm* the one
+who's "missing out."`,
+      `No.
+Here's the truth:
+I'm not undernourished.
+I'm just inconvenient.`,
+      `My existence
+interrupts the story
+they tell themselves
+to sleep better.`,
+      `Because if I can live
+stronger, cleaner, kinder
+without killing,
+then maybe their comfort food
+starts to taste
+a little guilty.`,
+      `That's what really bothers them.
+Not my protein.
+Not my iron.
+Not my B12.`,
+      `Just the quiet, undeniable proof
+that compassion
+and health
+can share a body.`,
+      `So yes —
+I'll keep eating my pumpkin seeds.
+My tofu. My beans. My conscience.`,
+      `You keep your comfort food,
+your myths,
+your artificial innocence.`,
+      `We'll see
+who survives
+the syllabus of science.`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Pleasure of Pretending" },
   { title: "The Quietest Company" },
   { title: "The Rationalist's Shadow" },
