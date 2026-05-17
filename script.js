@@ -4391,7 +4391,32 @@ Still clinging to the tremble of my **hand** — **again**.`,
       `— Lilith`,
     ],
   },
-  { title: "When No One Knows" },
+  {
+    title: "When No One Knows",
+    lines: [
+      `do you ever wish you could
+just disappear
+and have no one know
+you were ever hear`,
+      `the saddest thing you'll ever hear—
+is silence, soft and crystal clear,
+when all you wanted was someone near,
+to notice you were here.`,
+      `you leave no mark, no whispered name,
+no spark to prove you played the game,
+he world forgets, as worlds will do,
+and still, it spins, without you too.`,
+      `you stare at walls that never change,
+the hours blur, the stars rearrange,
+and somewhere life goes rushing past,
+while you just breathe, and hope it lasts.`,
+      `the saddest thing I've come to see,
+is not the world forgetting me,
+but knowing that my quiet fear,
+was wanting most to disappear.`,
+      `— Lilith`,
+    ],
+  },
   { title: "When's the Last Time?" },
   { title: "Wobblefluff and Bumblebee's Moonlit Jig" },
   { title: "Work Hard" },
