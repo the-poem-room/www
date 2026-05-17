@@ -5,6 +5,7 @@ const archiveSearchResults = document.querySelector("[data-archive-search-result
 const archiveSearchModeButtons = document.querySelectorAll("[data-archive-search-mode-option]");
 const archiveEmpty = document.querySelector("[data-archive-empty]");
 const archiveList = document.querySelector("[data-archive-list]");
+const featuredCollectionsList = document.querySelector("[data-featured-collections-list]");
 const reader = document.querySelector("#poem-reader");
 const readerTitle = document.querySelector("[data-reader-title]");
 const readerSubtitle = document.querySelector("[data-reader-subtitle]");
@@ -44,7 +45,14 @@ const navModeOptions = new Set(["always-visible", "auto-hide", "hover-top"]);
 const lineNumberOptions = new Set(["show", "hide"]);
 const miniMapOptions = new Set(["show", "hide"]);
 const archiveSearchModeOptions = new Set(["titles", "poem-text"]);
-const sectionTargetHashes = new Set(["#top", "#purpose", "#bio", "#poems", "#library"]);
+const sectionTargetHashes = new Set([
+  "#top",
+  "#purpose",
+  "#bio",
+  "#poems",
+  "#featured-collections",
+  "#library",
+]);
 const navRevealZone = 18;
 const mobileNavQuery = window.matchMedia("(max-width: 760px)");
 let lastPointerY = Number.POSITIVE_INFINITY;
@@ -4922,6 +4930,43 @@ const slugMigrations = {
 
 const poemBySlug = new Map(sortedPoems.map((poem) => [getPoemSlug(poem), poem]));
 const poemIndexBySlug = new Map(sortedPoems.map((poem, index) => [getPoemSlug(poem), index]));
+
+const featuredCollections = [
+  {
+    title: "Identity, Unfixed",
+    description:
+      "Poems about naming yourself, refusing tidy categories, and letting the self keep moving.",
+    poems: [
+      "Temporary Coördinates",
+      "To anyone confused",
+      "Unassigned",
+      "You Don't Have to Earn Your Pulse",
+    ],
+  },
+  {
+    title: "Quiet Durations",
+    description:
+      "Small rooms, soft weather, and the moments that make time feel almost human.",
+    poems: [
+      "The Weightless Hour",
+      "The Light Changes Key",
+      "Spoonful",
+      "When No One Knows",
+    ],
+  },
+  {
+    title: "Public Friction",
+    description:
+      "Poems that look straight at the larger mess and refuse to speak politely to it.",
+    poems: [
+      "The Real Curriculum",
+      "The Misinformation Olympics",
+      "The Unseen Wall",
+      "The Daily Whine",
+    ],
+  },
+];
+
 const favouriteSlugs = new Set(JSON.parse(localStorage.getItem(favouritesKey) || "[]"));
 let favouriteOrder = JSON.parse(localStorage.getItem(favouriteOrderKey) || "[]");
 if (!Array.isArray(favouriteOrder)) {
@@ -5429,6 +5474,48 @@ function renderArchive() {
     item.append(link);
     item.append(createArchiveActions(slug, poem.title));
     archiveList.append(item);
+  });
+}
+
+function renderFeaturedCollections() {
+  if (!featuredCollectionsList) {
+    return;
+  }
+
+  featuredCollectionsList.innerHTML = "";
+
+  featuredCollections.forEach((collection) => {
+    const card = document.createElement("article");
+    card.className = "featured-collection-card";
+
+    const heading = document.createElement("h3");
+    heading.textContent = collection.title;
+
+    const description = document.createElement("p");
+    description.textContent = collection.description;
+
+    const list = document.createElement("ul");
+    list.className = "featured-collection-poem-list";
+
+    collection.poems.forEach((poemTitle) => {
+      const slug = getPoemSlug({ title: poemTitle });
+      const poem = poemBySlug.get(slug);
+
+      if (!poem) {
+        return;
+      }
+
+      const item = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = getPoemPageHref(slug);
+      link.textContent = poem.title;
+
+      item.append(link);
+      list.append(item);
+    });
+
+    card.append(heading, description, list);
+    featuredCollectionsList.append(card);
   });
 }
 
@@ -6681,6 +6768,7 @@ function initializePoemPageControls() {
 renderArchive();
 initializeArchiveSearchMode();
 initializeArchiveSearch();
+renderFeaturedCollections();
 renderLibrary();
 handleRoute();
 scrollToArchiveItemFromHash();

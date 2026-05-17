@@ -1225,6 +1225,80 @@ h3 {
   border-top: 1px solid var(--line);
 }
 
+.featured-collections-section {
+  grid-template-columns: 1fr;
+  gap: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.featured-collections-copy {
+  max-width: 760px;
+  color: var(--muted);
+}
+
+.featured-collections-copy p {
+  margin: 0;
+  font-size: var(--body-copy-size);
+}
+
+.featured-collections-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.featured-collection-card {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+  padding: clamp(18px, 3vw, 26px);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.14), transparent),
+    var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 16px 44px rgba(117, 82, 98, 0.07);
+}
+
+.featured-collection-card h3 {
+  margin: 0;
+  color: var(--soft);
+  font-family: var(--sans);
+  font-size: var(--collection-title-size);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.featured-collection-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--body-copy-size);
+}
+
+.featured-collection-poem-list {
+  display: grid;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.featured-collection-poem-list li {
+  margin: 0;
+}
+
+.featured-collection-poem-list a {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: var(--collection-poem-size);
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.featured-collection-poem-list a:hover {
+  color: var(--soft);
+}
+
 .library-copy {
   max-width: 760px;
   color: var(--muted);
@@ -1883,6 +1957,10 @@ html[data-line-numbers="hide"] .poem-line--signature {
   .feature-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .featured-collections-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 760px) {
@@ -1917,6 +1995,10 @@ html[data-line-numbers="hide"] .poem-line--signature {
   .poem-map-button {
     font-size: 0.66em;
     letter-spacing: 0.04em;
+  }
+
+  .featured-collections-list {
+    grid-template-columns: 1fr;
   }
 
   .site-header {
