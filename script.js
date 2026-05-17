@@ -2464,7 +2464,7 @@ I go with it.`,
   {
     title: "The Misinformation Olympics",
     lines: [
-      `*\"I'm told\"*
+      `I'm told
 I'll fade without meat —
 usually by someone halfway through a drive-thru,
 confidence dripping with grease,
