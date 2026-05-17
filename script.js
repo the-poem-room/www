@@ -4525,7 +4525,24 @@ my outline.`,
       `— Lilith`,
     ],
   },
-  { title: "Wobblefluff and Bumblebee's Moonlit Jig" },
+  {
+    title: "Wobblefluff and Bumblebee's Moonlit Jig",
+    lines: [
+      `In the pickle-patch beneath violet skies,
+Wobblefluff wobbled on warm spaghetti pies.
+Bumblebee buzzed in a tutu of cheese,
+Tickling tulips with slippery ease.`,
+      `The clock tick-tocked in jellybean time,
+While marmalade clouds sang backwards in rhyme.
+Zigzagging zebras wore polka-dot hats,
+Playing hopscotch with juggling cats.`,
+      `A whispering waffle sailed past the moon,
+Humming a tune to a hummingfish croon.
+I laughed with a grin and a gleaming spoon,
+As noise spun like a loony balloon.`,
+      `— Lilith`,
+    ],
+  },
   { title: "Work Hard" },
   { title: "X." },
   { title: "You are Weak" },
