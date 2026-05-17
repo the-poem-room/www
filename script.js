@@ -1941,7 +1941,78 @@ They'll package it neatly and sell you the cage.`,
       `*— Lilith*`,
     ],
   },
-  { title: "The End" },
+  {
+    title: "The End",
+    lines: [
+      `When does the world end?
+Today,
+tomorrow,
+or in a hundred years?
+Does it vanish with the headlines,
+or dissolve
+quietly
+in the pause between two people
+who have nothing left to say?`,
+      `Maybe the end isn't fire,
+or floods,
+or sirens screaming.
+Maybe it's
+the empty seat at the table,
+the unanswered all,
+the weight of saying "I'm fine"
+when you haven't been
+for weeks.`,
+      `Perhaps the world ends
+not with chaos,
+but with silence—
+the long kind,
+the kind that hums in the corners of a room
+you forgot was once full.`,
+      `We think of endings
+as sudden,
+but some creep in
+like loneliness
+in a crowded room.
+Like talking
+and not being heard.
+Like sleeping
+beside someone
+who feels a thousand miles away.`,
+      `Does the world end
+when no one remembers
+your laugh?
+When the stars look down
+and see no one
+looking back?`,
+      `Maybe it's ending now—
+in text bubbles that vanish,
+in voices left on read,
+in the quiet click
+of a door
+you closed
+behind yourself.`,
+      `I wonder
+if anyone will notice
+when the last word
+goes unwritten,
+when the last hand
+reaches out
+and finds only air.`,
+      `And if it ends
+while I'm still writing,
+still hoping,
+still waiting—
+let this poem
+be the echo
+of someone
+who was here.
+Someone who asked
+if anyone else
+felt alone,
+too.`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Experience Machine" },
   { title: "The Garden After" },
   { title: "The Garden of Youth" },
