@@ -4233,7 +4233,118 @@ that teaches them to sing.`,
       `— Lilith`,
     ],
   },
-  { title: "We're All Dogmatic Because We Aren't Inactive" },
+  {
+    title: "We're All Dogmatic Because We Aren't Inactive",
+    lines: [
+      `I have never believed the same thing twice.
+Not fully. Not without alteration.
+Each conviction climbs its glittering track,
+click, click, click,
+and drops before I can name the view.
+I try to stand still—
+the river moves.`,
+      `They call it indecision.
+They call it noise.
+They call it the curse of too much mind.
+But what they call chaos
+feels, to me, like sight—
+the blur that proves I'm alive.
+They rest on answers; I rest in questions.
+I breathe in the current.
+Still—
+the river moves.`,
+      `They build their peace on permanence,
+on calendars and clocks,
+as if stillness were sanity.
+Their truths are polished rails:
+smooth, predictable, shining with use.
+I live in the loop,
+in the rise, the drop,
+the stomach's lurch and heart's defiance.
+My beliefs are flashes of sky
+seen between turns.
+They call that failure.
+I call it breathing.`,
+      `A man never crosses the same river twice.
+And neither does his fear.
+Each choice is a climb with no brake,
+each hesitation a hand lifting
+from the safety bar for a second too long.
+To move is to leap—
+without the promise of landing,
+and yet,
+not to leap
+and a quieter form of falling.`,
+      `I envy their calm,
+but not its cost.
+They call it normal.
+They call it healthy.`,
+      `But health, to me,
+is the courage to ride the loop again,
+knowing it won't end differently,
+and still holding on.
+Because while they build permanence,
+I am building passage.
+My truths are bridges,
+temporary, trembling, alive.
+They won't last,
+but they carry me across.
+And even as I step...
+the river moves.`,
+      `My empathy floods.
+My logic spins.
+I feel the track twist ahead
+before it finishes forming.
+The air sharpens;
+my heart misfires at every drop.
+I can't flatten the world
+into one safe design.
+They mistake my motion for confusion,
+my vertigo for loss.
+But how can I stay pure
+when purity is only the stillness of rust?`,
+      `They anchor. I spin.
+They guard. I gather.
+They fix. I feel.
+They are certain because they must be,
+because to stop moving
+would reveal the gravity underneath.
+And I—
+I am certain of nothing
+except that I cannot stop.
+And still,
+the river moves.`,
+      `Even this,
+this rollercoaster of doubt I call freedom,
+is only another circuit
+pretending to be escape.
+Perhaps we all worship motion,
+whether we march or hurtle.
+Perhaps dogma is the harness
+we buckle just to survive the climb.`,
+      `We are all dogmatic
+because we aren't inactive.
+The difference is in the rhythm.
+Some move in circles
+and call that control.
+Others, like me,
+compose symphonies without metronomes,
+rushing, breaking time,
+finding beauty in dissonance.`,
+      `And so I keep thinking,
+keep doubting,
+keep crossing rivers
+I've already named and renamed.
+There's a holiness in falling,
+a mercy in momentum—
+the kindness of never being still.
+Maybe motion is mercy,
+to keep us from mistaking the echo for the song.
+And still...
+the river moves.`,
+      `— Lilith`,
+    ],
+  },
   { title: "Where Is the Triangle?" },
   { title: "What the Hand Remembers" },
   { title: "When No One Knows" },
