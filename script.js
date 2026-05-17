@@ -2244,7 +2244,82 @@ something will begin.`,
       `— Lilith`,
     ],
   },
-  { title: "The Good Teacher" },
+  {
+    title: "The Good Teacher",
+    lines: [
+      `*\"Write an essay,\"*
+they say,
+dropping a link,
+slides clicking
+like a conveyor belt in an exam factory.
+Seven hundred and fifty words,
+no more, no less.
+Title in bold,
+Times New Roman,
+due Thursday, midday.`,
+      `The classroom hums
+with the whirr of the projector,
+whiteboard pen fumes clinging to the air.
+We copy bullet points
+like they're gospel,
+the hanswer fixed—
+we're just learning the neatest way
+to package it for the mark scheme.`,
+      `By Year Eleven,
+I could spot an AO2 command word
+—*\"How does the writer...\"*—
+before the paper even hit my desk.
+I could break a poem
+into three neat quotes and explanations,
+fill exactly eight lines—
+not because the poem needed it,
+but because the examiner did.`,
+      `I remember Mrs J in Year Seven,
+handing us a poem with no title,
+no questions,
+asked silence so heavy
+you could hear the clock tick
+and chairs shift against the floor.`,
+      `We sat in it.
+It felt dangerous.
+I spoke first—
+half-sure I'd missed the point—
+but she smiled
+as though I'd cracked a window
+in a room gone stale.`,
+      `A good teacher isn't a jailer of facts.
+They are a cartographer,
+handing you a map in pencil
+and whispering, *\"The borders are guesses.\"*`,
+      `They know ideas are birds—
+clip their wings,
+and they peck at the cage.
+They let you follow a question
+into the thorns,
+into the shadows,
+past the tidy borders of the syllabus,
+where the map smudges into blank space.`,
+      `And yes, they might give you word counts
+because the world does,
+but they also show you
+how to bend them—
+that rules can be ladders,
+not fences.`,
+      `I have forgotten the essays
+that ticked the boxes.
+But I still carry Mrs J's question,
+creased and foxed at the edges,
+a folded paper bird
+I keep in my pocket.
+ready to take flight
+the moment the air smells again
+of whiteboard ink,
+summer exam halls,
+and the slow, certain tick
+of a classroom clock.`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Light Changes Key" },
   { title: "The Misinformation Olympics" },
   { title: "The Pleasure of Pretending" },
