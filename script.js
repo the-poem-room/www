@@ -1826,11 +1826,11 @@ function updateMiniMapButtons(mode) {
 
 function getSavedMiniMapMode() {
   const savedMode = localStorage.getItem(miniMapKey);
-  return miniMapOptions.has(savedMode) ? savedMode : "show";
+  return miniMapOptions.has(savedMode) ? savedMode : "hide";
 }
 
 function setMiniMap(mode) {
-  const nextMode = miniMapOptions.has(mode) ? mode : "show";
+  const nextMode = miniMapOptions.has(mode) ? mode : "hide";
   document.documentElement.dataset.miniMap = nextMode;
   localStorage.setItem(miniMapKey, nextMode);
   updateMiniMapButtons(nextMode);
