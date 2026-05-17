@@ -2551,7 +2551,28 @@ the syllabus of science.`,
       `— Lilith`,
     ],
   },
-  { title: "The Pleasure of Pretending" },
+  {
+    title: "The Pleasure of Pretending",
+    lines: [
+      `I speak so someone hears
+the way my silence sounds.`,
+      `Not for help.
+For resonance.`,
+      `I want the illusion of mending—
+to feel the gears align
+though I built none of them.`,
+      `Every choice prewritten,
+every motion a ripple in a script.`,
+      `Still I reach for the thread,
+steady my hand,
+and pull—`,
+      `just to believe
+for a moment
+that I am the one
+who ties the knot.`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Quietest Company" },
   { title: "The Rationalist's Shadow" },
   { title: "The Real Curriculum" },
