@@ -1149,7 +1149,7 @@ const poems = [
       "Yet somewhere between my ribs\nand the back of my throat\na voice whispers:\n*move. create. produce.*",
       "I play the game anyway.\nPixel by pixel, block by block.\nMy body buffering.\nEach action deliberate, each motion clean—\na tiny illusion of completion.",
       {
-        text: "click.\npace.\nrepeat.\nheart.\nhand.\nhalt.\nheartbeat.\na loop of soft defeat.",
+        text: "click.\npace.\nrepeat.\nheart.\nhand.\n*halt.*\nheartbeat.\na loop of soft defeat.",
         className: "poem-stanza--indented",
       },
       "**...**",
