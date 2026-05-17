@@ -420,8 +420,8 @@ function main() {
 
   let written = 0;
   sortedPoems.forEach((poem, index) => {
-    const previousPoem = sortedPoems[(index - 1 + sortedPoems.length) % sortedPoems.length];
-    const nextPoem = sortedPoems[(index + 1) % sortedPoems.length];
+    const previousPoem = index > 0 ? sortedPoems[index - 1] : null;
+    const nextPoem = index < sortedPoems.length - 1 ? sortedPoems[index + 1] : null;
     const slug = poem.slug || slugify(poem.title);
     const filename = `${slug}.html`;
     const outPath = path.join(outDir, filename);

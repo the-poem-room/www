@@ -4944,22 +4944,22 @@ function getNextPoem(poemOrSlug) {
   const slug = typeof poemOrSlug === "string" ? poemOrSlug : getPoemSlug(poemOrSlug);
   const index = poemIndexBySlug.get(slug);
 
-  if (index === undefined || !sortedPoems.length) {
+  if (index === undefined || !sortedPoems.length || index >= sortedPoems.length - 1) {
     return null;
   }
 
-  return sortedPoems[(index + 1) % sortedPoems.length] || null;
+  return sortedPoems[index + 1] || null;
 }
 
 function getPreviousPoem(poemOrSlug) {
   const slug = typeof poemOrSlug === "string" ? poemOrSlug : getPoemSlug(poemOrSlug);
   const index = poemIndexBySlug.get(slug);
 
-  if (index === undefined || !sortedPoems.length) {
+  if (index === undefined || !sortedPoems.length || index <= 0) {
     return null;
   }
 
-  return sortedPoems[(index - 1 + sortedPoems.length) % sortedPoems.length] || null;
+  return sortedPoems[index - 1] || null;
 }
 
 function appendQueryParam(href, key, value) {
@@ -5065,10 +5065,16 @@ function getReaderNeighborPoem(currentSlug, direction, context = getReaderContex
   const currentIndex = collectionPoems.findIndex((poem) => getPoemSlug(poem) === currentSlug);
 
   if (currentIndex === -1 || !collectionPoems.length) {
-    return isNext ? getNextPoem(currentSlug) : getPreviousPoem(currentSlug);
+    return null;
   }
 
-  return collectionPoems[(currentIndex + (isNext ? 1 : -1) + collectionPoems.length) % collectionPoems.length] || null;
+  const nextIndex = currentIndex + (isNext ? 1 : -1);
+
+  if (nextIndex < 0 || nextIndex >= collectionPoems.length) {
+    return null;
+  }
+
+  return collectionPoems[nextIndex] || null;
 }
 
 function getReaderBackLinkDetails(currentSlug, context = getReaderContextFromSearchParams()) {
