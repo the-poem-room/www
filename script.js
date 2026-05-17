@@ -2852,6 +2852,97 @@ but the irony does not.`,
     ],
   },
   {
+    title: "Seventeen Haikus for Iceland",
+    lines: [
+      `1
+
+Snowfield without path —
+the wind invents its own script
+across the silence.`,
+      `2
+
+Reykjavík breathes light.
+Smoke, laughter, and winter coats
+soften every street.`,
+      `3
+
+Midnight fireworks —
+the sky blooms in every hue.
+Even cold applauds.`,
+      `4
+
+Frozen waterfall
+pauses mid-sentence of stone,
+held by breathless air.`,
+      `5
+
+Black sand under frost —
+each wave forgets where to go,
+lost beneath pale skies.`,
+      `6
+
+Hot srings blur the cold.
+Steam drifts like a memory
+not quite forgiven.`,
+      `7
+
+A shark on my plate.
+The taste: stubborn-sea-buried —
+I chew through the past.`,
+      `8
+
+Geyser's sudden roar —
+the still world flinches, then sighes,
+letting go of heat.`,
+      `9
+
+Cracks in the glacier
+shine with some ancient blue light.
+Ice remembers us.`,
+      `10
+
+A horse in the snow
+blinks, then turns — as if it knows
+this moment won't last.`,
+      `11
+
+Selfoss: one quiet road,
+each lamp a gentle heartbeat
+in the drifting dusk.`,
+      `12
+
+Volcanic black stone
+dressed in moon-reflecting frost —
+fire disguised as calm.`,
+      `13
+
+A tune in the wind —
+is it Björk or just the land
+humming to itself?`,
+      `14
+
+The sun barely wakes,
+lingers at the edge of things —
+a ghost of a flame.`,
+      `15
+
+Snow refills my steps
+before I've moved on from them.
+Even time retreats.`,
+      `16
+
+Silence so complete,
+I almost hear the mountain
+shift beneath the snow.`,
+      `17
+
+I pause in the white —
+no, path, no sound, only breath.
+I am what remains.`,
+      `— Lilith`,
+    ],
+  },
+  {
     title: "The Stars Said So",
     lines: [
       `Let me guess.
