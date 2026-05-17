@@ -108,8 +108,84 @@
             <div class="collection-menu-panel" hidden></div>
           </div>
         </div>
-        <div class="reader-poem">
-            <p class="poem-stanza">
+        <div class="reader-poem" data-reader-poem>
+        <aside class="poem-navigation" data-poem-navigation aria-label="Jump to stanza">
+          <div class="poem-progress" aria-hidden="true">
+            <span class="poem-progress-track"></span>
+            <span class="poem-progress-fill" data-poem-progress-fill></span>
+          </div>
+          <div class="poem-map">
+            <p class="poem-navigation-label">Jump to stanza</p>
+            <div class="poem-map-list" data-poem-map>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="0"
+            data-stanza-lines="8"
+            aria-label="Jump to stanza 1, 8 lines"
+            title="Jump to stanza 1"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="1"
+            data-stanza-lines="6"
+            aria-label="Jump to stanza 2, 6 lines"
+            title="Jump to stanza 2"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="2"
+            data-stanza-lines="13"
+            aria-label="Jump to stanza 3, 13 lines"
+            title="Jump to stanza 3"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="3"
+            data-stanza-lines="11"
+            aria-label="Jump to stanza 4, 11 lines"
+            title="Jump to stanza 4"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="4"
+            data-stanza-lines="7"
+            aria-label="Jump to stanza 5, 7 lines"
+            title="Jump to stanza 5"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="5"
+            data-stanza-lines="9"
+            aria-label="Jump to stanza 6, 9 lines"
+            title="Jump to stanza 6"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="6"
+            data-stanza-lines="7"
+            aria-label="Jump to stanza 7, 7 lines"
+            title="Jump to stanza 7"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="7"
+            data-stanza-lines="1"
+            aria-label="Jump to stanza 8, 1 line"
+            title="Jump to stanza 8"
+          >▇</button>
+            </div>
+          </div>
+        </aside>
+        <div class="reader-poem-body" data-reader-poem-body>
+            <p class="poem-stanza" data-stanza-index="0">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">1</span>
                 <span class="poem-line-content">I am not a man,</span>
@@ -143,7 +219,7 @@
                 <span class="poem-line-content">sometimes bright as flutes.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="1">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">9</span>
                 <span class="poem-line-content">My hair is clean, tied, blonde—</span>
@@ -169,7 +245,7 @@
                 <span class="poem-line-content">that would try to name me.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="2">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">15</span>
                 <span class="poem-line-content">The world of hetero eyes</span>
@@ -223,7 +299,7 @@
                 <span class="poem-line-content">I refuse to play.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="3">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">28</span>
                 <span class="poem-line-content">But with lesbians,</span>
@@ -269,7 +345,7 @@
                 <span class="poem-line-content">how many I should have won.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="4">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">39</span>
                 <span class="poem-line-content">Perhaps they know—</span>
@@ -299,7 +375,7 @@
                 <span class="poem-line-content">where expectation does not root.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="5">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">46</span>
                 <span class="poem-line-content">With lesbians, I am treated better,</span>
@@ -337,7 +413,7 @@
                 <span class="poem-line-content">a soul refusing the ledger.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="6">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">55</span>
                 <span class="poem-line-content">And in their presence,</span>
@@ -367,11 +443,12 @@
                 <span class="poem-line-content">that makes music.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="7">
               <span class="poem-line poem-line--signature">
                 <span class="poem-line-content">— Lilith</span>
               </span>
             </p>
+        </div>
         </div>
       </article>
     </main>

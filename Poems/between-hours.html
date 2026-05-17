@@ -108,8 +108,76 @@
             <div class="collection-menu-panel" hidden></div>
           </div>
         </div>
-        <div class="reader-poem">
-            <p class="poem-stanza">
+        <div class="reader-poem" data-reader-poem>
+        <aside class="poem-navigation" data-poem-navigation aria-label="Jump to stanza">
+          <div class="poem-progress" aria-hidden="true">
+            <span class="poem-progress-track"></span>
+            <span class="poem-progress-fill" data-poem-progress-fill></span>
+          </div>
+          <div class="poem-map">
+            <p class="poem-navigation-label">Jump to stanza</p>
+            <div class="poem-map-list" data-poem-map>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="0"
+            data-stanza-lines="2"
+            aria-label="Jump to stanza 1, 2 lines"
+            title="Jump to stanza 1"
+          >▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="1"
+            data-stanza-lines="11"
+            aria-label="Jump to stanza 2, 11 lines"
+            title="Jump to stanza 2"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="2"
+            data-stanza-lines="11"
+            aria-label="Jump to stanza 3, 11 lines"
+            title="Jump to stanza 3"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="3"
+            data-stanza-lines="11"
+            aria-label="Jump to stanza 4, 11 lines"
+            title="Jump to stanza 4"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="4"
+            data-stanza-lines="10"
+            aria-label="Jump to stanza 5, 10 lines"
+            title="Jump to stanza 5"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="5"
+            data-stanza-lines="17"
+            aria-label="Jump to stanza 6, 17 lines"
+            title="Jump to stanza 6"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="6"
+            data-stanza-lines="1"
+            aria-label="Jump to stanza 7, 1 line"
+            title="Jump to stanza 7"
+          >▇</button>
+            </div>
+          </div>
+        </aside>
+        <div class="reader-poem-body" data-reader-poem-body>
+            <p class="poem-stanza" data-stanza-index="0">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">1</span>
                 <span class="poem-line-content">Time has never been a strict thing,</span>
@@ -119,7 +187,7 @@
                 <span class="poem-line-content">not really.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="1">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">3</span>
                 <span class="poem-line-content">In Iceland, the sun forgets</span>
@@ -165,7 +233,7 @@
                 <span class="poem-line-content">what hour it holds.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="2">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">14</span>
                 <span class="poem-line-content">Here at home</span>
@@ -211,7 +279,7 @@
                 <span class="poem-line-content">dissolving into hush.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="3">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">25</span>
                 <span class="poem-line-content">Time blurs</span>
@@ -257,7 +325,7 @@
                 <span class="poem-line-content">share the same soft space.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="4">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">36</span>
                 <span class="poem-line-content">There&#39;s a kind of beauty</span>
@@ -299,7 +367,7 @@
                 <span class="poem-line-content">out of step.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="5">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">46</span>
                 <span class="poem-line-content">Maybe the most honest moments</span>
@@ -369,11 +437,12 @@
                 <span class="poem-line-content">between hours.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="6">
               <span class="poem-line poem-line--signature">
                 <span class="poem-line-content">— Lilith</span>
               </span>
             </p>
+        </div>
         </div>
       </article>
     </main>

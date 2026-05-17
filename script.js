@@ -37,6 +37,8 @@ const sectionTargetHashes = new Set(["#top", "#purpose", "#bio", "#poems", "#lib
 const navRevealZone = 18;
 const mobileNavQuery = window.matchMedia("(max-width: 760px)");
 let lastPointerY = Number.POSITIVE_INFINITY;
+let activeReadingRoomNavigation = null;
+let readingRoomNavigationPending = false;
 
 const poems = [
   {
@@ -2664,24 +2666,87 @@ function createPoemLineElement(lineText, lineNumber, { isSignature = false, isHe
   return line;
 }
 
-function createPoemBody(poem) {
-  const fragment = document.createDocumentFragment();
+function getStanzaLineCount(stanzaText) {
+  return String(stanzaText || "")
+    .split("\n")
+    .filter((line) => String(line || "").trim())
+    .length;
+}
 
-  if (!poem.lines?.length) {
+function createPoemNavigation(poem) {
+  const poemLines = Array.isArray(poem?.lines) ? poem.lines : [];
+  const aside = document.createElement("aside");
+  aside.className = "poem-navigation";
+  aside.setAttribute("data-poem-navigation", "");
+  aside.setAttribute("aria-label", "Jump to stanza");
+
+  const progress = document.createElement("div");
+  progress.className = "poem-progress";
+  progress.setAttribute("aria-hidden", "true");
+
+  const track = document.createElement("span");
+  track.className = "poem-progress-track";
+
+  const fill = document.createElement("span");
+  fill.className = "poem-progress-fill";
+  fill.setAttribute("data-poem-progress-fill", "");
+
+  const map = document.createElement("div");
+  map.className = "poem-map";
+
+  const label = document.createElement("p");
+  label.className = "poem-navigation-label";
+  label.textContent = "Jump to stanza";
+
+  const list = document.createElement("div");
+  list.className = "poem-map-list";
+  list.setAttribute("data-poem-map", "");
+
+  poemLines.forEach((stanza, index) => {
+    const stanzaText = typeof stanza === "string" ? stanza : String(stanza.text || "");
+    const lineCount = Math.max(1, getStanzaLineCount(stanzaText));
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "poem-map-button";
+    button.dataset.stanzaIndex = String(index);
+    button.dataset.stanzaLines = String(lineCount);
+    button.setAttribute(
+      "aria-label",
+      `Jump to stanza ${index + 1}, ${lineCount} line${lineCount === 1 ? "" : "s"}`
+    );
+    button.title = `Jump to stanza ${index + 1}`;
+    button.textContent = "▇".repeat(Math.min(lineCount, 6));
+    list.append(button);
+  });
+
+  progress.append(track, fill);
+  map.append(label, list);
+  aside.append(progress, map);
+  return aside;
+}
+
+function createPoemBody(poem) {
+  const poemLines = Array.isArray(poem?.lines) ? poem.lines : [];
+  const container = document.createElement("div");
+  container.className = "reader-poem-body";
+  container.setAttribute("data-reader-poem-body", "");
+
+  if (!poemLines.length) {
     const placeholder = document.createElement("p");
     placeholder.className = "reader-placeholder";
     placeholder.textContent = "Poem text coming soon.";
-    fragment.append(placeholder);
-    return fragment;
+    container.append(placeholder);
+    return container;
   }
 
   let lineNumber = 1;
 
-  poem.lines.forEach((stanza, index) => {
+  poemLines.forEach((stanza, index) => {
     const stanzaText = typeof stanza === "string" ? stanza : String(stanza.text || "");
     const stanzaClassName =
       typeof stanza === "string" ? "" : String(stanza.className || "").trim();
     const paragraph = document.createElement("p");
+    paragraph.dataset.stanzaIndex = String(index);
 
     paragraph.classList.add("poem-stanza");
 
@@ -2694,7 +2759,7 @@ function createPoemBody(poem) {
     stanzaLines.forEach((line, lineIndex) => {
       const hasText = Boolean(String(line || "").trim());
       const isSignature =
-        index === poem.lines.length - 1 &&
+        index === poemLines.length - 1 &&
         lineIndex === stanzaLines.length - 1 &&
         isSignatureLine(line);
 
@@ -2710,10 +2775,103 @@ function createPoemBody(poem) {
       }
     });
 
-    fragment.append(paragraph);
+    container.append(paragraph);
   });
 
-  return fragment;
+  return container;
+}
+
+function updateReadingRoomNavigationState() {
+  if (!activeReadingRoomNavigation) {
+    return;
+  }
+
+  const { nav, fill, buttons, stanzas } = activeReadingRoomNavigation;
+
+  if (!nav || !fill || !stanzas.length) {
+    return;
+  }
+
+  const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 1;
+  const headerHeight = siteHeader?.offsetHeight || 0;
+  const topOffset = headerHeight + 28;
+  const firstRect = stanzas[0].getBoundingClientRect();
+  const lastRect = stanzas[stanzas.length - 1].getBoundingClientRect();
+  const start = firstRect.top + window.scrollY - topOffset;
+  const end = lastRect.bottom + window.scrollY - topOffset;
+  const poemHeight = Math.max(end - start, 1);
+  const travel = Math.max(poemHeight - viewportHeight * 0.35, 1);
+  const progress = poemHeight <= viewportHeight ? 1 : Math.min(1, Math.max(0, (window.scrollY - start) / travel));
+
+  fill.style.transform = `scaleY(${progress})`;
+  fill.parentElement?.style.setProperty("--poem-progress", String(progress));
+
+  let activeIndex = 0;
+  const activationLine = viewportHeight * 0.34;
+
+  stanzas.forEach((stanza, index) => {
+    const rect = stanza.getBoundingClientRect();
+    if (rect.top <= activationLine) {
+      activeIndex = index;
+    }
+  });
+
+  buttons.forEach((button) => {
+    const isActive = Number(button.dataset.stanzaIndex) === activeIndex;
+    button.setAttribute("aria-current", isActive ? "true" : "false");
+  });
+}
+
+function scheduleReadingRoomNavigationUpdate() {
+  if (readingRoomNavigationPending) {
+    return;
+  }
+
+  readingRoomNavigationPending = true;
+  window.requestAnimationFrame(() => {
+    readingRoomNavigationPending = false;
+    updateReadingRoomNavigationState();
+  });
+}
+
+function mountReadingRoomNavigation(root) {
+  const nav = root?.querySelector("[data-poem-navigation]");
+  const body = root?.querySelector("[data-reader-poem-body]");
+
+  if (!nav || !body) {
+    activeReadingRoomNavigation = null;
+    return;
+  }
+
+  const fill = nav.querySelector("[data-poem-progress-fill]");
+  const buttons = Array.from(nav.querySelectorAll("[data-stanza-index]"));
+  const stanzas = Array.from(body.querySelectorAll(".poem-stanza[data-stanza-index]"));
+
+  if (!fill || !buttons.length || !stanzas.length) {
+    activeReadingRoomNavigation = null;
+    return;
+  }
+
+  if (!nav.dataset.boundNavigation) {
+    nav.addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-stanza-index]");
+      if (!button) {
+        return;
+      }
+
+      const stanzaIndex = Number(button.dataset.stanzaIndex);
+      const target = body.querySelector(`.poem-stanza[data-stanza-index="${stanzaIndex}"]`);
+      if (!target) {
+        return;
+      }
+
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    nav.dataset.boundNavigation = "true";
+  }
+
+  activeReadingRoomNavigation = { root, nav, fill, buttons, stanzas, body };
+  updateReadingRoomNavigationState();
 }
 
 function renderPoem(poem) {
@@ -2736,7 +2894,8 @@ function renderPoem(poem) {
   readerActions.append(createFavouriteButton(slug, poem.title));
   readerActions.append(createCollectionControl(slug));
   updateReaderNavLinks(slug);
-  readerPoem.append(createPoemBody(poem));
+  readerPoem.append(createPoemNavigation(poem), createPoemBody(poem));
+  mountReadingRoomNavigation(readerPoem);
 
   reader.scrollIntoView({ behavior: "smooth", block: "start" });
   reader.focus({ preventScroll: true });
@@ -2762,6 +2921,7 @@ function refreshReaderActions() {
   readerActions.append(createFavouriteButton(slug, poem.title));
   readerActions.append(createCollectionControl(slug));
   updateReaderNavLinks(slug);
+  mountReadingRoomNavigation(readerPoem);
 }
 
 function handleRoute() {
@@ -2833,6 +2993,7 @@ scrollToArchiveItemFromHash();
 updateFavouriteButtons();
 handlePendingLibraryTarget();
 initializePoemPageControls();
+mountReadingRoomNavigation(readerPoem);
 handleSectionTargetFromHash();
 
 window.addEventListener("hashchange", () => {
@@ -2908,3 +3069,6 @@ sectionJumpLinks.forEach((link) => {
     scrollToSectionTarget(hash);
   });
 });
+
+window.addEventListener("scroll", scheduleReadingRoomNavigationUpdate, { passive: true });
+window.addEventListener("resize", scheduleReadingRoomNavigationUpdate, { passive: true });

@@ -108,8 +108,84 @@
             <div class="collection-menu-panel" hidden></div>
           </div>
         </div>
-        <div class="reader-poem">
-            <p class="poem-stanza">
+        <div class="reader-poem" data-reader-poem>
+        <aside class="poem-navigation" data-poem-navigation aria-label="Jump to stanza">
+          <div class="poem-progress" aria-hidden="true">
+            <span class="poem-progress-track"></span>
+            <span class="poem-progress-fill" data-poem-progress-fill></span>
+          </div>
+          <div class="poem-map">
+            <p class="poem-navigation-label">Jump to stanza</p>
+            <div class="poem-map-list" data-poem-map>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="0"
+            data-stanza-lines="8"
+            aria-label="Jump to stanza 1, 8 lines"
+            title="Jump to stanza 1"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="1"
+            data-stanza-lines="8"
+            aria-label="Jump to stanza 2, 8 lines"
+            title="Jump to stanza 2"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="2"
+            data-stanza-lines="23"
+            aria-label="Jump to stanza 3, 23 lines"
+            title="Jump to stanza 3"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="3"
+            data-stanza-lines="8"
+            aria-label="Jump to stanza 4, 8 lines"
+            title="Jump to stanza 4"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="4"
+            data-stanza-lines="20"
+            aria-label="Jump to stanza 5, 20 lines"
+            title="Jump to stanza 5"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="5"
+            data-stanza-lines="5"
+            aria-label="Jump to stanza 6, 5 lines"
+            title="Jump to stanza 6"
+          >▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="6"
+            data-stanza-lines="2"
+            aria-label="Jump to stanza 7, 2 lines"
+            title="Jump to stanza 7"
+          >▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="7"
+            data-stanza-lines="1"
+            aria-label="Jump to stanza 8, 1 line"
+            title="Jump to stanza 8"
+          >▇</button>
+            </div>
+          </div>
+        </aside>
+        <div class="reader-poem-body" data-reader-poem-body>
+            <p class="poem-stanza" data-stanza-index="0">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">1</span>
                 <span class="poem-line-content">Should I wake with leaden breath,</span>
@@ -143,7 +219,7 @@
                 <span class="poem-line-content">    I could just as well refuse?</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="1">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">9</span>
                 <span class="poem-line-content">Should I grip the brittle thread</span>
@@ -177,7 +253,7 @@
                 <span class="poem-line-content">    is nothing more than just a lie?</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="2">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">17</span>
                 <span class="poem-line-content">Should I walk a path unworn</span>
@@ -271,7 +347,7 @@
                 <span class="poem-line-content">    and take it as a sign?</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="3">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">40</span>
                 <span class="poem-line-content">Should I tell myself I’m strong—</span>
@@ -305,7 +381,7 @@
                 <span class="poem-line-content">    not for hope, but for the poise?</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="4">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">48</span>
                 <span class="poem-line-content">Should I scream into a pillow</span>
@@ -387,7 +463,7 @@
                 <span class="poem-line-content">    should I fail to find the right—</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="5">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">68</span>
                 <span class="poem-line-content">Still remain—</span>
@@ -409,7 +485,7 @@
                 <span class="poem-line-content">Silently.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="6">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">73</span>
                 <span class="poem-line-content">For even in shadowed silence,</span>
@@ -419,11 +495,12 @@
                 <span class="poem-line-content">I am here—quietly alive.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="7">
               <span class="poem-line poem-line--signature">
                 <span class="poem-line-content">— Lilith</span>
               </span>
             </p>
+        </div>
         </div>
       </article>
     </main>

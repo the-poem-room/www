@@ -1291,8 +1291,9 @@ h3 {
 
 .reader-poem {
   display: grid;
-  gap: 34px;
-  width: min(100%, 62ch);
+  grid-template-columns: minmax(72px, 92px) minmax(0, 1fr);
+  gap: clamp(18px, 4vw, 34px);
+  width: min(100%, 74ch);
   margin: clamp(26px, 4vw, 44px) auto 0;
   color: var(--ink);
   font-family: var(--serif);
@@ -1302,12 +1303,18 @@ h3 {
 }
 
 body[data-poem-slug="sadboy"] .reader-poem {
-  width: min(100%, 520px);
+  width: min(100%, 620px);
   margin: clamp(26px, 4vw, 44px) auto 0;
 }
 
 .reader-actions {
   margin-top: 24px;
+}
+
+.reader-poem-body {
+  display: grid;
+  gap: 34px;
+  min-width: 0;
 }
 
 .reader-poem p.poem-stanza {
@@ -1316,6 +1323,7 @@ body[data-poem-slug="sadboy"] .reader-poem {
   gap: 0.18em;
   margin: 0;
   min-width: 0;
+  scroll-margin-top: clamp(130px, 18vh, 180px);
 }
 
 .reader-poem p.poem-stanza--indented {
@@ -1383,6 +1391,97 @@ html[data-line-numbers="show"] .poem-line--signature {
 .poem-line--blank {
   display: block;
   min-height: 1em;
+}
+
+.poem-navigation {
+  position: sticky;
+  top: clamp(112px, 16vh, 172px);
+  display: grid;
+  grid-template-columns: 10px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  padding-top: 4px;
+}
+
+.poem-progress {
+  position: relative;
+  width: 4px;
+  height: clamp(112px, 24vh, 180px);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.poem-progress-track,
+.poem-progress-fill {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.poem-progress-track {
+  background: color-mix(in srgb, var(--muted) 16%, var(--line));
+}
+
+.poem-progress-fill {
+  transform: scaleY(0);
+  transform-origin: bottom;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--soft) 74%, var(--mauve)) 0%,
+    color-mix(in srgb, var(--soft) 30%, var(--line)) 100%
+  );
+  will-change: transform;
+}
+
+.poem-map {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.poem-navigation-label {
+  margin: 0;
+  color: var(--soft);
+  font-size: var(--label-size);
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+}
+
+.poem-map-list {
+  display: grid;
+  gap: 6px;
+}
+
+.poem-map-button {
+  display: block;
+  width: fit-content;
+  padding: 0;
+  color: color-mix(in srgb, var(--muted) 84%, var(--line));
+  background: none;
+  border: 0;
+  font-family: var(--sans);
+  font-size: 0.72em;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-align: left;
+  cursor: pointer;
+  opacity: 0.7;
+  transition:
+    color 160ms ease,
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.poem-map-button:hover,
+.poem-map-button:focus-visible {
+  color: var(--soft);
+  opacity: 1;
+  transform: translateX(1px);
+}
+
+.poem-map-button[aria-current="true"] {
+  color: var(--ink);
+  opacity: 1;
 }
 
 html[data-line-numbers="hide"] .poem-line {
@@ -1544,6 +1643,34 @@ html[data-line-numbers="hide"] .poem-line--signature {
 }
 
 @media (max-width: 760px) {
+  .reader-poem {
+    grid-template-columns: minmax(56px, 72px) minmax(0, 1fr);
+    gap: 16px;
+    width: min(100%, 100%);
+  }
+
+  .reader-poem-body {
+    gap: 28px;
+  }
+
+  .poem-navigation {
+    top: clamp(96px, 12vh, 136px);
+    gap: 10px;
+  }
+
+  .poem-progress {
+    height: 108px;
+  }
+
+  .poem-navigation-label {
+    font-size: 0.78em;
+  }
+
+  .poem-map-button {
+    font-size: 0.66em;
+    letter-spacing: 0.04em;
+  }
+
   .site-header {
     grid-template-columns: minmax(0, 1fr) auto;
     grid-template-areas:
@@ -1617,6 +1744,32 @@ html[data-line-numbers="hide"] .poem-line--signature {
 @media (max-width: 620px) {
   :root {
     --poem-line-number-width: 1.9ch;
+  }
+
+  .reader-poem {
+    grid-template-columns: minmax(48px, 62px) minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .reader-poem-body {
+    gap: 24px;
+  }
+
+  .poem-navigation {
+    gap: 8px;
+  }
+
+  .poem-progress {
+    height: 92px;
+    width: 3px;
+  }
+
+  .poem-navigation-label {
+    font-size: 0.72em;
+  }
+
+  .poem-map-button {
+    font-size: 0.62em;
   }
 
   main {

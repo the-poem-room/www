@@ -108,8 +108,60 @@
             <div class="collection-menu-panel" hidden></div>
           </div>
         </div>
-        <div class="reader-poem">
-            <p class="poem-stanza">
+        <div class="reader-poem" data-reader-poem>
+        <aside class="poem-navigation" data-poem-navigation aria-label="Jump to stanza">
+          <div class="poem-progress" aria-hidden="true">
+            <span class="poem-progress-track"></span>
+            <span class="poem-progress-fill" data-poem-progress-fill></span>
+          </div>
+          <div class="poem-map">
+            <p class="poem-navigation-label">Jump to stanza</p>
+            <div class="poem-map-list" data-poem-map>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="0"
+            data-stanza-lines="15"
+            aria-label="Jump to stanza 1, 15 lines"
+            title="Jump to stanza 1"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="1"
+            data-stanza-lines="21"
+            aria-label="Jump to stanza 2, 21 lines"
+            title="Jump to stanza 2"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="2"
+            data-stanza-lines="19"
+            aria-label="Jump to stanza 3, 19 lines"
+            title="Jump to stanza 3"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="3"
+            data-stanza-lines="22"
+            aria-label="Jump to stanza 4, 22 lines"
+            title="Jump to stanza 4"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="4"
+            data-stanza-lines="19"
+            aria-label="Jump to stanza 5, 19 lines"
+            title="Jump to stanza 5"
+          >▇▇▇▇▇▇</button>
+            </div>
+          </div>
+        </aside>
+        <div class="reader-poem-body" data-reader-poem-body>
+            <p class="poem-stanza" data-stanza-index="0">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">1</span>
                 <span class="poem-line-content"><em>I.</em> <strong>The Crowned Pig Rises</strong></span>
@@ -174,7 +226,7 @@
                 <span class="poem-line-content">and the scoreboard.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="1">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">16</span>
                 <span class="poem-line-content"><em>II.</em> <strong>Potato King</strong></span>
@@ -264,7 +316,7 @@
                 <span class="poem-line-content">It was prophecy.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="2">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">37</span>
                 <span class="poem-line-content"><em>III.</em> <strong>The Blade Unsheathed</strong></span>
@@ -346,7 +398,7 @@
                 <span class="poem-line-content">and terrible puns.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="3">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">56</span>
                 <span class="poem-line-content"><em>IV.</em> <strong>The Exit</strong></span>
@@ -440,7 +492,7 @@
                 <span class="poem-line-content">his own ending.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="4">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">78</span>
                 <span class="poem-line-content"><em>V.</em> <strong>Respawn</strong></span>
@@ -523,6 +575,7 @@
                 <span class="poem-line-content"><em>— Lilith</em></span>
               </span>
             </p>
+        </div>
         </div>
       </article>
     </main>

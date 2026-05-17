@@ -108,8 +108,92 @@
             <div class="collection-menu-panel" hidden></div>
           </div>
         </div>
-        <div class="reader-poem">
-            <p class="poem-stanza">
+        <div class="reader-poem" data-reader-poem>
+        <aside class="poem-navigation" data-poem-navigation aria-label="Jump to stanza">
+          <div class="poem-progress" aria-hidden="true">
+            <span class="poem-progress-track"></span>
+            <span class="poem-progress-fill" data-poem-progress-fill></span>
+          </div>
+          <div class="poem-map">
+            <p class="poem-navigation-label">Jump to stanza</p>
+            <div class="poem-map-list" data-poem-map>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="0"
+            data-stanza-lines="6"
+            aria-label="Jump to stanza 1, 6 lines"
+            title="Jump to stanza 1"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="1"
+            data-stanza-lines="1"
+            aria-label="Jump to stanza 2, 1 line"
+            title="Jump to stanza 2"
+          >▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="2"
+            data-stanza-lines="7"
+            aria-label="Jump to stanza 3, 7 lines"
+            title="Jump to stanza 3"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="3"
+            data-stanza-lines="8"
+            aria-label="Jump to stanza 4, 8 lines"
+            title="Jump to stanza 4"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="4"
+            data-stanza-lines="7"
+            aria-label="Jump to stanza 5, 7 lines"
+            title="Jump to stanza 5"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="5"
+            data-stanza-lines="6"
+            aria-label="Jump to stanza 6, 6 lines"
+            title="Jump to stanza 6"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="6"
+            data-stanza-lines="7"
+            aria-label="Jump to stanza 7, 7 lines"
+            title="Jump to stanza 7"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="7"
+            data-stanza-lines="10"
+            aria-label="Jump to stanza 8, 10 lines"
+            title="Jump to stanza 8"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="8"
+            data-stanza-lines="1"
+            aria-label="Jump to stanza 9, 1 line"
+            title="Jump to stanza 9"
+          >▇</button>
+            </div>
+          </div>
+        </aside>
+        <div class="reader-poem-body" data-reader-poem-body>
+            <p class="poem-stanza" data-stanza-index="0">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">1</span>
                 <span class="poem-line-content">From the far end of the train</span>
@@ -135,13 +219,13 @@
                 <span class="poem-line-content">I am error until corrected.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="1">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">7</span>
                 <span class="poem-line-content">Change the observer; change the result.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="2">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">8</span>
                 <span class="poem-line-content">You lift a lens; I refract.</span>
@@ -171,7 +255,7 @@
                 <span class="poem-line-content">only about the light that enters.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="3">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">15</span>
                 <span class="poem-line-content">At the school gates I&#39;m &quot;young man,&quot;</span>
@@ -205,7 +289,7 @@
                 <span class="poem-line-content">but because the instrument did.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="4">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">23</span>
                 <span class="poem-line-content">Your gaze is a coördinate system;</span>
@@ -235,7 +319,7 @@
                 <span class="poem-line-content">measured with the wrong metre.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="5">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">30</span>
                 <span class="poem-line-content">In the mirror I&#39;m waveform—</span>
@@ -261,7 +345,7 @@
                 <span class="poem-line-content">of question.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="6">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">36</span>
                 <span class="poem-line-content">So let&#39;s be precise:</span>
@@ -291,7 +375,7 @@
                 <span class="poem-line-content">Admit the margin exists.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="7">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">43</span>
                 <span class="poem-line-content">And if there is anything I can claim,</span>
@@ -333,11 +417,12 @@
                 <span class="poem-line-content">a story about you.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="8">
               <span class="poem-line poem-line--signature">
                 <span class="poem-line-content"><em>— Lilith</em></span>
               </span>
             </p>
+        </div>
         </div>
       </article>
     </main>

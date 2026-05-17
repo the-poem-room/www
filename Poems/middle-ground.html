@@ -108,8 +108,84 @@
             <div class="collection-menu-panel" hidden></div>
           </div>
         </div>
-        <div class="reader-poem">
-            <p class="poem-stanza">
+        <div class="reader-poem" data-reader-poem>
+        <aside class="poem-navigation" data-poem-navigation aria-label="Jump to stanza">
+          <div class="poem-progress" aria-hidden="true">
+            <span class="poem-progress-track"></span>
+            <span class="poem-progress-fill" data-poem-progress-fill></span>
+          </div>
+          <div class="poem-map">
+            <p class="poem-navigation-label">Jump to stanza</p>
+            <div class="poem-map-list" data-poem-map>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="0"
+            data-stanza-lines="5"
+            aria-label="Jump to stanza 1, 5 lines"
+            title="Jump to stanza 1"
+          >▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="1"
+            data-stanza-lines="4"
+            aria-label="Jump to stanza 2, 4 lines"
+            title="Jump to stanza 2"
+          >▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="2"
+            data-stanza-lines="3"
+            aria-label="Jump to stanza 3, 3 lines"
+            title="Jump to stanza 3"
+          >▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="3"
+            data-stanza-lines="5"
+            aria-label="Jump to stanza 4, 5 lines"
+            title="Jump to stanza 4"
+          >▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="4"
+            data-stanza-lines="5"
+            aria-label="Jump to stanza 5, 5 lines"
+            title="Jump to stanza 5"
+          >▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="5"
+            data-stanza-lines="5"
+            aria-label="Jump to stanza 6, 5 lines"
+            title="Jump to stanza 6"
+          >▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="6"
+            data-stanza-lines="5"
+            aria-label="Jump to stanza 7, 5 lines"
+            title="Jump to stanza 7"
+          >▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="7"
+            data-stanza-lines="1"
+            aria-label="Jump to stanza 8, 1 line"
+            title="Jump to stanza 8"
+          >▇</button>
+            </div>
+          </div>
+        </aside>
+        <div class="reader-poem-body" data-reader-poem-body>
+            <p class="poem-stanza" data-stanza-index="0">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">1</span>
                 <span class="poem-line-content">They sit in lines,</span>
@@ -131,7 +207,7 @@
                 <span class="poem-line-content">in a glance between edits.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="1">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">6</span>
                 <span class="poem-line-content">The questions crack like thunder:</span>
@@ -149,7 +225,7 @@
                 <span class="poem-line-content">&quot;Are you your body, your beliefs, or your TikTok bio?&quot;</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="2">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">10</span>
                 <span class="poem-line-content">A light flickers,</span>
@@ -163,7 +239,7 @@
                 <span class="poem-line-content">in HD.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="3">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">13</span>
                 <span class="poem-line-content">We watch.</span>
@@ -185,7 +261,7 @@
                 <span class="poem-line-content">of identity turned spectactle.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="4">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">18</span>
                 <span class="poem-line-content">The moderators smile like neutral gods,</span>
@@ -207,7 +283,7 @@
                 <span class="poem-line-content">and monetised discomfort.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="5">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">23</span>
                 <span class="poem-line-content">Yes, it&#39;s good,</span>
@@ -229,7 +305,7 @@
                 <span class="poem-line-content">sponsored by headphones.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="6">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">28</span>
                 <span class="poem-line-content">They title it <strong>&quot;Human&quot;</strong>,</span>
@@ -251,11 +327,12 @@
                 <span class="poem-line-content">while YouTube counts the ad revenue.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="7">
               <span class="poem-line poem-line--signature">
                 <span class="poem-line-content">— Lilith</span>
               </span>
             </p>
+        </div>
         </div>
       </article>
     </main>

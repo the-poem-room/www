@@ -108,8 +108,132 @@
             <div class="collection-menu-panel" hidden></div>
           </div>
         </div>
-        <div class="reader-poem">
-            <p class="poem-stanza">
+        <div class="reader-poem" data-reader-poem>
+        <aside class="poem-navigation" data-poem-navigation aria-label="Jump to stanza">
+          <div class="poem-progress" aria-hidden="true">
+            <span class="poem-progress-track"></span>
+            <span class="poem-progress-fill" data-poem-progress-fill></span>
+          </div>
+          <div class="poem-map">
+            <p class="poem-navigation-label">Jump to stanza</p>
+            <div class="poem-map-list" data-poem-map>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="0"
+            data-stanza-lines="3"
+            aria-label="Jump to stanza 1, 3 lines"
+            title="Jump to stanza 1"
+          >▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="1"
+            data-stanza-lines="3"
+            aria-label="Jump to stanza 2, 3 lines"
+            title="Jump to stanza 2"
+          >▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="2"
+            data-stanza-lines="6"
+            aria-label="Jump to stanza 3, 6 lines"
+            title="Jump to stanza 3"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="3"
+            data-stanza-lines="6"
+            aria-label="Jump to stanza 4, 6 lines"
+            title="Jump to stanza 4"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="4"
+            data-stanza-lines="6"
+            aria-label="Jump to stanza 5, 6 lines"
+            title="Jump to stanza 5"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="5"
+            data-stanza-lines="6"
+            aria-label="Jump to stanza 6, 6 lines"
+            title="Jump to stanza 6"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="6"
+            data-stanza-lines="6"
+            aria-label="Jump to stanza 7, 6 lines"
+            title="Jump to stanza 7"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="7"
+            data-stanza-lines="7"
+            aria-label="Jump to stanza 8, 7 lines"
+            title="Jump to stanza 8"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="8"
+            data-stanza-lines="5"
+            aria-label="Jump to stanza 9, 5 lines"
+            title="Jump to stanza 9"
+          >▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="9"
+            data-stanza-lines="6"
+            aria-label="Jump to stanza 10, 6 lines"
+            title="Jump to stanza 10"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="10"
+            data-stanza-lines="7"
+            aria-label="Jump to stanza 11, 7 lines"
+            title="Jump to stanza 11"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="11"
+            data-stanza-lines="6"
+            aria-label="Jump to stanza 12, 6 lines"
+            title="Jump to stanza 12"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="12"
+            data-stanza-lines="3"
+            aria-label="Jump to stanza 13, 3 lines"
+            title="Jump to stanza 13"
+          >▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="13"
+            data-stanza-lines="1"
+            aria-label="Jump to stanza 14, 1 line"
+            title="Jump to stanza 14"
+          >▇</button>
+            </div>
+          </div>
+        </aside>
+        <div class="reader-poem-body" data-reader-poem-body>
+            <p class="poem-stanza" data-stanza-index="0">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">1</span>
                 <span class="poem-line-content">I open the dictionary like a trapdoor</span>
@@ -123,7 +247,7 @@
                 <span class="poem-line-content">Cute.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="1">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">4</span>
                 <span class="poem-line-content">The serpeant eats its tail, then reaches for dessert.</span>
@@ -137,7 +261,7 @@
                 <span class="poem-line-content">a hall of mirrors with good posture.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="2">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">7</span>
                 <span class="poem-line-content">Meanwhile, outside the mirror maze,</span>
@@ -163,7 +287,7 @@
                 <span class="poem-line-content">but it&#39;s also a lead: it points.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="3">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">13</span>
                 <span class="poem-line-content">Enter Chad, Esq., Defender of Loopholes:</span>
@@ -189,7 +313,7 @@
                 <span class="poem-line-content">and lands on my sandwich.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="4">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">19</span>
                 <span class="poem-line-content">Exhibit A: you said, &quot;I&#39;ll be there at six.&quot;</span>
@@ -215,7 +339,7 @@
                 <span class="poem-line-content">and the band still needed a drummer.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="5">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">25</span>
                 <span class="poem-line-content">Yes, all definitions link arms like cousins at a wedding,</span>
@@ -241,7 +365,7 @@
                 <span class="poem-line-content">it means careful steps on a roundabout with exits.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="6">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">31</span>
                 <span class="poem-line-content">Try this:</span>
@@ -267,7 +391,7 @@
                 <span class="poem-line-content">but the tea still cools in the actual cup.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="7">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">37</span>
                 <span class="poem-line-content">Chad objects: &quot;Truth is context!&quot;</span>
@@ -297,7 +421,7 @@
                 <span class="poem-line-content">Rent due: timelines, roles, stakes.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="8">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">44</span>
                 <span class="poem-line-content">So no, you can&#39;t Houdini your way out of responsibility</span>
@@ -319,7 +443,7 @@
                 <span class="poem-line-content">Loops are why the fourth time hurt in 4/4.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="9">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">49</span>
                 <span class="poem-line-content">Call it pragmatic magic:</span>
@@ -345,7 +469,7 @@
                 <span class="poem-line-content">Please wipe your shoes before you come inside.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="10">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">55</span>
                 <span class="poem-line-content">I grant you the circle—take it. Frame it.</span>
@@ -375,7 +499,7 @@
                 <span class="poem-line-content">or the trapdoor you opened.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="11">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">62</span>
                 <span class="poem-line-content">Because even in a loop, we pass the same landmarks—</span>
@@ -401,7 +525,7 @@
                 <span class="poem-line-content">you still chose that exist.</span>
               </span>
             </p>
-            <p class="poem-stanza poem-stanza--italic">
+            <p class="poem-stanza poem-stanza--italic" data-stanza-index="12">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">68</span>
                 <span class="poem-line-content">(P.S. Yes, &quot;there are context-based facts.&quot;</span>
@@ -415,11 +539,12 @@
                 <span class="poem-line-content">Case closed.)</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="13">
               <span class="poem-line poem-line--signature">
                 <span class="poem-line-content">— Lilith</span>
               </span>
             </p>
+        </div>
         </div>
       </article>
     </main>

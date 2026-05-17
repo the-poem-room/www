@@ -108,8 +108,124 @@
             <div class="collection-menu-panel" hidden></div>
           </div>
         </div>
-        <div class="reader-poem">
-            <p class="poem-stanza">
+        <div class="reader-poem" data-reader-poem>
+        <aside class="poem-navigation" data-poem-navigation aria-label="Jump to stanza">
+          <div class="poem-progress" aria-hidden="true">
+            <span class="poem-progress-track"></span>
+            <span class="poem-progress-fill" data-poem-progress-fill></span>
+          </div>
+          <div class="poem-map">
+            <p class="poem-navigation-label">Jump to stanza</p>
+            <div class="poem-map-list" data-poem-map>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="0"
+            data-stanza-lines="4"
+            aria-label="Jump to stanza 1, 4 lines"
+            title="Jump to stanza 1"
+          >▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="1"
+            data-stanza-lines="4"
+            aria-label="Jump to stanza 2, 4 lines"
+            title="Jump to stanza 2"
+          >▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="2"
+            data-stanza-lines="5"
+            aria-label="Jump to stanza 3, 5 lines"
+            title="Jump to stanza 3"
+          >▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="3"
+            data-stanza-lines="3"
+            aria-label="Jump to stanza 4, 3 lines"
+            title="Jump to stanza 4"
+          >▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="4"
+            data-stanza-lines="4"
+            aria-label="Jump to stanza 5, 4 lines"
+            title="Jump to stanza 5"
+          >▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="5"
+            data-stanza-lines="4"
+            aria-label="Jump to stanza 6, 4 lines"
+            title="Jump to stanza 6"
+          >▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="6"
+            data-stanza-lines="4"
+            aria-label="Jump to stanza 7, 4 lines"
+            title="Jump to stanza 7"
+          >▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="7"
+            data-stanza-lines="7"
+            aria-label="Jump to stanza 8, 7 lines"
+            title="Jump to stanza 8"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="8"
+            data-stanza-lines="5"
+            aria-label="Jump to stanza 9, 5 lines"
+            title="Jump to stanza 9"
+          >▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="9"
+            data-stanza-lines="8"
+            aria-label="Jump to stanza 10, 8 lines"
+            title="Jump to stanza 10"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="10"
+            data-stanza-lines="5"
+            aria-label="Jump to stanza 11, 5 lines"
+            title="Jump to stanza 11"
+          >▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="11"
+            data-stanza-lines="7"
+            aria-label="Jump to stanza 12, 7 lines"
+            title="Jump to stanza 12"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="12"
+            data-stanza-lines="1"
+            aria-label="Jump to stanza 13, 1 line"
+            title="Jump to stanza 13"
+          >▇</button>
+            </div>
+          </div>
+        </aside>
+        <div class="reader-poem-body" data-reader-poem-body>
+            <p class="poem-stanza" data-stanza-index="0">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">1</span>
                 <span class="poem-line-content">I never wanted the throne.</span>
@@ -127,7 +243,7 @@
                 <span class="poem-line-content">to decide what burns, and what endures.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="1">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">5</span>
                 <span class="poem-line-content">I did not ask for subjects,</span>
@@ -145,7 +261,7 @@
                 <span class="poem-line-content">is easily mistaken for consent.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="2">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">9</span>
                 <span class="poem-line-content">So I rule, reluctantly, absurdly, sincerely.</span>
@@ -167,7 +283,7 @@
                 <span class="poem-line-content">for life does not exist to be consumed.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="3">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">14</span>
                 <span class="poem-line-content">I sign my name beneath mercy</span>
@@ -181,7 +297,7 @@
                 <span class="poem-line-content">from every law that bears my seal.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="4">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">17</span>
                 <span class="poem-line-content">In my cities, no one is blamed.</span>
@@ -199,7 +315,7 @@
                 <span class="poem-line-content">yet still, we must choose.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="5">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">21</span>
                 <span class="poem-line-content">I build centres for renewal</span>
@@ -217,7 +333,7 @@
                 <span class="poem-line-content">who cannot live beneath gentleness.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="6">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">25</span>
                 <span class="poem-line-content">Voluntary exile.</span>
@@ -235,7 +351,7 @@
                 <span class="poem-line-content">except the refusal to harm.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="7">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">29</span>
                 <span class="poem-line-content">My laws are not carved in stone.</span>
@@ -265,7 +381,7 @@
                 <span class="poem-line-content">rewritten by persuasion.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="8">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">36</span>
                 <span class="poem-line-content">I trust experts more than myself,</span>
@@ -287,7 +403,7 @@
                 <span class="poem-line-content">am the only one I can be sure of.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="9">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">41</span>
                 <span class="poem-line-content">At night I confess to the void:</span>
@@ -321,7 +437,7 @@
                 <span class="poem-line-content">and too much for peace.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="10">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">49</span>
                 <span class="poem-line-content">So I sign another decree:</span>
@@ -343,7 +459,7 @@
                 <span class="poem-line-content">even when meaning fails.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="11">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">54</span>
                 <span class="poem-line-content">And I sit, not on a throne,</span>
@@ -373,11 +489,12 @@
                 <span class="poem-line-content">between right and wrong</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="12">
               <span class="poem-line poem-line--signature">
                 <span class="poem-line-content">— Lilith</span>
               </span>
             </p>
+        </div>
         </div>
       </article>
     </main>

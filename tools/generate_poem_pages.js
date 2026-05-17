@@ -121,9 +121,52 @@ function isSignatureLine(text) {
   return unwrapped.startsWith("— ");
 }
 
+function getStanzaLineCount(stanzaText) {
+  return String(stanzaText || "")
+    .split("\n")
+    .filter((line) => String(line || "").trim())
+    .length;
+}
+
+function renderPoemNavigation(poem) {
+  const poemLines = Array.isArray(poem?.lines) ? poem.lines : [];
+  const items = poemLines
+    .map((stanza, index) => {
+      const stanzaText = typeof stanza === "string" ? stanza : String(stanza.text || "");
+      const lineCount = Math.max(1, getStanzaLineCount(stanzaText));
+
+      return `          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="${index}"
+            data-stanza-lines="${lineCount}"
+            aria-label="Jump to stanza ${index + 1}, ${lineCount} line${lineCount === 1 ? "" : "s"}"
+            title="Jump to stanza ${index + 1}"
+          >${"▇".repeat(Math.min(lineCount, 6))}</button>`;
+    })
+    .join("\n");
+
+  return `        <aside class="poem-navigation" data-poem-navigation aria-label="Jump to stanza">
+          <div class="poem-progress" aria-hidden="true">
+            <span class="poem-progress-track"></span>
+            <span class="poem-progress-fill" data-poem-progress-fill></span>
+          </div>
+          <div class="poem-map">
+            <p class="poem-navigation-label">Jump to stanza</p>
+            <div class="poem-map-list" data-poem-map>
+${items}
+            </div>
+          </div>
+        </aside>`;
+}
+
 function renderPoemBody(poem) {
-  if (!poem.lines || !poem.lines.length) {
-    return `<p class="reader-placeholder">Poem text coming soon.</p>`;
+  const poemLines = Array.isArray(poem?.lines) ? poem.lines : [];
+
+  if (!poemLines.length) {
+    return `        <div class="reader-poem-body" data-reader-poem-body>
+          <p class="reader-placeholder">Poem text coming soon.</p>
+        </div>`;
   }
 
   function isAllCapsHeading(line) {
@@ -140,7 +183,7 @@ function renderPoemBody(poem) {
 
   let lineNumber = 1;
 
-  const stanzas = poem.lines
+  const stanzas = poemLines
     .map((stanza, index) => {
       const stanzaText = typeof stanza === "string" ? stanza : String(stanza.text || "");
       const stanzaClassName =
@@ -162,7 +205,7 @@ function renderPoemBody(poem) {
           const rendered = renderInlineHtml(line);
           const content = idx === 0 && isAllCapsHeading(line) ? `<strong>${rendered}</strong>` : rendered;
           const isSignature =
-            index === poem.lines.length - 1 &&
+            index === poemLines.length - 1 &&
             idx === stanzaLines.length - 1 &&
             isSignatureLine(line);
           const lineMarkup = isSignature
@@ -181,13 +224,15 @@ function renderPoemBody(poem) {
         })
         .join("\n");
 
-      return `            <p class="${classes.join(" ")}">
+      return `            <p class="${classes.join(" ")}" data-stanza-index="${index}">
 ${lines}
             </p>`;
     })
     .join("\n");
 
-  return stanzas;
+  return `        <div class="reader-poem-body" data-reader-poem-body>
+${stanzas}
+        </div>`;
 }
 
 function poemPageTemplate(poem, previousPoem, nextPoem) {
@@ -312,7 +357,8 @@ ${previousLink}${nextLink}        <a class="back-link" href="../index.html#archi
             <div class="collection-menu-panel" hidden></div>
           </div>
         </div>
-        <div class="reader-poem">
+        <div class="reader-poem" data-reader-poem>
+${renderPoemNavigation(poem)}
 ${renderPoemBody(poem)}
         </div>
       </article>

@@ -108,8 +108,76 @@
             <div class="collection-menu-panel" hidden></div>
           </div>
         </div>
-        <div class="reader-poem">
-            <p class="poem-stanza">
+        <div class="reader-poem" data-reader-poem>
+        <aside class="poem-navigation" data-poem-navigation aria-label="Jump to stanza">
+          <div class="poem-progress" aria-hidden="true">
+            <span class="poem-progress-track"></span>
+            <span class="poem-progress-fill" data-poem-progress-fill></span>
+          </div>
+          <div class="poem-map">
+            <p class="poem-navigation-label">Jump to stanza</p>
+            <div class="poem-map-list" data-poem-map>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="0"
+            data-stanza-lines="4"
+            aria-label="Jump to stanza 1, 4 lines"
+            title="Jump to stanza 1"
+          >▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="1"
+            data-stanza-lines="6"
+            aria-label="Jump to stanza 2, 6 lines"
+            title="Jump to stanza 2"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="2"
+            data-stanza-lines="5"
+            aria-label="Jump to stanza 3, 5 lines"
+            title="Jump to stanza 3"
+          >▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="3"
+            data-stanza-lines="6"
+            aria-label="Jump to stanza 4, 6 lines"
+            title="Jump to stanza 4"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="4"
+            data-stanza-lines="8"
+            aria-label="Jump to stanza 5, 8 lines"
+            title="Jump to stanza 5"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="5"
+            data-stanza-lines="9"
+            aria-label="Jump to stanza 6, 9 lines"
+            title="Jump to stanza 6"
+          >▇▇▇▇▇▇</button>
+          <button
+            type="button"
+            class="poem-map-button"
+            data-stanza-index="6"
+            data-stanza-lines="1"
+            aria-label="Jump to stanza 7, 1 line"
+            title="Jump to stanza 7"
+          >▇</button>
+            </div>
+          </div>
+        </aside>
+        <div class="reader-poem-body" data-reader-poem-body>
+            <p class="poem-stanza" data-stanza-index="0">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">1</span>
                 <span class="poem-line-content">They say we might be code—</span>
@@ -127,7 +195,7 @@
                 <span class="poem-line-content">with anime stickers and crumbs in the keys.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="1">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">5</span>
                 <span class="poem-line-content">But the only <em>problem</em></span>
@@ -153,7 +221,7 @@
                 <span class="poem-line-content">and wouldn&#39;t care if it did.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="2">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">11</span>
                 <span class="poem-line-content">Live <em>wholly</em> inside a thing</span>
@@ -175,7 +243,7 @@
                 <span class="poem-line-content">your bones expect.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="3">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">16</span>
                 <span class="poem-line-content">It&#39;s only when a pixel twitches,</span>
@@ -201,7 +269,7 @@
                 <span class="poem-line-content">who can&#39;t fold a sheet.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="4">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">22</span>
                 <span class="poem-line-content">And if we&#39;re the <em>external</em> world,</span>
@@ -235,7 +303,7 @@
                 <span class="poem-line-content">and the save file corrupts.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="5">
               <span class="poem-line">
                 <span class="poem-line-number" aria-hidden="true">30</span>
                 <span class="poem-line-content">So yes—maybe I&#39;m code.</span>
@@ -273,11 +341,12 @@
                 <span class="poem-line-content">into the void.</span>
               </span>
             </p>
-            <p class="poem-stanza">
+            <p class="poem-stanza" data-stanza-index="6">
               <span class="poem-line poem-line--signature">
                 <span class="poem-line-content"><em>— Lilith</em></span>
               </span>
             </p>
+        </div>
         </div>
       </article>
     </main>
