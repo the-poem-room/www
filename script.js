@@ -3353,7 +3353,62 @@ to be real.`,
       `— Lilith`,
     ],
   },
-  { title: "To-Be List" },
+  {
+    title: "To-Be List",
+    lines: [
+      `They ask, *What do you do?*
+as if humanity needs a stapled receipt,
+as if being requires proof of purchase.`,
+      `My brain is a house of lamps.
+Some days one bulb floods the place—
+hyperfocus clicks on and the rest forget their names.
+Other days the lamps hum at different pitches,
+and I stand palms-up, listening for the blend.`,
+      `The world clicks a clipboard open—boxes half-ticked for me.
+Make eye contact.
+Shake hands the correct number of seconds.
+Reply within an hour.
+Translate feeling into small talk, then into smaller talk.
+Tick the boxes. Tick. Now I'm the clock.`,
+      `But time isn't a corridor; it's a tidal flat with sudden hollows,
+and I cross it anyway, love in both hands.`,
+      `Doing looks good in photraphs.
+Being is tapping a rhythm on the bus seat,
+sunglasses in the supermarket,
+counting exits,
+letting the kettle boil twice—
+because a thought held me.
+When I roll a ring, it's prayer with moving parts.`,
+      `And they still ask, *What do you do?*`,
+      `Here is my To-Be List:`,
+      `[] Be kind to the kid under fluorescent buzz.
+[] Be a friend to the focus when it chooses me.
+[] Be honest when my smile is tired.
+[] Be breath before answer.
+[] Be the pause between questions, not the apology after it.
+[] Be music without lyrics when words get tangled.
+[] Be here. Not “behind”.`,
+      `I have *been* things too—
+essays, shifits, favours, perfect rows of dishes.
+But I have been things too:
+a harbour for a friend's quiet,
+a storm of ideas no one else saw coming,
+a mapmaker of details,
+a body that remembers joy like a drum remembers hands.`,
+      `Some call it masking; I call it wearing a rented face.`,
+      `What do I do?
+I notice. I care in ways that don't fit a spreadsheet.
+I build cathedrals of attention, every lamp a lit window—
+and then I rest, which looks like nothing
+until you've tried living without it.`,
+      `Today I will be the task.
+I will check myself off gently—no pen squak, no red mark—
+just breath in the margins and a small, certain note:
+
+**Human. Being.**`,
+      `— Lilith`,
+    ],
+  },
   { title: "tolerate" },
   { title: "Too Much Company" },
   { title: "Trying Not to Disappear" },
