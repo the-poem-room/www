@@ -2746,7 +2746,45 @@ the keys are in our hands.`,
       `— Lilith`,
     ],
   },
-  { title: "The Real Divide" },
+  {
+    title: "The Real Divide",
+    lines: [
+      `They keep calling it *left* and *right*,
+as if truth wears a colour,
+as if a fact can wave a flag.`,
+      `But it isn’t that.
+It’s who builds their world
+\u00A0\u00A0\u00A0\u00A0on something reasoned,
+\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0and who builds it on noise.`,
+      `It’s not a party line—
+it’s a lifeline.
+A test of who can bear
+\u00A0\u00A0\u00A0\u00A0the weight of being wrong—
+\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0not the kind you lift in a gym,
+\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0but the kind that makes thought ache.`,
+      `We’re fighting the wrong war,
+\u00A0\u00A0\u00A0\u00A0cheering for teams
+\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0while the scoreboard burns.`,
+      `Some call it *common sense*,
+\u00A0\u00A0\u00A0\u00A0mistaking comfort
+\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0for clarity.
+Some shout *facts don’t care about feelings*,
+\u00A0\u00A0\u00A0\u00A0then sob
+\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0when theirs are scratched.`,
+      `It’s not blue or red anymore—
+\u00A0\u00A0\u00A0\u00A0it’s evidence,
+\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0or echo.
+Reason,
+\u00A0\u00A0\u00A0\u00A0or rumour.
+A map drawn from data,
+\u00A0\u00A0\u00A0\u00A0or from desire.`,
+      `And I don’t care what side you’re on,
+\u00A0\u00A0\u00A0\u00A0if you can still look a fact in the eye
+\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0and say,
+\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0*I believe you.*`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Second Zapruder" },
   { title: "The Stars Said So" },
   { title: "The Third Room" },
