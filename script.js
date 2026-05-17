@@ -1127,7 +1127,7 @@ const poems = [
     title: "President of Nothing",
     lines: [
       "Begin with a tower.\nMake it gold.\nMake it loud.\nMake it lie.\nA monument to yourself,\nhollow as your handshake.\nSix bankruptices,\ntwo impeachments,\nzero accountability.\nYou sold a dream,\nthen sued the dreamers.\nYou called yourself a builder,\nthen built debt and drama,\nstiffed the workers,\ncooked the books,\nand called the wreckage \"deal-making.\"",
-      "You cried *law and order*\nwhile dodging the draft,\npaying hush money to porn stars,\nand stoking riots\nwith your thumbs.\nYou held a Bible\nlike it burned.\nYou gassed peace\nfor a photo.\nYou wept for statues—\nbut not for children\nin cages\nyou ordered.",
+      "You cried *law and order*\nwhile dodging the draft,\npaying hush money to porn stars,\nand stoking riots\nwith your thumb.\nYou held a Bible\nlike it burned.\nYou gassed peace\nfor a photo.\nYou wept for statues—\nbut not for children\nin cages\nyou ordered.",
       "You said:\n\"I alone can fixt it.\"\n\"Very fine people on both sides.\"\n\"Stand back and stand by.\"\n\"Grab 'em by the—\"\n\"We love you. You're very special.\"\n\"I won by a lot.\"\nEvery word a brand.\nEvery lie a strategy.\nEvery silence a scream.",
       "You mocked the weak,\nthe grieving,\nthe faithful,\nthe fallen.\nYou turned cruelty\ninto applause.\nYou called truth fake\nand made grievance\na religion.\nYou governed by gut,\nand your gut was rotten.",
       "You led a nation\nthrough a plague\nwith bleach,\ncontempt,\nand golf.\nHalf a million gone—\nyou blamed masks,\nChina,\nFauci—\nnever yourself.\nYou couldn't bear silence.\nNeeded claps like breath.\nAn empty room\nwas death.",
