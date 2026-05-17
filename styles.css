@@ -1228,6 +1228,11 @@ h3 {
   letter-spacing: 0;
 }
 
+body[data-poem-slug="sadboy"] .reader-poem {
+  width: min(100%, 43ch);
+  margin: clamp(26px, 4vw, 44px) 0 0;
+}
+
 .reader-actions {
   margin-top: 24px;
 }
