@@ -250,10 +250,10 @@ function poemPageTemplate(poem, previousPoem, nextPoem) {
   const previousSlug = previousPoem ? (previousPoem.slug || slugify(previousPoem.title)) : "";
   const nextSlug = nextPoem ? (nextPoem.slug || slugify(nextPoem.title)) : "";
   const previousLink = previousPoem
-    ? `        <a class="reader-prev-link" href="./${escapeHtml(previousSlug)}.html" rel="prev" aria-label="Previous poem: ${escapeHtml(previousPoem.title)}" title="Previous poem: ${escapeHtml(previousPoem.title)}"><span aria-hidden="true">←</span></a>\n`
+    ? `        <a class="reader-prev-link" data-reader-arrow="prev" href="./${escapeHtml(previousSlug)}.html" rel="prev" aria-label="Previous poem: ${escapeHtml(previousPoem.title)}" title="Previous poem: ${escapeHtml(previousPoem.title)}"><span aria-hidden="true">←</span></a>\n`
     : "";
   const nextLink = nextPoem
-    ? `        <a class="reader-next-link" href="./${escapeHtml(nextSlug)}.html" rel="next" aria-label="Next poem: ${escapeHtml(nextPoem.title)}" title="Next poem: ${escapeHtml(nextPoem.title)}"><span aria-hidden="true">→</span></a>\n`
+    ? `        <a class="reader-next-link" data-reader-arrow="next" href="./${escapeHtml(nextSlug)}.html" rel="next" aria-label="Next poem: ${escapeHtml(nextPoem.title)}" title="Next poem: ${escapeHtml(nextPoem.title)}"><span aria-hidden="true">→</span></a>\n`
     : "";
 
   return `<!doctype html>
