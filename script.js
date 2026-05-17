@@ -1630,7 +1630,41 @@ And still, the rubble waits.`,
       `— Lilith`,
     ],
   },
-  { title: "Thanks for Watching" },
+  {
+    title: "Thanks for Watching",
+    subtitle: "for October 21st, 2023",
+    lines: [
+      `I didn't visit much anymore,
+not like those days when pixel suns
+rose with his voice — warm and sure —
+and the world has built for fun.`,
+      `I'd long since left the treehouses,
+the cake trails and dogs he named,
+grown through those stories,
+with real-world things to claim.`,
+      `But still, the morning lingered
+in some soft-lit part of me,
+wooden planks, a gentle laugh,
+the place I first felt free.`,
+      `And then — the end.
+Not sudden, not unkind.
+Just a bow, a breath, a final sign-off
+from that world I'd left behind.`,
+      `He: "Thanks for watching."
+and the years came rushing through —
+how endings slip in quietly,
+with a whispered, "meant for you."`,
+      `He closed a door I thought had vanished,
+long boarded up with age,
+but it opened, just to wave goodbye,
+from that distant, golden stage.`,
+      `And I? I wept for something soft,
+for something small yet bright —
+a world that once had held me close,
+then let me go, just right.`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Angle of Light" },
   { title: "The Book of Ironicus" },
   { title: "The Butterfly's Lover" },
