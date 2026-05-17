@@ -1201,6 +1201,12 @@ h3 {
 
 .reading-page {
   position: relative;
+  --reader-edge: clamp(18px, 3vw, 28px);
+  --reader-arrow-size: 42px;
+  --reader-back-gap: clamp(18px, 2vw, 24px);
+  --reader-back-clearance: calc(
+    var(--reader-edge) + var(--reader-arrow-size) + var(--reader-back-gap)
+  );
   width: min(100% - 2 * clamp(16px, 4vw, 42px), 980px);
   margin: clamp(18px, 3vw, 32px) auto 0;
   padding: clamp(44px, 6vw, 78px) clamp(20px, 5vw, 72px);
@@ -1211,20 +1217,26 @@ h3 {
 }
 
 .back-link {
-  display: inline-block;
-  margin-bottom: 34px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  width: fit-content;
+  max-width: calc(100% - var(--reader-back-clearance));
+  margin: 0 0 34px var(--reader-back-clearance);
   color: var(--muted);
   text-underline-offset: 0.36em;
+  position: relative;
+  z-index: 1;
 }
 
 .reader-next-link,
 .reader-prev-link {
   position: absolute;
-  top: clamp(18px, 3vw, 28px);
+  top: var(--reader-edge);
   display: grid;
   place-items: center;
-  width: 42px;
-  height: 42px;
+  width: var(--reader-arrow-size);
+  height: var(--reader-arrow-size);
   color: var(--ink);
   background: color-mix(in srgb, var(--panel-solid) 92%, transparent);
   border: 1px solid var(--line);
@@ -1239,11 +1251,11 @@ h3 {
 }
 
 .reader-next-link {
-  right: clamp(18px, 3vw, 28px);
+  right: var(--reader-edge);
 }
 
 .reader-prev-link {
-  left: clamp(18px, 3vw, 28px);
+  left: var(--reader-edge);
 }
 
 .reader-next-link:hover,
