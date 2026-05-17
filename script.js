@@ -5729,7 +5729,7 @@ function updateArchiveSearchPlaceholder(mode) {
 
   archiveSearch.placeholder =
     mode === "poem-text"
-      ? "Search words, phrases, punctuation, or letters"
+      ? "Search poem text"
       : "Search poem titles";
 }
 
