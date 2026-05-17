@@ -1401,8 +1401,13 @@ h3 {
   grid-template-columns: minmax(3.2em, auto) minmax(0, 1fr);
   gap: 12px;
   align-items: start;
-  margin: 0;
+  padding: 0 10px;
+  margin: 0 -10px;
+  border-radius: 7px;
   counter-increment: featured-collection-poem;
+  transition:
+    background 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .featured-collection-poem-list li::before {
@@ -1436,6 +1441,19 @@ h3 {
   padding-top: 0.02em;
 }
 
+.featured-collection-poem-list li:hover,
+.featured-collection-poem-list li:focus-within {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--pink) 14%, transparent),
+      color-mix(in srgb, var(--lavender) 10%, transparent)
+    );
+  box-shadow:
+    0 8px 20px color-mix(in srgb, var(--soft) 9%, transparent),
+    inset 0 0 0 1px color-mix(in srgb, var(--soft) 18%, transparent);
+}
+
 .featured-collection-poem-list a {
   display: block;
   color: var(--ink);
@@ -1443,14 +1461,12 @@ h3 {
   font-size: var(--collection-poem-size);
   line-height: 1.35;
   text-decoration: none;
-  transition:
-    color 180ms ease,
-    transform 180ms ease;
+  transition: color 180ms ease;
 }
 
-.featured-collection-poem-list a:hover {
+.featured-collection-poem-list li:hover a,
+.featured-collection-poem-list li:focus-within a {
   color: var(--soft);
-  transform: translateX(2px);
 }
 
 .library-copy {
