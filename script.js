@@ -3580,7 +3580,272 @@ enough.`,
       "— Lilith",
     ],
   },
-  { title: "Trying to Bite Your Own Teeth" },
+  {
+    title: "Trying to Bite Your Own Teeth",
+    lines: [
+      `i'm so
+unsure`,
+      `whether uncertainty is wisdom
+is jut fear
+with a reading list.`,
+      `I envy people who seem able
+to arrive at conclusions without circling them
+for three hours first.
+People who say things like
+"this is obviously wrong"
+and apparently sleep perfectly well afterwards.`,
+      `Which is interesting, because
+I use words like "obviously" too.`,
+      `I wrote "cruelty" earlier
+without hesitation.`,
+      `It's strange
+how quickly my uncertainty disappears
+around suffering.`,
+      `Then I spend fifteen minutes
+choosing between two moisturisers
+as though one of them
+contains the morally correct way
+to exist inside a body.`,
+      `Sometimes I stand completely still
+in supermarket aisles
+because every choice suddenly branches outward
+into consequences I cannot fully calculate.`,
+      `Factory farms.
+Packaging.
+Rainforests.
+Advertising.
+My own hypocrisy.
+Whether wanting anything at all
+already compromises the whole exercise.`,
+      `Meanwhile somebody nearby
+has already chosen cereal
+without accidentally questioning
+the structure of reality.`,
+      `Or worse, I do know how I feel,
+and the feeling arrives first
+while the explanation rushes after it
+buttoning its shirt.`,
+      `Split-brain patients do things
+and then the brain invests a reason
+smooth enough to trust.`,
+      `I think about that constantly.`,
+      `How many of my beliefs
+were feelings first?`,
+      `How many arguments
+are just emotions
+with better grammar?`,
+      `And if that sentence felt convincing,
+was that because it was true
+or because my brain enjoys symmetry?`,
+      `Love appears.
+Fear appears.
+Disgust. Tenderness.`,
+      `I never consciously select any of them.`,
+      `They simply arrive
+already carrying names.`,
+      `Maybe morality does too.`,
+      `I still recoil from screams
+before philosophy arrives.`,
+      `I've spent entire evenings
+trying to untangle convinction
+from instinct,
+then trying to untangle instinct
+from social conditioning,
+then trying to determine
+whether the distinction even exists.`,
+      `At some point
+the whole thing starts folding in on itself.`,
+      `Something ancient in me
+still hears rustling grass
+and prepares for teeth.`,
+      `Which probably kept somebody alive once.`,
+      `Truth may have been incidental.`,
+      `And then I realise
+the thing producing all this doubt
+is the exact same organ
+I'm trying to doubt.`,
+      `A brain examing itself
+feels a bit like trying to bite your own teeth.`,
+      `Or trying to look directly
+at your own eyes
+without a mirror.`,
+      `SOmetimes I genuinely think
+everyone else received
+some fundamental instruction manual
+that I misplaced immediately.`,
+      `The world keeps telling me
+to follow my heart.`,
+      `My heart is tissue and electricity.`,
+      `It reacts before "I" do.`,
+      `Maybe certainty does too.`,
+      `Bertrand Russell wrote
+that stupid people are full of certainty
+while intelligent people are full of doubt.`,
+      `In ordinary life
+that often feels true.`,
+      `Science works.`,
+      `We can predict eclipses centuries in advance,
+photograph black holes,
+send signals into space
+and receive information back
+from things older than language.`,
+      `Every sunrise
+feels persuasive.`,
+      `That bothers me.`,
+      `Because persuasion isn't proof.`,
+      `Pattern is not proof.
+Habit is not proof.
+Memory is not proof.`,
+      `And still I set alarms
+as though tomorrow
+has signed a contract.`,
+      `I buy groceries
+like the future
+is guaranteed to arrive.`,
+      `The assumptions work
+with terrifying consistency.`,
+      `Enough consistency
+that doubting them too much
+starts to resemble illness.`,
+      `WHich is maybe why
+almost nobody does it all the way.`,
+      `Sometimes I think
+if I questioned every assumption
+with complete sincerity
+I would never leave bed again.`,
+      `Or speak.`,
+      `Or tust language enough
+to finish a sentence.`,
+      `The strange things is that society mostly functions
+because people pretend they know enough.`,
+      `Doctors.
+Teachers.
+Parents.
+Scientists.`,
+      `Me.`,
+      `Especially me.`,
+      `I keep writing sentences
+that sound definitive
+in a poem about uncertainty.`,
+      `I don't read philosophy
+expecting answers anymore.`,
+      `Mostly I read it
+the way people watch demolition videos.`,
+      `One argument
+kicking holes through another.`,
+      `And then another arriving
+to kick holes through that one too.`,
+      `Sometimes I lie awake wondering
+whether rationality
+is just an extremely sophisticated form
+of guessing correctly often enough.`,
+      `Or whether that sentence itself
+only feels intelligent
+because I've heard variations of it before.`,
+      `I say "I" constantly
+despite not understanding
+what that word refers to.`,
+      `Am I a consciousness
+looking outward at a world beyond itself?`,
+      `Or part of the world
+mistakenly experiencing separation
+because separation happened to be useful?`,
+      `I don't know how I could verify either.`,
+      `And even that statement
+quietly assumes
+verification is possible.`,
+      `Maybe consciousness produces reality.
+Maybe reality produces consciousness.`,
+      `Maybe both ideas
+are embarrassingly human.`,
+      `Maybe the need to choose between them is too.`,
+      `I reach for a glass of water
+before becoming aware
+of deciding to reach for it.`,
+      `The songs somebody listened to
+at fourteen until two in the morning.
+The exact tone a person used once
+that still reappears years later
+without permission.
+Being called "too sensitive"
+often enough
+that it starts sounding medical.`,
+      `Apparently large sections of my brain
+have stopped keeping me informed.`,
+      `But guilt still exists somehow.`,
+      `Regret too.`,
+      `I still replay conversations
+from years ago
+like my brain is trying to revise history
+through sheer repetition.`,
+      `Maybe certainty is unavoidable.`,
+      `Or maybe I only say that
+because uncertainty
+becomes exhausting after enough years.`,
+      `Sometimes a chord progression resolves
+in exactly the right way
+and my body believes it
+before my mind has time
+to object.`,
+      `Then five minutes later
+I'm back to questioning
+whether meaning itself
+is only another feeling
+arriving too quickly.`,
+      `Sometimes somebody speaks gently to me
+and for a few seconds
+doubt stops talking.`,
+      `Not permanently.
+Just long enough
+for me to notice the silence.`,
+      `Walking home through cold streets
+with music in my headphones
+feeling almost unearably grateful
+that consciousness exists at all.`,
+      `Then immediately wondering
+whether gratitude is just dopamine
+misinterpreting itself poetically.`,
+      `None of those feelings were chosen either.`,
+      `They happened to me.`,
+      `I care about frighten animals
+in a way that genuinely hurts sometimes.`,
+      `We can map distant galaxies
+while building industrial systems
+designed around screaming.`,
+      `I notice
+I never put quotation marks
+around suffering.`,
+      `Maybe that means something.`,
+      `Or maybe pain only feels morally obvious
+because evolution made social creatures
+that way.`,
+      `Or maybe saying that
+already feels vaguely monstrous.`,
+      `I honestly can't tell anymore.`,
+      `Maybe this is intellectual honesty.`,
+      `Or maybe I'm just afraid
+of becoming somebody
+who mistakes confidence
+for understanding.`,
+      `Tomorrow
+I will probably speak confidently again.`,
+      `I'll say
+"that's cruel"
+or "that's beautiful"
+or "I know."`,
+      `And part of me
+will believe it completely.`,
+      `Another part
+will immediately begin
+interrogating the sentence.`,
+      `And another part
+will become suspicious
+of the interrogation too.`,
+      `i'm still
+unsure`,
+      `— Lilith`,
+    ],
+  },
   { title: "Twelve Pounds and a Dream" },
   { title: "Two Chairs" },
   { title: "Unassigned" },
