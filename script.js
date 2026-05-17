@@ -1458,7 +1458,107 @@ desire.`,
       "*V.* **Respawn**\n\nNow, the lobbies are quieter.\nThe throne is empty,\nbut the crown remains.\n\nIn every SkyBlock grind,\nevery duel montage,\nevery whispered\n\"Technoblade never dies\"\nbefore the first strike—\n\nhe lives.\n\nNot just in memory,\nbut in muscle memory.\nIn clicks per second.\nIn the silence\nbefore the crit.\n\nHe didn't die.\nHe just reached\nthe next lobby.\n\n*— Lilith*",
     ],
   },
-  { title: "Temporary Coördinates" },
+  {
+    title: "Temporary Coördinates",
+    lines: [
+      `I'm autistic because I struggle with
+is not confession,
+not diagnosis,
+not essence.`,
+      `It is a **coördinate**.`,
+      `A graph-point.
+A pencil dot.
+where something infinite was happening.`,
+      `We collapse family resemblances—
+buzzing fluorescent supermarkets,
+the nylon hiss of a collar tag,
+sound that lands like metal,
+light that bruises the eyes—
+into syllables
+because language is a small suitcase
+and experience is **high-resolution**.`,
+      `"I struggle with sound
+because I'm autistic"
+and
+"I'm autistic
+so I struggle with sound"
+look identical at a distance.`,
+      `Both point at the same dot.
+Both survive small talk.`,
+      `Only one preserves the order.`,
+      `One flows left:`,
+      `**word → wound**`,
+      `It says:
+first the name,
+then the pain.`,
+      `The truer sentence moves right:`,
+      `**wound → word**`,
+      `Sound as blade.
+Light as shout.
+Fabric is fire.
+Time as a strobe that won't sync.`,
+      `Not:
+I am overwhelmed because I am autistic.`,
+      `But:
+I am autistic because the world arrives
+too loud,
+too bright,
+too unbuffered.`,
+      `**Noun:** autistic
+Still.`,
+      `**Verb:** noticing until the room shows its cracks.`,
+      `**Noun:** gender.
+Still.`,
+      `**Verb:** becoming despite the grid.`,
+      `**Noun:** race.
+Still.`,
+      `**Verb:** surviving systems that prefer stillness.`,
+      `Forms prefer **nouns**.
+Because **verbs** **move** too much.
+Systems love fixed points.
+They draw axes through us:
+functional / broken
+normal / other
+visible / erased`,
+      `But a point
+is supposed
+to **move**.`,
+      `I don't struggle with honesty
+because I'm autistic.`,
+      `I don't struggle with patterns,
+with depth,
+with the small fractures in large structures.`,
+      `"I don't struggle...
+because I'm autistic"
+is not denial.`,
+      `It is **calibration**.`,
+      `A reminder:
+maps are not territory.
+**Coördinates are not cages.**`,
+      `We turn constellations into dots
+for speed,
+for safety,
+for being understood
+before the bell rings.`,
+      `This is not essence.
+This is **transport**.`,
+      `A storm folded small enough
+to cross a room.
+A weather system
+flattened into breath.`,
+      `I am not fixed.
+I am not pinned.`,
+      `I am a moving **coördinate**
+misfiled as a **noun**,
+sliding across invisible axes,
+more **verb** than word,
+more weather than label.`,
+      `A storm that did not agree
+but learned
+how to be spelled.`,
+      `— Lilith`,
+    ],
+  },
   { title: "Ten Thousand Suns" },
   { title: "Thanks for Watching" },
   { title: "The Angle of Light" },
