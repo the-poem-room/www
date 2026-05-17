@@ -6963,7 +6963,7 @@ function scrollToLibraryTarget(targetHash) {
   if (poemPageSlug) {
     const url = new URL("../index.html", window.location.href);
     url.searchParams.set("target", targetHash || "#library");
-    url.hash = "#library";
+    url.hash = targetHash || "#library";
     window.location.href = url.toString();
     return;
   }
@@ -6972,7 +6972,8 @@ function scrollToLibraryTarget(targetHash) {
     return;
   }
 
-  window.history.pushState(null, "", "#library");
+  const nextHash = targetHash || "#library";
+  window.history.pushState(null, "", nextHash);
   handleRoute();
 
   const target = document.querySelector(targetHash) || document.querySelector("#library");
