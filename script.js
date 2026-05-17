@@ -2163,7 +2163,40 @@ as if there were time.`,
       `*— Lilith*`,
     ],
   },
-  { title: "The Garden of Youth" },
+  {
+    title: "The Garden of Youth",
+    lines: [
+      `They said a garden must be tended,
+as if wildness were a flaw.
+But every thought they tried to straighten
+just grew around their law.`,
+      `Dreams push through cracks they never planned,
+half doubt, half something true.
+The weeds don't ask for reprimand;
+they only do what flowers do.`,
+      `The sun should warm, not blind or burn,
+not glare like something owed.
+The best light listens, helps us learn,
+and lets new colours grow.`,
+      `Rain shouldn't fall like punishment,
+but softly, clear and kind —
+a rhythm meant to nourish roots,
+not flood a fragile mind.`,
+      `The gardeners must move with care,
+not fear what they didn't know.
+The brightest growth begins when they
+step back, and let it show.`,
+      `Still, underground, the seeds persist,
+alive, unruled, unmade.
+They hum beneath the clenched-up fist,
+and wait to meet the day.`,
+      `And now the paths begin to split,
+the fences blur, the rest makes sense.
+We grow through trust, through time, through wit —
+wild, deliberate, immense.`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Goldbergs, Everywhere-" },
   { title: "The Good Teacher" },
   { title: "The Light Changes Key" },
