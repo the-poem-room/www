@@ -1295,7 +1295,7 @@ Case closed.)`,
   },
   {
     title: "She Said Men Only Want One Thing",
-    subtitle: "(but then rewatched *Bridgerton* twice)",
+    subtitle: "(but then rewatched Bridgerton twice)",
     lines: [
       `She said,
 *"Men are animals."*
