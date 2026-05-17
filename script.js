@@ -1461,7 +1461,7 @@ desire.`,
   {
     title: "Temporary Coördinates",
     lines: [
-      `I'm autistic because I struggle with
+      `*I'm autistic because I struggle with*
 is not confession,
 not diagnosis,
 not essence.`,
@@ -1477,11 +1477,11 @@ light that bruises the eyes—
 into syllables
 because language is a small suitcase
 and experience is **high-resolution**.`,
-      `"I struggle with sound
-because I'm autistic"
+      `*"I struggle with sound*
+*because I'm autistic"*
 and
-"I'm autistic
-so I struggle with sound"
+*"I'm autistic*
+*so I struggle with sound"*
 look identical at a distance.`,
       `Both point at the same dot.
 Both survive small talk.`,
@@ -1517,19 +1517,19 @@ Still.`,
 Because **verbs** **move** too much.
 Systems love fixed points.
 They draw axes through us:
-functional / broken
-normal / other
-visible / erased`,
+*functional / broken*
+*normal / other*
+*visible / erased*`,
       `But a point
 is supposed
 to **move**.`,
-      `I don't struggle with honesty
-because I'm autistic.`,
+      `*I don't struggle with honesty*
+*because I'm autistic.*`,
       `I don't struggle with patterns,
 with depth,
 with the small fractures in large structures.`,
-      `"I don't struggle...
-because I'm autistic"
+      `*"I don't struggle...*
+*because I'm autistic"*
 is not denial.`,
       `It is **calibration**.`,
       `A reminder:
@@ -1551,12 +1551,12 @@ I am not pinned.`,
       `I am a moving **coördinate**
 misfiled as a **noun**,
 sliding across invisible axes,
-more **verb** than word,
-more weather than label.`,
+more *verb* than *word*,
+more *weather* than *label*.`,
       `A storm that did not agree
 but learned
 how to be spelled.`,
-      `— Lilith`,
+      `*— Lilith*`,
     ],
   },
   { title: "Ten Thousand Suns" },
