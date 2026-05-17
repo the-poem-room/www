@@ -163,12 +163,16 @@ function renderPoemBody(poem) {
   return stanzas;
 }
 
-function poemPageTemplate(poem, nextPoem) {
+function poemPageTemplate(poem, previousPoem, nextPoem) {
   const title = poem.title;
   const slug = poem.slug || slugify(title);
   const description = `Read "${title}" in The Poem Room.`;
   const subtitle = poem.subtitle ? renderInlineHtml(String(poem.subtitle)) : "";
+  const previousSlug = previousPoem ? (previousPoem.slug || slugify(previousPoem.title)) : "";
   const nextSlug = nextPoem ? (nextPoem.slug || slugify(nextPoem.title)) : "";
+  const previousLink = previousPoem
+    ? `        <a class="reader-prev-link" href="./${escapeHtml(previousSlug)}.html" rel="prev" aria-label="Previous poem: ${escapeHtml(previousPoem.title)}" title="Previous poem: ${escapeHtml(previousPoem.title)}"><span aria-hidden="true">←</span></a>\n`
+    : "";
   const nextLink = nextPoem
     ? `        <a class="reader-next-link" href="./${escapeHtml(nextSlug)}.html" rel="next" aria-label="Next poem: ${escapeHtml(nextPoem.title)}" title="Next poem: ${escapeHtml(nextPoem.title)}"><span aria-hidden="true">→</span></a>\n`
     : "";
@@ -252,7 +256,7 @@ function poemPageTemplate(poem, nextPoem) {
 
     <main id="main-content">
       <article class="reading-page" aria-labelledby="poem-title">
-${nextLink}        <a class="back-link" href="../index.html#archive-${escapeHtml(slug)}">Back to Archive</a>
+${previousLink}${nextLink}        <a class="back-link" href="../index.html#archive-${escapeHtml(slug)}">Back to Archive</a>
         <p class="eyebrow">reading room</p>
         <h1 id="poem-title">${escapeHtml(title)}</h1>
         ${subtitle ? `<p class="poem-subtitle">${subtitle}</p>` : ""}
@@ -319,11 +323,12 @@ function main() {
 
   let written = 0;
   sortedPoems.forEach((poem, index) => {
+    const previousPoem = sortedPoems[(index - 1 + sortedPoems.length) % sortedPoems.length];
     const nextPoem = sortedPoems[(index + 1) % sortedPoems.length];
     const slug = poem.slug || slugify(poem.title);
     const filename = `${slug}.html`;
     const outPath = path.join(outDir, filename);
-    fs.writeFileSync(outPath, poemPageTemplate(poem, nextPoem), "utf8");
+    fs.writeFileSync(outPath, poemPageTemplate(poem, previousPoem, nextPoem), "utf8");
     written += 1;
   });
 

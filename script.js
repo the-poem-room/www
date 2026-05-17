@@ -1530,59 +1530,76 @@ function getNextPoem(poemOrSlug) {
   return sortedPoems[(index + 1) % sortedPoems.length] || null;
 }
 
+function getPreviousPoem(poemOrSlug) {
+  const slug = typeof poemOrSlug === "string" ? poemOrSlug : getPoemSlug(poemOrSlug);
+  const index = poemIndexBySlug.get(slug);
+
+  if (index === undefined || !sortedPoems.length) {
+    return null;
+  }
+
+  return sortedPoems[(index - 1 + sortedPoems.length) % sortedPoems.length] || null;
+}
+
 function getPoemPageHref(slug) {
   return `Poems/${slug}.html`;
 }
 
-function createNextPoemLink(currentSlug) {
-  const nextPoem = getNextPoem(currentSlug);
+function createReaderArrowLink(currentSlug, direction) {
+  const isNext = direction === "next";
+  const poem = isNext ? getNextPoem(currentSlug) : getPreviousPoem(currentSlug);
 
-  if (!nextPoem) {
+  if (!poem) {
     return null;
   }
 
-  const nextSlug = getPoemSlug(nextPoem);
+  const slug = getPoemSlug(poem);
   const link = document.createElement("a");
-  link.className = "reader-next-link";
-  link.href = getPoemPageHref(nextSlug);
-  link.rel = "next";
-  link.title = `Next poem: ${nextPoem.title}`;
-  link.setAttribute("aria-label", `Next poem: ${nextPoem.title}`);
-  link.dataset.readerNext = "true";
-  link.innerHTML = '<span aria-hidden="true">→</span>';
+  link.className = `reader-${direction}-link`;
+  link.href = getPoemPageHref(slug);
+  link.rel = direction;
+  link.title = `${isNext ? "Next" : "Previous"} poem: ${poem.title}`;
+  link.setAttribute("aria-label", `${isNext ? "Next" : "Previous"} poem: ${poem.title}`);
+  link.dataset.readerArrow = direction;
+  link.innerHTML = `<span aria-hidden="true">${isNext ? "→" : "←"}</span>`;
   return link;
 }
 
-function updateReaderNextLink(currentSlug) {
+function updateReaderArrowLink(currentSlug, direction) {
   if (!reader) {
     return;
   }
 
-  const existing = reader.querySelector("[data-reader-next]");
-  const nextPoem = getNextPoem(currentSlug);
+  const existing = reader.querySelector(`[data-reader-arrow="${direction}"]`);
+  const poem = direction === "next" ? getNextPoem(currentSlug) : getPreviousPoem(currentSlug);
 
-  if (!nextPoem) {
+  if (!poem) {
     existing?.remove();
     return;
   }
 
-  const nextSlug = getPoemSlug(nextPoem);
-  const nextLabel = `Next poem: ${nextPoem.title}`;
-  const link = existing || createNextPoemLink(currentSlug);
+  const slug = getPoemSlug(poem);
+  const label = `${direction === "next" ? "Next" : "Previous"} poem: ${poem.title}`;
+  const link = existing || createReaderArrowLink(currentSlug, direction);
 
   if (!link) {
     return;
   }
 
-  link.href = getPoemPageHref(nextSlug);
-  link.rel = "next";
-  link.title = nextLabel;
-  link.setAttribute("aria-label", nextLabel);
+  link.href = getPoemPageHref(slug);
+  link.rel = direction;
+  link.title = label;
+  link.setAttribute("aria-label", label);
 
   if (!existing) {
     const eyebrow = reader.querySelector(".eyebrow");
     reader.insertBefore(link, eyebrow || reader.firstChild);
   }
+}
+
+function updateReaderNavLinks(currentSlug) {
+  updateReaderArrowLink(currentSlug, "prev");
+  updateReaderArrowLink(currentSlug, "next");
 }
 
 const slugMigrations = {
@@ -2561,7 +2578,7 @@ function renderPoem(poem) {
   readerActions.innerHTML = "";
   readerActions.append(createFavouriteButton(slug, poem.title));
   readerActions.append(createCollectionControl(slug));
-  updateReaderNextLink(slug);
+  updateReaderNavLinks(slug);
 
   if (poem.lines?.length) {
     poem.lines.forEach((stanza, index) => {
@@ -2621,7 +2638,7 @@ function refreshReaderActions() {
   readerActions.innerHTML = "";
   readerActions.append(createFavouriteButton(slug, poem.title));
   readerActions.append(createCollectionControl(slug));
-  updateReaderNextLink(slug);
+  updateReaderNavLinks(slug);
 }
 
 function handleRoute() {

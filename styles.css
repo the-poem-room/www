@@ -1217,10 +1217,10 @@ h3 {
   text-underline-offset: 0.36em;
 }
 
-.reader-next-link {
+.reader-next-link,
+.reader-prev-link {
   position: absolute;
   top: clamp(18px, 3vw, 28px);
-  right: clamp(18px, 3vw, 28px);
   display: grid;
   place-items: center;
   width: 42px;
@@ -1238,6 +1238,14 @@ h3 {
     background-color 180ms ease;
 }
 
+.reader-next-link {
+  right: clamp(18px, 3vw, 28px);
+}
+
+.reader-prev-link {
+  left: clamp(18px, 3vw, 28px);
+}
+
 .reader-next-link:hover,
 .reader-next-link:focus-visible {
   transform: translateX(2px);
@@ -1245,7 +1253,15 @@ h3 {
   background: var(--panel-solid);
 }
 
-.reader-next-link span {
+.reader-prev-link:hover,
+.reader-prev-link:focus-visible {
+  transform: translateX(-2px);
+  border-color: color-mix(in srgb, var(--soft) 46%, var(--line));
+  background: var(--panel-solid);
+}
+
+.reader-next-link span,
+.reader-prev-link span {
   font-size: 1.25rem;
   line-height: 1;
 }
