@@ -1229,48 +1229,8 @@ h3 {
 }
 
 body[data-poem-slug="sadboy"] .reader-poem {
-  width: min(100%, 43ch);
-  margin: clamp(26px, 4vw, 44px) 0 0;
-}
-
-body[data-poem-slug="sadboy"] .reader-poem p.poem-stanza--sadboy-1 {
-  transform: translateX(0.9em);
-}
-
-body[data-poem-slug="sadboy"] .reader-poem p.poem-stanza--sadboy-2 {
-  transform: translateX(1.7em);
-}
-
-body[data-poem-slug="sadboy"] .reader-poem p.poem-stanza--sadboy-3 {
-  transform: translateX(3em);
-}
-
-body[data-poem-slug="sadboy"] .reader-poem p.poem-stanza--sadboy-4 {
-  transform: translateX(0.45em);
-}
-
-body[data-poem-slug="sadboy"] .reader-poem p.poem-stanza--sadboy-5 {
-  transform: translateX(2.55em);
-}
-
-body[data-poem-slug="sadboy"] .reader-poem p.poem-stanza--sadboy-6 {
-  transform: translateX(1.2em);
-}
-
-body[data-poem-slug="sadboy"] .reader-poem p.poem-stanza--sadboy-7 {
-  transform: translateX(2.7em);
-}
-
-body[data-poem-slug="sadboy"] .reader-poem p.poem-stanza--sadboy-8 {
-  transform: translateX(3.15em);
-}
-
-body[data-poem-slug="sadboy"] .reader-poem p.poem-stanza--sadboy-9 {
-  transform: translateX(1.5em);
-}
-
-body[data-poem-slug="sadboy"] .reader-poem p.poem-stanza--sadboy-10 {
-  transform: translateX(0);
+  width: min(100%, 520px);
+  margin: clamp(26px, 4vw, 44px) auto 0;
 }
 
 .reader-actions {
