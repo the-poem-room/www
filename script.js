@@ -1214,7 +1214,85 @@ const poems = [
       "— Lilith",
     ],
   },
-  { title: "See Also: See Also" },
+  {
+    title: "See Also: See Also",
+    lines: [
+      `I open the dictionary like a trapdoor
+and fall into "meaning (n.): see **MEANING**."
+Cute.`,
+      `The serpeant eats its tail, then reaches for dessert.
+Every word winks at another word,
+a hall of mirrors with good posture.`,
+      `Meanwhile, outside the mirror maze,
+a bus arrives at 08:17,
+my toast burns (again),
+and you text, "omw," at precisely not-omw.
+Language is a leash, yes,
+but it's also a lead: it points.`,
+      `Enter Chad, Esq., Defender of Loopholes:
+"I can't be wrong because words are circles."
+He announces this... with words.
+He pulls a parachute from the very fabric
+he swore was imagery,
+and lands on my sandwich.`,
+      `Exhibit A: you said, "I'll be there at six."
+Exhibit B: at six you were not there.
+Exhibit C: my face doing the disappointed clock.
+Counsel, you may argue about the ontology of "there,"
+the chair remained un-sat,
+and the band still needed a drummer.`,
+      `Yes, all definitions link arms like cousins at a wedding,
+just delighted to be related.
+But the music still starts at bar one,
+and if you miss the downbeat, it's not philosophy; it's late.
+CIrcular doesn't mean useless—
+it means careful steps on a roundabout with exits.`,
+      `Try this:
+"Cup." See also: "container."
+"Container." See: "holds."
+"Hold." See: your hand, my sleeve, the final note we both heard.
+You can chase the chain to the horizon,
+but the tea still cools in the actual cup.`,
+      `Chad objects: "Truth is context!"
+Sustained, with an asterisk.
+Context is not a smokescreen; it's coördinates.
+It's why "I'm fine" means different things
+in a breakup, a hospital, and a group chat named "Chaos Crew."
+Context is the room where words pay rent.
+Rent due: timelines, roles, stakes.`,
+      `So no, you can't Houdini your way out of responsibility
+by whispering, "labels are loops."
+Loops are how we remember melodies.
+Loops are how you promised—twice, then thrice, then silence.
+Loops are why the fourth time hurt in 4/4.`,
+      `Call it pragmatic magic:
+we speak, the world answers back.
+You shout in the well of language,
+and the echo returns with mud on it.
+That mut is evidence.
+Please wipe your shoes before you come inside.`,
+      `I grant you the circle—take it. Frame it.
+Hang it above your desk with the diploma that says "words are tricky."
+Now do the trick with the lights on:
+say what you mean, mean what you can,
+and when the room proves you wrong,
+don't point athe ceiling and blame geometry—
+or the trapdoor you opened.`,
+      `Because even in a loop, we pass the same landmarks—
+apology, promise, claim, proof—
+and each time we pass them, we are judged
+by whether we actually stopped.
+Language is a roundabout;
+you still chose that exist.`,
+      {
+        text: `(P.S. Yes, "there are context-based facts."
+I see it. You saw it. We both know what it means.
+Case closed.)`,
+        className: "poem-stanza--italic",
+      },
+      "— Lilith",
+    ],
+  },
   { title: "She Said Men Only Want One Thing" },
   { title: "Should I?" },
   { title: "Small Things" },
