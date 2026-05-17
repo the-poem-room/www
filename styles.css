@@ -1340,19 +1340,10 @@ h3 {
 }
 
 .featured-collections-section {
+  display: grid;
   grid-template-columns: 1fr;
-  gap: 22px;
+  gap: 18px;
   border-top: 1px solid var(--line);
-}
-
-.featured-collections-copy {
-  max-width: 760px;
-  color: var(--muted);
-}
-
-.featured-collections-copy p {
-  margin: 0;
-  font-size: var(--body-copy-size);
 }
 
 .featured-collections-list {
@@ -2085,6 +2076,10 @@ html[data-line-numbers="hide"] .poem-line--signature {
   .featured-collections-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .featured-collections-section {
+    gap: 16px;
+  }
 }
 
 @media (max-width: 760px) {
@@ -2123,6 +2118,10 @@ html[data-line-numbers="hide"] .poem-line--signature {
 
   .featured-collections-list {
     grid-template-columns: 1fr;
+  }
+
+  .featured-collections-section {
+    gap: 14px;
   }
 
   .site-header {
