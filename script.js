@@ -4980,7 +4980,8 @@ function appendQueryParam(href, key, value) {
 function getPoemPageHref(slug, highlightOrOptions = "") {
   const options =
     typeof highlightOrOptions === "string" ? { highlightQuery: highlightOrOptions } : highlightOrOptions || {};
-  let href = `Poems/${slug}.html`;
+  const pagePrefix = poemPageSlug ? "./" : "Poems/";
+  let href = `${pagePrefix}${slug}.html`;
 
   if (options.readerContext === "featured" && options.collectionKey) {
     href = appendQueryParam(href, "readerContext", "featured");
