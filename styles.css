@@ -45,6 +45,7 @@
   --collection-title-size: clamp(1.16rem, 2vw, 1.48rem);
   --collection-poem-size: 1.24rem;
   --reader-placeholder-size: 1.16rem;
+  --poem-line-number-width: 2.7ch;
 }
 
 [data-theme="dark"] {
@@ -93,6 +94,7 @@
   --collection-title-size: clamp(1.05rem, 1.8vw, 1.32rem);
   --collection-poem-size: 1.12rem;
   --reader-placeholder-size: 1.04rem;
+  --poem-line-number-width: 2.45ch;
 }
 
 [data-font-size="big"] {
@@ -122,6 +124,7 @@
   --collection-title-size: clamp(1.28rem, 2.2vw, 1.64rem);
   --collection-poem-size: 1.36rem;
   --reader-placeholder-size: 1.24rem;
+  --poem-line-number-width: 2.95ch;
 }
 
 * {
@@ -396,6 +399,7 @@ button {
 .settings-menu,
 .settings-button,
 .settings-row,
+.line-number-control,
 .theme-toggle,
 .button,
 .site-footer {
@@ -502,7 +506,8 @@ button {
 }
 
 .font-size-control,
-.nav-mode-control {
+.nav-mode-control,
+.line-number-control {
   display: grid;
   gap: 0;
   padding: 3px;
@@ -519,8 +524,13 @@ button {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.line-number-control {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .font-size-control button,
-.nav-mode-control button {
+.nav-mode-control button,
+.line-number-control button {
   min-height: 34px;
   padding: 6px 8px;
   color: var(--muted);
@@ -534,7 +544,8 @@ button {
 }
 
 .font-size-control button[aria-pressed="true"],
-.nav-mode-control button[aria-pressed="true"] {
+.nav-mode-control button[aria-pressed="true"],
+.line-number-control button[aria-pressed="true"] {
   color: var(--ink);
   background: color-mix(in srgb, var(--panel-solid) 94%, var(--pink));
   box-shadow: 0 6px 16px color-mix(in srgb, var(--soft) 12%, transparent);
@@ -1299,8 +1310,12 @@ body[data-poem-slug="sadboy"] .reader-poem {
   margin-top: 24px;
 }
 
-.reader-poem p {
+.reader-poem p.poem-stanza {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.18em;
   margin: 0;
+  min-width: 0;
 }
 
 .reader-poem p.poem-stanza--indented {
@@ -1313,6 +1328,56 @@ body[data-poem-slug="sadboy"] .reader-poem {
 
 .reader-poem p.poem-stanza--italic {
   font-style: italic;
+}
+
+.poem-line {
+  display: grid;
+  grid-template-columns: var(--poem-line-number-width) minmax(0, 1fr);
+  gap: 0.72rem;
+  align-items: start;
+  min-width: 0;
+}
+
+.poem-line-number {
+  width: var(--poem-line-number-width);
+  color: color-mix(in srgb, var(--muted) 78%, var(--line));
+  font-family: var(--sans);
+  font-size: 0.72em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.45;
+  font-style: normal;
+  text-align: right;
+  user-select: none;
+  pointer-events: none;
+}
+
+.poem-line-content {
+  min-width: 0;
+}
+
+.poem-stanza--centered .poem-line-content {
+  text-align: center;
+}
+
+.poem-signature .poem-line-content {
+  font-style: italic;
+}
+
+.poem-signature .poem-line-number {
+  color: color-mix(in srgb, var(--soft) 50%, var(--muted));
+}
+
+.poem-line--blank {
+  display: block;
+  min-height: 1em;
+}
+
+html[data-line-numbers="hide"] .poem-line {
+  grid-template-columns: 1fr;
+}
+
+html[data-line-numbers="hide"] .poem-line-number {
+  display: none;
 }
 
 .reader-placeholder {
@@ -1533,6 +1598,10 @@ body[data-poem-slug="sadboy"] .reader-poem {
 }
 
 @media (max-width: 620px) {
+  :root {
+    --poem-line-number-width: 2.2ch;
+  }
+
   main {
     padding-inline: 16px;
   }

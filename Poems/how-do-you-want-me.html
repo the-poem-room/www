@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-line-numbers="hide">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,6 +71,13 @@
               <button type="button" data-font-size-option="big" aria-pressed="false">Big</button>
             </div>
           </div>
+          <div class="settings-row settings-row-stacked">
+            <span>Line numbers</span>
+            <div class="line-number-control" role="group" aria-label="Line numbers">
+              <button type="button" data-line-number-option="hide" aria-pressed="true">Hide</button>
+              <button type="button" data-line-number-option="show" aria-pressed="false">Show</button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -102,81 +109,237 @@
           </div>
         </div>
         <div class="reader-poem">
-            <p>
-              I ask, and you say:<br>
-              &quot;Just be yourself.&quot;<br>
-              As if I haven&#39;t spent years<br>
-              twisting into versions<br>
-              of me you might want.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">1</span>
+                <span class="poem-line-content">I ask, and you say:</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">2</span>
+                <span class="poem-line-content">&quot;Just be yourself.&quot;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">3</span>
+                <span class="poem-line-content">As if I haven&#39;t spent years</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">4</span>
+                <span class="poem-line-content">twisting into versions</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">5</span>
+                <span class="poem-line-content">of me you might want.</span>
+              </span>
             </p>
-            <p>
-              I hold your hand.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">6</span>
+                <span class="poem-line-content">I hold your hand.</span>
+              </span>
             </p>
-            <p>
-              And wonder<br>
-              if I&#39;m too much—<br>
-              or not enough.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">7</span>
+                <span class="poem-line-content">And wonder</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">8</span>
+                <span class="poem-line-content">if I&#39;m too much—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">9</span>
+                <span class="poem-line-content">or not enough.</span>
+              </span>
             </p>
-            <p>
-              You say, &quot;continue as normal,&quot;<br>
-              but normal, for me,<br>
-              is overthinking<br>
-              until my chest hurts.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">10</span>
+                <span class="poem-line-content">You say, &quot;continue as normal,&quot;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">11</span>
+                <span class="poem-line-content">but normal, for me,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">12</span>
+                <span class="poem-line-content">is overthinking</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">13</span>
+                <span class="poem-line-content">until my chest hurts.</span>
+              </span>
             </p>
-            <p>
-              I want to know<br>
-              if you want me<br>
-              to speak softer,<br>
-              or lead louder;<br>
-              to chase you in silence<br>
-              or wait in the open.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">14</span>
+                <span class="poem-line-content">I want to know</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">15</span>
+                <span class="poem-line-content">if you want me</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">16</span>
+                <span class="poem-line-content">to speak softer,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">17</span>
+                <span class="poem-line-content">or lead louder;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">18</span>
+                <span class="poem-line-content">to chase you in silence</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">19</span>
+                <span class="poem-line-content">or wait in the open.</span>
+              </span>
             </p>
-            <p>
-              Do you want me<br>
-              unfolded and tender?<br>
-              Or wrapped in riddle and edge?<br>
-              Do you want<br>
-              a fire to warm you<br>
-              or a forest to lose you?
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">20</span>
+                <span class="poem-line-content">Do you want me</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">21</span>
+                <span class="poem-line-content">unfolded and tender?</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">22</span>
+                <span class="poem-line-content">Or wrapped in riddle and edge?</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">23</span>
+                <span class="poem-line-content">Do you want</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">24</span>
+                <span class="poem-line-content">a fire to warm you</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">25</span>
+                <span class="poem-line-content">or a forest to lose you?</span>
+              </span>
             </p>
-            <p>
-              Do you want me<br>
-              to tease and surprise you,<br>
-              or be calm, reliable,<br>
-              the one who always texts back?
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">26</span>
+                <span class="poem-line-content">Do you want me</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">27</span>
+                <span class="poem-line-content">to tease and surprise you,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">28</span>
+                <span class="poem-line-content">or be calm, reliable,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">29</span>
+                <span class="poem-line-content">the one who always texts back?</span>
+              </span>
             </p>
-            <p>
-              You say, &quot;nothing&#39;s wrong.&quot;<br>
-              But if nothing&#39;s wrong,<br>
-              why do I feel like<br>
-              a lock with no key?
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">30</span>
+                <span class="poem-line-content">You say, &quot;nothing&#39;s wrong.&quot;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">31</span>
+                <span class="poem-line-content">But if nothing&#39;s wrong,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">32</span>
+                <span class="poem-line-content">why do I feel like</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">33</span>
+                <span class="poem-line-content">a lock with no key?</span>
+              </span>
             </p>
-            <p>
-              I love you.<br>
-              That&#39;s the part I knw.<br>
-              But loving<br>
-              without instructions<br>
-              feels like trying to dance<br>
-              to music I can&#39;t hear—<br>
-              scouring your texts<br>
-              for clues<br>
-              I can&#39;t decode.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">34</span>
+                <span class="poem-line-content">I love you.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">35</span>
+                <span class="poem-line-content">That&#39;s the part I knw.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">36</span>
+                <span class="poem-line-content">But loving</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">37</span>
+                <span class="poem-line-content">without instructions</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">38</span>
+                <span class="poem-line-content">feels like trying to dance</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">39</span>
+                <span class="poem-line-content">to music I can&#39;t hear—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">40</span>
+                <span class="poem-line-content">scouring your texts</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">41</span>
+                <span class="poem-line-content">for clues</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">42</span>
+                <span class="poem-line-content">I can&#39;t decode.</span>
+              </span>
             </p>
-            <p>
-              Tell me,<br>
-              how do you want me?
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">43</span>
+                <span class="poem-line-content">Tell me,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">44</span>
+                <span class="poem-line-content">how do you want me?</span>
+              </span>
             </p>
-            <p>
-              Because I&#39;m trying<br>
-              to be myself—<br>
-              but I don&#39;t know<br>
-              which self is still mine<br>
-              after so many years of<br>
-              trying to be<br>
-              what you need.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">45</span>
+                <span class="poem-line-content">Because I&#39;m trying</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">46</span>
+                <span class="poem-line-content">to be myself—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">47</span>
+                <span class="poem-line-content">but I don&#39;t know</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">48</span>
+                <span class="poem-line-content">which self is still mine</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">49</span>
+                <span class="poem-line-content">after so many years of</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">50</span>
+                <span class="poem-line-content">trying to be</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">51</span>
+                <span class="poem-line-content">what you need.</span>
+              </span>
             </p>
-            <p class="poem-signature">
-              <em>— Lilith</em>
+            <p class="poem-stanza poem-signature">
+              <span class="poem-line poem-line--signature">
+                <span class="poem-line-number" aria-hidden="true">52</span>
+                <span class="poem-line-content">— Lilith</span>
+              </span>
             </p>
         </div>
       </article>

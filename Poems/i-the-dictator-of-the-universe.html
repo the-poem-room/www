@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-line-numbers="hide">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,6 +71,13 @@
               <button type="button" data-font-size-option="big" aria-pressed="false">Big</button>
             </div>
           </div>
+          <div class="settings-row settings-row-stacked">
+            <span>Line numbers</span>
+            <div class="line-number-control" role="group" aria-label="Line numbers">
+              <button type="button" data-line-number-option="hide" aria-pressed="true">Hide</button>
+              <button type="button" data-line-number-option="show" aria-pressed="false">Show</button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -102,92 +109,275 @@
           </div>
         </div>
         <div class="reader-poem">
-            <p>
-              I never wanted the throne.<br>
-              It rose beneath me like gravity,<br>
-              the stars demanded someone<br>
-              to decide what burns, and what endures.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">1</span>
+                <span class="poem-line-content">I never wanted the throne.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">2</span>
+                <span class="poem-line-content">It rose beneath me like gravity,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">3</span>
+                <span class="poem-line-content">the stars demanded someone</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">4</span>
+                <span class="poem-line-content">to decide what burns, and what endures.</span>
+              </span>
             </p>
-            <p>
-              I did not ask for subjects,<br>
-              only witnesses,<br>
-              but the silence of the cosmos<br>
-              is easily mistaken for consent.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">5</span>
+                <span class="poem-line-content">I did not ask for subjects,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">6</span>
+                <span class="poem-line-content">only witnesses,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">7</span>
+                <span class="poem-line-content">but the silence of the cosmos</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">8</span>
+                <span class="poem-line-content">is easily mistaken for consent.</span>
+              </span>
             </p>
-            <p>
-              So I rule, reluctantly, absurdly, sincerely.<br>
-              I outlaw murder, rape, conversion,<br>
-              the bending of truth for power.<br>
-              I forbid the eating of those who think or feel,<br>
-              for life does not exist to be consumed.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">9</span>
+                <span class="poem-line-content">So I rule, reluctantly, absurdly, sincerely.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">10</span>
+                <span class="poem-line-content">I outlaw murder, rape, conversion,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">11</span>
+                <span class="poem-line-content">the bending of truth for power.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">12</span>
+                <span class="poem-line-content">I forbid the eating of those who think or feel,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">13</span>
+                <span class="poem-line-content">for life does not exist to be consumed.</span>
+              </span>
             </p>
-            <p>
-              I sign my name beneath mercy<br>
-              and strike the word <em>punishment</em><br>
-              from every law that bears my seal.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">14</span>
+                <span class="poem-line-content">I sign my name beneath mercy</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">15</span>
+                <span class="poem-line-content">and strike the word <em>punishment</em></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">16</span>
+                <span class="poem-line-content">from every law that bears my seal.</span>
+              </span>
             </p>
-            <p>
-              In my cities, no one is blamed.<br>
-              We are the sum of forces<br>
-              too tangled to call choice,<br>
-              yet still, we must choose.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">17</span>
+                <span class="poem-line-content">In my cities, no one is blamed.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">18</span>
+                <span class="poem-line-content">We are the sum of forces</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">19</span>
+                <span class="poem-line-content">too tangled to call choice,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">20</span>
+                <span class="poem-line-content">yet still, we must choose.</span>
+              </span>
             </p>
-            <p>
-              I build centres for renewal<br>
-              on the ruins of vengeance,<br>
-              offer relocation to those<br>
-              who cannot live beneath gentleness.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">21</span>
+                <span class="poem-line-content">I build centres for renewal</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">22</span>
+                <span class="poem-line-content">on the ruins of vengeance,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">23</span>
+                <span class="poem-line-content">offer relocation to those</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">24</span>
+                <span class="poem-line-content">who cannot live beneath gentleness.</span>
+              </span>
             </p>
-            <p>
-              Voluntary exile.<br>
-              Voluntary ending.<br>
-              Nothing forced,<br>
-              except the refusal to harm.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">25</span>
+                <span class="poem-line-content">Voluntary exile.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">26</span>
+                <span class="poem-line-content">Voluntary ending.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">27</span>
+                <span class="poem-line-content">Nothing forced,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">28</span>
+                <span class="poem-line-content">except the refusal to harm.</span>
+              </span>
             </p>
-            <p>
-              My laws are not carved in stone.<br>
-              They bend and breathe,<br>
-              spectral restrictions,<br>
-              drawn from the faint light of intuition.<br>
-              They shift with reason,<br>
-              refined by discourse,<br>
-              rewritten by persuasion.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">29</span>
+                <span class="poem-line-content">My laws are not carved in stone.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">30</span>
+                <span class="poem-line-content">They bend and breathe,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">31</span>
+                <span class="poem-line-content">spectral restrictions,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">32</span>
+                <span class="poem-line-content">drawn from the faint light of intuition.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">33</span>
+                <span class="poem-line-content">They shift with reason,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">34</span>
+                <span class="poem-line-content">refined by discourse,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">35</span>
+                <span class="poem-line-content">rewritten by persuasion.</span>
+              </span>
             </p>
-            <p>
-              I trust experts more than myself,<br>
-              but someone must say <em>yes</em>,<br>
-              someone must say <em>no</em>.<br>
-              And I, recluctant god of thoutful clay,<br>
-              am the only one I can be sure of.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">36</span>
+                <span class="poem-line-content">I trust experts more than myself,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">37</span>
+                <span class="poem-line-content">but someone must say <em>yes</em>,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">38</span>
+                <span class="poem-line-content">someone must say <em>no</em>.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">39</span>
+                <span class="poem-line-content">And I, recluctant god of thoutful clay,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">40</span>
+                <span class="poem-line-content">am the only one I can be sure of.</span>
+              </span>
             </p>
-            <p>
-              At night I confess to the void:<br>
-              there is no object good,<br>
-              only the ache that whispers,<br>
-              <em>some things should not be done</em>.<br>
-              Still, I listen.<br>
-              Still, I act.<br>
-              That is enough to move,<br>
-              and too much for peace.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">41</span>
+                <span class="poem-line-content">At night I confess to the void:</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">42</span>
+                <span class="poem-line-content">there is no object good,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">43</span>
+                <span class="poem-line-content">only the ache that whispers,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">44</span>
+                <span class="poem-line-content"><em>some things should not be done</em>.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">45</span>
+                <span class="poem-line-content">Still, I listen.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">46</span>
+                <span class="poem-line-content">Still, I act.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">47</span>
+                <span class="poem-line-content">That is enough to move,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">48</span>
+                <span class="poem-line-content">and too much for peace.</span>
+              </span>
             </p>
-            <p>
-              So I sign another decree:<br>
-              to live kindly,<br>
-              even when kindness feels uncertain.<br>
-              To guard life,<br>
-              even when meaning fails.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">49</span>
+                <span class="poem-line-content">So I sign another decree:</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">50</span>
+                <span class="poem-line-content">to live kindly,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">51</span>
+                <span class="poem-line-content">even when kindness feels uncertain.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">52</span>
+                <span class="poem-line-content">To guard life,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">53</span>
+                <span class="poem-line-content">even when meaning fails.</span>
+              </span>
             </p>
-            <p>
-              And I sit, not on a throne,<br>
-              but at the edge of understanding,<br>
-              head in hands,<br>
-              ruler of convinction,<br>
-              architect of mercy,<br>
-              dictator of the trembling light<br>
-              between right and wrong
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">54</span>
+                <span class="poem-line-content">And I sit, not on a throne,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">55</span>
+                <span class="poem-line-content">but at the edge of understanding,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">56</span>
+                <span class="poem-line-content">head in hands,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">57</span>
+                <span class="poem-line-content">ruler of convinction,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">58</span>
+                <span class="poem-line-content">architect of mercy,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">59</span>
+                <span class="poem-line-content">dictator of the trembling light</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">60</span>
+                <span class="poem-line-content">between right and wrong</span>
+              </span>
             </p>
-            <p class="poem-signature">
-              <em>— Lilith</em>
+            <p class="poem-stanza poem-signature">
+              <span class="poem-line poem-line--signature">
+                <span class="poem-line-number" aria-hidden="true">61</span>
+                <span class="poem-line-content">— Lilith</span>
+              </span>
             </p>
         </div>
       </article>

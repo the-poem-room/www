@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-line-numbers="hide">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,6 +71,13 @@
               <button type="button" data-font-size-option="big" aria-pressed="false">Big</button>
             </div>
           </div>
+          <div class="settings-row settings-row-stacked">
+            <span>Line numbers</span>
+            <div class="line-number-control" role="group" aria-label="Line numbers">
+              <button type="button" data-line-number-option="hide" aria-pressed="true">Hide</button>
+              <button type="button" data-line-number-option="show" aria-pressed="false">Show</button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -102,92 +109,293 @@
           </div>
         </div>
         <div class="reader-poem">
-            <p>
-              I once saw a crack<br>
-              in the pavement<br>
-              and thought maybe<br>
-              something was trying to escape—<br>
-              a root,<br>
-              a ripple,<br>
-              a hidden word.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">1</span>
+                <span class="poem-line-content">I once saw a crack</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">2</span>
+                <span class="poem-line-content">in the pavement</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">3</span>
+                <span class="poem-line-content">and thought maybe</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">4</span>
+                <span class="poem-line-content">something was trying to escape—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">5</span>
+                <span class="poem-line-content">a root,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">6</span>
+                <span class="poem-line-content">a ripple,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">7</span>
+                <span class="poem-line-content">a hidden word.</span>
+              </span>
             </p>
-            <p>
-              Mum said,<br>
-              &quot;It&#39;s just the frost,&quot;<br>
-              but I knew<br>
-              some things split<br>
-              because they want to grow.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">8</span>
+                <span class="poem-line-content">Mum said,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">9</span>
+                <span class="poem-line-content">&quot;It&#39;s just the frost,&quot;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">10</span>
+                <span class="poem-line-content">but I knew</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">11</span>
+                <span class="poem-line-content">some things split</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">12</span>
+                <span class="poem-line-content">because they want to grow.</span>
+              </span>
             </p>
-            <p>
-              I saw a girl<br>
-              offer her seat on the bus—<br>
-              no words,<br>
-              just a small move<br>
-              that felt like a quiet promise<br>
-              to someone who needed it more.<br>
-              She didn&#39;t smile.<br>
-              She didn&#39;t know<br>
-              it was the kindest thing<br>
-              I&#39;d seen all day.<br>
-              Maybe she still doesn&#39;t.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">13</span>
+                <span class="poem-line-content">I saw a girl</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">14</span>
+                <span class="poem-line-content">offer her seat on the bus—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">15</span>
+                <span class="poem-line-content">no words,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">16</span>
+                <span class="poem-line-content">just a small move</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">17</span>
+                <span class="poem-line-content">that felt like a quiet promise</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">18</span>
+                <span class="poem-line-content">to someone who needed it more.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">19</span>
+                <span class="poem-line-content">She didn&#39;t smile.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">20</span>
+                <span class="poem-line-content">She didn&#39;t know</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">21</span>
+                <span class="poem-line-content">it was the kindest thing</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">22</span>
+                <span class="poem-line-content">I&#39;d seen all day.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">23</span>
+                <span class="poem-line-content">Maybe she still doesn&#39;t.</span>
+              </span>
             </p>
-            <p>
-              Once, a puddle<br>
-              held a piece of sky.<br>
-              I told them—<br>
-              the clouds were floating in it—<br>
-              but they laughed<br>
-              and called me dreamy.<br>
-              The next day,<br>
-              the puddle was gone.<br>
-              The sky stayed.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">24</span>
+                <span class="poem-line-content">Once, a puddle</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">25</span>
+                <span class="poem-line-content">held a piece of sky.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">26</span>
+                <span class="poem-line-content">I told them—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">27</span>
+                <span class="poem-line-content">the clouds were floating in it—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">28</span>
+                <span class="poem-line-content">but they laughed</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">29</span>
+                <span class="poem-line-content">and called me dreamy.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">30</span>
+                <span class="poem-line-content">The next day,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">31</span>
+                <span class="poem-line-content">the puddle was gone.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">32</span>
+                <span class="poem-line-content">The sky stayed.</span>
+              </span>
             </p>
-            <p>
-              I watched a shadow<br>
-              climb the wall<br>
-              as if it had somewhere to be.<br>
-              I think time moves like that—<br>
-              quiet,<br>
-              slow,<br>
-              and only noticed<br>
-              when you stop playing.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">33</span>
+                <span class="poem-line-content">I watched a shadow</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">34</span>
+                <span class="poem-line-content">climb the wall</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">35</span>
+                <span class="poem-line-content">as if it had somewhere to be.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">36</span>
+                <span class="poem-line-content">I think time moves like that—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">37</span>
+                <span class="poem-line-content">quiet,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">38</span>
+                <span class="poem-line-content">slow,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">39</span>
+                <span class="poem-line-content">and only noticed</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">40</span>
+                <span class="poem-line-content">when you stop playing.</span>
+              </span>
             </p>
-            <p>
-              They say<br>
-              children imagine things.<br>
-              But maybe we just<br>
-              see the parts<br>
-              that adults forget—<br>
-              the shimmer<br>
-              on the edge of normal,<br>
-              the meaning<br>
-              tucked behind small things.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">41</span>
+                <span class="poem-line-content">They say</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">42</span>
+                <span class="poem-line-content">children imagine things.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">43</span>
+                <span class="poem-line-content">But maybe we just</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">44</span>
+                <span class="poem-line-content">see the parts</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">45</span>
+                <span class="poem-line-content">that adults forget—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">46</span>
+                <span class="poem-line-content">the shimmer</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">47</span>
+                <span class="poem-line-content">on the edge of normal,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">48</span>
+                <span class="poem-line-content">the meaning</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">49</span>
+                <span class="poem-line-content">tucked behind small things.</span>
+              </span>
             </p>
-            <p>
-              We don&#39;t grow out of it.<br>
-              We grow around it,<br>
-              like trees bending<br>
-              to fences<br>
-              but never forgetting<br>
-              the sky.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">50</span>
+                <span class="poem-line-content">We don&#39;t grow out of it.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">51</span>
+                <span class="poem-line-content">We grow around it,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">52</span>
+                <span class="poem-line-content">like trees bending</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">53</span>
+                <span class="poem-line-content">to fences</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">54</span>
+                <span class="poem-line-content">but never forgetting</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">55</span>
+                <span class="poem-line-content">the sky.</span>
+              </span>
             </p>
-            <p>
-              And one day,<br>
-              when it&#39;s quiet,<br>
-              we&#39;ll remember<br>
-              what it felt like<br>
-              to see<br>
-              without asking why.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">56</span>
+                <span class="poem-line-content">And one day,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">57</span>
+                <span class="poem-line-content">when it&#39;s quiet,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">58</span>
+                <span class="poem-line-content">we&#39;ll remember</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">59</span>
+                <span class="poem-line-content">what it felt like</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">60</span>
+                <span class="poem-line-content">to see</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">61</span>
+                <span class="poem-line-content">without asking why.</span>
+              </span>
             </p>
-            <p>
-              Not more, exactly.<br>
-              Just<br>
-              differently.<br>
-              Just<br>
-              deeper.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">62</span>
+                <span class="poem-line-content">Not more, exactly.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">63</span>
+                <span class="poem-line-content">Just</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">64</span>
+                <span class="poem-line-content">differently.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">65</span>
+                <span class="poem-line-content">Just</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">66</span>
+                <span class="poem-line-content">deeper.</span>
+              </span>
             </p>
-            <p class="poem-signature">
-              <em>— Lilith</em>
+            <p class="poem-stanza poem-signature">
+              <span class="poem-line poem-line--signature">
+                <span class="poem-line-number" aria-hidden="true">67</span>
+                <span class="poem-line-content">— Lilith</span>
+              </span>
             </p>
         </div>
       </article>

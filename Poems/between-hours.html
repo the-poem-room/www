@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-line-numbers="hide">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,6 +71,13 @@
               <button type="button" data-font-size-option="big" aria-pressed="false">Big</button>
             </div>
           </div>
+          <div class="settings-row settings-row-stacked">
+            <span>Line numbers</span>
+            <div class="line-number-control" role="group" aria-label="Line numbers">
+              <button type="button" data-line-number-option="hide" aria-pressed="true">Hide</button>
+              <button type="button" data-line-number-option="show" aria-pressed="false">Show</button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -102,82 +109,271 @@
           </div>
         </div>
         <div class="reader-poem">
-            <p>
-              Time has never been a strict thing,<br>
-              not really.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">1</span>
+                <span class="poem-line-content">Time has never been a strict thing,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">2</span>
+                <span class="poem-line-content">not really.</span>
+              </span>
             </p>
-            <p>
-              In Iceland, the sun forgets<br>
-              its bedtime —<br>
-              morning lingers,<br>
-              night take its time<br>
-              deciding if it wants to arrive at all.<br>
-              Hours stretch like curious arms,<br>
-              reaching toward winter fireworks,<br>
-              daylight stitched with quiet crackles,<br>
-              a small daylight revolt,<br>
-              the horizon unsure<br>
-              what hour it holds.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">3</span>
+                <span class="poem-line-content">In Iceland, the sun forgets</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">4</span>
+                <span class="poem-line-content">its bedtime —</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">5</span>
+                <span class="poem-line-content">morning lingers,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">6</span>
+                <span class="poem-line-content">night take its time</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">7</span>
+                <span class="poem-line-content">deciding if it wants to arrive at all.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">8</span>
+                <span class="poem-line-content">Hours stretch like curious arms,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">9</span>
+                <span class="poem-line-content">reaching toward winter fireworks,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">10</span>
+                <span class="poem-line-content">daylight stitched with quiet crackles,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">11</span>
+                <span class="poem-line-content">a small daylight revolt,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">12</span>
+                <span class="poem-line-content">the horizon unsure</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">13</span>
+                <span class="poem-line-content">what hour it holds.</span>
+              </span>
             </p>
-            <p>
-              Here at home<br>
-              curtains closed,<br>
-              the clock keeps its habits<br>
-              but I don&#39;t always listen.<br>
-              Pages fill, melodies spill,<br>
-              one idea nudging the next,<br>
-              thoughts tugging loose,<br>
-              seconds loosening,<br>
-              lost and briefly found,<br>
-              a quiet countdown<br>
-              dissolving into hush.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">14</span>
+                <span class="poem-line-content">Here at home</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">15</span>
+                <span class="poem-line-content">curtains closed,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">16</span>
+                <span class="poem-line-content">the clock keeps its habits</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">17</span>
+                <span class="poem-line-content">but I don&#39;t always listen.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">18</span>
+                <span class="poem-line-content">Pages fill, melodies spill,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">19</span>
+                <span class="poem-line-content">one idea nudging the next,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">20</span>
+                <span class="poem-line-content">thoughts tugging loose,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">21</span>
+                <span class="poem-line-content">seconds loosening,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">22</span>
+                <span class="poem-line-content">lost and briefly found,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">23</span>
+                <span class="poem-line-content">a quiet countdown</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">24</span>
+                <span class="poem-line-content">dissolving into hush.</span>
+              </span>
             </p>
-            <p>
-              Time blurs<br>
-              when I stop measuring it,<br>
-              when the world outside<br>
-              is simply allowed<br>
-              to be wherever it is,<br>
-              and I let myself be<br>
-              right here,<br>
-              in the honest hush<br>
-              between heartbeats,<br>
-              where light and thought<br>
-              share the same soft space.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">25</span>
+                <span class="poem-line-content">Time blurs</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">26</span>
+                <span class="poem-line-content">when I stop measuring it,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">27</span>
+                <span class="poem-line-content">when the world outside</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">28</span>
+                <span class="poem-line-content">is simply allowed</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">29</span>
+                <span class="poem-line-content">to be wherever it is,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">30</span>
+                <span class="poem-line-content">and I let myself be</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">31</span>
+                <span class="poem-line-content">right here,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">32</span>
+                <span class="poem-line-content">in the honest hush</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">33</span>
+                <span class="poem-line-content">between heartbeats,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">34</span>
+                <span class="poem-line-content">where light and thought</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">35</span>
+                <span class="poem-line-content">share the same soft space.</span>
+              </span>
             </p>
-            <p>
-              There&#39;s a kind of beauty<br>
-              in forgetting the rules<br>
-              we invented anyway:<br>
-              that morning must be bright,<br>
-              that evening must be dark,<br>
-              that minutes must march<br>
-              instead of dance —<br>
-              instead of chance,<br>
-              instead of slipping softly<br>
-              out of step.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">36</span>
+                <span class="poem-line-content">There&#39;s a kind of beauty</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">37</span>
+                <span class="poem-line-content">in forgetting the rules</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">38</span>
+                <span class="poem-line-content">we invented anyway:</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">39</span>
+                <span class="poem-line-content">that morning must be bright,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">40</span>
+                <span class="poem-line-content">that evening must be dark,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">41</span>
+                <span class="poem-line-content">that minutes must march</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">42</span>
+                <span class="poem-line-content">instead of dance —</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">43</span>
+                <span class="poem-line-content">instead of chance,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">44</span>
+                <span class="poem-line-content">instead of slipping softly</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">45</span>
+                <span class="poem-line-content">out of step.</span>
+              </span>
             </p>
-            <p>
-              Maybe the most honest moments<br>
-              are the ones that refuse<br>
-              to find inside a calendar square,<br>
-              the ones where a day<br>
-              feels boundless,<br>
-              where I float,<br>
-              unbothered by ticking,<br>
-              simply existing<br>
-              in the soft stretch<br>
-              between any beginning<br>
-              and any ending,<br>
-              the air still bending light,<br>
-              whispering<br>
-              that time is real<br>
-              when we forget to care,<br>
-              when we drift<br>
-              between hours.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">46</span>
+                <span class="poem-line-content">Maybe the most honest moments</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">47</span>
+                <span class="poem-line-content">are the ones that refuse</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">48</span>
+                <span class="poem-line-content">to find inside a calendar square,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">49</span>
+                <span class="poem-line-content">the ones where a day</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">50</span>
+                <span class="poem-line-content">feels boundless,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">51</span>
+                <span class="poem-line-content">where I float,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">52</span>
+                <span class="poem-line-content">unbothered by ticking,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">53</span>
+                <span class="poem-line-content">simply existing</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">54</span>
+                <span class="poem-line-content">in the soft stretch</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">55</span>
+                <span class="poem-line-content">between any beginning</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">56</span>
+                <span class="poem-line-content">and any ending,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">57</span>
+                <span class="poem-line-content">the air still bending light,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">58</span>
+                <span class="poem-line-content">whispering</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">59</span>
+                <span class="poem-line-content">that time is real</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">60</span>
+                <span class="poem-line-content">when we forget to care,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">61</span>
+                <span class="poem-line-content">when we drift</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">62</span>
+                <span class="poem-line-content">between hours.</span>
+              </span>
             </p>
-            <p class="poem-signature">
-              <em>— Lilith</em>
+            <p class="poem-stanza poem-signature">
+              <span class="poem-line poem-line--signature">
+                <span class="poem-line-number" aria-hidden="true">63</span>
+                <span class="poem-line-content">— Lilith</span>
+              </span>
             </p>
         </div>
       </article>

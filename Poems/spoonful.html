@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-line-numbers="hide">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,6 +71,13 @@
               <button type="button" data-font-size-option="big" aria-pressed="false">Big</button>
             </div>
           </div>
+          <div class="settings-row settings-row-stacked">
+            <span>Line numbers</span>
+            <div class="line-number-control" role="group" aria-label="Line numbers">
+              <button type="button" data-line-number-option="hide" aria-pressed="true">Hide</button>
+              <button type="button" data-line-number-option="show" aria-pressed="false">Show</button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -102,125 +109,392 @@
           </div>
         </div>
         <div class="reader-poem">
-            <p>
-              This morning<br>
-              I tipped a spoon of chia seeds<br>
-              onto my Weetabix—<br>
-              the same small ritual<br>
-              I barely notice anymore.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">1</span>
+                <span class="poem-line-content">This morning</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">2</span>
+                <span class="poem-line-content">I tipped a spoon of chia seeds</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">3</span>
+                <span class="poem-line-content">onto my Weetabix—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">4</span>
+                <span class="poem-line-content">the same small ritual</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">5</span>
+                <span class="poem-line-content">I barely notice anymore.</span>
+              </span>
             </p>
-            <p>
-              Later, I looked into the tub<br>
-              and found the bottom.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">6</span>
+                <span class="poem-line-content">Later, I looked into the tub</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">7</span>
+                <span class="poem-line-content">and found the bottom.</span>
+              </span>
             </p>
-            <p>
-              It startled me,<br>
-              how something so tiny,<br>
-              so ordinary,<br>
-              could empty a whole container<br>
-              without ever announcing itself,<br>
-              without ever realising<br>
-              what it had become.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">8</span>
+                <span class="poem-line-content">It startled me,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">9</span>
+                <span class="poem-line-content">how something so tiny,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">10</span>
+                <span class="poem-line-content">so ordinary,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">11</span>
+                <span class="poem-line-content">could empty a whole container</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">12</span>
+                <span class="poem-line-content">without ever announcing itself,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">13</span>
+                <span class="poem-line-content">without ever realising</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">14</span>
+                <span class="poem-line-content">what it had become.</span>
+              </span>
             </p>
-            <p>
-              I tried to remember<br>
-              the moment I refilled it—<br>
-              it feels impossibly recent,<br>
-              as if time had cheated,<br>
-              as if progress had happened<br>
-              quietly,<br>
-              behind my back.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">15</span>
+                <span class="poem-line-content">I tried to remember</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">16</span>
+                <span class="poem-line-content">the moment I refilled it—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">17</span>
+                <span class="poem-line-content">it feels impossibly recent,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">18</span>
+                <span class="poem-line-content">as if time had cheated,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">19</span>
+                <span class="poem-line-content">as if progress had happened</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">20</span>
+                <span class="poem-line-content">quietly,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">21</span>
+                <span class="poem-line-content">behind my back.</span>
+              </span>
             </p>
-            <p>
-              One spoonful.<br>
-              Then another.<br>
-              Then another.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">22</span>
+                <span class="poem-line-content">One spoonful.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">23</span>
+                <span class="poem-line-content">Then another.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">24</span>
+                <span class="poem-line-content">Then another.</span>
+              </span>
             </p>
-            <p>
-              No single morning<br>
-              felt like change.<br>
-              But together<br>
-              they became disappearance.<br>
-              Proof that repetition<br>
-              moves without noise<br>
-              not just in kitchens,<br>
-              but everywhere.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">25</span>
+                <span class="poem-line-content">No single morning</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">26</span>
+                <span class="poem-line-content">felt like change.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">27</span>
+                <span class="poem-line-content">But together</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">28</span>
+                <span class="poem-line-content">they became disappearance.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">29</span>
+                <span class="poem-line-content">Proof that repetition</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">30</span>
+                <span class="poem-line-content">moves without noise</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">31</span>
+                <span class="poem-line-content">not just in kitchens,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">32</span>
+                <span class="poem-line-content">but everywhere.</span>
+              </span>
             </p>
-            <p>
-              That small<br>
-              keeps going<br>
-              until it is no longer small.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">33</span>
+                <span class="poem-line-content">That small</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">34</span>
+                <span class="poem-line-content">keeps going</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">35</span>
+                <span class="poem-line-content">until it is no longer small.</span>
+              </span>
             </p>
-            <p>
-              I thought of hands<br>
-              that signed the same petition<br>
-              in cold halls and crowded streets<br>
-              again and again<br>
-              until signatures turned into law.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">36</span>
+                <span class="poem-line-content">I thought of hands</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">37</span>
+                <span class="poem-line-content">that signed the same petition</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">38</span>
+                <span class="poem-line-content">in cold halls and crowded streets</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">39</span>
+                <span class="poem-line-content">again and again</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">40</span>
+                <span class="poem-line-content">until signatures turned into law.</span>
+              </span>
             </p>
-            <p>
-              Of voices<br>
-              that kept speaking<br>
-              long after they were told<br>
-              to be silent,<br>
-              until silence itself<br>
-              was forced to move.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">41</span>
+                <span class="poem-line-content">Of voices</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">42</span>
+                <span class="poem-line-content">that kept speaking</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">43</span>
+                <span class="poem-line-content">long after they were told</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">44</span>
+                <span class="poem-line-content">to be silent,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">45</span>
+                <span class="poem-line-content">until silence itself</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">46</span>
+                <span class="poem-line-content">was forced to move.</span>
+              </span>
             </p>
-            <p>
-              Of feet<br>
-              that walked the same streets<br>
-              in the same direction<br>
-              for years,<br>
-              until roads learned<br>
-              new meanings;<br>
-              until history found<br>
-              new routes.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">47</span>
+                <span class="poem-line-content">Of feet</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">48</span>
+                <span class="poem-line-content">that walked the same streets</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">49</span>
+                <span class="poem-line-content">in the same direction</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">50</span>
+                <span class="poem-line-content">for years,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">51</span>
+                <span class="poem-line-content">until roads learned</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">52</span>
+                <span class="poem-line-content">new meanings;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">53</span>
+                <span class="poem-line-content">until history found</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">54</span>
+                <span class="poem-line-content">new routes.</span>
+              </span>
             </p>
-            <p>
-              Of people<br>
-              who did not overthrow the world<br>
-              in one dramatic moment,<br>
-              but nudged it,<br>
-              daily, stubbornly,<br>
-              spoonful by spoonful,<br>
-              day by day.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">55</span>
+                <span class="poem-line-content">Of people</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">56</span>
+                <span class="poem-line-content">who did not overthrow the world</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">57</span>
+                <span class="poem-line-content">in one dramatic moment,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">58</span>
+                <span class="poem-line-content">but nudged it,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">59</span>
+                <span class="poem-line-content">daily, stubbornly,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">60</span>
+                <span class="poem-line-content">spoonful by spoonful,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">61</span>
+                <span class="poem-line-content">day by day.</span>
+              </span>
             </p>
-            <p>
-              It made me strangely hopeful:<br>
-              that the things I do<br>
-              when nobody is watching,<br>
-              when nothing feels different,<br>
-              when change seems too slow to matter,<br>
-              might already be emptying a tub<br>
-              I haven&#39;t thought to look inside,<br>
-              in lives I will never see.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">62</span>
+                <span class="poem-line-content">It made me strangely hopeful:</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">63</span>
+                <span class="poem-line-content">that the things I do</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">64</span>
+                <span class="poem-line-content">when nobody is watching,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">65</span>
+                <span class="poem-line-content">when nothing feels different,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">66</span>
+                <span class="poem-line-content">when change seems too slow to matter,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">67</span>
+                <span class="poem-line-content">might already be emptying a tub</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">68</span>
+                <span class="poem-line-content">I haven&#39;t thought to look inside,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">69</span>
+                <span class="poem-line-content">in lives I will never see.</span>
+              </span>
             </p>
-            <p>
-              That maybe<br>
-              the future is not built<br>
-              by revolutions alone,<br>
-              but by breakfasts,<br>
-              by habits,<br>
-              by ordinary mornings<br>
-              that refuse to give up,<br>
-              even when they feel<br>
-              too small to matter.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">70</span>
+                <span class="poem-line-content">That maybe</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">71</span>
+                <span class="poem-line-content">the future is not built</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">72</span>
+                <span class="poem-line-content">by revolutions alone,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">73</span>
+                <span class="poem-line-content">but by breakfasts,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">74</span>
+                <span class="poem-line-content">by habits,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">75</span>
+                <span class="poem-line-content">by ordinary mornings</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">76</span>
+                <span class="poem-line-content">that refuse to give up,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">77</span>
+                <span class="poem-line-content">even when they feel</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">78</span>
+                <span class="poem-line-content">too small to matter.</span>
+              </span>
             </p>
-            <p>
-              And tomorrow,<br>
-              I will sprinkle another spoonful<br>
-              without expecting anything.<br>
-              But the tub will be closer to empty.<br>
-              <br>
-              And the world—<br>
-              just slightly,<br>
-              almost invisibly,<br>
-              closer to becoming<br>
-              something kinder<br>
-              than it ever was.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">79</span>
+                <span class="poem-line-content">And tomorrow,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">80</span>
+                <span class="poem-line-content">I will sprinkle another spoonful</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">81</span>
+                <span class="poem-line-content">without expecting anything.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">82</span>
+                <span class="poem-line-content">But the tub will be closer to empty.</span>
+              </span>
+              <span class="poem-line poem-line--blank" aria-hidden="true"></span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">83</span>
+                <span class="poem-line-content">And the world—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">84</span>
+                <span class="poem-line-content">just slightly,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">85</span>
+                <span class="poem-line-content">almost invisibly,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">86</span>
+                <span class="poem-line-content">closer to becoming</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">87</span>
+                <span class="poem-line-content">something kinder</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">88</span>
+                <span class="poem-line-content">than it ever was.</span>
+              </span>
             </p>
-            <p class="poem-signature">
-              <em>— Lilith</em>
+            <p class="poem-stanza poem-signature">
+              <span class="poem-line poem-line--signature">
+                <span class="poem-line-number" aria-hidden="true">89</span>
+                <span class="poem-line-content">— Lilith</span>
+              </span>
             </p>
         </div>
       </article>

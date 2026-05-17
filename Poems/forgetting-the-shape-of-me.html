@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-line-numbers="hide">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,6 +71,13 @@
               <button type="button" data-font-size-option="big" aria-pressed="false">Big</button>
             </div>
           </div>
+          <div class="settings-row settings-row-stacked">
+            <span>Line numbers</span>
+            <div class="line-number-control" role="group" aria-label="Line numbers">
+              <button type="button" data-line-number-option="hide" aria-pressed="true">Hide</button>
+              <button type="button" data-line-number-option="show" aria-pressed="false">Show</button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -102,195 +109,615 @@
           </div>
         </div>
         <div class="reader-poem">
-            <p>
-              Feeling the feelings of others<br>
-              for so long<br>
-              that I am forgetting which<br>
-              are mine,
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">1</span>
+                <span class="poem-line-content">Feeling the feelings of others</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">2</span>
+                <span class="poem-line-content">for so long</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">3</span>
+                <span class="poem-line-content">that I am forgetting which</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">4</span>
+                <span class="poem-line-content">are mine,</span>
+              </span>
             </p>
-            <p>
-              standing in a narrow hallway,<br>
-              air tasting of damp wood and old metal,<br>
-              fingertips resting on a cold brass hinge<br>
-              that does not open<br>
-              but remembers opening,<br>
-              pipes muttering behind the walls.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">5</span>
+                <span class="poem-line-content">standing in a narrow hallway,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">6</span>
+                <span class="poem-line-content">air tasting of damp wood and old metal,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">7</span>
+                <span class="poem-line-content">fingertips resting on a cold brass hinge</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">8</span>
+                <span class="poem-line-content">that does not open</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">9</span>
+                <span class="poem-line-content">but remembers opening,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">10</span>
+                <span class="poem-line-content">pipes muttering behind the walls.</span>
+              </span>
             </p>
-            <p>
-              holding my hunger to the light,<br>
-              tilting it,<br>
-              watching sediment gather at the bottom of the glass,<br>
-              not falling,<br>
-              settling,<br>
-              as if even motion has begun to doubt itself,
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">11</span>
+                <span class="poem-line-content">holding my hunger to the light,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">12</span>
+                <span class="poem-line-content">tilting it,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">13</span>
+                <span class="poem-line-content">watching sediment gather at the bottom of the glass,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">14</span>
+                <span class="poem-line-content">not falling,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">15</span>
+                <span class="poem-line-content">settling,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">16</span>
+                <span class="poem-line-content">as if even motion has begun to doubt itself,</span>
+              </span>
             </p>
-            <p>
-              signals rising without language,<br>
-              static crossing under my skin<br>
-              like wires fitted to too many blueprints,<br>
-              each drawn by a careful hand<br>
-              that never learned the cost of care.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">17</span>
+                <span class="poem-line-content">signals rising without language,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">18</span>
+                <span class="poem-line-content">static crossing under my skin</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">19</span>
+                <span class="poem-line-content">like wires fitted to too many blueprints,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">20</span>
+                <span class="poem-line-content">each drawn by a careful hand</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">21</span>
+                <span class="poem-line-content">that never learned the cost of care.</span>
+              </span>
             </p>
-            <p>
-              watching a choice split,<br>
-              and split again,<br>
-              not into spectacle<br>
-              but into hardline fractures<br>
-              creeping silently across a tiled floor,<br>
-              geometry my body cannot pronounce,
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">22</span>
+                <span class="poem-line-content">watching a choice split,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">23</span>
+                <span class="poem-line-content">and split again,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">24</span>
+                <span class="poem-line-content">not into spectacle</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">25</span>
+                <span class="poem-line-content">but into hardline fractures</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">26</span>
+                <span class="poem-line-content">creeping silently across a tiled floor,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">27</span>
+                <span class="poem-line-content">geometry my body cannot pronounce,</span>
+              </span>
             </p>
-            <p>
-              as though awareness itself<br>
-              were a kind of wrong gravity.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">28</span>
+                <span class="poem-line-content">as though awareness itself</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">29</span>
+                <span class="poem-line-content">were a kind of wrong gravity.</span>
+              </span>
             </p>
-            <p>
-              standing in front of a sentence<br>
-              that should be harmless,<br>
-              feeling it swell behind my teeth,<br>
-              warm and misaligned,<br>
-              like pressure building in a pipe<br>
-              whose gauge knows too much<br>
-              to be useful.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">30</span>
+                <span class="poem-line-content">standing in front of a sentence</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">31</span>
+                <span class="poem-line-content">that should be harmless,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">32</span>
+                <span class="poem-line-content">feeling it swell behind my teeth,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">33</span>
+                <span class="poem-line-content">warm and misaligned,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">34</span>
+                <span class="poem-line-content">like pressure building in a pipe</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">35</span>
+                <span class="poem-line-content">whose gauge knows too much</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">36</span>
+                <span class="poem-line-content">to be useful.</span>
+              </span>
             </p>
-            <p>
-              light loosening its grip on the wall,<br>
-              dust rearranging itself mid-air,<br>
-              my mind indexing evrey shift—<br>
-              noting,<br>
-              sorting,<br>
-              over-calibrating each tremor until movement feels reckless,<br>
-              measuring the breath of the room<br>
-              like knowing too much to touch anything cleanly,<br>
-              Aware of too many invisible ways to be wrong.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">37</span>
+                <span class="poem-line-content">light loosening its grip on the wall,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">38</span>
+                <span class="poem-line-content">dust rearranging itself mid-air,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">39</span>
+                <span class="poem-line-content">my mind indexing evrey shift—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">40</span>
+                <span class="poem-line-content">noting,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">41</span>
+                <span class="poem-line-content">sorting,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">42</span>
+                <span class="poem-line-content">over-calibrating each tremor until movement feels reckless,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">43</span>
+                <span class="poem-line-content">measuring the breath of the room</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">44</span>
+                <span class="poem-line-content">like knowing too much to touch anything cleanly,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">45</span>
+                <span class="poem-line-content">Aware of too many invisible ways to be wrong.</span>
+              </span>
             </p>
-            <p>
-              This should be simple.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">46</span>
+                <span class="poem-line-content">This should be simple.</span>
+              </span>
             </p>
-            <p>
-              My mouth tastes wrong.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">47</span>
+                <span class="poem-line-content">My mouth tastes wrong.</span>
+              </span>
             </p>
-            <p>
-              weighing syllables in my palm<br>
-              like bent instruments,<br>
-              warped by a tuuning fork<br>
-              that can hear too far,<br>
-              all vibrations at once,<br>
-              all slightly out of mercy,<br>
-              no single tone safe enough<br>
-              to trust.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">48</span>
+                <span class="poem-line-content">weighing syllables in my palm</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">49</span>
+                <span class="poem-line-content">like bent instruments,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">50</span>
+                <span class="poem-line-content">warped by a tuuning fork</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">51</span>
+                <span class="poem-line-content">that can hear too far,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">52</span>
+                <span class="poem-line-content">all vibrations at once,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">53</span>
+                <span class="poem-line-content">all slightly out of mercy,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">54</span>
+                <span class="poem-line-content">no single tone safe enough</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">55</span>
+                <span class="poem-line-content">to trust.</span>
+              </span>
             </p>
-            <p>
-              Hovering between two switches —<br>
-              truth / tenderness —<br>
-              thumb shaking,<br>
-              hand becoming a stuck valve,<br>
-              open, closed, open,<br>
-              leaking nothing<br>
-              while pressure hums behind my ribs<br>
-              like an unanswered theorem.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">56</span>
+                <span class="poem-line-content">Hovering between two switches —</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">57</span>
+                <span class="poem-line-content">truth / tenderness —</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">58</span>
+                <span class="poem-line-content">thumb shaking,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">59</span>
+                <span class="poem-line-content">hand becoming a stuck valve,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">60</span>
+                <span class="poem-line-content">open, closed, open,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">61</span>
+                <span class="poem-line-content">leaking nothing</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">62</span>
+                <span class="poem-line-content">while pressure hums behind my ribs</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">63</span>
+                <span class="poem-line-content">like an unanswered theorem.</span>
+              </span>
             </p>
-            <p>
-              letting &quot;I should just say it&quot;<br>
-              go stale inside my mouth,<br>
-              spit thickening under my tongue,<br>
-              rust blooming quietly<br>
-              along the back of my throat,<br>
-              while my heartbeat flickers between meanings<br>
-              I understand too well<br>
-              to follow blindly.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">64</span>
+                <span class="poem-line-content">letting &quot;I should just say it&quot;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">65</span>
+                <span class="poem-line-content">go stale inside my mouth,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">66</span>
+                <span class="poem-line-content">spit thickening under my tongue,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">67</span>
+                <span class="poem-line-content">rust blooming quietly</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">68</span>
+                <span class="poem-line-content">along the back of my throat,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">69</span>
+                <span class="poem-line-content">while my heartbeat flickers between meanings</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">70</span>
+                <span class="poem-line-content">I understand too well</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">71</span>
+                <span class="poem-line-content">to follow blindly.</span>
+              </span>
             </p>
-            <p>
-              And doing nothing.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">72</span>
+                <span class="poem-line-content">And doing nothing.</span>
+              </span>
             </p>
-            <p>
-              I am scared of making the wrong thing real.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">73</span>
+                <span class="poem-line-content">I am scared of making the wrong thing real.</span>
+              </span>
             </p>
-            <p>
-              Standing still<br>
-              while the room grows louder,<br>
-              not in sound<br>
-              but in structure,<br>
-              pipes expanding,<br>
-              floorboards tightening,<br>
-              lights sharpening along corners<br>
-              like systems I can see through<br>
-              but cannot unlearn.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">74</span>
+                <span class="poem-line-content">Standing still</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">75</span>
+                <span class="poem-line-content">while the room grows louder,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">76</span>
+                <span class="poem-line-content">not in sound</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">77</span>
+                <span class="poem-line-content">but in structure,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">78</span>
+                <span class="poem-line-content">pipes expanding,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">79</span>
+                <span class="poem-line-content">floorboards tightening,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">80</span>
+                <span class="poem-line-content">lights sharpening along corners</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">81</span>
+                <span class="poem-line-content">like systems I can see through</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">82</span>
+                <span class="poem-line-content">but cannot unlearn.</span>
+              </span>
             </p>
-            <p>
-              I don&#39;t know what I feel.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">83</span>
+                <span class="poem-line-content">I don&#39;t know what I feel.</span>
+              </span>
             </p>
-            <p>
-              cradling thin versions of myself<br>
-              on narrow, leaning shelves,<br>
-              labels written by hands<br>
-              that thought they were kind,<br>
-              edges tilted by arguments<br>
-              I cannot disprove,<br>
-              some tipping toward hunger,<br>
-              some toward silence,<br>
-              rebalancing weight<br>
-              I never chose<br>
-              but now cannot set down.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">84</span>
+                <span class="poem-line-content">cradling thin versions of myself</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">85</span>
+                <span class="poem-line-content">on narrow, leaning shelves,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">86</span>
+                <span class="poem-line-content">labels written by hands</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">87</span>
+                <span class="poem-line-content">that thought they were kind,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">88</span>
+                <span class="poem-line-content">edges tilted by arguments</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">89</span>
+                <span class="poem-line-content">I cannot disprove,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">90</span>
+                <span class="poem-line-content">some tipping toward hunger,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">91</span>
+                <span class="poem-line-content">some toward silence,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">92</span>
+                <span class="poem-line-content">rebalancing weight</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">93</span>
+                <span class="poem-line-content">I never chose</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">94</span>
+                <span class="poem-line-content">but now cannot set down.</span>
+              </span>
             </p>
-            <p>
-              Lifting one.<br>
-              Setting it back.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">95</span>
+                <span class="poem-line-content">Lifting one.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">96</span>
+                <span class="poem-line-content">Setting it back.</span>
+              </span>
             </p>
-            <p>
-              thirst arriving like a question<br>
-              that has too many honest answers,<br>
-              time pooling at my feet<br>
-              like water circling a blocked drain,<br>
-              still,<br>
-              reflective,<br>
-              unmoving<br>
-              because it sees too much of the room.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">97</span>
+                <span class="poem-line-content">thirst arriving like a question</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">98</span>
+                <span class="poem-line-content">that has too many honest answers,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">99</span>
+                <span class="poem-line-content">time pooling at my feet</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">100</span>
+                <span class="poem-line-content">like water circling a blocked drain,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">101</span>
+                <span class="poem-line-content">still,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">102</span>
+                <span class="poem-line-content">reflective,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">103</span>
+                <span class="poem-line-content">unmoving</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">104</span>
+                <span class="poem-line-content">because it sees too much of the room.</span>
+              </span>
             </p>
-            <p>
-              pressing my tongue to the dark<br>
-              of my own mouth,<br>
-              pressing my hands storms<br>
-              I do not own,<br>
-              feelings other people&#39;s weather<br>
-              strike my skin without warning —<br>
-              too bright,<br>
-              too loud,<br>
-              too close,<br>
-              as if empathy were a field<br>
-              with no shelter.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">105</span>
+                <span class="poem-line-content">pressing my tongue to the dark</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">106</span>
+                <span class="poem-line-content">of my own mouth,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">107</span>
+                <span class="poem-line-content">pressing my hands storms</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">108</span>
+                <span class="poem-line-content">I do not own,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">109</span>
+                <span class="poem-line-content">feelings other people&#39;s weather</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">110</span>
+                <span class="poem-line-content">strike my skin without warning —</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">111</span>
+                <span class="poem-line-content">too bright,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">112</span>
+                <span class="poem-line-content">too loud,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">113</span>
+                <span class="poem-line-content">too close,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">114</span>
+                <span class="poem-line-content">as if empathy were a field</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">115</span>
+                <span class="poem-line-content">with no shelter.</span>
+              </span>
             </p>
-            <p>
-              stagnating in a bent length of pipe,<br>
-              green film growing slowly inside,<br>
-              water forgetting which direction<br>
-              means relief.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">116</span>
+                <span class="poem-line-content">stagnating in a bent length of pipe,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">117</span>
+                <span class="poem-line-content">green film growing slowly inside,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">118</span>
+                <span class="poem-line-content">water forgetting which direction</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">119</span>
+                <span class="poem-line-content">means relief.</span>
+              </span>
             </p>
-            <p>
-              While somewhere<br>
-              under pavement,<br>
-              beneath stone,<br>
-              a current keeps moving<br>
-              without permission,<br>
-              without analysis,<br>
-              without apology.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">120</span>
+                <span class="poem-line-content">While somewhere</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">121</span>
+                <span class="poem-line-content">under pavement,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">122</span>
+                <span class="poem-line-content">beneath stone,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">123</span>
+                <span class="poem-line-content">a current keeps moving</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">124</span>
+                <span class="poem-line-content">without permission,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">125</span>
+                <span class="poem-line-content">without analysis,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">126</span>
+                <span class="poem-line-content">without apology.</span>
+              </span>
             </p>
-            <p>
-              And still—<br>
-              breathing,<br>
-              standing over a hairline crack in the floorboards,<br>
-              feeling the feelings of others<br>
-              for so long<br>
-              that I am forgetting which<br>
-              are mine,<br>
-              feeling pressure gather without language,<br>
-              frameworks bending under bone,<br>
-              until ever water,<br>
-              quietly,<br>
-              inevitably,<br>
-              finds a seam.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">127</span>
+                <span class="poem-line-content">And still—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">128</span>
+                <span class="poem-line-content">breathing,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">129</span>
+                <span class="poem-line-content">standing over a hairline crack in the floorboards,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">130</span>
+                <span class="poem-line-content">feeling the feelings of others</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">131</span>
+                <span class="poem-line-content">for so long</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">132</span>
+                <span class="poem-line-content">that I am forgetting which</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">133</span>
+                <span class="poem-line-content">are mine,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">134</span>
+                <span class="poem-line-content">feeling pressure gather without language,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">135</span>
+                <span class="poem-line-content">frameworks bending under bone,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">136</span>
+                <span class="poem-line-content">until ever water,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">137</span>
+                <span class="poem-line-content">quietly,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">138</span>
+                <span class="poem-line-content">inevitably,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">139</span>
+                <span class="poem-line-content">finds a seam.</span>
+              </span>
             </p>
-            <p class="poem-signature">
-              <em>— Lilith</em>
+            <p class="poem-stanza poem-signature">
+              <span class="poem-line poem-line--signature">
+                <span class="poem-line-number" aria-hidden="true">140</span>
+                <span class="poem-line-content">— Lilith</span>
+              </span>
             </p>
         </div>
       </article>

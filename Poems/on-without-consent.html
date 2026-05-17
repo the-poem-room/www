@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-line-numbers="hide">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,6 +71,13 @@
               <button type="button" data-font-size-option="big" aria-pressed="false">Big</button>
             </div>
           </div>
+          <div class="settings-row settings-row-stacked">
+            <span>Line numbers</span>
+            <div class="line-number-control" role="group" aria-label="Line numbers">
+              <button type="button" data-line-number-option="hide" aria-pressed="true">Hide</button>
+              <button type="button" data-line-number-option="show" aria-pressed="false">Show</button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -102,164 +109,479 @@
           </div>
         </div>
         <div class="reader-poem">
-            <p>
-              I don&#39;t want to die.<br>
-              I want to stop being <em>on</em>.<br>
-              There&#39;s a difference<br>
-              the body understands<br>
-              even if language doesn&#39;t.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">1</span>
+                <span class="poem-line-content">I don&#39;t want to die.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">2</span>
+                <span class="poem-line-content">I want to stop being <em>on</em>.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">3</span>
+                <span class="poem-line-content">There&#39;s a difference</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">4</span>
+                <span class="poem-line-content">the body understands</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">5</span>
+                <span class="poem-line-content">even if language doesn&#39;t.</span>
+              </span>
             </p>
-            <p>
-              Every second feels leased—<br>
-              rented consciousness,<br>
-              a meter that never pauses.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">6</span>
+                <span class="poem-line-content">Every second feels leased—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">7</span>
+                <span class="poem-line-content">rented consciousness,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">8</span>
+                <span class="poem-line-content">a meter that never pauses.</span>
+              </span>
             </p>
-            <p>
-              I wake already tired<br>
-              of being reachable,<br>
-              light striking the inside of my skull<br>
-              like a question<br>
-              I didn&#39;t agree to answer.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">9</span>
+                <span class="poem-line-content">I wake already tired</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">10</span>
+                <span class="poem-line-content">of being reachable,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">11</span>
+                <span class="poem-line-content">light striking the inside of my skull</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">12</span>
+                <span class="poem-line-content">like a question</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">13</span>
+                <span class="poem-line-content">I didn&#39;t agree to answer.</span>
+              </span>
             </p>
-            <p>
-              The system marks me <em>on</em><br>
-              and expects gratitude.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">14</span>
+                <span class="poem-line-content">The system marks me <em>on</em></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">15</span>
+                <span class="poem-line-content">and expects gratitude.</span>
+              </span>
             </p>
-            <p>
-              Life keeps running in default mode.<br>
-              Processes stack.<br>
-              Windows refuse to close.<br>
-              I move through the day<br>
-              like a room with the lights left <em>on</em> for weeks—<br>
-              nothing happening inside it,<br>
-              electricity still spent.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">16</span>
+                <span class="poem-line-content">Life keeps running in default mode.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">17</span>
+                <span class="poem-line-content">Processes stack.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">18</span>
+                <span class="poem-line-content">Windows refuse to close.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">19</span>
+                <span class="poem-line-content">I move through the day</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">20</span>
+                <span class="poem-line-content">like a room with the lights left <em>on</em> for weeks—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">21</span>
+                <span class="poem-line-content">nothing happening inside it,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">22</span>
+                <span class="poem-line-content">electricity still spent.</span>
+              </span>
             </p>
-            <p>
-              People mistake this for sadness.<br>
-              Sadness still belives in contrast.<br>
-              What I feel is erosion:<br>
-              a cliff worn smooth<br>
-              by staying.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">23</span>
+                <span class="poem-line-content">People mistake this for sadness.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">24</span>
+                <span class="poem-line-content">Sadness still belives in contrast.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">25</span>
+                <span class="poem-line-content">What I feel is erosion:</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">26</span>
+                <span class="poem-line-content">a cliff worn smooth</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">27</span>
+                <span class="poem-line-content">by staying.</span>
+              </span>
             </p>
-            <p>
-              I move correctly.<br>
-              I respond.<br>
-              I laugh when something lands.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">28</span>
+                <span class="poem-line-content">I move correctly.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">29</span>
+                <span class="poem-line-content">I respond.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">30</span>
+                <span class="poem-line-content">I laugh when something lands.</span>
+              </span>
             </p>
-            <p>
-              The laughter is accurate.<br>
-              I don&#39;t dispute it
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">31</span>
+                <span class="poem-line-content">The laughter is accurate.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">32</span>
+                <span class="poem-line-content">I don&#39;t dispute it</span>
+              </span>
             </p>
-            <p>
-              But underneath<br>
-              there&#39;s the hum—<br>
-              the low current that says:<br>
-              still powered,<br>
-              still unnecessary.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">33</span>
+                <span class="poem-line-content">But underneath</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">34</span>
+                <span class="poem-line-content">there&#39;s the hum—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">35</span>
+                <span class="poem-line-content">the low current that says:</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">36</span>
+                <span class="poem-line-content">still powered,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">37</span>
+                <span class="poem-line-content">still unnecessary.</span>
+              </span>
             </p>
-            <p>
-              Joy does not accumulate.<br>
-              It flashes, clears cache.<br>
-              No saved data.<br>
-              No resume later.<br>
-              The moment works.<br>
-              I am not altered.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">38</span>
+                <span class="poem-line-content">Joy does not accumulate.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">39</span>
+                <span class="poem-line-content">It flashes, clears cache.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">40</span>
+                <span class="poem-line-content">No saved data.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">41</span>
+                <span class="poem-line-content">No resume later.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">42</span>
+                <span class="poem-line-content">The moment works.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">43</span>
+                <span class="poem-line-content">I am not altered.</span>
+              </span>
             </p>
-            <p>
-              The anguish isn&#39;t loud.<br>
-              That&#39;s what makes it unbearable.<br>
-              It&#39;s a constant, narrow pressure—<br>
-              like holding your breath<br>
-              long after you&#39;ve forgotten<br>
-              why you started.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">44</span>
+                <span class="poem-line-content">The anguish isn&#39;t loud.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">45</span>
+                <span class="poem-line-content">That&#39;s what makes it unbearable.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">46</span>
+                <span class="poem-line-content">It&#39;s a constant, narrow pressure—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">47</span>
+                <span class="poem-line-content">like holding your breath</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">48</span>
+                <span class="poem-line-content">long after you&#39;ve forgotten</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">49</span>
+                <span class="poem-line-content">why you started.</span>
+              </span>
             </p>
-            <p>
-              Every thought ends<br>
-              at the same closed door:<br>
-              <em>how long can a person stay conscious</em><br>
-              <em>purely out of decency?</em>
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">50</span>
+                <span class="poem-line-content">Every thought ends</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">51</span>
+                <span class="poem-line-content">at the same closed door:</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">52</span>
+                <span class="poem-line-content"><em>how long can a person stay conscious</em></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">53</span>
+                <span class="poem-line-content"><em>purely out of decency?</em></span>
+              </span>
             </p>
-            <p>
-              Remaining awake<br>
-              has become an ethical performance.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">54</span>
+                <span class="poem-line-content">Remaining awake</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">55</span>
+                <span class="poem-line-content">has become an ethical performance.</span>
+              </span>
             </p>
-            <p>
-              I stay alert<br>
-              so other people don&#39;t have to grieve.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">56</span>
+                <span class="poem-line-content">I stay alert</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">57</span>
+                <span class="poem-line-content">so other people don&#39;t have to grieve.</span>
+              </span>
             </p>
-            <p>
-              My endurance is harm reduction.<br>
-              My presence, preventative care—<br>
-              for everyone except me.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">58</span>
+                <span class="poem-line-content">My endurance is harm reduction.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">59</span>
+                <span class="poem-line-content">My presence, preventative care—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">60</span>
+                <span class="poem-line-content">for everyone except me.</span>
+              </span>
             </p>
-            <p>
-              Love has hardened<br>
-              into responsibility.<br>
-              I don&#39;t know<br>
-              how to resign.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">61</span>
+                <span class="poem-line-content">Love has hardened</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">62</span>
+                <span class="poem-line-content">into responsibility.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">63</span>
+                <span class="poem-line-content">I don&#39;t know</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">64</span>
+                <span class="poem-line-content">how to resign.</span>
+              </span>
             </p>
-            <p>
-              They call this motivation.<br>
-              They offer futures,<br>
-              goals,<br>
-              achievement—<br>
-              as if being operational<br>
-              weren&#39;t already exhausting.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">65</span>
+                <span class="poem-line-content">They call this motivation.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">66</span>
+                <span class="poem-line-content">They offer futures,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">67</span>
+                <span class="poem-line-content">goals,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">68</span>
+                <span class="poem-line-content">achievement—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">69</span>
+                <span class="poem-line-content">as if being operational</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">70</span>
+                <span class="poem-line-content">weren&#39;t already exhausting.</span>
+              </span>
             </p>
-            <p>
-              I am trans in a world<br>
-              that calls waiting virtue.<br>
-              Neurodivergent in a culture<br>
-              that mistakes burnout for laziness.<br>
-              Alive in an economy<br>
-              that treats rest as theft.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">71</span>
+                <span class="poem-line-content">I am trans in a world</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">72</span>
+                <span class="poem-line-content">that calls waiting virtue.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">73</span>
+                <span class="poem-line-content">Neurodivergent in a culture</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">74</span>
+                <span class="poem-line-content">that mistakes burnout for laziness.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">75</span>
+                <span class="poem-line-content">Alive in an economy</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">76</span>
+                <span class="poem-line-content">that treats rest as theft.</span>
+              </span>
             </p>
-            <p>
-              I don&#39;t want achievement.<br>
-              I want cessation of demand.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">77</span>
+                <span class="poem-line-content">I don&#39;t want achievement.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">78</span>
+                <span class="poem-line-content">I want cessation of demand.</span>
+              </span>
             </p>
-            <p>
-              I imagine a switch<br>
-              because switches are kind.<br>
-              They don&#39;t asky why.<br>
-              They don&#39;t require meaning.<br>
-              They just obey.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">79</span>
+                <span class="poem-line-content">I imagine a switch</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">80</span>
+                <span class="poem-line-content">because switches are kind.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">81</span>
+                <span class="poem-line-content">They don&#39;t asky why.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">82</span>
+                <span class="poem-line-content">They don&#39;t require meaning.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">83</span>
+                <span class="poem-line-content">They just obey.</span>
+              </span>
             </p>
-            <p>
-              What I want isn&#39;t relief.<br>
-              It isn&#39;t healing.<br>
-              It&#39;s rest without symbolism—<br>
-              quiet that doesn&#39;t ask<br>
-              what I learned.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">84</span>
+                <span class="poem-line-content">What I want isn&#39;t relief.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">85</span>
+                <span class="poem-line-content">It isn&#39;t healing.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">86</span>
+                <span class="poem-line-content">It&#39;s rest without symbolism—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">87</span>
+                <span class="poem-line-content">quiet that doesn&#39;t ask</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">88</span>
+                <span class="poem-line-content">what I learned.</span>
+              </span>
             </p>
-            <p>
-              Not disappearance.<br>
-              Not drama.<br>
-              Just the mercy<br>
-              of a system<br>
-              that knows when to sleep.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">89</span>
+                <span class="poem-line-content">Not disappearance.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">90</span>
+                <span class="poem-line-content">Not drama.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">91</span>
+                <span class="poem-line-content">Just the mercy</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">92</span>
+                <span class="poem-line-content">of a system</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">93</span>
+                <span class="poem-line-content">that knows when to sleep.</span>
+              </span>
             </p>
-            <p>
-              This isn&#39;t despair.<br>
-              Despair reaches.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">94</span>
+                <span class="poem-line-content">This isn&#39;t despair.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">95</span>
+                <span class="poem-line-content">Despair reaches.</span>
+              </span>
             </p>
-            <p>
-              This is the fantasy<br>
-              of trusting the dark<br>
-              to hold.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">96</span>
+                <span class="poem-line-content">This is the fantasy</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">97</span>
+                <span class="poem-line-content">of trusting the dark</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">98</span>
+                <span class="poem-line-content">to hold.</span>
+              </span>
             </p>
-            <p>
-              So I do.<br>
-              I stay lit.<br>
-              Not bright.<br>
-              Not willing.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">99</span>
+                <span class="poem-line-content">So I do.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">100</span>
+                <span class="poem-line-content">I stay lit.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">101</span>
+                <span class="poem-line-content">Not bright.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">102</span>
+                <span class="poem-line-content">Not willing.</span>
+              </span>
             </p>
-            <p>
-              Just—<br>
-              <em>on</em>.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">103</span>
+                <span class="poem-line-content">Just—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">104</span>
+                <span class="poem-line-content"><em>on</em>.</span>
+              </span>
             </p>
-            <p>
-              <em>— Lilith</em>
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">105</span>
+                <span class="poem-line-content"><em>— Lilith</em></span>
+              </span>
             </p>
         </div>
       </article>

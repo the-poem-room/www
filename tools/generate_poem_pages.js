@@ -128,23 +128,15 @@ function renderPoemBody(poem) {
     return true;
   }
 
+  let lineNumber = 1;
+
   const stanzas = poem.lines
     .map((stanza, index) => {
       const stanzaText = typeof stanza === "string" ? stanza : String(stanza.text || "");
       const stanzaClassName =
         typeof stanza === "string" ? "" : String(stanza.className || "").trim();
-      const escaped = stanzaText
-        .split("\n")
-        .map((line, idx) => {
-          const rendered = renderInlineHtml(line);
-          if (idx === 0 && isAllCapsHeading(line)) {
-            return `<strong>${rendered}</strong>`;
-          }
-          return rendered;
-        })
-        .join("<br>\n              ");
       const isSignature = index === poem.lines.length - 1 && stanzaText.startsWith("— ");
-      const classes = [];
+      const classes = ["poem-stanza"];
 
       if (stanzaClassName) {
         classes.push(...stanzaClassName.split(/\s+/));
@@ -154,8 +146,27 @@ function renderPoemBody(poem) {
         classes.push("poem-signature");
       }
 
-      return `            <p${classes.length ? ` class="${classes.join(" ")}"` : ""}>
-              ${isSignature ? `<em>${escaped}</em>` : escaped}
+      const lines = stanzaText
+        .split("\n")
+        .map((line, idx) => {
+          if (!String(line || "").trim()) {
+            return `              <span class="poem-line poem-line--blank" aria-hidden="true"></span>`;
+          }
+
+          const rendered = renderInlineHtml(line);
+          const content = idx === 0 && isAllCapsHeading(line) ? `<strong>${rendered}</strong>` : rendered;
+          const lineMarkup = `              <span class="poem-line${isSignature ? " poem-line--signature" : ""}">
+                <span class="poem-line-number" aria-hidden="true">${lineNumber}</span>
+                <span class="poem-line-content">${content}</span>
+              </span>`;
+
+          lineNumber += 1;
+          return lineMarkup;
+        })
+        .join("\n");
+
+      return `            <p class="${classes.join(" ")}">
+${lines}
             </p>`;
     })
     .join("\n");
@@ -178,7 +189,7 @@ function poemPageTemplate(poem, previousPoem, nextPoem) {
     : "";
 
   return `<!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-line-numbers="hide">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -248,6 +259,13 @@ function poemPageTemplate(poem, previousPoem, nextPoem) {
               <button type="button" data-font-size-option="small" aria-pressed="false">Small</button>
               <button type="button" data-font-size-option="normal" aria-pressed="true">Normal</button>
               <button type="button" data-font-size-option="big" aria-pressed="false">Big</button>
+            </div>
+          </div>
+          <div class="settings-row settings-row-stacked">
+            <span>Line numbers</span>
+            <div class="line-number-control" role="group" aria-label="Line numbers">
+              <button type="button" data-line-number-option="hide" aria-pressed="true">Hide</button>
+              <button type="button" data-line-number-option="show" aria-pressed="false">Show</button>
             </div>
           </div>
         </div>

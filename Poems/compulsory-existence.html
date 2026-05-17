@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-line-numbers="hide">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,6 +71,13 @@
               <button type="button" data-font-size-option="big" aria-pressed="false">Big</button>
             </div>
           </div>
+          <div class="settings-row settings-row-stacked">
+            <span>Line numbers</span>
+            <div class="line-number-control" role="group" aria-label="Line numbers">
+              <button type="button" data-line-number-option="hide" aria-pressed="true">Hide</button>
+              <button type="button" data-line-number-option="show" aria-pressed="false">Show</button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -102,290 +109,971 @@
           </div>
         </div>
         <div class="reader-poem">
-            <p>
-              I am told this is good for me.<br>
-              That attendance is education,<br>
-              that education is liberation,<br>
-              that liberation is obedience<br>
-              to the timetable.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">1</span>
+                <span class="poem-line-content">I am told this is good for me.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">2</span>
+                <span class="poem-line-content">That attendance is education,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">3</span>
+                <span class="poem-line-content">that education is liberation,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">4</span>
+                <span class="poem-line-content">that liberation is obedience</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">5</span>
+                <span class="poem-line-content">to the timetable.</span>
+              </span>
             </p>
-            <p>
-              They call it <em>freedom</em>,<br>
-              the freedom to choose between one government-approved route<br>
-              and another.<br>
-              The freedom to wear my tie straight,<br>
-              to keep my hair bound<br>
-              in an acceptable demonstration<br>
-              of focus.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">6</span>
+                <span class="poem-line-content">They call it <em>freedom</em>,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">7</span>
+                <span class="poem-line-content">the freedom to choose between one government-approved route</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">8</span>
+                <span class="poem-line-content">and another.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">9</span>
+                <span class="poem-line-content">The freedom to wear my tie straight,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">10</span>
+                <span class="poem-line-content">to keep my hair bound</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">11</span>
+                <span class="poem-line-content">in an acceptable demonstration</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">12</span>
+                <span class="poem-line-content">of focus.</span>
+              </span>
             </p>
-            <p>
-              I sit in a room and I think:<br>
-              my body is here because the law says it must be,<br>
-              and my mind is elsewhere because my body is.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">13</span>
+                <span class="poem-line-content">I sit in a room and I think:</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">14</span>
+                <span class="poem-line-content">my body is here because the law says it must be,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">15</span>
+                <span class="poem-line-content">and my mind is elsewhere because my body is.</span>
+              </span>
             </p>
-            <p>
-              Sometimes I wonder<br>
-              if the real subject being taught<br>
-              is <em>submission</em>:<br>
-              how to smile politely<br>
-              while they measure your attention span<br>
-              in units of compliance.<br>
-              How to call the bars of the cage<br>
-              discipline.<br>
-              How to label your questions<br>
-              as distractions,<br>
-              and your enthusiasm<br>
-              as disruption.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">16</span>
+                <span class="poem-line-content">Sometimes I wonder</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">17</span>
+                <span class="poem-line-content">if the real subject being taught</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">18</span>
+                <span class="poem-line-content">is <em>submission</em>:</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">19</span>
+                <span class="poem-line-content">how to smile politely</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">20</span>
+                <span class="poem-line-content">while they measure your attention span</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">21</span>
+                <span class="poem-line-content">in units of compliance.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">22</span>
+                <span class="poem-line-content">How to call the bars of the cage</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">23</span>
+                <span class="poem-line-content">discipline.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">24</span>
+                <span class="poem-line-content">How to label your questions</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">25</span>
+                <span class="poem-line-content">as distractions,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">26</span>
+                <span class="poem-line-content">and your enthusiasm</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">27</span>
+                <span class="poem-line-content">as disruption.</span>
+              </span>
             </p>
-            <p>
-              Ah, the wondrous, infallible curriculum!<br>
-              That celestial scripture of state-approved curiosity.<br>
-              Immutable. Unquestionable.<br>
-              Its commandments carved into PowerPoint slides,<br>
-              delivered by prophets of punctuality.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">28</span>
+                <span class="poem-line-content">Ah, the wondrous, infallible curriculum!</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">29</span>
+                <span class="poem-line-content">That celestial scripture of state-approved curiosity.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">30</span>
+                <span class="poem-line-content">Immutable. Unquestionable.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">31</span>
+                <span class="poem-line-content">Its commandments carved into PowerPoint slides,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">32</span>
+                <span class="poem-line-content">delivered by prophets of punctuality.</span>
+              </span>
             </p>
-            <p>
-              I&#39;m not asking to burn it down,<br>
-              only to annotate the margins.<br>
-              To say: this doesn&#39;t fit me.<br>
-              This doesn&#39;t honour the way<br>
-              my mind tangles and bursts and leaps<br>
-              like fireworks that refuse to be choregraphed.<br>
-              I love my brain for its chaos,<br>
-              its insistence that beauty lives<br>
-              in digression.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">33</span>
+                <span class="poem-line-content">I&#39;m not asking to burn it down,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">34</span>
+                <span class="poem-line-content">only to annotate the margins.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">35</span>
+                <span class="poem-line-content">To say: this doesn&#39;t fit me.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">36</span>
+                <span class="poem-line-content">This doesn&#39;t honour the way</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">37</span>
+                <span class="poem-line-content">my mind tangles and bursts and leaps</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">38</span>
+                <span class="poem-line-content">like fireworks that refuse to be choregraphed.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">39</span>
+                <span class="poem-line-content">I love my brain for its chaos,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">40</span>
+                <span class="poem-line-content">its insistence that beauty lives</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">41</span>
+                <span class="poem-line-content">in digression.</span>
+              </span>
             </p>
-            <p>
-              But here, I must behave.<br>
-              I must stay in line.<br>
-              I must recite the learning objective<br>
-              until I no longer have objectives of my own.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">42</span>
+                <span class="poem-line-content">But here, I must behave.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">43</span>
+                <span class="poem-line-content">I must stay in line.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">44</span>
+                <span class="poem-line-content">I must recite the learning objective</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">45</span>
+                <span class="poem-line-content">until I no longer have objectives of my own.</span>
+              </span>
             </p>
-            <p>
-              Sometimes, when I&#39;m really tired,<br>
-              I imagine the walls breathing—<br>
-              slow, bureaucratic inhales,<br>
-              exhales of policy.<br>
-              The air tastes metallic,<br>
-              like it&#39;s been filtered through rules.<br>
-              A heat builds in my chest,<br>
-              not anger exactly,<br>
-              just pressure,<br>
-              a quiet, constant burning behind the ribs.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">46</span>
+                <span class="poem-line-content">Sometimes, when I&#39;m really tired,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">47</span>
+                <span class="poem-line-content">I imagine the walls breathing—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">48</span>
+                <span class="poem-line-content">slow, bureaucratic inhales,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">49</span>
+                <span class="poem-line-content">exhales of policy.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">50</span>
+                <span class="poem-line-content">The air tastes metallic,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">51</span>
+                <span class="poem-line-content">like it&#39;s been filtered through rules.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">52</span>
+                <span class="poem-line-content">A heat builds in my chest,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">53</span>
+                <span class="poem-line-content">not anger exactly,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">54</span>
+                <span class="poem-line-content">just pressure,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">55</span>
+                <span class="poem-line-content">a quiet, constant burning behind the ribs.</span>
+              </span>
             </p>
-            <p>
-              And yet, they say I am lucky.<br>
-              They say children elsewhere<br>
-              would kill for this.<br>
-              Would kill for the right<br>
-              to sit quietly<br>
-              and copy definitions<br>
-              of <em>autonomy</em>.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">56</span>
+                <span class="poem-line-content">And yet, they say I am lucky.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">57</span>
+                <span class="poem-line-content">They say children elsewhere</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">58</span>
+                <span class="poem-line-content">would kill for this.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">59</span>
+                <span class="poem-line-content">Would kill for the right</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">60</span>
+                <span class="poem-line-content">to sit quietly</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">61</span>
+                <span class="poem-line-content">and copy definitions</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">62</span>
+                <span class="poem-line-content">of <em>autonomy</em>.</span>
+              </span>
             </p>
-            <p>
-              What irony!<br>
-              That we are told to think for ourselves<br>
-              it environments designed<br>
-              to stop us doing so.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">63</span>
+                <span class="poem-line-content">What irony!</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">64</span>
+                <span class="poem-line-content">That we are told to think for ourselves</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">65</span>
+                <span class="poem-line-content">it environments designed</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">66</span>
+                <span class="poem-line-content">to stop us doing so.</span>
+              </span>
             </p>
-            <p>
-              School teaches me philosophy,<br>
-              but forbids me from living it.<br>
-              We discuss free will<br>
-              under the shadow<br>
-              of compulsory attendance.<br>
-              We debate the social contract<br>
-              that none of us signed.<br>
-              We define utilitarianism<br>
-              while sacrificing our joy<br>
-              for the greater good of the data sheet.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">67</span>
+                <span class="poem-line-content">School teaches me philosophy,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">68</span>
+                <span class="poem-line-content">but forbids me from living it.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">69</span>
+                <span class="poem-line-content">We discuss free will</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">70</span>
+                <span class="poem-line-content">under the shadow</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">71</span>
+                <span class="poem-line-content">of compulsory attendance.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">72</span>
+                <span class="poem-line-content">We debate the social contract</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">73</span>
+                <span class="poem-line-content">that none of us signed.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">74</span>
+                <span class="poem-line-content">We define utilitarianism</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">75</span>
+                <span class="poem-line-content">while sacrificing our joy</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">76</span>
+                <span class="poem-line-content">for the greater good of the data sheet.</span>
+              </span>
             </p>
-            <p>
-              When I speak with passion,<br>
-              they tell me to simplify.<br>
-              When I dig too deep,<br>
-              they tell me to stop.<br>
-              When I move too fast,<br>
-              they tell me to slow down.<br>
-              When I take my time,<br>
-              they tell me I&#39;m behind.<br>
-              I&#39;ve learned that learning,<br>
-              apparently,<br>
-              has a correct speed.<br>
-              That curiosity must follow<br>
-              the fixed schedule of comprehension.<br>
-              That thought must be punctual.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">77</span>
+                <span class="poem-line-content">When I speak with passion,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">78</span>
+                <span class="poem-line-content">they tell me to simplify.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">79</span>
+                <span class="poem-line-content">When I dig too deep,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">80</span>
+                <span class="poem-line-content">they tell me to stop.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">81</span>
+                <span class="poem-line-content">When I move too fast,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">82</span>
+                <span class="poem-line-content">they tell me to slow down.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">83</span>
+                <span class="poem-line-content">When I take my time,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">84</span>
+                <span class="poem-line-content">they tell me I&#39;m behind.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">85</span>
+                <span class="poem-line-content">I&#39;ve learned that learning,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">86</span>
+                <span class="poem-line-content">apparently,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">87</span>
+                <span class="poem-line-content">has a correct speed.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">88</span>
+                <span class="poem-line-content">That curiosity must follow</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">89</span>
+                <span class="poem-line-content">the fixed schedule of comprehension.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">90</span>
+                <span class="poem-line-content">That thought must be punctual.</span>
+              </span>
             </p>
-            <p>
-              And when I try to hold it in,<br>
-              the questions twitch behind my teeth,<br>
-              press against the back of my throat,<br>
-              as if language itself<br>
-              is trying to escape.<br>
-              My lungs tighten with swallowed words.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">91</span>
+                <span class="poem-line-content">And when I try to hold it in,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">92</span>
+                <span class="poem-line-content">the questions twitch behind my teeth,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">93</span>
+                <span class="poem-line-content">press against the back of my throat,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">94</span>
+                <span class="poem-line-content">as if language itself</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">95</span>
+                <span class="poem-line-content">is trying to escape.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">96</span>
+                <span class="poem-line-content">My lungs tighten with swallowed words.</span>
+              </span>
             </p>
-            <p>
-              But the worst thing—<br>
-              the thing that burns—<br>
-              is being rushed.<br>
-              Not the kind that comes from urgency or need,<br>
-              but the kind that comes from someone<br>
-              deciding your pace for you,<br>
-              When they tap their foot,<br>
-              raise an eyebrow,<br>
-              wait for your mind<br>
-              to collapse into something shorter.<br>
-              When a thought, still forming,<br>
-              is treated like failure.<br>
-              I feel it in my body:<br>
-              the throat constricting,<br>
-              pulse quickening,<br>
-              the raw electricity<br>
-              of being forced to think faster<br>
-              than truth allows.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">97</span>
+                <span class="poem-line-content">But the worst thing—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">98</span>
+                <span class="poem-line-content">the thing that burns—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">99</span>
+                <span class="poem-line-content">is being rushed.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">100</span>
+                <span class="poem-line-content">Not the kind that comes from urgency or need,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">101</span>
+                <span class="poem-line-content">but the kind that comes from someone</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">102</span>
+                <span class="poem-line-content">deciding your pace for you,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">103</span>
+                <span class="poem-line-content">When they tap their foot,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">104</span>
+                <span class="poem-line-content">raise an eyebrow,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">105</span>
+                <span class="poem-line-content">wait for your mind</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">106</span>
+                <span class="poem-line-content">to collapse into something shorter.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">107</span>
+                <span class="poem-line-content">When a thought, still forming,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">108</span>
+                <span class="poem-line-content">is treated like failure.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">109</span>
+                <span class="poem-line-content">I feel it in my body:</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">110</span>
+                <span class="poem-line-content">the throat constricting,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">111</span>
+                <span class="poem-line-content">pulse quickening,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">112</span>
+                <span class="poem-line-content">the raw electricity</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">113</span>
+                <span class="poem-line-content">of being forced to think faster</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">114</span>
+                <span class="poem-line-content">than truth allows.</span>
+              </span>
             </p>
-            <p>
-              I see it everywhere:<br>
-              online, in classrooms,<br>
-              in every argument that rewards speed<br>
-              over sincerity.<br>
-              If you don&#39;t have an answer now,<br>
-              you don&#39;t deserve the time to find one.<br>
-              As if reflection were cowardice.<br>
-              As if the space between sentences<br>
-              were shameful.<br>
-              As if silence weren&#39;t also a form of thought.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">115</span>
+                <span class="poem-line-content">I see it everywhere:</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">116</span>
+                <span class="poem-line-content">online, in classrooms,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">117</span>
+                <span class="poem-line-content">in every argument that rewards speed</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">118</span>
+                <span class="poem-line-content">over sincerity.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">119</span>
+                <span class="poem-line-content">If you don&#39;t have an answer now,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">120</span>
+                <span class="poem-line-content">you don&#39;t deserve the time to find one.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">121</span>
+                <span class="poem-line-content">As if reflection were cowardice.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">122</span>
+                <span class="poem-line-content">As if the space between sentences</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">123</span>
+                <span class="poem-line-content">were shameful.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">124</span>
+                <span class="poem-line-content">As if silence weren&#39;t also a form of thought.</span>
+              </span>
             </p>
-            <p>
-              But my mind was not built<br>
-              for timetables.<br>
-              It stumbles and sprints,<br>
-              pauses to marvel,<br>
-              loops back to something half-remembered,<br>
-              connects two ideas<br>
-              no one asked it to.<br>
-              The fixed schedule of learning<br>
-              feels like being asked to dance<br>
-              to a metronome—<br>
-              every step exact,<br>
-              every breath corrected.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">125</span>
+                <span class="poem-line-content">But my mind was not built</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">126</span>
+                <span class="poem-line-content">for timetables.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">127</span>
+                <span class="poem-line-content">It stumbles and sprints,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">128</span>
+                <span class="poem-line-content">pauses to marvel,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">129</span>
+                <span class="poem-line-content">loops back to something half-remembered,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">130</span>
+                <span class="poem-line-content">connects two ideas</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">131</span>
+                <span class="poem-line-content">no one asked it to.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">132</span>
+                <span class="poem-line-content">The fixed schedule of learning</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">133</span>
+                <span class="poem-line-content">feels like being asked to dance</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">134</span>
+                <span class="poem-line-content">to a metronome—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">135</span>
+                <span class="poem-line-content">every step exact,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">136</span>
+                <span class="poem-line-content">every breath corrected.</span>
+              </span>
             </p>
-            <p>
-              Maybe that&#39;s the lesson.<br>
-              Maybe the system is the syllabus.<br>
-              Maybe obedience is the hidden exam.<br>
-              Maybe the grade is survival.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">137</span>
+                <span class="poem-line-content">Maybe that&#39;s the lesson.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">138</span>
+                <span class="poem-line-content">Maybe the system is the syllabus.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">139</span>
+                <span class="poem-line-content">Maybe obedience is the hidden exam.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">140</span>
+                <span class="poem-line-content">Maybe the grade is survival.</span>
+              </span>
             </p>
-            <p>
-              I could thrive<br>
-              if I were allowed to be deliberate,<br>
-              to construct my knowledge<br>
-              as I build songs, poems,<br>
-              looping four bars of logic,<br>
-              then layering questions<br>
-              and strange harmonies<br>
-              until something clicks.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">141</span>
+                <span class="poem-line-content">I could thrive</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">142</span>
+                <span class="poem-line-content">if I were allowed to be deliberate,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">143</span>
+                <span class="poem-line-content">to construct my knowledge</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">144</span>
+                <span class="poem-line-content">as I build songs, poems,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">145</span>
+                <span class="poem-line-content">looping four bars of logic,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">146</span>
+                <span class="poem-line-content">then layering questions</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">147</span>
+                <span class="poem-line-content">and strange harmonies</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">148</span>
+                <span class="poem-line-content">until something clicks.</span>
+              </span>
             </p>
-            <p>
-              But here,<br>
-              everything must move at one tempo.<br>
-              No rubato.<br>
-              No freedom of phrasing.<br>
-              No pause that might lead<br>
-              no real thought.<br>
-              It won&#39;t earn a grade—<br>
-              that&#39;s the point.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">149</span>
+                <span class="poem-line-content">But here,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">150</span>
+                <span class="poem-line-content">everything must move at one tempo.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">151</span>
+                <span class="poem-line-content">No rubato.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">152</span>
+                <span class="poem-line-content">No freedom of phrasing.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">153</span>
+                <span class="poem-line-content">No pause that might lead</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">154</span>
+                <span class="poem-line-content">no real thought.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">155</span>
+                <span class="poem-line-content">It won&#39;t earn a grade—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">156</span>
+                <span class="poem-line-content">that&#39;s the point.</span>
+              </span>
             </p>
-            <p>
-              It&#39;s no wonder<br>
-              I wake each morning<br>
-              with that low hum of despair,<br>
-              that dull ache of being managed,<br>
-              of being someone else&#39;s project.<br>
-              My jaw aches from restraint.<br>
-              There&#39;s a pulse in my temples;<br>
-              the second hand<br>
-              on a clock that never stops.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">157</span>
+                <span class="poem-line-content">It&#39;s no wonder</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">158</span>
+                <span class="poem-line-content">I wake each morning</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">159</span>
+                <span class="poem-line-content">with that low hum of despair,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">160</span>
+                <span class="poem-line-content">that dull ache of being managed,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">161</span>
+                <span class="poem-line-content">of being someone else&#39;s project.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">162</span>
+                <span class="poem-line-content">My jaw aches from restraint.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">163</span>
+                <span class="poem-line-content">There&#39;s a pulse in my temples;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">164</span>
+                <span class="poem-line-content">the second hand</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">165</span>
+                <span class="poem-line-content">on a clock that never stops.</span>
+              </span>
             </p>
-            <p>
-              The world loves to speak<br>
-              of fairness,<br>
-              while defining it<br>
-              as sameness.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">166</span>
+                <span class="poem-line-content">The world loves to speak</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">167</span>
+                <span class="poem-line-content">of fairness,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">168</span>
+                <span class="poem-line-content">while defining it</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">169</span>
+                <span class="poem-line-content">as sameness.</span>
+              </span>
             </p>
-            <p>
-              The world loves to chant<br>
-              about <em>freedom</em>,<br>
-              while handing you<br>
-              a pre-written timetable.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">170</span>
+                <span class="poem-line-content">The world loves to chant</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">171</span>
+                <span class="poem-line-content">about <em>freedom</em>,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">172</span>
+                <span class="poem-line-content">while handing you</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">173</span>
+                <span class="poem-line-content">a pre-written timetable.</span>
+              </span>
             </p>
-            <p>
-              And I just want to ask—<br>
-              not shout, not break,<br>
-              just ask—<br>
-              is this really what they call living?
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">174</span>
+                <span class="poem-line-content">And I just want to ask—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">175</span>
+                <span class="poem-line-content">not shout, not break,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">176</span>
+                <span class="poem-line-content">just ask—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">177</span>
+                <span class="poem-line-content">is this really what they call living?</span>
+              </span>
             </p>
-            <p>
-              I don&#39;t hate learning.<br>
-              I hate being taught<br>
-              as a form of possession.<br>
-              Knowledge shouldn&#39;t be administered.<br>
-              It should be discovered,<br>
-              devoured,<br>
-              disassembled,<br>
-              and loved.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">178</span>
+                <span class="poem-line-content">I don&#39;t hate learning.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">179</span>
+                <span class="poem-line-content">I hate being taught</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">180</span>
+                <span class="poem-line-content">as a form of possession.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">181</span>
+                <span class="poem-line-content">Knowledge shouldn&#39;t be administered.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">182</span>
+                <span class="poem-line-content">It should be discovered,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">183</span>
+                <span class="poem-line-content">devoured,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">184</span>
+                <span class="poem-line-content">disassembled,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">185</span>
+                <span class="poem-line-content">and loved.</span>
+              </span>
             </p>
-            <p>
-              But here it&#39;s measured<br>
-              in marks and minutes.<br>
-              Every insight<br>
-              is a step toward a qualification,<br>
-              not liberation.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">186</span>
+                <span class="poem-line-content">But here it&#39;s measured</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">187</span>
+                <span class="poem-line-content">in marks and minutes.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">188</span>
+                <span class="poem-line-content">Every insight</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">189</span>
+                <span class="poem-line-content">is a step toward a qualification,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">190</span>
+                <span class="poem-line-content">not liberation.</span>
+              </span>
             </p>
-            <p>
-              Still,<br>
-              I&#39;m here.<br>
-              It&#39;s 2 a.m. on the first Monday back<br>
-              after half term.<br>
-              The house is silent,<br>
-              but my mind refuses to clock out.<br>
-              I should be sleeping,<br>
-              resting, preparing<br>
-              to obey the timetable again—<br>
-              but I&#39;m writing this instead.<br>
-              Refusing to be cured<br>
-              of wonder.<br>
-              Hoping that somewhere,<br>
-              beyond this detention of daily life,<br>
-              a freer kind of mind<br>
-              is waiting.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">191</span>
+                <span class="poem-line-content">Still,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">192</span>
+                <span class="poem-line-content">I&#39;m here.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">193</span>
+                <span class="poem-line-content">It&#39;s 2 a.m. on the first Monday back</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">194</span>
+                <span class="poem-line-content">after half term.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">195</span>
+                <span class="poem-line-content">The house is silent,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">196</span>
+                <span class="poem-line-content">but my mind refuses to clock out.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">197</span>
+                <span class="poem-line-content">I should be sleeping,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">198</span>
+                <span class="poem-line-content">resting, preparing</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">199</span>
+                <span class="poem-line-content">to obey the timetable again—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">200</span>
+                <span class="poem-line-content">but I&#39;m writing this instead.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">201</span>
+                <span class="poem-line-content">Refusing to be cured</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">202</span>
+                <span class="poem-line-content">of wonder.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">203</span>
+                <span class="poem-line-content">Hoping that somewhere,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">204</span>
+                <span class="poem-line-content">beyond this detention of daily life,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">205</span>
+                <span class="poem-line-content">a freer kind of mind</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">206</span>
+                <span class="poem-line-content">is waiting.</span>
+              </span>
             </p>
-            <p>
-              Until then,<br>
-              I&#39;ll keep breathing beneath the surface,<br>
-              scribbling my rebellion<br>
-              in the margins of a worksheet<br>
-              that calls it off-task.<br>
-              And maybe,<br>
-              when the paper&#39;s marked,<br>
-              they&#39;ll see the question I left<br>
-              at the bottom of the page,<br>
-              a single smudge of graphite,<br>
-              shaking like a pulse.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">207</span>
+                <span class="poem-line-content">Until then,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">208</span>
+                <span class="poem-line-content">I&#39;ll keep breathing beneath the surface,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">209</span>
+                <span class="poem-line-content">scribbling my rebellion</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">210</span>
+                <span class="poem-line-content">in the margins of a worksheet</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">211</span>
+                <span class="poem-line-content">that calls it off-task.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">212</span>
+                <span class="poem-line-content">And maybe,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">213</span>
+                <span class="poem-line-content">when the paper&#39;s marked,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">214</span>
+                <span class="poem-line-content">they&#39;ll see the question I left</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">215</span>
+                <span class="poem-line-content">at the bottom of the page,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">216</span>
+                <span class="poem-line-content">a single smudge of graphite,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">217</span>
+                <span class="poem-line-content">shaking like a pulse.</span>
+              </span>
             </p>
-            <p>
-              It won&#39;t earn a grade.<br>
-              It isn&#39;t on the syllabus.<br>
-              But it&#39;s mine—<br>
-              the small, stubborn tremor<br>
-              of a body still thinking,<br>
-              and the faint sound of walls<br>
-              still breathing—<br>
-              as if they, too,<br>
-              were learning to resist.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">218</span>
+                <span class="poem-line-content">It won&#39;t earn a grade.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">219</span>
+                <span class="poem-line-content">It isn&#39;t on the syllabus.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">220</span>
+                <span class="poem-line-content">But it&#39;s mine—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">221</span>
+                <span class="poem-line-content">the small, stubborn tremor</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">222</span>
+                <span class="poem-line-content">of a body still thinking,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">223</span>
+                <span class="poem-line-content">and the faint sound of walls</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">224</span>
+                <span class="poem-line-content">still breathing—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">225</span>
+                <span class="poem-line-content">as if they, too,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">226</span>
+                <span class="poem-line-content">were learning to resist.</span>
+              </span>
             </p>
-            <p class="poem-signature">
-              <em>— Lilith</em>
+            <p class="poem-stanza poem-signature">
+              <span class="poem-line poem-line--signature">
+                <span class="poem-line-number" aria-hidden="true">227</span>
+                <span class="poem-line-content">— Lilith</span>
+              </span>
             </p>
         </div>
       </article>

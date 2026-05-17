@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-line-numbers="hide">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,6 +71,13 @@
               <button type="button" data-font-size-option="big" aria-pressed="false">Big</button>
             </div>
           </div>
+          <div class="settings-row settings-row-stacked">
+            <span>Line numbers</span>
+            <div class="line-number-control" role="group" aria-label="Line numbers">
+              <button type="button" data-line-number-option="hide" aria-pressed="true">Hide</button>
+              <button type="button" data-line-number-option="show" aria-pressed="false">Show</button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -102,175 +109,445 @@
           </div>
         </div>
         <div class="reader-poem">
-            <p>
-              <strong>Logic:</strong><br>
-              can we stay on topic
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">1</span>
+                <span class="poem-line-content"><strong>Logic:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">2</span>
+                <span class="poem-line-content">can we stay on topic</span>
+              </span>
             </p>
-            <p>
-              <strong>Emotion:</strong><br>
-              this <em>is</em> the topic
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">3</span>
+                <span class="poem-line-content"><strong>Emotion:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">4</span>
+                <span class="poem-line-content">this <em>is</em> the topic</span>
+              </span>
             </p>
-            <p>
-              <strong>Impulse:</strong><br>
-              what if we just<br>
-              changed our name<br>
-              and moved somewhere<br>
-              with low expectations
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">5</span>
+                <span class="poem-line-content"><strong>Impulse:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">6</span>
+                <span class="poem-line-content">what if we just</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">7</span>
+                <span class="poem-line-content">changed our name</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">8</span>
+                <span class="poem-line-content">and moved somewhere</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">9</span>
+                <span class="poem-line-content">with low expectations</span>
+              </span>
             </p>
-            <p>
-              <strong>Ethics:</strong><br>
-              other people live there
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">10</span>
+                <span class="poem-line-content"><strong>Ethics:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">11</span>
+                <span class="poem-line-content">other people live there</span>
+              </span>
             </p>
-            <p>
-              <strong>Impulse:</strong><br>
-              ruined immediately
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">12</span>
+                <span class="poem-line-content"><strong>Impulse:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">13</span>
+                <span class="poem-line-content">ruined immediately</span>
+              </span>
             </p>
-            <p>
-              <strong>Music:</strong><br>
-              🎧 (voice note: 0:41)
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">14</span>
+                <span class="poem-line-content"><strong>Music:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">15</span>
+                <span class="poem-line-content">🎧 (voice note: 0:41)</span>
+              </span>
             </p>
-            <p>
-              <strong>Logic:</strong><br>
-              summary
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">16</span>
+                <span class="poem-line-content"><strong>Logic:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">17</span>
+                <span class="poem-line-content">summary</span>
+              </span>
             </p>
-            <p>
-              <strong>Music:</strong><br>
-              no
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">18</span>
+                <span class="poem-line-content"><strong>Music:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">19</span>
+                <span class="poem-line-content">no</span>
+              </span>
             </p>
-            <p>
-              <strong>3am Thoughts:</strong><br>
-              is anyone else scared that<br>
-              we&#39;re wasting something<br>
-              that doesn&#39;t renew
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">20</span>
+                <span class="poem-line-content"><strong>3am Thoughts:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">21</span>
+                <span class="poem-line-content">is anyone else scared that</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">22</span>
+                <span class="poem-line-content">we&#39;re wasting something</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">23</span>
+                <span class="poem-line-content">that doesn&#39;t renew</span>
+              </span>
             </p>
-            <p>
-              <strong>Impulse:</strong><br>
-              like time
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">24</span>
+                <span class="poem-line-content"><strong>Impulse:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">25</span>
+                <span class="poem-line-content">like time</span>
+              </span>
             </p>
-            <p>
-              <strong>Emotion:</strong><br>
-              or kindness
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">26</span>
+                <span class="poem-line-content"><strong>Emotion:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">27</span>
+                <span class="poem-line-content">or kindness</span>
+              </span>
             </p>
-            <p>
-              <strong>Logic:</strong><br>
-              or sleep
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">28</span>
+                <span class="poem-line-content"><strong>Logic:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">29</span>
+                <span class="poem-line-content">or sleep</span>
+              </span>
             </p>
-            <p>
-              <strong>Impulse:</strong><br>
-              or a sandwich<br>
-              we were emotionally invested in
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">30</span>
+                <span class="poem-line-content"><strong>Impulse:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">31</span>
+                <span class="poem-line-content">or a sandwich</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">32</span>
+                <span class="poem-line-content">we were emotionally invested in</span>
+              </span>
             </p>
-            <p>
-              <strong>Ethics:</strong><br>
-              can we not joke every time<br>
-              something matters
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">33</span>
+                <span class="poem-line-content"><strong>Ethics:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">34</span>
+                <span class="poem-line-content">can we not joke every time</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">35</span>
+                <span class="poem-line-content">something matters</span>
+              </span>
             </p>
-            <p>
-              <strong>Impulse:</strong><br>
-              i joke <em>because</em> it matters
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">36</span>
+                <span class="poem-line-content"><strong>Impulse:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">37</span>
+                <span class="poem-line-content">i joke <em>because</em> it matters</span>
+              </span>
             </p>
-            <p>
-              <strong>Emotion:</strong><br>
-              i don&#39;t want to be efficient<br>
-              i want to be understood
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">38</span>
+                <span class="poem-line-content"><strong>Emotion:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">39</span>
+                <span class="poem-line-content">i don&#39;t want to be efficient</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">40</span>
+                <span class="poem-line-content">i want to be understood</span>
+              </span>
             </p>
-            <p>
-              <strong>Logic:</strong><br>
-              those are not mutually exclusive
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">41</span>
+                <span class="poem-line-content"><strong>Logic:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">42</span>
+                <span class="poem-line-content">those are not mutually exclusive</span>
+              </span>
             </p>
-            <p>
-              <strong>Emotion:</strong><br>
-              they are when someone&#39;s holding a clipboard
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">43</span>
+                <span class="poem-line-content"><strong>Emotion:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">44</span>
+                <span class="poem-line-content">they are when someone&#39;s holding a clipboard</span>
+              </span>
             </p>
-            <p>
-              <strong>Music:</strong><br>
-              what if the answer isn&#39;t an answer<br>
-              what if it&#39;s a tempo
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">45</span>
+                <span class="poem-line-content"><strong>Music:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">46</span>
+                <span class="poem-line-content">what if the answer isn&#39;t an answer</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">47</span>
+                <span class="poem-line-content">what if it&#39;s a tempo</span>
+              </span>
             </p>
-            <p>
-              <strong>Logic:</strong><br>
-              that&#39;s not helpful
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">48</span>
+                <span class="poem-line-content"><strong>Logic:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">49</span>
+                <span class="poem-line-content">that&#39;s not helpful</span>
+              </span>
             </p>
-            <p>
-              <strong>3am Thoughts:</strong><br>
-              what if we&#39;re only overwhelmed<br>
-              because we&#39;re paying attention
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">50</span>
+                <span class="poem-line-content"><strong>3am Thoughts:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">51</span>
+                <span class="poem-line-content">what if we&#39;re only overwhelmed</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">52</span>
+                <span class="poem-line-content">because we&#39;re paying attention</span>
+              </span>
             </p>
-            <p>
-              <strong>Ethics:</strong><br>
-              that doesn&#39;t make it wrong
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">53</span>
+                <span class="poem-line-content"><strong>Ethics:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">54</span>
+                <span class="poem-line-content">that doesn&#39;t make it wrong</span>
+              </span>
             </p>
-            <p>
-              <strong>Impulse:</strong><br>
-              it does in marking schemes
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">55</span>
+                <span class="poem-line-content"><strong>Impulse:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">56</span>
+                <span class="poem-line-content">it does in marking schemes</span>
+              </span>
             </p>
-            <p>
-              <strong>System:</strong><br>
-              <em>multiple inputs detected</em>
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">57</span>
+                <span class="poem-line-content"><strong>System:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">58</span>
+                <span class="poem-line-content"><em>multiple inputs detected</em></span>
+              </span>
             </p>
-            <p>
-              <strong>Logic:</strong><br>
-              please don&#39;t start
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">59</span>
+                <span class="poem-line-content"><strong>Logic:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">60</span>
+                <span class="poem-line-content">please don&#39;t start</span>
+              </span>
             </p>
-            <p>
-              <strong>Emotion:</strong><br>
-              too late
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">61</span>
+                <span class="poem-line-content"><strong>Emotion:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">62</span>
+                <span class="poem-line-content">too late</span>
+              </span>
             </p>
-            <p>
-              <strong>System:</strong><br>
-              <em>Impulse has left the chat.</em>
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">63</span>
+                <span class="poem-line-content"><strong>System:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">64</span>
+                <span class="poem-line-content"><em>Impulse has left the chat.</em></span>
+              </span>
             </p>
-            <p>
-              <strong>Emotion:</strong><br>
-              that wasn&#39;t funny
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">65</span>
+                <span class="poem-line-content"><strong>Emotion:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">66</span>
+                <span class="poem-line-content">that wasn&#39;t funny</span>
+              </span>
             </p>
-            <p>
-              <strong>Music:</strong><br>
-              statistically it was
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">67</span>
+                <span class="poem-line-content"><strong>Music:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">68</span>
+                <span class="poem-line-content">statistically it was</span>
+              </span>
             </p>
-            <p>
-              <strong>3am Thoughts:</strong><br>
-              they&#39;ll be back
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">69</span>
+                <span class="poem-line-content"><strong>3am Thoughts:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">70</span>
+                <span class="poem-line-content">they&#39;ll be back</span>
+              </span>
             </p>
-            <p>
-              <strong>System:</strong><br>
-              <em>Impulse joined using a new account.</em>
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">71</span>
+                <span class="poem-line-content"><strong>System:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">72</span>
+                <span class="poem-line-content"><em>Impulse joined using a new account.</em></span>
+              </span>
             </p>
-            <p>
-              <strong>Impulse:</strong><br>
-              hi sorry
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">73</span>
+                <span class="poem-line-content"><strong>Impulse:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">74</span>
+                <span class="poem-line-content">hi sorry</span>
+              </span>
             </p>
-            <p>
-              <strong>Ethics:</strong><br>
-              you didn&#39;t apologise
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">75</span>
+                <span class="poem-line-content"><strong>Ethics:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">76</span>
+                <span class="poem-line-content">you didn&#39;t apologise</span>
+              </span>
             </p>
-            <p>
-              <strong>Impulse:</strong><br>
-              i did. spiritually.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">77</span>
+                <span class="poem-line-content"><strong>Impulse:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">78</span>
+                <span class="poem-line-content">i did. spiritually.</span>
+              </span>
             </p>
-            <p>
-              <strong>Logic:</strong><br>
-              that&#39;s worse
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">79</span>
+                <span class="poem-line-content"><strong>Logic:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">80</span>
+                <span class="poem-line-content">that&#39;s worse</span>
+              </span>
             </p>
-            <p>
-              <strong>Impulse:</strong><br>
-              wow ok
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">81</span>
+                <span class="poem-line-content"><strong>Impulse:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">82</span>
+                <span class="poem-line-content">wow ok</span>
+              </span>
             </p>
-            <p>
-              <strong>Emotion:</strong><br>
-              can someone just say<br>
-              it&#39;s okay to be like this
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">83</span>
+                <span class="poem-line-content"><strong>Emotion:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">84</span>
+                <span class="poem-line-content">can someone just say</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">85</span>
+                <span class="poem-line-content">it&#39;s okay to be like this</span>
+              </span>
             </p>
-            <p>
-              <strong>System:</strong><br>
-              <em>seen by everyone</em>
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">86</span>
+                <span class="poem-line-content"><strong>System:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">87</span>
+                <span class="poem-line-content"><em>seen by everyone</em></span>
+              </span>
             </p>
-            <p>
-              <strong>System:</strong><br>
-              <em>notifications silenced</em>
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">88</span>
+                <span class="poem-line-content"><strong>System:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">89</span>
+                <span class="poem-line-content"><em>notifications silenced</em></span>
+              </span>
             </p>
-            <p class="poem-signature">
-              <em>— Lilith</em>
+            <p class="poem-stanza poem-signature">
+              <span class="poem-line poem-line--signature">
+                <span class="poem-line-number" aria-hidden="true">90</span>
+                <span class="poem-line-content">— Lilith</span>
+              </span>
             </p>
         </div>
       </article>

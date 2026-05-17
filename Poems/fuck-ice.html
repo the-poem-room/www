@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-line-numbers="hide">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,6 +71,13 @@
               <button type="button" data-font-size-option="big" aria-pressed="false">Big</button>
             </div>
           </div>
+          <div class="settings-row settings-row-stacked">
+            <span>Line numbers</span>
+            <div class="line-number-control" role="group" aria-label="Line numbers">
+              <button type="button" data-line-number-option="hide" aria-pressed="true">Hide</button>
+              <button type="button" data-line-number-option="show" aria-pressed="false">Show</button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -102,244 +109,739 @@
           </div>
         </div>
         <div class="reader-poem">
-            <p>
-              Let&#39;s not do the cable-news dance.<br>
-              Let&#39;s not stand at the podium,<br>
-              beneath the flags and the blue-lit gloss,<br>
-              and pretend this is difficult.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">1</span>
+                <span class="poem-line-content">Let&#39;s not do the cable-news dance.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">2</span>
+                <span class="poem-line-content">Let&#39;s not stand at the podium,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">3</span>
+                <span class="poem-line-content">beneath the flags and the blue-lit gloss,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">4</span>
+                <span class="poem-line-content">and pretend this is difficult.</span>
+              </span>
             </p>
-            <p>
-              It isn&#39;t.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">5</span>
+                <span class="poem-line-content">It isn&#39;t.</span>
+              </span>
             </p>
-            <p>
-              You took a country already swollen<br>
-              with grievance, spectacle, surveillance;<br>
-              fet it donor money,<br>
-              powdered its face for television,<br>
-              then taught it to scroll.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">6</span>
+                <span class="poem-line-content">You took a country already swollen</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">7</span>
+                <span class="poem-line-content">with grievance, spectacle, surveillance;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">8</span>
+                <span class="poem-line-content">fet it donor money,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">9</span>
+                <span class="poem-line-content">powdered its face for television,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">10</span>
+                <span class="poem-line-content">then taught it to scroll.</span>
+              </span>
             </p>
-            <p>
-              Now every soft-handed strongman<br>
-              with a flag pin, a ring light, and a media coach<br>
-              can go online and speak of<br>
-              <strong>the border crises,</strong><br>
-              <strong>law and order,</strong><br>
-              <strong>illegals,</strong><br>
-              as though a family could be crushed to a caption,<br>
-              as though fear becomes fact<br>
-              if it travels fast.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">11</span>
+                <span class="poem-line-content">Now every soft-handed strongman</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">12</span>
+                <span class="poem-line-content">with a flag pin, a ring light, and a media coach</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">13</span>
+                <span class="poem-line-content">can go online and speak of</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">14</span>
+                <span class="poem-line-content"><strong>the border crises,</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">15</span>
+                <span class="poem-line-content"><strong>law and order,</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">16</span>
+                <span class="poem-line-content"><strong>illegals,</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">17</span>
+                <span class="poem-line-content">as though a family could be crushed to a caption,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">18</span>
+                <span class="poem-line-content">as though fear becomes fact</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">19</span>
+                <span class="poem-line-content">if it travels fast.</span>
+              </span>
             </p>
-            <p>
-              Here is the scam:
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">20</span>
+                <span class="poem-line-content">Here is the scam:</span>
+              </span>
             </p>
-            <p>
-              a billionaire writes the cheque.<br>
-              a think tank writes the script.<br>
-              a senator reads it slowly into a microphone<br>
-              like he thought of it himself.<br>
-              some stream-fed pundit trims it to a clip.<br>
-              the algorithm smells blood<br>
-              and calls it content.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">21</span>
+                <span class="poem-line-content">a billionaire writes the cheque.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">22</span>
+                <span class="poem-line-content">a think tank writes the script.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">23</span>
+                <span class="poem-line-content">a senator reads it slowly into a microphone</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">24</span>
+                <span class="poem-line-content">like he thought of it himself.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">25</span>
+                <span class="poem-line-content">some stream-fed pundit trims it to a clip.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">26</span>
+                <span class="poem-line-content">the algorithm smells blood</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">27</span>
+                <span class="poem-line-content">and calls it content.</span>
+              </span>
             </p>
-            <p>
-              Then, somewhere beneath all that polish,<br>
-              a front door opens<br>
-              into hell.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">28</span>
+                <span class="poem-line-content">Then, somewhere beneath all that polish,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">29</span>
+                <span class="poem-line-content">a front door opens</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">30</span>
+                <span class="poem-line-content">into hell.</span>
+              </span>
             </p>
-            <p>
-              Because the people who build this machine<br>
-              never stand in the doorway.<br>
-              They live too high up.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">31</span>
+                <span class="poem-line-content">Because the people who build this machine</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">32</span>
+                <span class="poem-line-content">never stand in the doorway.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">33</span>
+                <span class="poem-line-content">They live too high up.</span>
+              </span>
             </p>
-            <p>
-              They live among cufflinks, cocktails, studio powder,<br>
-              green rooms, golf grass, private flights.<br>
-              Their shoes do not stick to stairwells.<br>
-              Their hands do not shake at knocks.<br>
-              Words like <strong>deterrence,</strong><br>
-              <strong>enforcement,</strong><br>
-              <strong>removal</strong><br>
-              float cleanly from one soft mouth to another,<br>
-              never once passing through the throat<br>
-              of the person they mean to erase.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">34</span>
+                <span class="poem-line-content">They live among cufflinks, cocktails, studio powder,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">35</span>
+                <span class="poem-line-content">green rooms, golf grass, private flights.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">36</span>
+                <span class="poem-line-content">Their shoes do not stick to stairwells.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">37</span>
+                <span class="poem-line-content">Their hands do not shake at knocks.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">38</span>
+                <span class="poem-line-content">Words like <strong>deterrence,</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">39</span>
+                <span class="poem-line-content"><strong>enforcement,</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">40</span>
+                <span class="poem-line-content"><strong>removal</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">41</span>
+                <span class="poem-line-content">float cleanly from one soft mouth to another,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">42</span>
+                <span class="poem-line-content">never once passing through the throat</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">43</span>
+                <span class="poem-line-content">of the person they mean to erase.</span>
+              </span>
             </p>
-            <p>
-              But down here,<br>
-              those words arrive with boots in them.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">44</span>
+                <span class="poem-line-content">But down here,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">45</span>
+                <span class="poem-line-content">those words arrive with boots in them.</span>
+              </span>
             </p>
-            <p>
-              Down here, they mean<br>
-              rent still due on Friday;<br>
-              a half-zipped school bag by the sofa;<br>
-              lunch still packed in the fridge;<br>
-              steam lifting from rice;<br>
-              a mother reaching, still reaching,<br>
-              for her child,<br>
-              while some armed bureaucract,<br>
-              funded by men who hoard tax cuts like trophies,<br>
-              turns her life into a case number—
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">46</span>
+                <span class="poem-line-content">Down here, they mean</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">47</span>
+                <span class="poem-line-content">rent still due on Friday;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">48</span>
+                <span class="poem-line-content">a half-zipped school bag by the sofa;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">49</span>
+                <span class="poem-line-content">lunch still packed in the fridge;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">50</span>
+                <span class="poem-line-content">steam lifting from rice;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">51</span>
+                <span class="poem-line-content">a mother reaching, still reaching,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">52</span>
+                <span class="poem-line-content">for her child,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">53</span>
+                <span class="poem-line-content">while some armed bureaucract,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">54</span>
+                <span class="poem-line-content">funded by men who hoard tax cuts like trophies,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">55</span>
+                <span class="poem-line-content">turns her life into a case number—</span>
+              </span>
             </p>
-            <p>
-              and someone else<br>
-              turns it into reach.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">56</span>
+                <span class="poem-line-content">and someone else</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">57</span>
+                <span class="poem-line-content">turns it into reach.</span>
+              </span>
             </p>
-            <p>
-              That may be the filthiest part of it:<br>
-              not just the raid,<br>
-              but the feed.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">58</span>
+                <span class="poem-line-content">That may be the filthiest part of it:</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">59</span>
+                <span class="poem-line-content">not just the raid,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">60</span>
+                <span class="poem-line-content">but the feed.</span>
+              </span>
             </p>
-            <p>
-              The stitched reaction.<br>
-              The smirk.<br>
-              The flag in the bio.<br>
-              The patriot in the comment section,<br>
-              typing <strong>send them back,</strong><br>
-              with one hand<br>
-              while the other hovers at the screen<br>
-              as if it might finally hand him<br>
-              the jawline, the woman, the rank<br>
-              he thinks the world forgot to give him.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">61</span>
+                <span class="poem-line-content">The stitched reaction.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">62</span>
+                <span class="poem-line-content">The smirk.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">63</span>
+                <span class="poem-line-content">The flag in the bio.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">64</span>
+                <span class="poem-line-content">The patriot in the comment section,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">65</span>
+                <span class="poem-line-content">typing <strong>send them back,</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">66</span>
+                <span class="poem-line-content">with one hand</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">67</span>
+                <span class="poem-line-content">while the other hovers at the screen</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">68</span>
+                <span class="poem-line-content">as if it might finally hand him</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">69</span>
+                <span class="poem-line-content">the jawline, the woman, the rank</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">70</span>
+                <span class="poem-line-content">he thinks the world forgot to give him.</span>
+              </span>
             </p>
-            <p>
-              All this chest-thumping content.<br>
-              All this borrowed &quot;masculinity.&quot;<br>
-              All this synthetic manhood,<br>
-              bottled, branded, backlit—<br>
-              men taught to confuse cruelty with discipline,<br>
-              contempt with strength,<br>
-              humiliation with truth.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">71</span>
+                <span class="poem-line-content">All this chest-thumping content.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">72</span>
+                <span class="poem-line-content">All this borrowed &quot;masculinity.&quot;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">73</span>
+                <span class="poem-line-content">All this synthetic manhood,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">74</span>
+                <span class="poem-line-content">bottled, branded, backlit—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">75</span>
+                <span class="poem-line-content">men taught to confuse cruelty with discipline,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">76</span>
+                <span class="poem-line-content">contempt with strength,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">77</span>
+                <span class="poem-line-content">humiliation with truth.</span>
+              </span>
             </p>
-            <p>
-              Not grief, but grift.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">78</span>
+                <span class="poem-line-content">Not grief, but grift.</span>
+              </span>
             </p>
-            <p>
-              And spare me the fake seriousness.<br>
-              The debate-bro cadence.<br>
-              The &quot;just asking questions.&quot;<br>
-              The smarmy little pause<br>
-              before the next rehearsed evasion.<br>
-              All that confidence,<br>
-              all that posturing,<br>
-              all that edge lord ironed flat for advertisers.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">79</span>
+                <span class="poem-line-content">And spare me the fake seriousness.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">80</span>
+                <span class="poem-line-content">The debate-bro cadence.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">81</span>
+                <span class="poem-line-content">The &quot;just asking questions.&quot;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">82</span>
+                <span class="poem-line-content">The smarmy little pause</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">83</span>
+                <span class="poem-line-content">before the next rehearsed evasion.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">84</span>
+                <span class="poem-line-content">All that confidence,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">85</span>
+                <span class="poem-line-content">all that posturing,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">86</span>
+                <span class="poem-line-content">all that edge lord ironed flat for advertisers.</span>
+              </span>
             </p>
-            <p>
-              Because oligarchy does not only speak<br>
-              from podiums now.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">87</span>
+                <span class="poem-line-content">Because oligarchy does not only speak</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">88</span>
+                <span class="poem-line-content">from podiums now.</span>
+              </span>
             </p>
-            <p>
-              Now it livestreams.<br>
-              Now it quote-tweets.<br>
-              Now it buries xenophobia in memes,<br>
-              wraps it in irony,<br>
-              slips it between ads for razors and supplements,<br>
-              and lets the algorithm do the marching.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">89</span>
+                <span class="poem-line-content">Now it livestreams.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">90</span>
+                <span class="poem-line-content">Now it quote-tweets.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">91</span>
+                <span class="poem-line-content">Now it buries xenophobia in memes,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">92</span>
+                <span class="poem-line-content">wraps it in irony,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">93</span>
+                <span class="poem-line-content">slips it between ads for razors and supplements,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">94</span>
+                <span class="poem-line-content">and lets the algorithm do the marching.</span>
+              </span>
             </p>
-            <p>
-              ICE is no longer just an agency.<br>
-              It is a format:
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">95</span>
+                <span class="poem-line-content">ICE is no longer just an agency.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">96</span>
+                <span class="poem-line-content">It is a format:</span>
+              </span>
             </p>
-            <p>
-              Cuffs and chyrons,<br>
-              dashboard footage and atriotic music,<br>
-              a press release shaved down to a clip,<br>
-              a bureaucracy of terror<br>
-              made slick enough to scroll past.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">97</span>
+                <span class="poem-line-content">Cuffs and chyrons,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">98</span>
+                <span class="poem-line-content">dashboard footage and atriotic music,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">99</span>
+                <span class="poem-line-content">a press release shaved down to a clip,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">100</span>
+                <span class="poem-line-content">a bureaucracy of terror</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">101</span>
+                <span class="poem-line-content">made slick enough to scroll past.</span>
+              </span>
             </p>
-            <p>
-              And the same old men still profit.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">102</span>
+                <span class="poem-line-content">And the same old men still profit.</span>
+              </span>
             </p>
-            <p>
-              The Super PAC banquet.<br>
-              The DHS memo.<br>
-              The panel segment.<br>
-              The executive order.<br>
-              The detention contract.<br>
-              The van.<br>
-              The viral clip.<br>
-              The ad revenue.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">103</span>
+                <span class="poem-line-content">The Super PAC banquet.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">104</span>
+                <span class="poem-line-content">The DHS memo.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">105</span>
+                <span class="poem-line-content">The panel segment.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">106</span>
+                <span class="poem-line-content">The executive order.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">107</span>
+                <span class="poem-line-content">The detention contract.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">108</span>
+                <span class="poem-line-content">The van.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">109</span>
+                <span class="poem-line-content">The viral clip.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">110</span>
+                <span class="poem-line-content">The ad revenue.</span>
+              </span>
             </p>
-            <p>
-              All of it connected.<br>
-              Spotless on paper.<br>
-              Filthy where it lands.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">111</span>
+                <span class="poem-line-content">All of it connected.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">112</span>
+                <span class="poem-line-content">Spotless on paper.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">113</span>
+                <span class="poem-line-content">Filthy where it lands.</span>
+              </span>
             </p>
-            <p>
-              They always do this—<br>
-              the men in tailored fascism.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">114</span>
+                <span class="poem-line-content">They always do this—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">115</span>
+                <span class="poem-line-content">the men in tailored fascism.</span>
+              </span>
             </p>
-            <p>
-              They bury the wound<br>
-              under acronyms,<br>
-              under hashtags,<br>
-              under bullet points,<br>
-              under thumbnails,<br>
-              until the blood dries into discourse;
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">116</span>
+                <span class="poem-line-content">They bury the wound</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">117</span>
+                <span class="poem-line-content">under acronyms,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">118</span>
+                <span class="poem-line-content">under hashtags,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">119</span>
+                <span class="poem-line-content">under bullet points,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">120</span>
+                <span class="poem-line-content">under thumbnails,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">121</span>
+                <span class="poem-line-content">until the blood dries into discourse;</span>
+              </span>
             </p>
-            <p>
-              then they call it debate.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">122</span>
+                <span class="poem-line-content">then they call it debate.</span>
+              </span>
             </p>
-            <p>
-              As if a nation were a comment section.<br>
-              As if cruelty were just another take.<br>
-              As if the poor were tinder,<br>
-              and brown skin, tired eyes, an accent, a bus ticket,<br>
-              could be arranged into a spectacle<br>
-              bright enough, loud enough,<br>
-              to distract from the men<br>
-              selling off the republic, room by room.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">123</span>
+                <span class="poem-line-content">As if a nation were a comment section.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">124</span>
+                <span class="poem-line-content">As if cruelty were just another take.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">125</span>
+                <span class="poem-line-content">As if the poor were tinder,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">126</span>
+                <span class="poem-line-content">and brown skin, tired eyes, an accent, a bus ticket,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">127</span>
+                <span class="poem-line-content">could be arranged into a spectacle</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">128</span>
+                <span class="poem-line-content">bright enough, loud enough,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">129</span>
+                <span class="poem-line-content">to distract from the men</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">130</span>
+                <span class="poem-line-content">selling off the republic, room by room.</span>
+              </span>
             </p>
-            <p>
-              Fuck ICE.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">131</span>
+                <span class="poem-line-content">Fuck ICE.</span>
+              </span>
             </p>
-            <p>
-              Fuck every donor-fat patriot,<br>
-              every smooth-faced apparatchik,<br>
-              every hedge-fund nationalist,<br>
-              every blue-check coward,<br>
-              every studio-bred prophet of &quot;strength&quot;<br>
-              who says <strong>secure the border</strong><br>
-              from perfect lighting<br>
-              and has never once had to wonder<br>
-              whether the knock at the door<br>
-              was meant for them.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">132</span>
+                <span class="poem-line-content">Fuck every donor-fat patriot,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">133</span>
+                <span class="poem-line-content">every smooth-faced apparatchik,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">134</span>
+                <span class="poem-line-content">every hedge-fund nationalist,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">135</span>
+                <span class="poem-line-content">every blue-check coward,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">136</span>
+                <span class="poem-line-content">every studio-bred prophet of &quot;strength&quot;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">137</span>
+                <span class="poem-line-content">who says <strong>secure the border</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">138</span>
+                <span class="poem-line-content">from perfect lighting</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">139</span>
+                <span class="poem-line-content">and has never once had to wonder</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">140</span>
+                <span class="poem-line-content">whether the knock at the door</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">141</span>
+                <span class="poem-line-content">was meant for them.</span>
+              </span>
             </p>
-            <p>
-              One day the branding will fail.<br>
-              The posts will sink.<br>
-              The chyrons will fade.<br>
-              The talking points will curdle in the mouth.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">142</span>
+                <span class="poem-line-content">One day the branding will fail.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">143</span>
+                <span class="poem-line-content">The posts will sink.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">144</span>
+                <span class="poem-line-content">The chyrons will fade.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">145</span>
+                <span class="poem-line-content">The talking points will curdle in the mouth.</span>
+              </span>
             </p>
-            <p>
-              And those grave little phrases—<br>
-              <strong>national emergency,</strong><br>
-              <strong>strong borders,</strong><br>
-              <strong>rule of law,</strong><br>
-              <strong>America First—</strong><br>
-              will collapse back into what they always were:
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">146</span>
+                <span class="poem-line-content">And those grave little phrases—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">147</span>
+                <span class="poem-line-content"><strong>national emergency,</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">148</span>
+                <span class="poem-line-content"><strong>strong borders,</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">149</span>
+                <span class="poem-line-content"><strong>rule of law,</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">150</span>
+                <span class="poem-line-content"><strong>America First—</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">151</span>
+                <span class="poem-line-content">will collapse back into what they always were:</span>
+              </span>
             </p>
-            <p>
-              money deciding<br>
-              who gets hunted.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">152</span>
+                <span class="poem-line-content">money deciding</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">153</span>
+                <span class="poem-line-content">who gets hunted.</span>
+              </span>
             </p>
-            <p>
-              History will not remember<br>
-              the segment titles<br>
-              or the poll numbers.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">154</span>
+                <span class="poem-line-content">History will not remember</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">155</span>
+                <span class="poem-line-content">the segment titles</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">156</span>
+                <span class="poem-line-content">or the poll numbers.</span>
+              </span>
             </p>
-            <p>
-              It will remember the splintered door.<br>
-              The phone lit up on the counter.<br>
-              The rice gone cold.<br>
-              The child gone quiet.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">157</span>
+                <span class="poem-line-content">It will remember the splintered door.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">158</span>
+                <span class="poem-line-content">The phone lit up on the counter.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">159</span>
+                <span class="poem-line-content">The rice gone cold.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">160</span>
+                <span class="poem-line-content">The child gone quiet.</span>
+              </span>
             </p>
-            <p>
-              And somewhere far away,<br>
-              a man adjusting his tie<br>
-              before going on air<br>
-              to call it order.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">161</span>
+                <span class="poem-line-content">And somewhere far away,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">162</span>
+                <span class="poem-line-content">a man adjusting his tie</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">163</span>
+                <span class="poem-line-content">before going on air</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">164</span>
+                <span class="poem-line-content">to call it order.</span>
+              </span>
             </p>
-            <p class="poem-signature">
-              <em>— Lilith</em>
+            <p class="poem-stanza poem-signature">
+              <span class="poem-line poem-line--signature">
+                <span class="poem-line-number" aria-hidden="true">165</span>
+                <span class="poem-line-content">— Lilith</span>
+              </span>
             </p>
         </div>
       </article>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-line-numbers="hide">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,6 +71,13 @@
               <button type="button" data-font-size-option="big" aria-pressed="false">Big</button>
             </div>
           </div>
+          <div class="settings-row settings-row-stacked">
+            <span>Line numbers</span>
+            <div class="line-number-control" role="group" aria-label="Line numbers">
+              <button type="button" data-line-number-option="hide" aria-pressed="true">Hide</button>
+              <button type="button" data-line-number-option="show" aria-pressed="false">Show</button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -102,68 +109,197 @@
           </div>
         </div>
         <div class="reader-poem">
-            <p>
-              <strong>1. Symptoms:</strong><br>
-                  You spot two men holding hands.<br>
-                  Your heart attempts a drum solo.<br>
-                  A 90s sitcom laugh track boots up in your skull.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">1</span>
+                <span class="poem-line-content"><strong>1. Symptoms:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">2</span>
+                <span class="poem-line-content">    You spot two men holding hands.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">3</span>
+                <span class="poem-line-content">    Your heart attempts a drum solo.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">4</span>
+                <span class="poem-line-content">    A 90s sitcom laugh track boots up in your skull.</span>
+              </span>
             </p>
-            <p>
-              <strong>2. Diagnosis:</strong><br>
-                  Not an emergency.<br>
-                  Just attraction existing in the open air, like oxygen or pigeons.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">5</span>
+                <span class="poem-line-content"><strong>2. Diagnosis:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">6</span>
+                <span class="poem-line-content">    Not an emergency.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">7</span>
+                <span class="poem-line-content">    Just attraction existing in the open air, like oxygen or pigeons.</span>
+              </span>
             </p>
-            <p>
-              <strong>3. Immediate care:</strong><br>
-                  Breathe.<br>
-                  If breathing fails, try blinking.<br>
-                  If blinking fails, try minding your own business.<br>
-                  (Clinical trials show a 100% success rate.)
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">8</span>
+                <span class="poem-line-content"><strong>3. Immediate care:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">9</span>
+                <span class="poem-line-content">    Breathe.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">10</span>
+                <span class="poem-line-content">    If breathing fails, try blinking.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">11</span>
+                <span class="poem-line-content">    If blinking fails, try minding your own business.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">12</span>
+                <span class="poem-line-content">    (Clinical trials show a 100% success rate.)</span>
+              </span>
             </p>
-            <p>
-              <strong>4. Common myths:</strong><br>
-                  — Queerness is contagious?<br>
-                  Nope. You can stand near a rainbow and still like whoever you like.<br>
-                  — Compliments cause conversions?<br>
-                  Nope. “Nice jacket” is a sentence, not a spell.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">13</span>
+                <span class="poem-line-content"><strong>4. Common myths:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">14</span>
+                <span class="poem-line-content">    — Queerness is contagious?</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">15</span>
+                <span class="poem-line-content">    Nope. You can stand near a rainbow and still like whoever you like.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">16</span>
+                <span class="poem-line-content">    — Compliments cause conversions?</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">17</span>
+                <span class="poem-line-content">    Nope. “Nice jacket” is a sentence, not a spell.</span>
+              </span>
             </p>
-            <p>
-              <strong>5. De-escalation script:</strong><br>
-                  (beginner) “Hi.”<br>
-                  (intermediate) “Cool shoes.”<br>
-                  (advanced) “Have a great day.”<br>
-                  If you’ve made it this far, congratulations: you survived courtesy.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">18</span>
+                <span class="poem-line-content"><strong>5. De-escalation script:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">19</span>
+                <span class="poem-line-content">    (beginner) “Hi.”</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">20</span>
+                <span class="poem-line-content">    (intermediate) “Cool shoes.”</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">21</span>
+                <span class="poem-line-content">    (advanced) “Have a great day.”</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">22</span>
+                <span class="poem-line-content">    If you’ve made it this far, congratulations: you survived courtesy.</span>
+              </span>
             </p>
-            <p>
-              <strong>6. Environmental notes:</strong><br>
-                  Two women kissing won’t lower your battery life.<br>
-                  A non-binary person entering a room won’t tilt the earth’s axis.<br>
-                  Someone flirting politely won’t steal your masculinity;<br>
-                  you’ll find that under your bed—<br>
-                  keeping company with your don’t-ask sock.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">23</span>
+                <span class="poem-line-content"><strong>6. Environmental notes:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">24</span>
+                <span class="poem-line-content">    Two women kissing won’t lower your battery life.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">25</span>
+                <span class="poem-line-content">    A non-binary person entering a room won’t tilt the earth’s axis.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">26</span>
+                <span class="poem-line-content">    Someone flirting politely won’t steal your masculinity;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">27</span>
+                <span class="poem-line-content">    you’ll find that under your bed—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">28</span>
+                <span class="poem-line-content">    keeping company with your don’t-ask sock.</span>
+              </span>
             </p>
-            <p>
-              <strong>7. When to call for help:</strong><br>
-                  If you hear sirens, they’re for an actual thing<br>
-                  like a cat on a roof or a kettle left on;<br>
-                  not for you witnessing joy in public.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">29</span>
+                <span class="poem-line-content"><strong>7. When to call for help:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">30</span>
+                <span class="poem-line-content">    If you hear sirens, they’re for an actual thing</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">31</span>
+                <span class="poem-line-content">    like a cat on a roof or a kettle left on;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">32</span>
+                <span class="poem-line-content">    not for you witnessing joy in public.</span>
+              </span>
             </p>
-            <p>
-              <strong>8. Long-term treatment:</strong><br>
-                  Update the software between your ears.<br>
-                  Uninstall “gay panic (beta).”<br>
-                  Install “other people are people (stable release).”
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">33</span>
+                <span class="poem-line-content"><strong>8. Long-term treatment:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">34</span>
+                <span class="poem-line-content">    Update the software between your ears.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">35</span>
+                <span class="poem-line-content">    Uninstall “gay panic (beta).”</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">36</span>
+                <span class="poem-line-content">    Install “other people are people (stable release).”</span>
+              </span>
             </p>
-            <p>
-              <strong>9. Prognosis:</strong><br>
-                  Excellent. Side effects include<br>
-                  less fear, more friends,<br>
-                  and the shocking realisation<br>
-                  that love, in all its outfits, isn’t out to get you—<br>
-                  it’s just out.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">37</span>
+                <span class="poem-line-content"><strong>9. Prognosis:</strong></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">38</span>
+                <span class="poem-line-content">    Excellent. Side effects include</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">39</span>
+                <span class="poem-line-content">    less fear, more friends,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">40</span>
+                <span class="poem-line-content">    and the shocking realisation</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">41</span>
+                <span class="poem-line-content">    that love, in all its outfits, isn’t out to get you—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">42</span>
+                <span class="poem-line-content">    it’s just out.</span>
+              </span>
             </p>
-            <p class="poem-signature">
-              <em>— Lilith</em>
+            <p class="poem-stanza poem-signature">
+              <span class="poem-line poem-line--signature">
+                <span class="poem-line-number" aria-hidden="true">43</span>
+                <span class="poem-line-content">— Lilith</span>
+              </span>
             </p>
         </div>
       </article>

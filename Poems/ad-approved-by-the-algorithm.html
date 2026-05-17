@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-line-numbers="hide">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,6 +71,13 @@
               <button type="button" data-font-size-option="big" aria-pressed="false">Big</button>
             </div>
           </div>
+          <div class="settings-row settings-row-stacked">
+            <span>Line numbers</span>
+            <div class="line-number-control" role="group" aria-label="Line numbers">
+              <button type="button" data-line-number-option="hide" aria-pressed="true">Hide</button>
+              <button type="button" data-line-number-option="show" aria-pressed="false">Show</button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -102,57 +109,171 @@
           </div>
         </div>
         <div class="reader-poem">
-            <p>
-              Welcome, child, to <strong>BattleTits3</strong>,<br>
-              An &quot;educational&quot; game (for free!)<br>
-              Where warriors jiggle to earn their place<br>
-              In Candy Kingdom&#39;s sacred space.<br>
-              Install now! No age check here—<br>
-              Just swipe the add and click &quot;appear.&quot;
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">1</span>
+                <span class="poem-line-content">Welcome, child, to <strong>BattleTits3</strong>,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">2</span>
+                <span class="poem-line-content">An &quot;educational&quot; game (for free!)</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">3</span>
+                <span class="poem-line-content">Where warriors jiggle to earn their place</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">4</span>
+                <span class="poem-line-content">In Candy Kingdom&#39;s sacred space.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">5</span>
+                <span class="poem-line-content">Install now! No age check here—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">6</span>
+                <span class="poem-line-content">Just swipe the add and click &quot;appear.&quot;</span>
+              </span>
             </p>
-            <p>
-              Scroll again and you shall find<br>
-              A quiz to help you &quot;know your mind.&quot;<br>
-              &quot;Do you like green?&quot; You&#39;re probably gay.<br>
-              &quot;Do bees distract you?&quot; ADHD today!<br>
-              &quot;Are you sad sometimes?&quot; Oh, that&#39;s autism—<br>
-              Diagnosed by <strong>Jeff&#39;s Brain Prism™</strong>.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">7</span>
+                <span class="poem-line-content">Scroll again and you shall find</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">8</span>
+                <span class="poem-line-content">A quiz to help you &quot;know your mind.&quot;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">9</span>
+                <span class="poem-line-content">&quot;Do you like green?&quot; You&#39;re probably gay.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">10</span>
+                <span class="poem-line-content">&quot;Do bees distract you?&quot; ADHD today!</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">11</span>
+                <span class="poem-line-content">&quot;Are you sad sometimes?&quot; Oh, that&#39;s autism—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">12</span>
+                <span class="poem-line-content">Diagnosed by <strong>Jeff&#39;s Brain Prism™</strong>.</span>
+              </span>
             </p>
-            <p>
-              Your phone says <em>Buy</em>, your brains says <em>Why?</em><br>
-              But you still want that glitter slime pie<br>
-              Made by hands you&#39;ll never see<br>
-              In factories named <em>Anyonymity</em>.<br>
-              It&#39;s &quot;eco-friendly,&quot; &quot;mom-approved,&quot;<br>
-              &quot;Tested on bunnies&quot; (just not removed).
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">13</span>
+                <span class="poem-line-content">Your phone says <em>Buy</em>, your brains says <em>Why?</em></span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">14</span>
+                <span class="poem-line-content">But you still want that glitter slime pie</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">15</span>
+                <span class="poem-line-content">Made by hands you&#39;ll never see</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">16</span>
+                <span class="poem-line-content">In factories named <em>Anyonymity</em>.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">17</span>
+                <span class="poem-line-content">It&#39;s &quot;eco-friendly,&quot; &quot;mom-approved,&quot;</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">18</span>
+                <span class="poem-line-content">&quot;Tested on bunnies&quot; (just not removed).</span>
+              </span>
             </p>
-            <p>
-              And every click and tap and stare<br>
-              Feeds the gods of targeted care.<br>
-              They whisper soft through pixel breath:<br>
-              &quot;Your worth is low, your flaw is death.<br>
-              Buy this cream, take this test,<br>
-              And maybe then you&#39;ll be your best.&quot;
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">19</span>
+                <span class="poem-line-content">And every click and tap and stare</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">20</span>
+                <span class="poem-line-content">Feeds the gods of targeted care.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">21</span>
+                <span class="poem-line-content">They whisper soft through pixel breath:</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">22</span>
+                <span class="poem-line-content">&quot;Your worth is low, your flaw is death.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">23</span>
+                <span class="poem-line-content">Buy this cream, take this test,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">24</span>
+                <span class="poem-line-content">And maybe then you&#39;ll be your best.&quot;</span>
+              </span>
             </p>
-            <p>
-              But best is plastic, best is thin,<br>
-              best is not the skin you&#39;re in.<br>
-              Best has abs and sparkly lips,<br>
-              Best unboxes, best does flips,<br>
-              Best knows thirteen languages,<br>
-              And still makes time for sponsorships.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">25</span>
+                <span class="poem-line-content">But best is plastic, best is thin,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">26</span>
+                <span class="poem-line-content">best is not the skin you&#39;re in.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">27</span>
+                <span class="poem-line-content">Best has abs and sparkly lips,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">28</span>
+                <span class="poem-line-content">Best unboxes, best does flips,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">29</span>
+                <span class="poem-line-content">Best knows thirteen languages,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">30</span>
+                <span class="poem-line-content">And still makes time for sponsorships.</span>
+              </span>
             </p>
-            <p>
-              So gather &#39;round, ye gullible youth,<br>
-              And download lies disguised as truth.<br>
-              No need for facts—just <strong>vibes</strong> will do.<br>
-              The ads know more than even you.<br>
-              And when you&#39;re broke and tired and sad,<br>
-              Don&#39;t blame yourself—<br>
-              <strong>Just blame the ad.</strong>
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">31</span>
+                <span class="poem-line-content">So gather &#39;round, ye gullible youth,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">32</span>
+                <span class="poem-line-content">And download lies disguised as truth.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">33</span>
+                <span class="poem-line-content">No need for facts—just <strong>vibes</strong> will do.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">34</span>
+                <span class="poem-line-content">The ads know more than even you.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">35</span>
+                <span class="poem-line-content">And when you&#39;re broke and tired and sad,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">36</span>
+                <span class="poem-line-content">Don&#39;t blame yourself—</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">37</span>
+                <span class="poem-line-content"><strong>Just blame the ad.</strong></span>
+              </span>
             </p>
-            <p class="poem-signature">
-              <em>— Lilith</em>
+            <p class="poem-stanza poem-signature">
+              <span class="poem-line poem-line--signature">
+                <span class="poem-line-number" aria-hidden="true">38</span>
+                <span class="poem-line-content">— Lilith</span>
+              </span>
             </p>
         </div>
       </article>

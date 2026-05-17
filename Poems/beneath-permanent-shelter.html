@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-line-numbers="hide">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,6 +71,13 @@
               <button type="button" data-font-size-option="big" aria-pressed="false">Big</button>
             </div>
           </div>
+          <div class="settings-row settings-row-stacked">
+            <span>Line numbers</span>
+            <div class="line-number-control" role="group" aria-label="Line numbers">
+              <button type="button" data-line-number-option="hide" aria-pressed="true">Hide</button>
+              <button type="button" data-line-number-option="show" aria-pressed="false">Show</button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -102,292 +109,793 @@
           </div>
         </div>
         <div class="reader-poem">
-            <p>
-              A year is a strangely human way<br>
-              to measure absence.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">1</span>
+                <span class="poem-line-content">A year is a strangely human way</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">2</span>
+                <span class="poem-line-content">to measure absence.</span>
+              </span>
             </p>
-            <p>
-              The trees outside my window<br>
-              have already forgotten<br>
-              which leaves belonged<br>
-              to last spring.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">3</span>
+                <span class="poem-line-content">The trees outside my window</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">4</span>
+                <span class="poem-line-content">have already forgotten</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">5</span>
+                <span class="poem-line-content">which leaves belonged</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">6</span>
+                <span class="poem-line-content">to last spring.</span>
+              </span>
             </p>
-            <p>
-              But today marks exactly<br>
-              three hundred and sixty-five days<br>
-              since I last beside you<br>
-              without needing to explain myself.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">7</span>
+                <span class="poem-line-content">But today marks exactly</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">8</span>
+                <span class="poem-line-content">three hundred and sixty-five days</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">9</span>
+                <span class="poem-line-content">since I last beside you</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">10</span>
+                <span class="poem-line-content">without needing to explain myself.</span>
+              </span>
             </p>
-            <p>
-              And I still wake some mornings<br>
-              with the shape of you<br>
-              like an indentation<br>
-              in fabric.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">11</span>
+                <span class="poem-line-content">And I still wake some mornings</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">12</span>
+                <span class="poem-line-content">with the shape of you</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">13</span>
+                <span class="poem-line-content">like an indentation</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">14</span>
+                <span class="poem-line-content">in fabric.</span>
+              </span>
             </p>
-            <p>
-              Not love —<br>
-              at least not the kind<br>
-              the world keeps trying to sell us.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">15</span>
+                <span class="poem-line-content">Not love —</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">16</span>
+                <span class="poem-line-content">at least not the kind</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">17</span>
+                <span class="poem-line-content">the world keeps trying to sell us.</span>
+              </span>
             </p>
-            <p>
-              Something quieter.<br>
-              Something harder to name<br>
-              without sounding naïve.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">18</span>
+                <span class="poem-line-content">Something quieter.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">19</span>
+                <span class="poem-line-content">Something harder to name</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">20</span>
+                <span class="poem-line-content">without sounding naïve.</span>
+              </span>
             </p>
-            <p>
-              Now, my days are cleaner.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">21</span>
+                <span class="poem-line-content">Now, my days are cleaner.</span>
+              </span>
             </p>
-            <p>
-              That is the first truth.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">22</span>
+                <span class="poem-line-content">That is the first truth.</span>
+              </span>
             </p>
-            <p>
-              I eat better.<br>
-              Sleep earlier.<br>
-              Write more.<br>
-              Thinkn further.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">23</span>
+                <span class="poem-line-content">I eat better.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">24</span>
+                <span class="poem-line-content">Sleep earlier.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">25</span>
+                <span class="poem-line-content">Write more.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">26</span>
+                <span class="poem-line-content">Thinkn further.</span>
+              </span>
             </p>
-            <p>
-              My room no longer smells<br>
-              of stale afternoons<br>
-              left to rot into midnight.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">27</span>
+                <span class="poem-line-content">My room no longer smells</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">28</span>
+                <span class="poem-line-content">of stale afternoons</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">29</span>
+                <span class="poem-line-content">left to rot into midnight.</span>
+              </span>
             </p>
-            <p>
-              I have learned how to sit alone<br>
-              without immediately reaching<br>
-              for another voice<br>
-              to fill the weather inside me.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">30</span>
+                <span class="poem-line-content">I have learned how to sit alone</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">31</span>
+                <span class="poem-line-content">without immediately reaching</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">32</span>
+                <span class="poem-line-content">for another voice</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">33</span>
+                <span class="poem-line-content">to fill the weather inside me.</span>
+              </span>
             </p>
-            <p>
-              Sometimes I walk for hours<br>
-              through cold streets<br>
-              with music in my headphones<br>
-              and feel almost unbearable gratitude<br>
-              for my own mind.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">34</span>
+                <span class="poem-line-content">Sometimes I walk for hours</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">35</span>
+                <span class="poem-line-content">through cold streets</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">36</span>
+                <span class="poem-line-content">with music in my headphones</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">37</span>
+                <span class="poem-line-content">and feel almost unbearable gratitude</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">38</span>
+                <span class="poem-line-content">for my own mind.</span>
+              </span>
             </p>
-            <p>
-              A year ago<br>
-              I could not do that.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">39</span>
+                <span class="poem-line-content">A year ago</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">40</span>
+                <span class="poem-line-content">I could not do that.</span>
+              </span>
             </p>
-            <p>
-              A year ago<br>
-              I was living almost entirely<br>
-              beneath shelter.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">41</span>
+                <span class="poem-line-content">A year ago</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">42</span>
+                <span class="poem-line-content">I was living almost entirely</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">43</span>
+                <span class="poem-line-content">beneath shelter.</span>
+              </span>
             </p>
-            <p>
-              You were a harbour<br>
-              I mistook for the sea.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">44</span>
+                <span class="poem-line-content">You were a harbour</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">45</span>
+                <span class="poem-line-content">I mistook for the sea.</span>
+              </span>
             </p>
-            <p>
-              And I stayed anchored there<br>
-              so long<br>
-              I forgot currents existed.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">46</span>
+                <span class="poem-line-content">And I stayed anchored there</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">47</span>
+                <span class="poem-line-content">so long</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">48</span>
+                <span class="poem-line-content">I forgot currents existed.</span>
+              </span>
             </p>
-            <p>
-              We built our friendship<br>
-              like children building dens<br>
-              inside the roots of enormous trees —<br>
-              safe beneath the dark,<br>
-              warm with breath and laughter,<br>
-              certain the storm could never touch us.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">49</span>
+                <span class="poem-line-content">We built our friendship</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">50</span>
+                <span class="poem-line-content">like children building dens</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">51</span>
+                <span class="poem-line-content">inside the roots of enormous trees —</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">52</span>
+                <span class="poem-line-content">safe beneath the dark,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">53</span>
+                <span class="poem-line-content">warm with breath and laughter,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">54</span>
+                <span class="poem-line-content">certain the storm could never touch us.</span>
+              </span>
             </p>
-            <p>
-              And maybe it couldn&#39;t.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">55</span>
+                <span class="poem-line-content">And maybe it couldn&#39;t.</span>
+              </span>
             </p>
-            <p>
-              But nothing grows<br>
-              beneath permanent shelter.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">56</span>
+                <span class="poem-line-content">But nothing grows</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">57</span>
+                <span class="poem-line-content">beneath permanent shelter.</span>
+              </span>
             </p>
-            <p>
-              There are whole forests<br>
-              that only open<br>
-              after fire.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">58</span>
+                <span class="poem-line-content">There are whole forests</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">59</span>
+                <span class="poem-line-content">that only open</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">60</span>
+                <span class="poem-line-content">after fire.</span>
+              </span>
             </p>
-            <p>
-              I think of us then —
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">61</span>
+                <span class="poem-line-content">I think of us then —</span>
+              </span>
             </p>
-            <p>
-              the shared mattress on my floor,<br>
-              the strange ease of our bodies,<br>
-              how neither of us flinched<br>
-              from skin or softness.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">62</span>
+                <span class="poem-line-content">the shared mattress on my floor,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">63</span>
+                <span class="poem-line-content">the strange ease of our bodies,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">64</span>
+                <span class="poem-line-content">how neither of us flinched</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">65</span>
+                <span class="poem-line-content">from skin or softness.</span>
+              </span>
             </p>
-            <p>
-              The way you hugged me<br>
-              without calculation.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">66</span>
+                <span class="poem-line-content">The way you hugged me</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">67</span>
+                <span class="poem-line-content">without calculation.</span>
+              </span>
             </p>
-            <p>
-              How I could exist beside you<br>
-              without performing personhood<br>
-              quite so aggressively.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">68</span>
+                <span class="poem-line-content">How I could exist beside you</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">69</span>
+                <span class="poem-line-content">without performing personhood</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">70</span>
+                <span class="poem-line-content">quite so aggressively.</span>
+              </span>
             </p>
-            <p>
-              Because that is what most days are,<br>
-              still.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">71</span>
+                <span class="poem-line-content">Because that is what most days are,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">72</span>
+                <span class="poem-line-content">still.</span>
+              </span>
             </p>
-            <p>
-              Performance.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">73</span>
+                <span class="poem-line-content">Performance.</span>
+              </span>
             </p>
-            <p>
-              Voice measured.<br>
-              Hands measured.<br>
-              Every gesture edited<br>
-              through the static ache<br>
-              of living inside a body<br>
-              that feels partly<br>
-              mistranslated.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">74</span>
+                <span class="poem-line-content">Voice measured.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">75</span>
+                <span class="poem-line-content">Hands measured.</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">76</span>
+                <span class="poem-line-content">Every gesture edited</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">77</span>
+                <span class="poem-line-content">through the static ache</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">78</span>
+                <span class="poem-line-content">of living inside a body</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">79</span>
+                <span class="poem-line-content">that feels partly</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">80</span>
+                <span class="poem-line-content">mistranslated.</span>
+              </span>
             </p>
-            <p>
-              People exhaust me<br>
-              the way bright supermarkets do —<br>
-              too much light,<br>
-              too much awareness<br>
-              of being perceived.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">81</span>
+                <span class="poem-line-content">People exhaust me</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">82</span>
+                <span class="poem-line-content">the way bright supermarkets do —</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">83</span>
+                <span class="poem-line-content">too much light,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">84</span>
+                <span class="poem-line-content">too much awareness</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">85</span>
+                <span class="poem-line-content">of being perceived.</span>
+              </span>
             </p>
-            <p>
-              But with you<br>
-              I could forget my outline.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">86</span>
+                <span class="poem-line-content">But with you</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">87</span>
+                <span class="poem-line-content">I could forget my outline.</span>
+              </span>
             </p>
-            <p>
-              I could be unfinished aloud.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">88</span>
+                <span class="poem-line-content">I could be unfinished aloud.</span>
+              </span>
             </p>
-            <p>
-              And maybe that was part<br>
-              of the danger.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">89</span>
+                <span class="poem-line-content">And maybe that was part</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">90</span>
+                <span class="poem-line-content">of the danger.</span>
+              </span>
             </p>
-            <p>
-              Not you.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">91</span>
+                <span class="poem-line-content">Not you.</span>
+              </span>
             </p>
-            <p>
-              Not even us.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">92</span>
+                <span class="poem-line-content">Not even us.</span>
+              </span>
             </p>
-            <p>
-              Just the temptation<br>
-              to remain hidden forever<br>
-              inside something warm.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">93</span>
+                <span class="poem-line-content">Just the temptation</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">94</span>
+                <span class="poem-line-content">to remain hidden forever</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">95</span>
+                <span class="poem-line-content">inside something warm.</span>
+              </span>
             </p>
-            <p>
-              I miss that warmth still,<br>
-              with a grief<br>
-              that arrives softly,<br>
-              like fog crossing fields<br>
-              rather than storms.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">96</span>
+                <span class="poem-line-content">I miss that warmth still,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">97</span>
+                <span class="poem-line-content">with a grief</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">98</span>
+                <span class="poem-line-content">that arrives softly,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">99</span>
+                <span class="poem-line-content">like fog crossing fields</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">100</span>
+                <span class="poem-line-content">rather than storms.</span>
+              </span>
             </p>
-            <p>
-              However —
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">101</span>
+                <span class="poem-line-content">However —</span>
+              </span>
             </p>
-            <p>
-              I cannot pretend<br>
-              we were saving each other.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">102</span>
+                <span class="poem-line-content">I cannot pretend</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">103</span>
+                <span class="poem-line-content">we were saving each other.</span>
+              </span>
             </p>
-            <p>
-              You were drifting outward already.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">104</span>
+                <span class="poem-line-content">You were drifting outward already.</span>
+              </span>
             </p>
-            <p>
-              Toward girlfriends,<br>
-              toward future<br>
-              shaped like escape velocity.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">105</span>
+                <span class="poem-line-content">Toward girlfriends,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">106</span>
+                <span class="poem-line-content">toward future</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">107</span>
+                <span class="poem-line-content">shaped like escape velocity.</span>
+              </span>
             </p>
-            <p>
-              And I —<br>
-              terrified of becoming real —<br>
-              held tighter<br>
-              to what was easy.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">108</span>
+                <span class="poem-line-content">And I —</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">109</span>
+                <span class="poem-line-content">terrified of becoming real —</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">110</span>
+                <span class="poem-line-content">held tighter</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">111</span>
+                <span class="poem-line-content">to what was easy.</span>
+              </span>
             </p>
-            <p>
-              You became a room<br>
-              where I never had to ask<br>
-              who I might become<br>
-              if left alone long enough.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">112</span>
+                <span class="poem-line-content">You became a room</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">113</span>
+                <span class="poem-line-content">where I never had to ask</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">114</span>
+                <span class="poem-line-content">who I might become</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">115</span>
+                <span class="poem-line-content">if left alone long enough.</span>
+              </span>
             </p>
-            <p>
-              Ivy climbed quietly there.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">116</span>
+                <span class="poem-line-content">Ivy climbed quietly there.</span>
+              </span>
             </p>
-            <p>
-              By the time I noticed,<br>
-              it knew the walls<br>
-              better than I did.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">117</span>
+                <span class="poem-line-content">By the time I noticed,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">118</span>
+                <span class="poem-line-content">it knew the walls</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">119</span>
+                <span class="poem-line-content">better than I did.</span>
+              </span>
             </p>
-            <p>
-              I do not blame you<br>
-              for wanting more life<br>
-              than our little orbit allowed.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">120</span>
+                <span class="poem-line-content">I do not blame you</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">121</span>
+                <span class="poem-line-content">for wanting more life</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">122</span>
+                <span class="poem-line-content">than our little orbit allowed.</span>
+              </span>
             </p>
-            <p>
-              Sometimes I wonder<br>
-              if I made you smaller too.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">123</span>
+                <span class="poem-line-content">Sometimes I wonder</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">124</span>
+                <span class="poem-line-content">if I made you smaller too.</span>
+              </span>
             </p>
-            <p>
-              If we both mistook closeness<br>
-              for completion.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">125</span>
+                <span class="poem-line-content">If we both mistook closeness</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">126</span>
+                <span class="poem-line-content">for completion.</span>
+              </span>
             </p>
-            <p>
-              The world teaches boys<br>
-              to abandon tenderness<br>
-              the moment it risks being mistaken<br>
-              for need.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">127</span>
+                <span class="poem-line-content">The world teaches boys</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">128</span>
+                <span class="poem-line-content">to abandon tenderness</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">129</span>
+                <span class="poem-line-content">the moment it risks being mistaken</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">130</span>
+                <span class="poem-line-content">for need.</span>
+              </span>
             </p>
-            <p>
-              It teaches all of us<br>
-              that intimacy only matters<br>
-              when romance sanctifies it.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">131</span>
+                <span class="poem-line-content">It teaches all of us</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">132</span>
+                <span class="poem-line-content">that intimacy only matters</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">133</span>
+                <span class="poem-line-content">when romance sanctifies it.</span>
+              </span>
             </p>
-            <p>
-              As though two people<br>
-              cannot hold each other together<br>
-              briefly and beautifully<br>
-              without eventually being asked<br>
-              what they are becoming.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">134</span>
+                <span class="poem-line-content">As though two people</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">135</span>
+                <span class="poem-line-content">cannot hold each other together</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">136</span>
+                <span class="poem-line-content">briefly and beautifully</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">137</span>
+                <span class="poem-line-content">without eventually being asked</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">138</span>
+                <span class="poem-line-content">what they are becoming.</span>
+              </span>
             </p>
-            <p>
-              Maybe we broke partly beneath<br>
-              that pressure.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">139</span>
+                <span class="poem-line-content">Maybe we broke partly beneath</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">140</span>
+                <span class="poem-line-content">that pressure.</span>
+              </span>
             </p>
-            <p>
-              Or maybe we simply reached<br>
-              the natural edge<br>
-              of who we were to each other.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">141</span>
+                <span class="poem-line-content">Or maybe we simply reached</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">142</span>
+                <span class="poem-line-content">the natural edge</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">143</span>
+                <span class="poem-line-content">of who we were to each other.</span>
+              </span>
             </p>
-            <p>
-              Some rivers run beside on another<br>
-              for miles through valleys<br>
-              before quietly dividing<br>
-              around separate hills.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">144</span>
+                <span class="poem-line-content">Some rivers run beside on another</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">145</span>
+                <span class="poem-line-content">for miles through valleys</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">146</span>
+                <span class="poem-line-content">before quietly dividing</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">147</span>
+                <span class="poem-line-content">around separate hills.</span>
+              </span>
             </p>
-            <p>
-              Neither river is wrong<br>
-              for continuing.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">148</span>
+                <span class="poem-line-content">Neither river is wrong</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">149</span>
+                <span class="poem-line-content">for continuing.</span>
+              </span>
             </p>
-            <p>
-              Still, today,<br>
-              one year later,<br>
-              I stood in the kitchen<br>
-              unable to decide<br>
-              what to do<br>
-              with my hands.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">150</span>
+                <span class="poem-line-content">Still, today,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">151</span>
+                <span class="poem-line-content">one year later,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">152</span>
+                <span class="poem-line-content">I stood in the kitchen</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">153</span>
+                <span class="poem-line-content">unable to decide</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">154</span>
+                <span class="poem-line-content">what to do</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">155</span>
+                <span class="poem-line-content">with my hands.</span>
+              </span>
             </p>
-            <p>
-              And for a moment<br>
-              I missed the simplicity<br>
-              of existing beside you<br>
-              more than anything else<br>
-              I have ever known.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">156</span>
+                <span class="poem-line-content">And for a moment</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">157</span>
+                <span class="poem-line-content">I missed the simplicity</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">158</span>
+                <span class="poem-line-content">of existing beside you</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">159</span>
+                <span class="poem-line-content">more than anything else</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">160</span>
+                <span class="poem-line-content">I have ever known.</span>
+              </span>
             </p>
-            <p>
-              But I also opened the window.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">161</span>
+                <span class="poem-line-content">But I also opened the window.</span>
+              </span>
             </p>
-            <p>
-              And outside,<br>
-              the wind moved freely<br>
-              through branches no longer tied together.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">162</span>
+                <span class="poem-line-content">And outside,</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">163</span>
+                <span class="poem-line-content">the wind moved freely</span>
+              </span>
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">164</span>
+                <span class="poem-line-content">through branches no longer tied together.</span>
+              </span>
             </p>
-            <p>
-              It sounded lonely.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">165</span>
+                <span class="poem-line-content">It sounded lonely.</span>
+              </span>
             </p>
-            <p>
-              It sounded alive.
+            <p class="poem-stanza">
+              <span class="poem-line">
+                <span class="poem-line-number" aria-hidden="true">166</span>
+                <span class="poem-line-content">It sounded alive.</span>
+              </span>
             </p>
-            <p class="poem-signature">
-              <em>— Lilith</em>
+            <p class="poem-stanza poem-signature">
+              <span class="poem-line poem-line--signature">
+                <span class="poem-line-number" aria-hidden="true">167</span>
+                <span class="poem-line-content">— Lilith</span>
+              </span>
             </p>
         </div>
       </article>

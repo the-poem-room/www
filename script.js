@@ -22,14 +22,17 @@ const settingsToggle = document.querySelector("[data-settings-toggle]");
 const settingsPanel = document.querySelector("[data-settings-panel]");
 const fontSizeButtons = document.querySelectorAll("[data-font-size-option]");
 const navModeButtons = document.querySelectorAll("[data-nav-mode-option]");
+const lineNumberButtons = document.querySelectorAll("[data-line-number-option]");
 
 const poemPageSlug = document.body?.dataset?.poemSlug || "";
 const favouritesKey = "poem-room-favourites";
 const collectionsKey = "poem-room-collections";
 const fontSizeKey = "poem-room-font-size";
 const navModeKey = "poem-room-nav-mode";
+const lineNumbersKey = "poem-room-line-numbers";
 const fontSizeOptions = new Set(["small", "normal", "big"]);
 const navModeOptions = new Set(["always-visible", "auto-hide", "hover-top"]);
+const lineNumberOptions = new Set(["show", "hide"]);
 const sectionTargetHashes = new Set(["#top", "#purpose", "#bio", "#poems", "#library"]);
 const navRevealZone = 18;
 const mobileNavQuery = window.matchMedia("(max-width: 760px)");
@@ -1786,6 +1789,30 @@ function initializeFontSize() {
 
 initializeFontSize();
 
+function updateLineNumberButtons(mode) {
+  lineNumberButtons.forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.lineNumberOption === mode));
+  });
+}
+
+function getSavedLineNumberMode() {
+  const savedMode = localStorage.getItem(lineNumbersKey);
+  return lineNumberOptions.has(savedMode) ? savedMode : "hide";
+}
+
+function setLineNumbers(mode) {
+  const nextMode = lineNumberOptions.has(mode) ? mode : "hide";
+  document.documentElement.dataset.lineNumbers = nextMode;
+  localStorage.setItem(lineNumbersKey, nextMode);
+  updateLineNumberButtons(nextMode);
+}
+
+function initializeLineNumbers() {
+  setLineNumbers(getSavedLineNumberMode());
+}
+
+initializeLineNumbers();
+
 function updateNavModeButtons(mode) {
   navModeButtons.forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.navModeOption === mode));
@@ -1877,6 +1904,12 @@ fontSizeButtons.forEach((button) => {
 navModeButtons.forEach((button) => {
   button.addEventListener("click", () => {
     setNavMode(button.dataset.navModeOption || "always-visible");
+  });
+});
+
+lineNumberButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setLineNumbers(button.dataset.lineNumberOption || "hide");
   });
 });
 
@@ -2559,6 +2592,113 @@ function createCollectionControl(slug) {
   return wrapper;
 }
 
+function isAllCapsHeading(line) {
+  const trimmed = String(line || "").trim();
+
+  if (!trimmed) {
+    return false;
+  }
+
+  if (trimmed.length > 64) {
+    return false;
+  }
+
+  if (/[a-z]/.test(trimmed)) {
+    return false;
+  }
+
+  if (!/[A-Z]/.test(trimmed)) {
+    return false;
+  }
+
+  return !trimmed.startsWith("—");
+}
+
+function createPoemLineElement(lineText, lineNumber, { isSignature = false, isHeading = false } = {}) {
+  const trimmedLine = String(lineText || "");
+
+  if (!trimmedLine.trim()) {
+    const spacer = document.createElement("span");
+    spacer.className = "poem-line poem-line--blank";
+    spacer.setAttribute("aria-hidden", "true");
+    return spacer;
+  }
+
+  const line = document.createElement("span");
+  line.className = "poem-line";
+  if (isSignature) {
+    line.classList.add("poem-line--signature");
+  }
+
+  const number = document.createElement("span");
+  number.className = "poem-line-number";
+  number.setAttribute("aria-hidden", "true");
+  number.textContent = String(lineNumber);
+
+  const content = document.createElement("span");
+  content.className = "poem-line-content";
+  appendFormattedText(content, trimmedLine);
+
+  if (isHeading) {
+    const strong = document.createElement("strong");
+    while (content.firstChild) {
+      strong.append(content.firstChild);
+    }
+    content.append(strong);
+  }
+
+  line.append(number, content);
+  return line;
+}
+
+function createPoemBody(poem) {
+  const fragment = document.createDocumentFragment();
+
+  if (!poem.lines?.length) {
+    const placeholder = document.createElement("p");
+    placeholder.className = "reader-placeholder";
+    placeholder.textContent = "Poem text coming soon.";
+    fragment.append(placeholder);
+    return fragment;
+  }
+
+  let lineNumber = 1;
+
+  poem.lines.forEach((stanza, index) => {
+    const stanzaText = typeof stanza === "string" ? stanza : String(stanza.text || "");
+    const stanzaClassName =
+      typeof stanza === "string" ? "" : String(stanza.className || "").trim();
+    const paragraph = document.createElement("p");
+    const isSignature = index === poem.lines.length - 1 && stanzaText.startsWith("— ");
+
+    paragraph.classList.add("poem-stanza");
+
+    if (stanzaClassName) {
+      stanzaClassName.split(/\s+/).forEach((className) => paragraph.classList.add(className));
+    }
+
+    if (isSignature) {
+      paragraph.classList.add("poem-signature");
+    }
+
+    stanzaText.split("\n").forEach((line, lineIndex) => {
+      paragraph.append(
+        createPoemLineElement(line, lineNumber, {
+          isSignature,
+          isHeading: lineIndex === 0 && isAllCapsHeading(line),
+        })
+      );
+      if (line.trim()) {
+        lineNumber += 1;
+      }
+    });
+
+    fragment.append(paragraph);
+  });
+
+  return fragment;
+}
+
 function renderPoem(poem) {
   if (!reader || !readerTitle || !readerPoem || !readerActions) {
     return;
@@ -2579,41 +2719,7 @@ function renderPoem(poem) {
   readerActions.append(createFavouriteButton(slug, poem.title));
   readerActions.append(createCollectionControl(slug));
   updateReaderNavLinks(slug);
-
-  if (poem.lines?.length) {
-    poem.lines.forEach((stanza, index) => {
-      const stanzaText = typeof stanza === "string" ? stanza : String(stanza.text || "");
-      const stanzaClassName =
-        typeof stanza === "string" ? "" : String(stanza.className || "").trim();
-      const paragraph = document.createElement("p");
-      const isSignature = index === poem.lines.length - 1 && stanzaText.startsWith("— ");
-      const target = isSignature ? document.createElement("em") : paragraph;
-
-      if (stanzaClassName) {
-        stanzaClassName.split(/\s+/).forEach((className) => paragraph.classList.add(className));
-      }
-
-      stanzaText.split("\n").forEach((line, lineIndex) => {
-        if (lineIndex > 0) {
-          target.append(document.createElement("br"));
-        }
-
-        appendFormattedText(target, line);
-      });
-
-      if (isSignature) {
-        paragraph.classList.add("poem-signature");
-        paragraph.append(target);
-      }
-
-      readerPoem.append(paragraph);
-    });
-  } else {
-    const placeholder = document.createElement("p");
-    placeholder.className = "reader-placeholder";
-    placeholder.textContent = "Poem text coming soon.";
-    readerPoem.append(placeholder);
-  }
+  readerPoem.append(createPoemBody(poem));
 
   reader.scrollIntoView({ behavior: "smooth", block: "start" });
   reader.focus({ preventScroll: true });
