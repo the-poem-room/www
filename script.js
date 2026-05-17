@@ -5865,7 +5865,7 @@ function renderFeaturedCollections() {
     const description = document.createElement("p");
     description.textContent = collection.description;
 
-    const list = document.createElement("ul");
+    const list = document.createElement("ol");
     list.className = "featured-collection-poem-list";
 
     collection.poems.forEach((poemTitle) => {
