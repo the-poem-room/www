@@ -4977,8 +4977,123 @@ function appendQueryParam(href, key, value) {
   return `${path}${nextSearch ? `?${nextSearch}` : ""}${hash ? `#${hash}` : ""}`;
 }
 
-function getPoemPageHref(slug, highlightQuery = "") {
-  return appendQueryParam(`Poems/${slug}.html`, "highlight", highlightQuery);
+function getPoemPageHref(slug, highlightOrOptions = "") {
+  const options =
+    typeof highlightOrOptions === "string" ? { highlightQuery: highlightOrOptions } : highlightOrOptions || {};
+  let href = `Poems/${slug}.html`;
+
+  if (options.readerContext === "featured" && options.collectionKey) {
+    href = appendQueryParam(href, "readerContext", "featured");
+    href = appendQueryParam(href, "collectionKey", options.collectionKey);
+  } else if (options.readerContext === "library" && options.collectionId) {
+    href = appendQueryParam(href, "readerContext", "library");
+    href = appendQueryParam(href, "collectionId", options.collectionId);
+  }
+
+  return appendQueryParam(href, "highlight", options.highlightQuery || "");
+}
+
+function getReaderContextFromSearchParams() {
+  if (!poemPageSlug) {
+    return { type: "archive" };
+  }
+
+  const params = new URLSearchParams(window.location.search);
+  const readerContext = String(params.get("readerContext") || "").trim();
+
+  if (readerContext === "featured") {
+    return {
+      type: "featured",
+      collectionKey: String(params.get("collectionKey") || "").trim(),
+    };
+  }
+
+  if (readerContext === "library") {
+    return {
+      type: "library",
+      collectionId: String(params.get("collectionId") || "").trim(),
+    };
+  }
+
+  return { type: "archive" };
+}
+
+function getFeaturedCollectionByKey(collectionKey) {
+  const normalizedKey = slugify(collectionKey);
+  return featuredCollections.find((collection) => slugify(collection.title) === normalizedKey) || null;
+}
+
+function getLibraryCollectionById(collectionId) {
+  return collections.find((collection) => collection.id === collectionId) || null;
+}
+
+function getReaderCollectionPoems(context) {
+  if (context.type === "featured") {
+    const collection = getFeaturedCollectionByKey(context.collectionKey);
+
+    if (!collection) {
+      return [];
+    }
+
+    return collection.poems
+      .map((poemTitle) => poemBySlug.get(getPoemSlug({ title: poemTitle })) || null)
+      .filter(Boolean);
+  }
+
+  if (context.type === "library") {
+    const collection = getLibraryCollectionById(context.collectionId);
+
+    if (!collection) {
+      return [];
+    }
+
+    return collection.poems.map((slug) => poemBySlug.get(slug) || null).filter(Boolean);
+  }
+
+  return [];
+}
+
+function getReaderNeighborPoem(currentSlug, direction, context = getReaderContextFromSearchParams()) {
+  const isNext = direction === "next";
+
+  if (context.type === "archive") {
+    return isNext ? getNextPoem(currentSlug) : getPreviousPoem(currentSlug);
+  }
+
+  const collectionPoems = getReaderCollectionPoems(context);
+  const currentIndex = collectionPoems.findIndex((poem) => getPoemSlug(poem) === currentSlug);
+
+  if (currentIndex === -1 || !collectionPoems.length) {
+    return isNext ? getNextPoem(currentSlug) : getPreviousPoem(currentSlug);
+  }
+
+  return collectionPoems[(currentIndex + (isNext ? 1 : -1) + collectionPoems.length) % collectionPoems.length] || null;
+}
+
+function getReaderBackLinkDetails(currentSlug, context = getReaderContextFromSearchParams()) {
+  if (context.type === "featured") {
+    return {
+      text: "Back to Featured Collections",
+      href: "../index.html?target=%23featured-collections#featured-collections",
+    };
+  }
+
+  if (context.type === "library") {
+    const collectionExists = Boolean(getLibraryCollectionById(context.collectionId));
+    const collectionTarget = collectionExists && context.collectionId
+      ? `../index.html?target=%23collection-${encodeURIComponent(context.collectionId)}#library`
+      : "../index.html#library";
+
+    return {
+      text: "Back to My Library",
+      href: collectionTarget,
+    };
+  }
+
+  return {
+    text: "Back to Archive",
+    href: `../index.html#archive-${currentSlug}`,
+  };
 }
 
 function getActivePoemTextHighlightQuery() {
@@ -4986,9 +5101,13 @@ function getActivePoemTextHighlightQuery() {
   return String(params.get("highlight") || "").trim();
 }
 
-function createReaderArrowLink(currentSlug, direction) {
+function getReaderRootElement() {
+  return reader || document.querySelector(".reading-page");
+}
+
+function createReaderArrowLink(currentSlug, direction, context = getReaderContextFromSearchParams()) {
   const isNext = direction === "next";
-  const poem = isNext ? getNextPoem(currentSlug) : getPreviousPoem(currentSlug);
+  const poem = getReaderNeighborPoem(currentSlug, direction, context);
   const highlightQuery = getActivePoemTextHighlightQuery();
 
   if (!poem) {
@@ -4998,7 +5117,12 @@ function createReaderArrowLink(currentSlug, direction) {
   const slug = getPoemSlug(poem);
   const link = document.createElement("a");
   link.className = `reader-${direction}-link`;
-  link.href = getPoemPageHref(slug, highlightQuery);
+  link.href = getPoemPageHref(slug, {
+    highlightQuery,
+    readerContext: context.type === "featured" || context.type === "library" ? context.type : "",
+    collectionKey: context.collectionKey,
+    collectionId: context.collectionId,
+  });
   link.rel = direction;
   link.title = `${isNext ? "Next" : "Previous"} poem: ${poem.title}`;
   link.setAttribute("aria-label", `${isNext ? "Next" : "Previous"} poem: ${poem.title}`);
@@ -5007,13 +5131,32 @@ function createReaderArrowLink(currentSlug, direction) {
   return link;
 }
 
-function updateReaderArrowLink(currentSlug, direction) {
-  if (!reader) {
+function updateReaderBackLink(currentSlug, context = getReaderContextFromSearchParams()) {
+  if (!poemPageSlug) {
     return;
   }
 
-  const existing = reader.querySelector(`[data-reader-arrow="${direction}"]`);
-  const poem = direction === "next" ? getNextPoem(currentSlug) : getPreviousPoem(currentSlug);
+  const backLink = document.querySelector(".reader-top-links .back-link");
+  if (!backLink) {
+    return;
+  }
+
+  const details = getReaderBackLinkDetails(currentSlug, context);
+  backLink.textContent = details.text;
+  backLink.href = details.href;
+  backLink.title = details.text;
+  backLink.setAttribute("aria-label", details.text);
+}
+
+function updateReaderArrowLink(currentSlug, direction, context = getReaderContextFromSearchParams()) {
+  const root = getReaderRootElement();
+
+  if (!root) {
+    return;
+  }
+
+  const existing = root.querySelector(`[data-reader-arrow="${direction}"]`);
+  const poem = getReaderNeighborPoem(currentSlug, direction, context);
   const highlightQuery = getActivePoemTextHighlightQuery();
 
   if (!poem) {
@@ -5023,26 +5166,34 @@ function updateReaderArrowLink(currentSlug, direction) {
 
   const slug = getPoemSlug(poem);
   const label = `${direction === "next" ? "Next" : "Previous"} poem: ${poem.title}`;
-  const link = existing || createReaderArrowLink(currentSlug, direction);
+  const link = existing || createReaderArrowLink(currentSlug, direction, context);
 
   if (!link) {
     return;
   }
 
-  link.href = getPoemPageHref(slug, highlightQuery);
+  link.href = getPoemPageHref(slug, {
+    highlightQuery,
+    readerContext: context.type === "featured" || context.type === "library" ? context.type : "",
+    collectionKey: context.collectionKey,
+    collectionId: context.collectionId,
+  });
   link.rel = direction;
   link.title = label;
   link.setAttribute("aria-label", label);
 
   if (!existing) {
-    const eyebrow = reader.querySelector(".eyebrow");
-    reader.insertBefore(link, eyebrow || reader.firstChild);
+    const eyebrow = root.querySelector(".eyebrow");
+    const topLinks = root.querySelector(".reader-top-links");
+    root.insertBefore(link, eyebrow || topLinks || root.firstChild);
   }
 }
 
 function updateReaderNavLinks(currentSlug) {
-  updateReaderArrowLink(currentSlug, "prev");
-  updateReaderArrowLink(currentSlug, "next");
+  const context = getReaderContextFromSearchParams();
+  updateReaderBackLink(currentSlug, context);
+  updateReaderArrowLink(currentSlug, "prev", context);
+  updateReaderArrowLink(currentSlug, "next", context);
 }
 
 function normalizePoemHighlightValue(value) {
@@ -5957,6 +6108,7 @@ function renderFeaturedCollections() {
   featuredCollections.forEach((collection) => {
     const card = document.createElement("article");
     card.className = "featured-collection-card";
+    const collectionKey = slugify(collection.title);
 
     const heading = document.createElement("h3");
     heading.textContent = collection.title;
@@ -5977,7 +6129,10 @@ function renderFeaturedCollections() {
 
       const item = document.createElement("li");
       const link = document.createElement("a");
-      link.href = getPoemPageHref(slug);
+      link.href = getPoemPageHref(slug, {
+        readerContext: "featured",
+        collectionKey,
+      });
       link.textContent = poem.title;
 
       item.append(link);
@@ -6735,7 +6890,10 @@ function renderCollections() {
         });
 
         const link = document.createElement("a");
-        link.href = `Poems/${slug}.html`;
+        link.href = getPoemPageHref(slug, {
+          readerContext: "library",
+          collectionId: collection.id,
+        });
         link.textContent = poem.title;
 
         const controls = document.createElement("div");
@@ -7302,6 +7460,9 @@ scrollToArchiveItemFromHash();
 updateFavouriteButtons();
 handlePendingLibraryTarget();
 initializePoemPageControls();
+if (poemPageSlug) {
+  updateReaderNavLinks(poemPageSlug);
+}
 mountReadingRoomNavigation(readerPoem);
 initializePoemPageSearchHighlighting();
 handleSectionTargetFromHash();
