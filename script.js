@@ -2469,10 +2469,10 @@ I'll fade without meat —
 usually by someone halfway through a drive-thru,
 confidence dripping with grease,
 arteries rehearing their last act.`,
-      `*\"You're not getting enough protein.\"*
-*\"You're iron-deficient.\"*
-*\"You need B12.\"*
-*\"That vegan food's too artificial.\"*`,
+      `*You're not getting enough protein.*
+*You're iron-deficient.*
+*You need B12.*
+*That vegan food's too artificial.*`,
       `*Artificial.*
 Theh word lands heavy
 from people whose meals
