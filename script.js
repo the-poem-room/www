@@ -23,6 +23,7 @@ const settingsPanel = document.querySelector("[data-settings-panel]");
 const fontSizeButtons = document.querySelectorAll("[data-font-size-option]");
 const navModeButtons = document.querySelectorAll("[data-nav-mode-option]");
 const lineNumberButtons = document.querySelectorAll("[data-line-number-option]");
+const miniMapButtons = document.querySelectorAll("[data-mini-map-option]");
 
 const poemPageSlug = document.body?.dataset?.poemSlug || "";
 const favouritesKey = "poem-room-favourites";
@@ -30,9 +31,11 @@ const collectionsKey = "poem-room-collections";
 const fontSizeKey = "poem-room-font-size";
 const navModeKey = "poem-room-nav-mode";
 const lineNumbersKey = "poem-room-line-numbers";
+const miniMapKey = "poem-room-mini-map";
 const fontSizeOptions = new Set(["small", "normal", "big"]);
 const navModeOptions = new Set(["always-visible", "auto-hide", "hover-top"]);
 const lineNumberOptions = new Set(["show", "hide"]);
+const miniMapOptions = new Set(["show", "hide"]);
 const sectionTargetHashes = new Set(["#top", "#purpose", "#bio", "#poems", "#library"]);
 const navRevealZone = 18;
 const mobileNavQuery = window.matchMedia("(max-width: 760px)");
@@ -1815,6 +1818,30 @@ function initializeLineNumbers() {
 
 initializeLineNumbers();
 
+function updateMiniMapButtons(mode) {
+  miniMapButtons.forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.miniMapOption === mode));
+  });
+}
+
+function getSavedMiniMapMode() {
+  const savedMode = localStorage.getItem(miniMapKey);
+  return miniMapOptions.has(savedMode) ? savedMode : "show";
+}
+
+function setMiniMap(mode) {
+  const nextMode = miniMapOptions.has(mode) ? mode : "show";
+  document.documentElement.dataset.miniMap = nextMode;
+  localStorage.setItem(miniMapKey, nextMode);
+  updateMiniMapButtons(nextMode);
+}
+
+function initializeMiniMap() {
+  setMiniMap(getSavedMiniMapMode());
+}
+
+initializeMiniMap();
+
 function updateNavModeButtons(mode) {
   navModeButtons.forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.navModeOption === mode));
@@ -1912,6 +1939,12 @@ navModeButtons.forEach((button) => {
 lineNumberButtons.forEach((button) => {
   button.addEventListener("click", () => {
     setLineNumbers(button.dataset.lineNumberOption || "hide");
+  });
+});
+
+miniMapButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setMiniMap(button.dataset.miniMapOption || "show");
   });
 });
 
