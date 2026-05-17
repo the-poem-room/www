@@ -2573,7 +2573,56 @@ who ties the knot.`,
       `— Lilith`,
     ],
   },
-  { title: "The Quietest Company" },
+  {
+    title: "The Quietest Company",
+    lines: [
+      `I speak in chords no one showed me—
+thoughts that spiral inward,
+where silence wears silk,
+and rhythm alone
+is enough.`,
+      `Friends say they hate being alone.
+They patch their days like leaky boats—
+afloat in noise and plans.
+But I've found a different fullness—
+solo walks,
+writing poems the world may never see—
+the quiet echo of my own mind
+returning home.`,
+      `Some night—I ask myself
+the kinds of questions
+people save for lovers.
+The answers aren't always kind—
+but they are mine,
+and I return
+with something like trust.`,
+      `I've been in love,
+and I've been alone—
+and neither one
+was emptier than the other.`,
+      `The trees are not lonely—
+nor am I.
+The moon and I blink in sync,
+and sometimes the rain
+finishes my sentences.`,
+      `To walk alone is not to wander.
+It is to hum with the wind,
+to dance with patterns
+that have no names—
+but feel like truth.`,
+      `I'm not waiting to be completed.
+I am audience and orchestra—
+composer and instrument—
+playing the chords no one showed me.
+And in the quiest company,
+I know myself—by heart.`,
+      `A fox once crossed the road ahead,
+each step a brushstroke—
+as if the air itself
+was conducting.`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Rationalist's Shadow" },
   { title: "The Real Curriculum" },
   { title: "The Real Divide" },
