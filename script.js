@@ -3169,7 +3169,143 @@ something merciful holds.`,
       `— Lilith`,
     ],
   },
-  { title: "The Wheel Doesn't Know Why You're Here" },
+  {
+    title: "The Wheel Doesn't Know Why You're Here",
+    lines: [
+      `It spins
+without memory.`,
+      `Plastic light
+clicks past corridors
+painted by dying children,
+past ice-cream vans
+parked outside grief.`,
+      `A man with soft-serve hands
+stands very still,
+holding a hospice
+between his ribs.`,
+      `Derian House
+waits quietly
+off-camera.`,
+      `He asks a question
+about films.`,
+      `Wrong.`,
+      `The wheel does not flinch.
+It has never heard of hospice beds,
+or morphine,
+or children learning
+they will not grow up.`,
+      `It only knows
+answers.`,
+      `Another chair turns.`,
+      `A woman who has learned
+how to survive her own cells
+steps forward
+carrying Maggie's
+like a small candle
+that could change
+someone else's dark.`,
+      `Lucy speaks.
+The answer is wrong.
+Seventy-nine thousand pounds
+evaporates
+without ceremony.`,
+      `Trending headline:
+"Comedian costs cancer charity £79,000."`,
+      `The machine
+does not apologise.`,
+      `Instead, a human hand
+reaches into a real pocket —
+an appearance fee,
+a flawed, beautiful interruption.`,
+      `Money given
+not by the system
+but in spite of it.`,
+      `Proof that the wheel
+was never the only way.`,
+      `They call this fairness
+because everyone was treated equally.`,
+      `Equally unseen.
+Equally unheard.`,
+      `This is what fairness looks like
+when you remove
+context.`,
+      `And when the wheel *does* stop
+on something bright,
+something generous,
+something big —`,
+      `the body learns
+its ritualised gesture.`,
+      `Hands shake.
+Arms open.
+Performed reverence.`,
+      `The host is embraced
+like a benefactor.`,
+      `Thank you.
+Thank you.
+Thank you.`,
+      `you've changed my life`,
+      `This is not true.`,
+      `Not to the wheel.
+Not to chance.
+Not to the silent arithmetic
+of probability.`,
+      `But to the assigned face of chance
+standing beside the mechanism
+who did nothing
+but witness.`,
+      `They press their face
+into his shoulder
+like he chose them.`,
+      `Like he gave.`,
+      `Like the money
+came from him.`,
+      `This is the strangest part:
+grief is mechanised,
+luck is televised,
+and gratitude
+is misdirected.`,
+      `A hug
+where a question mark
+should be.`,
+      `A thank-you
+where ethics
+should be.`,
+      `The audience claps
+because someone else won.
+They had a hobby.
+A holiday planned.
+A dream that fit neatly 
+inside a question.`,
+      `Meanwhile, a children's ward
+carries on breathing.`,
+      `Meanwhile, a cancer support centre
+counts quieter donations.`,
+      `The wheel smiles
+in glitter.`,
+      `Michael smiles
+because the rules are clean.`,
+      `And they are.
+
+No corruption.
+No cheating.
+
+Just a flawless machine
+built to make suffering
+compete with luck.`,
+      `It keeps turning
+past hospice windows,
+past oncology chairs,
+past ice-cream vans
+parked at the edge
+of grief.`,
+      `It spins
+and nothing in it
+knows
+why anyone
+is really there.`,
+      `— Lilith`,
+    ],
+  },
   { title: "To anyone confused" },
   { title: "To-Be List" },
   { title: "tolerate" },
