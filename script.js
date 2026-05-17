@@ -1559,7 +1559,72 @@ how to be spelled.`,
       `*— Lilith*`,
     ],
   },
-  { title: "Ten Thousand Suns" },
+  {
+    title: "Ten Thousand Suns",
+    lines: [
+      `A shoe in the rubble.
+A notebook ash-smeared.
+A toy, buried in concrete.`,
+      `Hospitals shelled,
+bread lines scattered,
+aid trucks stalled at the border.`,
+      `Health denied.
+Food denied.
+Relief denied.`,
+      `I will not excuse the blood spilled
+on October 7th.
+But what name is left
+for the answer of ten thousand children
+silenced in return?`,
+      `Ten thousand suns
+that will never rise.`,
+      `A generation extinguished
+before its fire was lit.`,
+      `The ceiling gave way,
+and the sky itself
+broke into dust.`,
+      `Britain signs it lawful,
+Germany stamps it necessary,
+America names the burning of children defence.`,
+      `Licences stamped,
+bullets boxed,
+engines shipped into Gaza's night.`,
+      `This is not neutrality.
+This is genocide by supply chain.`,
+      `History is not past.`,
+      `1948 bleeds into 2023,
+exile into blockade,
+occupation into rubble.`,
+      `Hamas is not Gaza.
+It is not the child under the blanket,
+not the mother waiting in the bread line.`,
+      `And "Israel" in our headlines
+is not the girl in Tel Aviv
+who only wanted to dance at a festival,
+nor the father still searching,
+one among 251 families,
+for his kidnapped son.`,
+      `These are names for power,
+for government,
+for armies and parties — 
+separate from the people
+who bury the dead
+and carry the grief.`,
+      `The child is not Hamas.
+The mother is not Hamas.
+The father is not Hamas.
+The dead are not the politics
+we pin to their names.`,
+      `And yet the world debates
+the grammar of its statements,
+drafts paragraphs while morgues overflow.
+As if silence were not
+another kind of weapon.`,
+      `Gaza burns.
+And still, the rubble waits.`,
+      `— Lilith`,
+    ],
+  },
   { title: "Thanks for Watching" },
   { title: "The Angle of Light" },
   { title: "The Book of Ironicus" },
