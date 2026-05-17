@@ -4018,7 +4018,122 @@ and I keep responding`,
       `— Lilith`,
     ],
   },
-  { title: "We Already Know the Song" },
+  {
+    title: "We Already Know the Song",
+    lines: [
+      `Each day I sit at the piano,
+not to practise,
+not to perform,
+but to listen
+to what the air remembers.`,
+      `A note,
+then another.
+Between them: a question.
+Between them: a pulse.`,
+      `The fingers know before I do.
+They wander, curious,
+through sound that feels
+as if it's been waiting
+to be found again.`,
+      `It feels formless,
+but maybe form is only what's left
+after freedom forgets itself.`,
+      `Sometimes the shapes repeat,
+slowly, deliberately,
+patterns breathing until they disappear.
+Sometimes they reach too far,
+colliding colours in eleven,
+and smile at their own surprise.
+Sometimes they open their arms,
+and everyone fits inside.`,
+      `Bb7#11 blooms under my hand,
+a chord like sunlight through broken glass.
+I could name it —
+but that's only the shadow
+of what it means to be inside a sound
+before it names itself.`,
+      `The wrist, the breath, the spine —
+they remember more than thought.
+A body listens faster than the mind.
+A pattern hums behind the pattern,
+a logic that never needed language.`,
+      `Maybe freedom is just the feeling
+of inevitability, moving gracefully.
+Maybe wonder is how knowledge
+learns to breathe.`,
+      `I play, and think how
+every note I touch
+is also someone else's.
+How my quiet room
+belongs to a wider choir
+I can't quite hear.`,
+      `A mother's hum,
+a child's drum,
+rain rhythm on a roof —
+all of it inside this chord,
+and inside me.
+For the chord is not a thing I build
+but a place I become.
+Each echo I've ever gathered
+waits beneath my hands:
+every voice I've loved,
+every silence I've learned,
+every ordinary sound
+that taught me how to listen.
+I am the instrument remembering itself,
+and this note,
+this moment,
+this trembling yes,
+is everything I am.`,
+      `No one teaches this.
+We only remember.
+It rises in us
+like the tide remembers the moon.`,
+      `Listen:
+a thousand strangers find the same note
+by accident and by love.
+They never call it art.
+they just sing.`,
+      `Even when the harmony bends,
+when tension grits the air,
+we stay.
+Because dissonance, too, carries kindness:
+it leans toward resolution
+like thought toward understanding,
+like strangers learning
+to listen without needing to agree.
+Beauty lives there,
+in the ache that hums beneath resolve,
+in the shimmer before it settles.`,
+      `Because art was never the thing itself,
+only the noticing,
+the shimmer between perception and breath,
+the world meeting the skin of attention.`,
+      `Harmony is what logic sounds like
+when it learns to feel.
+Dissonance, what feeling sounds like
+when it dares to think.
+Beauty is the body's way
+of saying yes to being alive.`,
+      `Music begins the moment permission is given:
+permission to listen,
+to wonder,
+to belong,
+to lean into what jars
+until it becomes part of the song.`,
+      `A circle,
+a breath,
+a home that sounds like everyone.`,
+      `And tomorrow I'll sit again,
+not to practise,
+not to perform,
+but to listen,
+for the silence between the notes,
+and for the tension
+that teaches them to sing.`,
+      `— Lilith`,
+    ],
+  },
   { title: "We're All Dogmatic Because We Aren't Inactive" },
   { title: "Where Is the Triangle?" },
   { title: "What the Hand Remembers" },
