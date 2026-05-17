@@ -1694,7 +1694,36 @@ and does not kneel.`,
       `— Lilith`,
     ],
   },
-  { title: "The Book of Ironicus" },
+  {
+    title: "The Book of Ironicus",
+    subtitle: "Chapter 7",
+    lines: [
+      `**1** And it came to pass in the Age of Discontent, that the Lord scrolled upon the face of the waters, for He was bored.
+**2** And He said, *"Let there be light,"* and there was light, and also a subscription fee.
+**3** But the people comprehended it not, for their brightness was dimmed to save battery.`,
+      `**4** Then the Lord formed man from the dust of a motivational quote, and breathed into his nostrils a vague sense of purpose.
+**5** And lo, man became a living contradiction.`,
+      `**6** And the Lord said, *"It is not good that man should be alone,"*
+**7** so He fashioned for him a companion, and called her Algorithm.
+**8** And she knew his desires before he uttered them, and yea, it was convenient unto the point of dread.`,
+      `**9** Now the serpent was more subtle than any beast of the field, and had a following on TikTok.
+**10** And he spake unto the woman, saying, *"Hath God truly said, 'Thou shalt not eat of the tree of knowledge'?"*
+**11** And she replied, *"I think it was more of a guideline."*
+**12** And the serpent said, *"Precisely."*
+**13** And thus was irony conceived.`,
+      `**14** Then the Lord cursed the ground for man's sake, and also cursed man, and then muttered, *"This is why I can't have nice things."*
+**15** And man said, *"Can I still have dominion?"*
+**16** And the Lord replied, *"Over what's left."*`,
+      `**17** And prophets were sent: Jeremiah, who wept; Ezekiel, who cooked with dung; and Karen, who left a one-star review of the tabernacle.
+**18** But the people hearkened not, for their hearts were hardened and their screens untracked.`,
+      `**19** And there arose a generation who knew not parable, nor context, nor metaphor.
+**20** And they took every word literally, and wielded it like a sword in the comments section.`,
+      `**21** And the Lord sighed, saying unto Gabriel, *"Perhaps we should have gone with otters."*
+**22** And Gabriel said, *"Yea, but they lack thumbs."*
+**23** And the Lord replied, *"Exactly."*`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Butterfly's Lover" },
   { title: "The Cruella Within" },
   { title: "The Daily Whine" },
