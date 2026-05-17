@@ -1567,6 +1567,21 @@ html[data-line-numbers="show"] .poem-line--signature {
   min-width: 0;
 }
 
+.poem-line--biblical .poem-verse-number,
+.poem-line--biblical .poem-line-content > strong:first-child {
+  display: inline-block;
+  margin-right: 0.22em;
+  color: color-mix(in srgb, var(--soft) 84%, var(--line));
+  font-size: 0.62em;
+  font-weight: 700;
+  line-height: 0;
+  vertical-align: super;
+  letter-spacing: 0.04em;
+  font-variant-numeric: oldstyle-nums;
+  font-feature-settings: "onum";
+  text-transform: none;
+}
+
 .poem-stanza--centered .poem-line-content {
   text-align: center;
 }

@@ -162,6 +162,7 @@ ${items}
 
 function renderPoemBody(poem) {
   const poemLines = Array.isArray(poem?.lines) ? poem.lines : [];
+  const isBiblicalPoem = slugify(poem?.title || "") === "the-book-of-ironicus";
 
   if (!poemLines.length) {
     return `        <div class="reader-poem-body" data-reader-poem-body>
@@ -208,11 +209,17 @@ function renderPoemBody(poem) {
             index === poemLines.length - 1 &&
             idx === stanzaLines.length - 1 &&
             isSignatureLine(line);
+          const lineClasses = ["poem-line"];
+
+          if (isBiblicalPoem && !isSignature) {
+            lineClasses.push("poem-line--biblical");
+          }
+
           const lineMarkup = isSignature
             ? `              <span class="poem-line poem-line--signature">
                 <span class="poem-line-content">${content}</span>
               </span>`
-            : `              <span class="poem-line">
+            : `              <span class="${lineClasses.join(" ")}">
                 <span class="poem-line-number" aria-hidden="true">${lineNumber}</span>
                 <span class="poem-line-content">${content}</span>
               </span>`;

@@ -3123,7 +3123,11 @@ function isSignatureLine(line) {
   return unwrapped.startsWith("— ");
 }
 
-function createPoemLineElement(lineText, lineNumber, { isSignature = false, isHeading = false } = {}) {
+function createPoemLineElement(
+  lineText,
+  lineNumber,
+  { isSignature = false, isHeading = false, isBiblicalVerse = false } = {}
+) {
   const trimmedLine = String(lineText || "");
 
   if (!trimmedLine.trim()) {
@@ -3149,6 +3153,17 @@ function createPoemLineElement(lineText, lineNumber, { isSignature = false, isHe
       strong.append(content.firstChild);
     }
     content.append(strong);
+  }
+
+  if (isBiblicalVerse) {
+    const leadingNumber = content.firstElementChild;
+    if (
+      leadingNumber?.tagName === "STRONG" &&
+      /^\d+$/.test((leadingNumber.textContent || "").trim())
+    ) {
+      line.classList.add("poem-line--biblical");
+      leadingNumber.classList.add("poem-verse-number");
+    }
   }
 
   if (!isSignature) {
@@ -3224,6 +3239,7 @@ function createPoemNavigation(poem) {
 
 function createPoemBody(poem) {
   const poemLines = Array.isArray(poem?.lines) ? poem.lines : [];
+  const isBiblicalPoem = getPoemSlug(poem) === "the-book-of-ironicus";
   const container = document.createElement("div");
   container.className = "reader-poem-body";
   container.setAttribute("data-reader-poem-body", "");
@@ -3264,6 +3280,7 @@ function createPoemBody(poem) {
         createPoemLineElement(line, lineNumber, {
           isSignature,
           isHeading: lineIndex === 0 && isAllCapsHeading(line),
+          isBiblicalVerse: isBiblicalPoem,
         })
       );
 
