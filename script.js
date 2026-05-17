@@ -31,6 +31,7 @@ const miniMapButtons = document.querySelectorAll("[data-mini-map-option]");
 
 const poemPageSlug = document.body?.dataset?.poemSlug || "";
 const favouritesKey = "poem-room-favourites";
+const favouriteOrderKey = "poem-room-favourite-order";
 const collectionsKey = "poem-room-collections";
 const fontSizeKey = "poem-room-font-size";
 const navModeKey = "poem-room-nav-mode";
@@ -1786,6 +1787,10 @@ const slugMigrations = {
 const poemBySlug = new Map(sortedPoems.map((poem) => [getPoemSlug(poem), poem]));
 const poemIndexBySlug = new Map(sortedPoems.map((poem, index) => [getPoemSlug(poem), index]));
 const favouriteSlugs = new Set(JSON.parse(localStorage.getItem(favouritesKey) || "[]"));
+let favouriteOrder = JSON.parse(localStorage.getItem(favouriteOrderKey) || "[]");
+if (!Array.isArray(favouriteOrder)) {
+  favouriteOrder = [];
+}
 let collections = JSON.parse(localStorage.getItem(collectionsKey) || "[]");
 
 function migrateLibrarySlugs() {
@@ -1802,6 +1807,23 @@ function migrateLibrarySlugs() {
     favouriteSlugs.clear();
     migratedFavourites.forEach((slug) => favouriteSlugs.add(slug));
     localStorage.setItem(favouritesKey, JSON.stringify([...favouriteSlugs]));
+  }
+
+  const migratedFavouriteOrder = favouriteOrder.map((slug) => {
+    const next = slugMigrations[slug] || slug;
+    if (next !== slug) changed = true;
+    return next;
+  });
+
+  const nextFavouriteOrder = normalizeFavouriteOrder(migratedFavouriteOrder);
+  const favouriteOrderChanged =
+    nextFavouriteOrder.length !== favouriteOrder.length ||
+    nextFavouriteOrder.some((slug, index) => slug !== favouriteOrder[index]);
+
+  if (favouriteOrderChanged) {
+    changed = true;
+    favouriteOrder = nextFavouriteOrder;
+    localStorage.setItem(favouriteOrderKey, JSON.stringify(favouriteOrder));
   }
 
   const migratedCollections = collections.map((collection) => {
@@ -2481,6 +2503,7 @@ document.addEventListener("click", (event) => {
 
 function saveFavourites() {
   localStorage.setItem(favouritesKey, JSON.stringify([...favouriteSlugs]));
+  localStorage.setItem(favouriteOrderKey, JSON.stringify(favouriteOrder));
 }
 
 function saveCollections() {
@@ -2522,13 +2545,45 @@ function updateFavouriteButtons() {
   });
 }
 
+function normalizeFavouriteOrder(order = favouriteOrder) {
+  const next = [];
+  const seen = new Set();
+  const source = Array.isArray(order) ? order : [];
+
+  source.forEach((slug) => {
+    const migrated = slugMigrations[slug] || slug;
+    if (favouriteSlugs.has(migrated) && poemBySlug.has(migrated) && !seen.has(migrated)) {
+      next.push(migrated);
+      seen.add(migrated);
+    }
+  });
+
+  sortedPoems.forEach((poem) => {
+    const slug = getPoemSlug(poem);
+    if (favouriteSlugs.has(slug) && !seen.has(slug)) {
+      next.push(slug);
+      seen.add(slug);
+    }
+  });
+
+  return next;
+}
+
+function getOrderedFavouriteSlugs() {
+  return normalizeFavouriteOrder();
+}
+
 function toggleFavourite(slug) {
   const wasFavourite = isFavourite(slug);
 
   if (isFavourite(slug)) {
     favouriteSlugs.delete(slug);
+    favouriteOrder = favouriteOrder.filter((item) => item !== slug);
   } else {
     favouriteSlugs.add(slug);
+    if (!favouriteOrder.includes(slug)) {
+      favouriteOrder.push(slug);
+    }
   }
 
   saveFavourites();
@@ -2611,6 +2666,26 @@ function movePoemInCollection(collectionId, fromIndex, toIndex) {
   renderCollections();
 }
 
+function moveFavouriteInLibrary(fromIndex, toIndex) {
+  const orderedSlugs = getOrderedFavouriteSlugs();
+
+  if (
+    fromIndex < 0 ||
+    toIndex < 0 ||
+    fromIndex >= orderedSlugs.length ||
+    toIndex >= orderedSlugs.length ||
+    fromIndex === toIndex
+  ) {
+    return;
+  }
+
+  const [poemSlug] = orderedSlugs.splice(fromIndex, 1);
+  orderedSlugs.splice(toIndex, 0, poemSlug);
+  favouriteOrder = orderedSlugs;
+  saveFavourites();
+  renderLibrary();
+}
+
 function removeCollection(collectionId) {
   const collection = collections.find((item) => item.id === collectionId);
 
@@ -2653,14 +2728,44 @@ function renderLibrary() {
 
   libraryList.innerHTML = "";
 
-  const favourites = sortedPoems.filter((poem) => favouriteSlugs.has(getPoemSlug(poem)));
+  const favourites = getOrderedFavouriteSlugs()
+    .map((slug) => poemBySlug.get(slug))
+    .filter(Boolean);
   libraryEmpty.hidden = favourites.length > 0;
 
-  favourites.forEach((poem) => {
+  favourites.forEach((poem, index) => {
     const slug = getPoemSlug(poem);
     const item = document.createElement("li");
     item.className = "archive-item";
     item.dataset.poemSlug = slug;
+    item.draggable = true;
+    item.dataset.favouriteIndex = String(index);
+    item.addEventListener("dragstart", (event) => {
+      event.dataTransfer.setData("text/plain", JSON.stringify({ fromIndex: index }));
+      event.dataTransfer.effectAllowed = "move";
+      item.classList.add("is-dragging");
+    });
+    item.addEventListener("dragend", () => {
+      item.classList.remove("is-dragging");
+    });
+    item.addEventListener("dragover", (event) => {
+      event.preventDefault();
+      item.classList.add("is-drop-target");
+    });
+    item.addEventListener("dragleave", () => {
+      item.classList.remove("is-drop-target");
+    });
+    item.addEventListener("drop", (event) => {
+      event.preventDefault();
+      item.classList.remove("is-drop-target");
+
+      try {
+        const payload = JSON.parse(event.dataTransfer.getData("text/plain"));
+        moveFavouriteInLibrary(payload.fromIndex, index);
+      } catch {
+        // Ignore invalid drops.
+      }
+    });
 
     const link = document.createElement("a");
     link.href = `Poems/${slug}.html`;

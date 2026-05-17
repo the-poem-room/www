@@ -1021,6 +1021,22 @@ h3 {
     box-shadow 180ms ease;
 }
 
+.library-list .archive-item {
+  cursor: grab;
+}
+
+.library-list .archive-item:active {
+  cursor: grabbing;
+}
+
+.library-list .archive-item.is-dragging {
+  opacity: 0.45;
+}
+
+.library-list .archive-item.is-drop-target {
+  border-top: 2px solid var(--soft);
+}
+
 .archive-item:hover,
 .archive-item:focus-within {
   background:
