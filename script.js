@@ -18,6 +18,8 @@ const collectionsList = document.querySelector("[data-collections-list]");
 const collectionsEmpty = document.querySelector("[data-collections-empty]");
 const toastRegion = document.querySelector("[data-toast-region]");
 const siteHeader = document.querySelector(".site-header");
+const siteBrand = document.querySelector(".brand");
+const siteNav = document.querySelector(".site-nav");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const sectionJumpLinks = document.querySelectorAll(
   ".site-nav a[href^='#'], .hero-actions a[href^='#']"
@@ -50,6 +52,7 @@ const mobileNavQuery = window.matchMedia("(max-width: 760px)");
 let lastPointerY = Number.POSITIVE_INFINITY;
 let activeReadingRoomNavigation = null;
 let readingRoomNavigationPending = false;
+let headerLayoutUpdatePending = false;
 
 const poems = [
   {
@@ -4831,6 +4834,8 @@ function setFontSize(size) {
   fontSizeButtons.forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.fontSizeOption === nextSize));
   });
+
+  scheduleHeaderLayoutModeUpdate();
 }
 
 function initializeFontSize() {
@@ -4838,6 +4843,68 @@ function initializeFontSize() {
 }
 
 initializeFontSize();
+
+function measureDesktopHeaderNavFit() {
+  if (!siteHeader || !siteNav || !settingsMenu) {
+    return true;
+  }
+
+  const wasCompact = siteHeader.classList.contains("is-nav-compact");
+  if (wasCompact) {
+    siteHeader.classList.remove("is-nav-compact");
+  }
+
+  const headerRect = siteHeader.getBoundingClientRect();
+  const headerStyles = window.getComputedStyle(siteHeader);
+  const paddingLeft = Number.parseFloat(headerStyles.paddingLeft || "0") || 0;
+  const paddingRight = Number.parseFloat(headerStyles.paddingRight || "0") || 0;
+  const gap = Number.parseFloat(headerStyles.columnGap || headerStyles.gap || "0") || 0;
+  const brandWidth = siteBrand?.getBoundingClientRect().width || 0;
+  const settingsWidth = settingsMenu.getBoundingClientRect().width || 0;
+  const navWidth = siteNav.scrollWidth || 0;
+  const availableWidth =
+    headerRect.width - paddingLeft - paddingRight - brandWidth - settingsWidth - gap * 2 - 2;
+
+  if (wasCompact) {
+    siteHeader.classList.add("is-nav-compact");
+  }
+
+  return navWidth <= availableWidth;
+}
+
+function updateHeaderLayoutMode() {
+  if (!siteHeader) {
+    return;
+  }
+
+  const shouldCompact = mobileNavQuery.matches ? true : !measureDesktopHeaderNavFit();
+  const isCompact = siteHeader.classList.contains("is-nav-compact");
+
+  if (shouldCompact !== isCompact) {
+    siteHeader.classList.toggle("is-nav-compact", shouldCompact);
+  }
+
+  if (!shouldCompact && isMobileNavOpen()) {
+    closeMobileNav();
+  }
+
+  updateHeaderVisibility();
+}
+
+function scheduleHeaderLayoutModeUpdate() {
+  if (headerLayoutUpdatePending) {
+    return;
+  }
+
+  headerLayoutUpdatePending = true;
+  window.requestAnimationFrame(() => {
+    headerLayoutUpdatePending = false;
+    updateHeaderLayoutMode();
+    updateHeaderVisibility();
+  });
+}
+
+updateHeaderLayoutMode();
 
 function updateLineNumberButtons(mode) {
   lineNumberButtons.forEach((button) => {
@@ -5034,11 +5101,12 @@ function updateHeaderVisibility() {
 
 if (siteHeader) {
   window.addEventListener("scroll", updateHeaderVisibility, { passive: true });
-  window.addEventListener("resize", updateHeaderVisibility, { passive: true });
+  window.addEventListener("resize", scheduleHeaderLayoutModeUpdate, { passive: true });
   mobileNavQuery.addEventListener("change", (event) => {
     if (!event.matches) {
       closeMobileNav();
     }
+    scheduleHeaderLayoutModeUpdate();
   });
   document.addEventListener(
     "mousemove",
@@ -5062,7 +5130,7 @@ if (siteHeader) {
     },
     { passive: true }
   );
-  updateHeaderVisibility();
+  scheduleHeaderLayoutModeUpdate();
 }
 
 if (navToggle) {
