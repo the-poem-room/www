@@ -823,7 +823,6 @@ const poems = [
       "— Lilith",
     ],
   },
-  { title: "Somewhere", slug: "somewhere" },
   {
     title: "Memory",
     lines: [
@@ -1385,6 +1384,18 @@ desire.`,
       "Maybe the joke isn't about dresses.\nMaybe it's about\nhow small we made the world\njust to feel certain inside it.",
       "And somewhere, between the punchline\nand the quiet after,\na man reaches for softness\nnot because he is \"allowed,\"\nbut because softness was always his.",
       "— Lilith",
+    ],
+  },
+  {
+    title: "Somewhere",
+    lines: [
+      "I scroll through the old messages,\nnot to remember\nbut to feel if loss still glows.",
+      "Each line is untouched,\npreserved like frost on glass.\nYou still speak to me there,\nbright as if the sun never set on us.",
+      "The philosophers call it\nthe block universe,\neverything happening at once,\nnothing really gone.\nI think that's what grief becomes:\na stillness that shines\nwhere affection doesn't fade,\nit just stops being received.",
+      "*A-theory* says the world keeps moving.\nBut these texts don't.\nThey stay,\nbeating softly inside a server.\nSometimes I envy them:\ntheir refusal to decay,\ntheir peace with permanence.",
+      "*C-theory* tells me even motion\nis an illusion.\nMoments are just beads on a string,\nno before, no after,\nonly position.\nAnd I am somewhere\nbetween the bead where you laughed\nand the bead where you left.",
+      "If I could unlearn grammar,\nI'd forget how to say once.\nI'd forget how to say after.\nI'd say somewhere\nand mean:\nyou are still typing\nand I am still waiting.",
+      "*— Lilith*",
     ],
   },
   { title: "Split-Screen World" },
