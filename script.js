@@ -3892,7 +3892,29 @@ and called it progress.`,
       `— Lilith`,
     ],
   },
-  { title: "Two Chairs" },
+  {
+    title: "Two Chairs",
+    lines: [
+      `Alan stacked two chairs,
+saving himself a journey.
+For a moment,
+there was a *pile*,
+a small kingdom of two.`,
+      `Then he lifted one away,
+set it down where it belonged,
+and just like that—
+no stack,
+only chairs again.`,
+      `Strange how something
+can vanish
+without going anywhere.
+How "together"
+is less a fact
+than a story we tell
+while things touch.`,
+      `— Lilith`,
+    ],
+  },
   { title: "Unassigned" },
   { title: "We Already Know the Song" },
   { title: "We're All Dogmatic Because We Aren't Inactive" },
