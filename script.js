@@ -1665,7 +1665,35 @@ then let me go, just right.`,
       `— Lilith`,
     ],
   },
-  { title: "The Angle of Light" },
+  {
+    title: "The Angle of Light",
+    lines: [
+      `I no longer call it sacred,
+yet I still pause
+when light meets glass
+at the exact angle
+that turns precision into silence.`,
+      `They say mystery sustains meaning,
+but I have learned
+that exposure is its own devotion—
+the more I understand,
+the more atonished I become
+by what understanding cannot hold.`,
+      `To name the atom
+does not still its shimmer.
+To measure the sky
+does not steal its blue.
+Awe endures dissection;
+it only learns
+to breathe without illusion.`,
+      `There is holiness, still,
+in the honest perimeter of knowing,
+in the mind that burns
+to see clearly,
+and does not kneel.`,
+      `— Lilith`,
+    ],
+  },
   { title: "The Book of Ironicus" },
   { title: "The Butterfly's Lover" },
   { title: "The Cruella Within" },
