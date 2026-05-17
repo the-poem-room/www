@@ -2474,7 +2474,7 @@ arteries rehearing their last act.`,
 *You need B12.*
 *That vegan food's too artificial.*`,
       `*Artificial.*
-Theh word lands heavy
+That word lands heavy
 from people whose meals
 were factory-made
 before the cow was born.`,
