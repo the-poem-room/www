@@ -69,7 +69,6 @@ let headerLayoutUpdatePending = false;
 const poems = [
   {
     title: "a broken metronome",
-    written: "19th August 2025",
     lines: [
       "click. click—\nthen silence.\nA room holds its breath like a barline stretched thin.\nI count with my ribs, find four in the flutter of three.\nThe lamp hums a shaky tempo; rain plays triplets on glass.\nI pencil a beat on the desk, wood answering skin.\nTime is elastic when no one's watching.\nI practice the piece that won't still\nuntil the ending learns to arrive\nFashionably late, but exactly right.",
       "*— Lilith*",
@@ -77,7 +76,6 @@ const poems = [
   },
   {
     title: "A Manual for the Modern Messiah",
-    written: "18 July 2025",
     subtitle: "(Instructions by Elon Musk)",
     lines: [
       "Build a rocket.\nBurn the sky.\nPreach green—\nthen mine cobalt \nwith Congolese hands\nyou'll never see.",
@@ -93,7 +91,6 @@ const poems = [
   },
   {
     title: "A Note Outside the Scale",
-    written: "3 October 2025",
     lines: [
       "I am not a man,\nnor a woman—\nnor half of one pretending to be whole.\nI am GNP:\na balance, an absence,\na body that speaks in shifting pitches,\nsometimes velvet-deep,\nsometimes bright as flutes.",
       "My hair is clean, tied, blonde—\na kind of rebellion against the buzz-cut of expectation.\nMy voice is a compass,\nshifting with the room,\nwith the ears\nthat would try to name me.",
@@ -107,7 +104,6 @@ const poems = [
   },
   {
     title: "A Practical Guide to My Pronouns",
-    written: "9 October 2025",
     lines: [
       "Shall they say *he*?\nWell, yes, they shall, and I'll twitch like a smoke alarm\ncatching whiffs of burnt toast,\nbut not burst into flames.",
       "Shall they say *she*?\nThat one feels like wearing shoes two sizes off:\ntight in the toes, loose in the heel,\nclumsy to walk in, but walkable.",
@@ -127,7 +123,6 @@ const poems = [
   },
   {
     title: "Ad Approved by the Algorithm",
-    written: "14 July 2025",
     lines: [
       "Welcome, child, to **BattleTits3**,\nAn \"educational\" game (for free!)\nWhere warriors jiggle to earn their place\nIn Candy Kingdom's sacred space.\nInstall now! No age check here—\nJust swipe the add and click \"appear.\"",
       "Scroll again and you shall find\nA quiz to help you \"know your mind.\"\n\"Do you like green?\" You're probably gay.\n\"Do bees distract you?\" ADHD today!\n\"Are you sad sometimes?\" Oh, that's autism—\nDiagnosed by **Jeff's Brain Prism™**.",
@@ -140,7 +135,6 @@ const poems = [
   },
   {
     title: "aftersound",
-    written: "2 May 2025",
     lines: [
       "sometimes i forget\nthe shape of your voice\nhow silence\nlearned to sound like you",
       "the air between us\nhas stretched so thin\nit hums",
@@ -157,7 +151,6 @@ const poems = [
   },
   {
     title: "Against the Mean",
-    written: "11 May 2025",
     lines: [
       "It learns to make the room nod in unison—\nloss shaved thin, surprise sanded down—\na mean-making engine,\nhotel-lobby playlist on infinite loop.",
       "Still, in the data; harline whistles—\nverbs moonlighting as nouns,\nriffs in 5/4 that step off the curb\nand keep walking. Red-circled outliers.",
@@ -173,7 +166,6 @@ const poems = [
   },
   {
     title: "Alpha by Algorithm",
-    written: "17 June 2025",
     lines: [
       "He speaks in clips, in kicks, in clicks,\nin hustler creeds and party tricks.\nHe growls of war, of weight, of wealth—\nbut shouts the loudest at himself.",
       "He barks \"You're weak!\"—a schoolyard sneer,\nfrom behind sunglasses and fear.\nA temple built on abs and flash,\na god of protein shakes and cash.",
@@ -185,7 +177,6 @@ const poems = [
   },
   {
     title: "Before the Screens",
-    written: "1 January 2025",
     lines: [
       "I still recall what silence used to say—\nbefore the red lights glowed across our screens.\nThe stars were clearer when we looke away.",
       "We lived like clocks that ticked but lost their way,\nforgetting how the golden hours wane.\nI still recall what silence used to say.",
@@ -198,7 +189,6 @@ const poems = [
   },
   {
     title: "Beneath Permanent Shelter",
-    written: "9 May 2026",
     lines: [
       "A year is a strangely human way\nto measure absence.",
       "The trees outside my window\nhave already forgotten\nwhich leaves belonged\nto last spring.",
@@ -264,7 +254,6 @@ const poems = [
   },
   {
     title: "Between Hours",
-    written: "11 November 2025",
     lines: [
       "Time has never been a strict thing,\nnot really.",
       "In Iceland, the sun forgets\nits bedtime —\nmorning lingers,\nnight take its time\ndeciding if it wants to arrive at all.\nHours stretch like curious arms,\nreaching toward winter fireworks,\ndaylight stitched with quiet crackles,\na small daylight revolt,\nthe horizon unsure\nwhat hour it holds.",
@@ -277,7 +266,6 @@ const poems = [
   },
   {
     title: "BREAKING: Polite Notices During Catastrophe",
-    written: "29 September 2025",
     slug: "breaking-politce-notices-during-catastrophe",
     lines: [
       "The ticker reads like a shopping list—\nArsenal 3-1,\nactor \"sorry if anyone was offended,\"\nsix thousand confirmed,\nsunny spells by Sunday.",
@@ -296,7 +284,6 @@ const poems = [
   },
   {
     title: "Cartography of Shadows",
-    written: "15 October 2025",
     lines: [
       "In Pyongyang,\navenues wide as silence,\nmonuments rehearsed into stone.\nFrom above, the city glows with borrowed light,\nbut inside the dark,\nfamilies barter rice for whispers of truth.\nYet on festival days,\ndrums ripple through the streets,\nneighbours share rice cakes,\nlaughter rising louder than fear.\nAnd still—\neverywhere, a heartbeat resists.",
       "In Gaza,\nwalls rise higher than sky,\na child knots a kite from plastic bags,\nlaunches it above the rubble,\na sky more forgiving than the earth.\nEven here, weddings weave music through alleys,\nchildren race between broken stones,\ntheir joy as defiant as the kite.\nAnd still—\neverywhere, a heartbeat resists.",
@@ -309,7 +296,6 @@ const poems = [
   },
   {
     title: "Children See More",
-    written: "15 March 2025",
     lines: [
       "I once saw a crack\nin the pavement\nand thought maybe\nsomething was trying to escape—\na root,\na ripple,\na hidden word.",
       "Mum said,\n\"It's just the frost,\"\nbut I knew\nsome things split\nbecause they want to grow.",
@@ -325,7 +311,6 @@ const poems = [
   },
   {
     title: "Compulsory Existence",
-    written: "2 November 2025",
     lines: [
       "I am told this is good for me.\nThat attendance is education,\nthat education is liberation,\nthat liberation is obedience\nto the timetable.",
       "They call it *freedom*,\nthe freedom to choose between one government-approved route\nand another.\nThe freedom to wear my tie straight,\nto keep my hair bound\nin an acceptable demonstration\nof focus.",
@@ -360,12 +345,10 @@ const poems = [
   },
   {
     title: "Definition",
-    written: "11 August 2025",
     lines: ["Art is preference.\nArt is mere existence.\nArt is me.\nArt is you.\nEverything else is marketing.", "— Lilith"],
   },
   {
     title: "Draft",
-    written: "9 December 2025",
     lines: [
       "This is a love poem.\nThere is no you.\nThere is only the space\nwhere a you might have stood,\nlike a chair pulled out\nand never pushed back in.",
       "This is a protest poem.\nNo one is marching.\nThe signs are all internal,\nwritten in pencil,\nheld up only\nwhen I'm alone.",
@@ -380,7 +363,6 @@ const poems = [
   },
   {
     title: "Errata",
-    written: "21 September 2025",
     lines: [
       "The words change—\nmenus swap syllables, street signs trade alphabets;\nhello learns a hundred disguises and still blushes at the door.\nYou carry a pocket of phrases like loose screws,\ntighten what you can, leave the rest to rattle.",
       "The rules change—\nleft becomes right, shoes off / hat on;\nno loitering unless you buy something;\nqueue here; press green; don't touch the oranges.\nA whistle says stop. A bell says go.\nYou learn to nod in the correct language.",
@@ -393,7 +375,6 @@ const poems = [
   },
   {
     title: "Eulogy for the Melting Giant",
-    written: "18 September 2025",
     lines: [
       "I was born before your calendars,\nbefore the word \"beginning\" found its breath.\nSnow upon snow,\nlayered like sleep over centuries—\nI remembered silence long after you forgot it.",
       "I carved valleys with the patience of gods.\nSpoke only in pressure.\nTaught rivers how to walk.\nHeld time in my blue-lit belly,\nwhile stars blinked\nthrough the slow dance of ages.",
@@ -410,7 +391,6 @@ const poems = [
   },
   {
     title: "Factory Hits",
-    written: "14 April 2025",
     lines: [
       "The crowd swears Taylor bled it out herself,\neach comma wrung from heartbreak.\nTheh crowd swears Ed hummed his hook in the shower,\nand the shampoo bottle clapped.",
       "But really—\nit's ten Swedes in a windowless room,\narguing whether \"oh-oh-oh\"\nshould come before or after \"baby.\"\nThere's a spreadsheet for syllables.\nThere's a quota for metaphors.\nThere's a dartboard labeled *bridge*.",
@@ -423,7 +403,6 @@ const poems = [
   },
   {
     title: "Fictions We Carry",
-    written: "4 June 2025",
     lines: [
       "He learns desire from pixels:\nmute bodies on command,\nclips like templates,\neach pause a chance to swap her out\nfor the next.\nNo backstory,\nno mess,\njust fragments—\nand slowly,\nthe fragments replace the person.",
       "She learns intimacy from pages:\nthe villain with soft eyes,\nthe captor who secretly loves,\nthe man who bruises, then apologises\nwith roses.\nEach chapter whispers:\ndevotion is proven by suffering,\nromance is waiting for cruelty\nto turn into care—\nand slowly, \nthe cage replaces the comfort.",
@@ -443,7 +422,6 @@ const poems = [
   },
   {
     title: "FIELD GUIDE",
-    written: "17 June 2025",
     lines: [
       "my body's a room with every light on.\na radio tuuned to all stations at once.\ni'm trying to sit still\nbut my thoughts spin chairs.",
       "in year seven, i learned\nhow to pretend i was listening.\nnod at the right time,\nunderline the date,\ndraw galaxies on the margins.",
@@ -459,7 +437,6 @@ const poems = [
   },
   {
     title: "Foil, Barcode, Tongue",
-    written: "30 October 2025",
     lines: [
       "Arthur twists the shaker.\nNot king—\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0~~not man~~\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0just a barcode etched\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0into the foil of a snack pack\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0beside the word *potassium*.",
       "It glints in static.\nClean hands.\nClean mouth.\nThe book opens on the wrong page\nand says,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u201cThis is the journey.\u201d\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0(*it lies in perfect grammar.*)",
@@ -475,7 +452,6 @@ const poems = [
   },
   {
     title: "Forgetting the Shape of Me",
-    written: "27 September 2025",
     lines: [
       "Feeling the feelings of others\nfor so long\nthat I am forgetting which\nare mine,",
       "standing in a narrow hallway,\nair tasting of damp wood and old metal,\nfingertips resting on a cold brass hinge\nthat does not open\nbut remembers opening,\npipes muttering behind the walls.",
@@ -506,7 +482,6 @@ const poems = [
   },
   {
     title: "Fuck ICE",
-    written: "25 April 2025",
     lines: [
       "Let's not do the cable-news dance.\nLet's not stand at the podium,\nbeneath the flags and the blue-lit gloss,\nand pretend this is difficult.",
       "It isn't.",
@@ -549,7 +524,6 @@ const poems = [
   },
   {
     title: "Glitch in the Static",
-    written: "1 June 2025",
     lines: [
       "Statistically,\nI shouldn't be here.\nIt's harder to make a whole universe\nthan one stray mind in the dark.\nGiven infinite time,\nbrains like mine\noutnumber planets.",
       "And yet here I am,\ntrying to remember\nif I left the light on in the kitchen\nbefore the cold claims its final flicker.",
@@ -561,7 +535,6 @@ const poems = [
   },
   {
     title: "Group Chat (Muted)",
-    written: "27 July 2025",
     lines: [
       "**Logic:**\ncan we stay on topic",
       "**Emotion:**\nthis *is* the topic",
@@ -607,7 +580,6 @@ const poems = [
   },
   {
     title: "Half the World Away, Yet Here",
-    written: "1 March 2025",
     lines: [
       "I was eleven\nwhen the calendar split\ninto *before* and *after*.",
       "Year 6 ended mid-sentence—\nno SATs, no leavers' day—\njust empty desks,\nforgotten jumpers,\nand the smell of pencil shavings\ntrapped in the dark.",
@@ -626,7 +598,6 @@ const poems = [
   },
   {
     title: "Hedonic Calculus",
-    written: "20 September 2025",
     lines: [
       "This morning,\nI wanted toast.\nBentham whispers: *weigh the pleasures, weigh the pains.*",
       "Pleasure: warmth, crunch,\njam dripping off the edge like a sunrise.\nPain: sticky fingers,\ncrumbs in my bed for the next three weeks.",
@@ -645,7 +616,6 @@ const poems = [
   },
   {
     title: "House, Year 3025",
-    written: "2 December 2025",
     lines: [
       "in 1000 years\nmy house will be",
       "a shuffle of bricks\nhalf asleep\nunder a dune",
@@ -662,7 +632,6 @@ const poems = [
   },
   {
     title: "How Do You Want Me?",
-    written: "22 February 2025",
     lines: [
       "I ask, and you say:\n\"Just be yourself.\"\nAs if I haven't spent years\ntwisting into versions\nof me you might want.",
       "I hold your hand.",
@@ -680,7 +649,6 @@ const poems = [
   },
   {
     title: "How I Stayed Still",
-    written: "23 December 2025",
     lines: [
       "today,\ni\ncouldn't\nget\nout\nof\nbed —\nthe sheet\ncold\nas\nthought",
       "no why\ncame near",
@@ -711,7 +679,6 @@ const poems = [
   },
   {
     title: "How To",
-    written: "2 August 2025",
     lines: [
       "**1. Symptoms:**\n\u00a0\u00a0\u00a0\u00a0You spot two men holding hands.\n\u00a0\u00a0\u00a0\u00a0Your heart attempts a drum solo.\n\u00a0\u00a0\u00a0\u00a0A 90s sitcom laugh track boots up in your skull.",
       "**2. Diagnosis:**\n\u00a0\u00a0\u00a0\u00a0Not an emergency.\n\u00a0\u00a0\u00a0\u00a0Just attraction existing in the open air, like oxygen or pigeons.",
@@ -727,7 +694,6 @@ const poems = [
   },
   {
     title: "I Cherish Fully",
-    written: "6 April 2025",
     lines: [
       "I cherish, fully—\nnot in halves or borrowed time—\nbut like the hush of turning pages\nin the books you've left behind.",
       "I believe\nin dog-eared truths\ncreased between the moments\nwe dared to read each other out loud.",
@@ -738,7 +704,6 @@ const poems = [
   },
   {
     title: "I Don't Owe My Time To Anyone",
-    written: "3 November 2025",
     lines: [
       "I don’t owe my time to anyone.\nNot the bells that split the morning like *ritual*,\nnot the collar biting at my neck like *penance*,\nnot the white walls that smell of bleach and silence,\nnot the corridor clocks that sermonise in seconds,\ncounting out my youth in fluorescent faith.\nThe hum of lights tunnels through thought,\nAnd every tick feels like confession.",
       "They say we earn our freedom by degrees.\nGCSEs: a fraction of choice.\nA Levels: a little more.\nLike believers reward for obedience.\nAs if liberty were *salvation*,\nnot birthright.",
@@ -762,7 +727,6 @@ const poems = [
   },
   {
     title: "I love you",
-    written: "15 January 2026",
     lines: [
       "I love you\nthe way rain loves pavement—\nwithout checing names,\nwithout deciding which stone earns it.",
       "When I say *I love you*\nI don't mean a promise with conditions.\nI don't mean a door\nthat opens only if you say it back.\nI mean what moss means to a wall,\nwhat light means to a window,\nwhat gravity means to dust.",
@@ -785,7 +749,6 @@ const poems = [
   },
   {
     title: "I, The Dictator of the Universe",
-    written: "1 October 2025",
     subtitle: "(a moral thought experiment)",
     lines: [
       "I never wanted the throne.\nIt rose beneath me like gravity,\nthe stars demanded someone\nto decide what burns, and what endures.",
@@ -805,7 +768,6 @@ const poems = [
   },
   {
     title: "Improvisation, Not Itinerary",
-    written: "18 June 2025",
     lines: [
       "Don't audtition for bed and then cast a life.\nDon't hire a heartbeat to fill a role you wrote\nbefore you met the actor.",
       "This isn't functional.\nYou are not a vending machine;\nthere's no slot for tenderness,\nno button marked \"partner — A3.\"",
@@ -819,7 +781,6 @@ const poems = [
   },
   {
     title: "Interactive Learning",
-    written: "30 September 2025",
     lines: [
       "My philosophy teacher said,\nI should be more *interactive*,\nso I threw a paper ball at him.",
       "He caught it.\nPaused.\n*sighed*.",
@@ -835,7 +796,6 @@ const poems = [
   },
   {
     title: "Is there life on Mars?",
-    written: "24 January 2025",
     lines: [
       "Not with mortgages\nor milk left out.",
       "Maybe a microbe\nclinging to dust.",
@@ -845,7 +805,6 @@ const poems = [
   },
   {
     title: "Lilith",
-    written: "26 October 2025",
     lines: [
       "it turns out you weren't a revelation,\njust a recognition.\nsomething I kept circling\nuntil the shape stopped pretending\nit was anything else.",
       "Lilith.\nthe name knows how to sit in my mouth.\nall soft edges.\nno explanation required.\nfeminine in the way breathing is.\nnot decorative.\nnot obedient.",
@@ -860,7 +819,6 @@ const poems = [
   },
   {
     title: "Make Him a Sandwich (Episode 69)",
-    written: "4 December 2025",
     lines: [
       "Hello and welcome\nto the 69th episode \nof the *Make Him a Sandwich* podcast,",
       "hosted by popular conservative pundit\nLilith Foxcroft —\nwhich is really funny,\nbecause I'm definitely not conservative,",
@@ -990,7 +948,6 @@ const poems = [
   },
   {
     title: "None of the Above",
-    written: "16 September 2025",
     lines: [
       "If you expect a *man*—\n(whatever that means)\n—you will be\ndevastatingly.\ndisappointment.",
       "What is a *man*?\na jawline.\na silence.\na violence.\n[none of the above].",
@@ -1163,7 +1120,6 @@ const poems = [
   },
   {
     title: "Parallax",
-    written: "1 August 2025",
     lines: [
       "From the far end of the train\nI am sir.\nUnder the platform's sodium light\nI am miss.\nOn the form where a box wants an X,\nI am error until corrected.",
       "Change the observer; change the result.",
@@ -1568,7 +1524,6 @@ desire.`,
   },
   {
     title: "Taking Off the Label",
-    written: "22 August 2025",
     lines: [
       "She calls the year a bin of receipts—\nsmall proofs of two people—\nand tips it into the dark.\n\"Wasted,\" she says, and the word lands\nlike a lid.",
       "I am still holding the label\nthat cinched my chest: boyfriend,\na collar that glittered then tightened\nuntil breathing felt like a verdict.\nEvery time it buckled, I edited myself:\ndrafts on drafts, sharpened commas,\nkindness proofread by a committe of friends.\nMy heart, meanwhile, ran laps.",
@@ -4773,7 +4728,6 @@ my outline.`,
   },
   {
     title: "Wobblefluff and Bumblebee's Moonlit Jig",
-    written: "3 July 2025",
     lines: [
       `In the pickle-patch beneath violet skies,
 Wobblefluff wobbled on warm spaghetti pies.
@@ -5040,14 +4994,6 @@ function formatPoemStats(poem) {
   return `${stats.lineCount} line${stats.lineCount === 1 ? "" : "s"} · ${stats.wordCount} word${stats.wordCount === 1 ? "" : "s"} · ${stats.readMinutes} min read`;
 }
 
-function formatPoemWrittenDate(poem) {
-  if (!poem?.written) {
-    return "";
-  }
-
-  return `Written ${String(poem.written).trim()}`;
-}
-
 function getNextPoem(poemOrSlug) {
   const slug = typeof poemOrSlug === "string" ? poemOrSlug : getPoemSlug(poemOrSlug);
   const index = poemIndexBySlug.get(slug);
@@ -5269,20 +5215,7 @@ function updateReaderMeta(poem) {
   }
 
   readerMeta.hidden = false;
-  readerMeta.replaceChildren();
-
-  const statsLine = document.createElement("p");
-  statsLine.className = "poem-meta-line";
-  statsLine.textContent = formatPoemStats(poem);
-  readerMeta.append(statsLine);
-
-  const writtenDate = formatPoemWrittenDate(poem);
-  if (writtenDate) {
-    const dateLine = document.createElement("p");
-    dateLine.className = "poem-meta-line poem-meta-date";
-    dateLine.textContent = writtenDate;
-    readerMeta.append(dateLine);
-  }
+  readerMeta.textContent = formatPoemStats(poem);
 }
 
 function updateReaderArrowLink(currentSlug, direction, context = getReaderContextFromSearchParams()) {

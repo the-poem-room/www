@@ -827,8 +827,6 @@ h1 {
 
 .poem-meta {
   margin: 8px 0 0;
-  display: grid;
-  gap: 3px;
   color: var(--muted);
   font-family: var(--sans);
   font-size: var(--label-size);
@@ -836,14 +834,6 @@ h1 {
   letter-spacing: 0.02em;
   font-variant-numeric: tabular-nums;
   text-wrap: balance;
-}
-
-.poem-meta-line {
-  margin: 0;
-}
-
-.poem-meta-date {
-  opacity: 0.82;
 }
 
 h2 {

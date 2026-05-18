@@ -181,14 +181,6 @@ function formatPoemStats(poem) {
   return `${stats.lineCount} line${stats.lineCount === 1 ? "" : "s"} · ${stats.wordCount} word${stats.wordCount === 1 ? "" : "s"} · ${stats.readMinutes} min read`;
 }
 
-function formatPoemWrittenDate(poem) {
-  if (!poem?.written) {
-    return "";
-  }
-
-  return `Written ${String(poem.written).trim()}`;
-}
-
 function renderPoemNavigation(poem) {
   const poemLines = Array.isArray(poem?.lines) ? poem.lines : [];
   const items = poemLines
@@ -309,10 +301,6 @@ function poemPageTemplate(poem, previousPoem, nextPoem) {
   const description = `Read "${title}" in The Poem Room.`;
   const subtitle = poem.subtitle ? renderInlineHtml(String(poem.subtitle)) : "";
   const poemStats = formatPoemStats(poem);
-  const poemWrittenDate = formatPoemWrittenDate(poem);
-  const poemMeta = poemWrittenDate
-    ? `        <div class="poem-meta">\n          <p class="poem-meta-line">${escapeHtml(poemStats)}</p>\n          <p class="poem-meta-line poem-meta-date">${escapeHtml(poemWrittenDate)}</p>\n        </div>`
-    : `        <div class="poem-meta">\n          <p class="poem-meta-line">${escapeHtml(poemStats)}</p>\n        </div>`;
   const previousSlug = previousPoem ? (previousPoem.slug || slugify(previousPoem.title)) : "";
   const nextSlug = nextPoem ? (nextPoem.slug || slugify(nextPoem.title)) : "";
   const previousLink = previousPoem
@@ -422,7 +410,9 @@ ${previousLink}${nextLink}        <div class="reader-top-links">
         <p class="eyebrow">reading room</p>
         <h1 id="poem-title">${escapeHtml(title)}</h1>
         ${subtitle ? `<p class="poem-subtitle">${subtitle}</p>` : ""}
-${poemMeta}
+        <div class="poem-meta">
+          <p class="poem-meta-line">${escapeHtml(poemStats)}</p>
+        </div>
         <div class="reader-actions">
           <button
             class="favourite-button"
