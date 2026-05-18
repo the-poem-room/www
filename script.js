@@ -192,7 +192,7 @@ const poems = [
       "A stream would murmur softly as it lay\nacross the stones, untouched by bright machines.\nThe stars were clearer when we looked away.",
       "We traded sky for signal, earth for steel,\nin every pixelated frame of days gone by.\nI still recall what silence used to say—",
       "The future hums, but never wants to stay.\nIt flickers past through code and fading loops.\nThe stars were clearer when we looked away.",
-      "And thoughe world will fade to screen-washed grey,\nI hold the hush that hummed in softer scenes.\nI still recall what silence used to say—\nthe stars burned clearer when we looked away.",
+      "And though the world will fade to screen-washed grey,\nI hold the hush that hummed in softer scenes.\nI still recall what silence used to say—\nthe stars burned clearer when we looked away.",
       "— Lilith",
     ],
   },
