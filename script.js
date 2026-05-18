@@ -309,6 +309,7 @@ const poems = [
   },
   {
     title: "Children See More",
+    written: "15 March 2025",
     lines: [
       "I once saw a crack\nin the pavement\nand thought maybe\nsomething was trying to escape—\na root,\na ripple,\na hidden word.",
       "Mum said,\n\"It's just the frost,\"\nbut I knew\nsome things split\nbecause they want to grow.",
