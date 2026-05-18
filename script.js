@@ -107,6 +107,7 @@ const poems = [
   },
   {
     title: "A Practical Guide to My Pronouns",
+    written: "9 October 2025",
     lines: [
       "Shall they say *he*?\nWell, yes, they shall, and I'll twitch like a smoke alarm\ncatching whiffs of burnt toast,\nbut not burst into flames.",
       "Shall they say *she*?\nThat one feels like wearing shoes two sizes off:\ntight in the toes, loose in the heel,\nclumsy to walk in, but walkable.",
