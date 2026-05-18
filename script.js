@@ -325,6 +325,7 @@ const poems = [
   },
   {
     title: "Compulsory Existence",
+    written: "2 November 2025",
     lines: [
       "I am told this is good for me.\nThat attendance is education,\nthat education is liberation,\nthat liberation is obedience\nto the timetable.",
       "They call it *freedom*,\nthe freedom to choose between one government-approved route\nand another.\nThe freedom to wear my tie straight,\nto keep my hair bound\nin an acceptable demonstration\nof focus.",
