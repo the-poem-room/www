@@ -4902,7 +4902,7 @@ growing in shadows.`,
       `For one moment
 of stillness—
 in a world
-too loud`,
+too loud.`,
       `And I,
 I was born
 with chlorophyll in my lungs
@@ -4914,7 +4914,7 @@ a song in every breath.`,
 but from the fear
 you'll pull me out
 before I'm ready
-to wake from this dream`,
+to wake from this dream.`,
       `— Lilith`,
     ],
   },
