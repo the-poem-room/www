@@ -941,6 +941,21 @@ h3 {
   margin-top: 20px;
 }
 
+.purpose-heading {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.purpose-heading > div {
+  display: grid;
+  gap: 4px;
+  width: fit-content;
+}
+
+#purpose-title {
+  white-space: nowrap;
+}
+
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
