@@ -365,6 +365,7 @@ const poems = [
   },
   {
     title: "Draft",
+    written: "9 December 2025",
     lines: [
       "This is a love poem.\nThere is no you.\nThere is only the space\nwhere a you might have stood,\nlike a chair pulled out\nand never pushed back in.",
       "This is a protest poem.\nNo one is marching.\nThe signs are all internal,\nwritten in pencil,\nheld up only\nwhen I'm alone.",
