@@ -93,6 +93,7 @@ const poems = [
   },
   {
     title: "A Note Outside the Scale",
+    written: "3 October 2025",
     lines: [
       "I am not a man,\nnor a woman—\nnor half of one pretending to be whole.\nI am GNP:\na balance, an absence,\na body that speaks in shifting pitches,\nsometimes velvet-deep,\nsometimes bright as flutes.",
       "My hair is clean, tied, blonde—\na kind of rebellion against the buzz-cut of expectation.\nMy voice is a compass,\nshifting with the room,\nwith the ears\nthat would try to name me.",
