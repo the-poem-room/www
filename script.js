@@ -3,6 +3,7 @@ const archiveSearch = document.querySelector("[data-archive-search]");
 const archiveSearchStatus = document.querySelector("[data-archive-search-status]");
 const archiveSearchResults = document.querySelector("[data-archive-search-results]");
 const archiveSearchModeButtons = document.querySelectorAll("[data-archive-search-mode-option]");
+const randomPoemButton = document.querySelector("[data-random-poem-button]");
 const archiveEmpty = document.querySelector("[data-archive-empty]");
 const archiveList = document.querySelector("[data-archive-list]");
 const featuredCollectionsList = document.querySelector("[data-featured-collections-list]");
@@ -4991,6 +4992,7 @@ function getPoemPageHref(slug, highlightOrOptions = "") {
     href = appendQueryParam(href, "collectionId", options.collectionId);
   }
 
+  href = appendQueryParam(href, "transition", options.transition || "");
   return appendQueryParam(href, "highlight", options.highlightQuery || "");
 }
 
@@ -5201,6 +5203,27 @@ function updateReaderNavLinks(currentSlug) {
   updateReaderBackLink(currentSlug, context);
   updateReaderArrowLink(currentSlug, "prev", context);
   updateReaderArrowLink(currentSlug, "next", context);
+}
+
+function initializeRandomPoemPageTransition() {
+  if (document.documentElement.dataset.pageTransition !== "random") {
+    return;
+  }
+
+  requestAnimationFrame(() => {
+    document.documentElement.classList.add("is-page-ready");
+  });
+
+  window.requestAnimationFrame(() => {
+    const url = new URL(window.location.href);
+
+    if (!url.searchParams.has("transition")) {
+      return;
+    }
+
+    url.searchParams.delete("transition");
+    window.history.replaceState(null, "", url.toString());
+  });
 }
 
 function normalizePoemHighlightValue(value) {
@@ -6393,6 +6416,49 @@ function initializeArchiveSearchMode() {
   });
 }
 
+function getRandomArchivePoemSlug() {
+  const visibleItems = archiveList ? Array.from(archiveList.querySelectorAll(".archive-item:not([hidden])")) : [];
+  const pool = visibleItems.length
+    ? visibleItems.map((item) => item.dataset.poemSlug || "").filter(Boolean)
+    : sortedPoems.map((poem) => getPoemSlug(poem));
+
+  if (!pool.length) {
+    return null;
+  }
+
+  return pool[Math.floor(Math.random() * pool.length)] || null;
+}
+
+function navigateToRandomPoem() {
+  const slug = getRandomArchivePoemSlug();
+
+  if (!slug) {
+    return;
+  }
+
+  const href = getPoemPageHref(slug, { transition: "random" });
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  document.documentElement.classList.add("is-random-poem-transition");
+
+  if (reduceMotion) {
+    window.location.assign(href);
+    return;
+  }
+
+  window.setTimeout(() => {
+    window.location.assign(href);
+  }, 220);
+}
+
+function initializeRandomPoemButton() {
+  if (!randomPoemButton) {
+    return;
+  }
+
+  randomPoemButton.addEventListener("click", navigateToRandomPoem);
+}
+
 function handleArchivePoemSelection(event) {
   if (!archiveSearch || event.defaultPrevented) {
     return;
@@ -7461,6 +7527,7 @@ function initializePoemPageSearchHighlighting() {
 renderArchive();
 initializeArchiveSearchMode();
 initializeArchiveSearch();
+initializeRandomPoemButton();
 renderFeaturedCollections();
 renderLibrary();
 handleRoute();
@@ -7468,6 +7535,7 @@ scrollToArchiveItemFromHash();
 updateFavouriteButtons();
 handlePendingLibraryTarget();
 initializePoemPageControls();
+initializeRandomPoemPageTransition();
 if (poemPageSlug) {
   updateReaderNavLinks(poemPageSlug);
 }

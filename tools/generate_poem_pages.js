@@ -261,6 +261,14 @@ function poemPageTemplate(poem, previousPoem, nextPoem) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("transition") === "random") {
+          document.documentElement.dataset.pageTransition = "random";
+        }
+      })();
+    </script>
     <meta name="description" content="${escapeHtml(description)}">
     <title>${escapeHtml(title)} · The Poem Room</title>
     <link rel="stylesheet" href="../styles.css">

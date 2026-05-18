@@ -3,6 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("transition") === "random") {
+          document.documentElement.dataset.pageTransition = "random";
+        }
+      })();
+    </script>
     <meta
       name="description"
       content="The Poem Room is a quiet home for poems, notes, collections, and reflective reading."
@@ -330,6 +338,15 @@
             <div class="archive-search-mode" role="group" aria-label="Search mode">
               <button type="button" data-archive-search-mode-option="titles" aria-pressed="true">Titles</button>
               <button type="button" data-archive-search-mode-option="poem-text" aria-pressed="false">Poem text</button>
+            </div>
+            <div class="archive-search-actions">
+              <button
+                type="button"
+                class="button secondary archive-random-button"
+                data-random-poem-button
+              >
+                Random poem
+              </button>
             </div>
             <p
               class="archive-search-status"
