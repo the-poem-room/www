@@ -842,8 +842,7 @@ h3 {
   font-size: var(--body-copy-size);
 }
 
-.section-heading > p,
-.bio-copy p {
+.section-heading > p {
   max-width: 42ch;
 }
 
@@ -1001,7 +1000,8 @@ h3 {
 }
 
 .bio-copy {
-  max-width: 980px;
+  width: 100%;
+  max-width: none;
 }
 
 .bio-intro,
