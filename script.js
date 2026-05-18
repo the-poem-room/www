@@ -277,6 +277,7 @@ const poems = [
   },
   {
     title: "BREAKING: Polite Notices During Catastrophe",
+    written: "29 September 2025",
     slug: "breaking-politce-notices-during-catastrophe",
     lines: [
       "The ticker reads like a shopping list—\nArsenal 3-1,\nactor \"sorry if anyone was offended,\"\nsix thousand confirmed,\nsunny spells by Sunday.",
