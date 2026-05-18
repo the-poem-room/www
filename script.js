@@ -77,6 +77,7 @@ const poems = [
   },
   {
     title: "A Manual for the Modern Messiah",
+    written: "18 July 2025",
     subtitle: "(Instructions by Elon Musk)",
     lines: [
       "Build a rocket.\nBurn the sky.\nPreach green—\nthen mine cobalt \nwith Congolese hands\nyou'll never see.",
