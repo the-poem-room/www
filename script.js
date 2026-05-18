@@ -6459,6 +6459,10 @@ function initializeRandomPoemButton() {
   randomPoemButton.addEventListener("click", navigateToRandomPoem);
 }
 
+function clearRandomPoemTransitionState() {
+  document.documentElement.classList.remove("is-random-poem-transition");
+}
+
 function handleArchivePoemSelection(event) {
   if (!archiveSearch || event.defaultPrevented) {
     return;
@@ -7551,6 +7555,8 @@ window.addEventListener("hashchange", () => {
   scrollToArchiveItemFromHash();
   handleSectionTargetFromHash();
 });
+
+window.addEventListener("pagehide", clearRandomPoemTransitionState);
 
 if (collectionForm) {
   collectionForm.addEventListener("submit", (event) => {
