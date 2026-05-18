@@ -1299,25 +1299,64 @@ h3 {
 }
 
 .archive-random-icon {
-  display: grid;
-  width: 1.8em;
-  height: 1.8em;
-  place-items: center;
-  color: #fffaf7;
-  background: linear-gradient(135deg, #c8799b, #b66fa1);
-  border-radius: 999px;
-  box-shadow: 0 8px 18px rgba(191, 112, 151, 0.22);
-  font-size: 1em;
-  line-height: 1;
+  position: relative;
+  flex: none;
+  width: 1.9em;
+  height: 1.9em;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0)),
+    linear-gradient(135deg, #c8799b, #b66fa1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 0.55em;
+  box-shadow:
+    0 9px 18px rgba(191, 112, 151, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.24);
   transition:
     transform 180ms ease,
     box-shadow 180ms ease;
 }
 
+.archive-random-pip {
+  position: absolute;
+  width: 0.27em;
+  height: 0.27em;
+  background: #fffaf7;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(119, 63, 90, 0.14);
+}
+
+.archive-random-pip--tl {
+  top: 0.38em;
+  left: 0.38em;
+}
+
+.archive-random-pip--tr {
+  top: 0.38em;
+  right: 0.38em;
+}
+
+.archive-random-pip--c {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.archive-random-pip--bl {
+  bottom: 0.38em;
+  left: 0.38em;
+}
+
+.archive-random-pip--br {
+  bottom: 0.38em;
+  right: 0.38em;
+}
+
 .archive-random-button:hover .archive-random-icon,
 .archive-random-button:focus-visible .archive-random-icon {
-  transform: rotate(-8deg) scale(1.05);
-  box-shadow: 0 10px 22px rgba(191, 112, 151, 0.28);
+  transform: rotate(-5deg) scale(1.04);
+  box-shadow:
+    0 11px 24px rgba(191, 112, 151, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.24);
 }
 
 .archive-search-status {
