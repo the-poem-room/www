@@ -380,6 +380,7 @@ const poems = [
   },
   {
     title: "Errata",
+    written: "21 September 2025",
     lines: [
       "The words change—\nmenus swap syllables, street signs trade alphabets;\nhello learns a hundred disguises and still blushes at the door.\nYou carry a pocket of phrases like loose screws,\ntighten what you can, leave the rest to rattle.",
       "The rules change—\nleft becomes right, shoes off / hat on;\nno loitering unless you buy something;\nqueue here; press green; don't touch the oranges.\nA whistle says stop. A bell says go.\nYou learn to nod in the correct language.",
