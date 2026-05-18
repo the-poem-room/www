@@ -140,6 +140,7 @@ const poems = [
   },
   {
     title: "aftersound",
+    written: "2 May 2025",
     lines: [
       "sometimes i forget\nthe shape of your voice\nhow silence\nlearned to sound like you",
       "the air between us\nhas stretched so thin\nit hums",
