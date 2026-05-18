@@ -296,6 +296,7 @@ const poems = [
   },
   {
     title: "Cartography of Shadows",
+    written: "15 October 2025",
     lines: [
       "In Pyongyang,\navenues wide as silence,\nmonuments rehearsed into stone.\nFrom above, the city glows with borrowed light,\nbut inside the dark,\nfamilies barter rice for whispers of truth.\nYet on festival days,\ndrums ripple through the streets,\nneighbours share rice cakes,\nlaughter rising louder than fear.\nAnd still—\neverywhere, a heartbeat resists.",
       "In Gaza,\nwalls rise higher than sky,\na child knots a kite from plastic bags,\nlaunches it above the rubble,\na sky more forgiving than the earth.\nEven here, weddings weave music through alleys,\nchildren race between broken stones,\ntheir joy as defiant as the kite.\nAnd still—\neverywhere, a heartbeat resists.",
