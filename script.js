@@ -185,6 +185,7 @@ const poems = [
   },
   {
     title: "Before the Screens",
+    written: "1 January 2025",
     lines: [
       "I still recall what silence used to say—\nbefore the red lights glowed across our screens.\nThe stars were clearer when we looke away.",
       "We lived like clocks that ticked but lost their way,\nforgetting how the golden hours wane.\nI still recall what silence used to say.",
