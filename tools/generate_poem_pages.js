@@ -121,13 +121,6 @@ function isSignatureLine(text) {
   return unwrapped.startsWith("— ");
 }
 
-function getStanzaLineCount(stanzaText) {
-  return String(stanzaText || "")
-    .split("\n")
-    .filter((line) => String(line || "").trim())
-    .length;
-}
-
 const POEM_READING_WPM = 100;
 
 function stripPoemCountFormatting(text) {
@@ -179,38 +172,6 @@ function getPoemStats(poem) {
 function formatPoemStats(poem) {
   const stats = getPoemStats(poem);
   return `${stats.lineCount} line${stats.lineCount === 1 ? "" : "s"} · ${stats.wordCount} word${stats.wordCount === 1 ? "" : "s"} · ${stats.readMinutes} min read`;
-}
-
-function renderPoemNavigation(poem) {
-  const poemLines = Array.isArray(poem?.lines) ? poem.lines : [];
-  const items = poemLines
-    .map((stanza, index) => {
-      const stanzaText = typeof stanza === "string" ? stanza : String(stanza.text || "");
-      const lineCount = Math.max(1, getStanzaLineCount(stanzaText));
-
-      return `          <button
-            type="button"
-            class="poem-map-button"
-            data-stanza-index="${index}"
-            data-stanza-lines="${lineCount}"
-            aria-label="Jump to stanza ${index + 1}, ${lineCount} line${lineCount === 1 ? "" : "s"}"
-            title="Jump to stanza ${index + 1}"
-          >${"▇".repeat(Math.min(lineCount, 6))}</button>`;
-    })
-    .join("\n");
-
-  return `        <aside class="poem-navigation" data-poem-navigation aria-label="Jump to stanza">
-          <div class="poem-progress" aria-hidden="true">
-            <span class="poem-progress-track"></span>
-            <span class="poem-progress-fill" data-poem-progress-fill></span>
-          </div>
-          <div class="poem-map">
-            <p class="poem-navigation-label">Jump to stanza</p>
-            <div class="poem-map-list" data-poem-map>
-${items}
-            </div>
-          </div>
-        </aside>`;
 }
 
 function renderPoemBody(poem) {
@@ -311,7 +272,7 @@ function poemPageTemplate(poem, previousPoem, nextPoem) {
     : "";
 
   return `<!doctype html>
-<html lang="en" data-theme="dark" data-line-numbers="hide" data-mini-map="hide">
+<html lang="en" data-theme="dark" data-line-numbers="hide">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -391,13 +352,6 @@ function poemPageTemplate(poem, previousPoem, nextPoem) {
               <button type="button" data-line-number-option="show" aria-pressed="false">Show</button>
             </div>
           </div>
-          <div class="settings-row settings-row-stacked">
-            <span>Mini map</span>
-            <div class="mini-map-control" role="group" aria-label="Mini map">
-              <button type="button" data-mini-map-option="hide" aria-pressed="true">Hide</button>
-              <button type="button" data-mini-map-option="show" aria-pressed="false">Show</button>
-            </div>
-          </div>
         </div>
       </div>
     </header>
@@ -432,7 +386,6 @@ ${previousLink}${nextLink}        <div class="reader-top-links">
           </div>
         </div>
         <div class="reader-poem" data-reader-poem>
-${renderPoemNavigation(poem)}
 ${renderPoemBody(poem)}
         </div>
       </article>

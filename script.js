@@ -33,7 +33,6 @@ const settingsPanel = document.querySelector("[data-settings-panel]");
 const fontSizeButtons = document.querySelectorAll("[data-font-size-option]");
 const navModeButtons = document.querySelectorAll("[data-nav-mode-option]");
 const lineNumberButtons = document.querySelectorAll("[data-line-number-option]");
-const miniMapButtons = document.querySelectorAll("[data-mini-map-option]");
 
 const poemPageSlug = document.body?.dataset?.poemSlug || "";
 const POEM_READING_WPM = 100;
@@ -43,12 +42,10 @@ const collectionsKey = "poem-room-collections";
 const fontSizeKey = "poem-room-font-size";
 const navModeKey = "poem-room-nav-mode";
 const lineNumbersKey = "poem-room-line-numbers";
-const miniMapKey = "poem-room-mini-map";
 const archiveSearchModeKey = "poem-room-archive-search-mode";
 const fontSizeOptions = new Set(["small", "normal", "big"]);
 const navModeOptions = new Set(["always-visible", "auto-hide", "hover-top"]);
 const lineNumberOptions = new Set(["show", "hide"]);
-const miniMapOptions = new Set(["show", "hide"]);
 const archiveSearchModeOptions = new Set(["titles", "poem-text"]);
 const sectionTargetHashes = new Set([
   "#top",
@@ -62,8 +59,6 @@ const navRevealZone = 18;
 const headerFitSlack = 28;
 const mobileNavQuery = window.matchMedia("(max-width: 760px)");
 let lastPointerY = Number.POSITIVE_INFINITY;
-let activeReadingRoomNavigation = null;
-let readingRoomNavigationPending = false;
 let headerLayoutUpdatePending = false;
 
 const poems = [
@@ -5402,7 +5397,7 @@ function highlightPoemSearchInRoot(root, query) {
         return NodeFilter.FILTER_REJECT;
       }
 
-      if (parentElement.closest(".poem-line-number, .poem-navigation, .reader-actions, .reader-top-links")) {
+      if (parentElement.closest(".poem-line-number, .reader-actions, .reader-top-links")) {
         return NodeFilter.FILTER_REJECT;
       }
 
@@ -5764,30 +5759,6 @@ function initializeLineNumbers() {
 
 initializeLineNumbers();
 
-function updateMiniMapButtons(mode) {
-  miniMapButtons.forEach((button) => {
-    button.setAttribute("aria-pressed", String(button.dataset.miniMapOption === mode));
-  });
-}
-
-function getSavedMiniMapMode() {
-  const savedMode = localStorage.getItem(miniMapKey);
-  return miniMapOptions.has(savedMode) ? savedMode : "hide";
-}
-
-function setMiniMap(mode) {
-  const nextMode = miniMapOptions.has(mode) ? mode : "hide";
-  document.documentElement.dataset.miniMap = nextMode;
-  localStorage.setItem(miniMapKey, nextMode);
-  updateMiniMapButtons(nextMode);
-}
-
-function initializeMiniMap() {
-  setMiniMap(getSavedMiniMapMode());
-}
-
-initializeMiniMap();
-
 function updateNavModeButtons(mode) {
   navModeButtons.forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.navModeOption === mode));
@@ -5887,12 +5858,6 @@ navModeButtons.forEach((button) => {
 lineNumberButtons.forEach((button) => {
   button.addEventListener("click", () => {
     setLineNumbers(button.dataset.lineNumberOption || "hide");
-  });
-});
-
-miniMapButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    setMiniMap(button.dataset.miniMapOption || "show");
   });
 });
 
@@ -7210,65 +7175,6 @@ function createPoemLineElement(
   return line;
 }
 
-function getStanzaLineCount(stanzaText) {
-  return String(stanzaText || "")
-    .split("\n")
-    .filter((line) => String(line || "").trim())
-    .length;
-}
-
-function createPoemNavigation(poem) {
-  const poemLines = Array.isArray(poem?.lines) ? poem.lines : [];
-  const aside = document.createElement("aside");
-  aside.className = "poem-navigation";
-  aside.setAttribute("data-poem-navigation", "");
-  aside.setAttribute("aria-label", "Jump to stanza");
-
-  const progress = document.createElement("div");
-  progress.className = "poem-progress";
-  progress.setAttribute("aria-hidden", "true");
-
-  const track = document.createElement("span");
-  track.className = "poem-progress-track";
-
-  const fill = document.createElement("span");
-  fill.className = "poem-progress-fill";
-  fill.setAttribute("data-poem-progress-fill", "");
-
-  const map = document.createElement("div");
-  map.className = "poem-map";
-
-  const label = document.createElement("p");
-  label.className = "poem-navigation-label";
-  label.textContent = "Jump to stanza";
-
-  const list = document.createElement("div");
-  list.className = "poem-map-list";
-  list.setAttribute("data-poem-map", "");
-
-  poemLines.forEach((stanza, index) => {
-    const stanzaText = typeof stanza === "string" ? stanza : String(stanza.text || "");
-    const lineCount = Math.max(1, getStanzaLineCount(stanzaText));
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "poem-map-button";
-    button.dataset.stanzaIndex = String(index);
-    button.dataset.stanzaLines = String(lineCount);
-    button.setAttribute(
-      "aria-label",
-      `Jump to stanza ${index + 1}, ${lineCount} line${lineCount === 1 ? "" : "s"}`
-    );
-    button.title = `Jump to stanza ${index + 1}`;
-    button.textContent = "▇".repeat(Math.min(lineCount, 6));
-    list.append(button);
-  });
-
-  progress.append(track, fill);
-  map.append(label, list);
-  aside.append(progress, map);
-  return aside;
-}
-
 function createPoemBody(poem) {
   const poemLines = Array.isArray(poem?.lines) ? poem.lines : [];
   const isBiblicalPoem = getPoemSlug(poem) === "the-book-of-ironicus";
@@ -7327,99 +7233,6 @@ function createPoemBody(poem) {
   return container;
 }
 
-function updateReadingRoomNavigationState() {
-  if (!activeReadingRoomNavigation) {
-    return;
-  }
-
-  const { nav, fill, buttons, stanzas } = activeReadingRoomNavigation;
-
-  if (!nav || !fill || !stanzas.length) {
-    return;
-  }
-
-  const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 1;
-  const headerHeight = siteHeader?.offsetHeight || 0;
-  const topOffset = headerHeight + 28;
-  const firstRect = stanzas[0].getBoundingClientRect();
-  const lastRect = stanzas[stanzas.length - 1].getBoundingClientRect();
-  const start = firstRect.top + window.scrollY - topOffset;
-  const end = lastRect.bottom + window.scrollY - topOffset;
-  const poemHeight = Math.max(end - start, 1);
-  const travel = Math.max(poemHeight - viewportHeight * 0.35, 1);
-  const progress = poemHeight <= viewportHeight ? 1 : Math.min(1, Math.max(0, (window.scrollY - start) / travel));
-
-  fill.style.transform = `scaleY(${progress})`;
-  fill.parentElement?.style.setProperty("--poem-progress", String(progress));
-
-  let activeIndex = 0;
-  const activationLine = viewportHeight * 0.34;
-
-  stanzas.forEach((stanza, index) => {
-    const rect = stanza.getBoundingClientRect();
-    if (rect.top <= activationLine) {
-      activeIndex = index;
-    }
-  });
-
-  buttons.forEach((button) => {
-    const isActive = Number(button.dataset.stanzaIndex) === activeIndex;
-    button.setAttribute("aria-current", isActive ? "true" : "false");
-  });
-}
-
-function scheduleReadingRoomNavigationUpdate() {
-  if (readingRoomNavigationPending) {
-    return;
-  }
-
-  readingRoomNavigationPending = true;
-  window.requestAnimationFrame(() => {
-    readingRoomNavigationPending = false;
-    updateReadingRoomNavigationState();
-  });
-}
-
-function mountReadingRoomNavigation(root) {
-  const nav = root?.querySelector("[data-poem-navigation]");
-  const body = root?.querySelector("[data-reader-poem-body]");
-
-  if (!nav || !body) {
-    activeReadingRoomNavigation = null;
-    return;
-  }
-
-  const fill = nav.querySelector("[data-poem-progress-fill]");
-  const buttons = Array.from(nav.querySelectorAll("[data-stanza-index]"));
-  const stanzas = Array.from(body.querySelectorAll(".poem-stanza[data-stanza-index]"));
-
-  if (!fill || !buttons.length || !stanzas.length) {
-    activeReadingRoomNavigation = null;
-    return;
-  }
-
-  if (!nav.dataset.boundNavigation) {
-    nav.addEventListener("click", (event) => {
-      const button = event.target.closest("button[data-stanza-index]");
-      if (!button) {
-        return;
-      }
-
-      const stanzaIndex = Number(button.dataset.stanzaIndex);
-      const target = body.querySelector(`.poem-stanza[data-stanza-index="${stanzaIndex}"]`);
-      if (!target) {
-        return;
-      }
-
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-    nav.dataset.boundNavigation = "true";
-  }
-
-  activeReadingRoomNavigation = { root, nav, fill, buttons, stanzas, body };
-  updateReadingRoomNavigationState();
-}
-
 function renderPoem(poem) {
   if (!reader || !readerTitle || !readerPoem || !readerActions) {
     return;
@@ -7441,8 +7254,7 @@ function renderPoem(poem) {
   readerActions.append(createFavouriteButton(slug, poem.title));
   readerActions.append(createCollectionControl(slug));
   updateReaderNavLinks(slug);
-  readerPoem.append(createPoemNavigation(poem), createPoemBody(poem));
-  mountReadingRoomNavigation(readerPoem);
+  readerPoem.append(createPoemBody(poem));
   applyActivePoemTextHighlight();
 
   reader.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -7470,7 +7282,6 @@ function refreshReaderActions() {
   readerActions.append(createFavouriteButton(slug, poem.title));
   readerActions.append(createCollectionControl(slug));
   updateReaderNavLinks(slug);
-  mountReadingRoomNavigation(readerPoem);
 }
 
 function handleRoute() {
@@ -7569,7 +7380,6 @@ initializePoemPageControls();
 if (poemPageSlug) {
   updateReaderNavLinks(poemPageSlug);
 }
-mountReadingRoomNavigation(readerPoem);
 initializePoemPageSearchHighlighting();
 handleSectionTargetFromHash();
 
@@ -7649,6 +7459,3 @@ sectionJumpLinks.forEach((link) => {
     scrollToSectionTarget(hash);
   });
 });
-
-window.addEventListener("scroll", scheduleReadingRoomNavigationUpdate, { passive: true });
-window.addEventListener("resize", scheduleReadingRoomNavigationUpdate, { passive: true });
