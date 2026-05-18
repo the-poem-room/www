@@ -1410,7 +1410,12 @@ h3 {
 }
 
 #featured-collections-title {
-  white-space: var(--featured-collections-title-whitespace);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.03em;
+  white-space: normal;
+  line-height: 0.94;
 }
 
 .featured-collections-list {
