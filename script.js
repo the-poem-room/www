@@ -4992,7 +4992,6 @@ function getPoemPageHref(slug, highlightOrOptions = "") {
     href = appendQueryParam(href, "collectionId", options.collectionId);
   }
 
-  href = appendQueryParam(href, "transition", options.transition || "");
   return appendQueryParam(href, "highlight", options.highlightQuery || "");
 }
 
@@ -5203,27 +5202,6 @@ function updateReaderNavLinks(currentSlug) {
   updateReaderBackLink(currentSlug, context);
   updateReaderArrowLink(currentSlug, "prev", context);
   updateReaderArrowLink(currentSlug, "next", context);
-}
-
-function initializeRandomPoemPageTransition() {
-  if (document.documentElement.dataset.pageTransition !== "random") {
-    return;
-  }
-
-  requestAnimationFrame(() => {
-    document.documentElement.classList.add("is-page-ready");
-  });
-
-  window.requestAnimationFrame(() => {
-    const url = new URL(window.location.href);
-
-    if (!url.searchParams.has("transition")) {
-      return;
-    }
-
-    url.searchParams.delete("transition");
-    window.history.replaceState(null, "", url.toString());
-  });
 }
 
 function normalizePoemHighlightValue(value) {
@@ -6436,19 +6414,8 @@ function navigateToRandomPoem() {
     return;
   }
 
-  const href = getPoemPageHref(slug, { transition: "random" });
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  document.documentElement.classList.add("is-random-poem-transition");
-
-  if (reduceMotion) {
-    window.location.assign(href);
-    return;
-  }
-
-  window.setTimeout(() => {
-    window.location.assign(href);
-  }, 220);
+  const href = getPoemPageHref(slug);
+  window.location.assign(href);
 }
 
 function initializeRandomPoemButton() {
@@ -6457,10 +6424,6 @@ function initializeRandomPoemButton() {
   }
 
   randomPoemButton.addEventListener("click", navigateToRandomPoem);
-}
-
-function clearRandomPoemTransitionState() {
-  document.documentElement.classList.remove("is-random-poem-transition");
 }
 
 function handleArchivePoemSelection(event) {
@@ -7539,7 +7502,6 @@ scrollToArchiveItemFromHash();
 updateFavouriteButtons();
 handlePendingLibraryTarget();
 initializePoemPageControls();
-initializeRandomPoemPageTransition();
 if (poemPageSlug) {
   updateReaderNavLinks(poemPageSlug);
 }
@@ -7555,8 +7517,6 @@ window.addEventListener("hashchange", () => {
   scrollToArchiveItemFromHash();
   handleSectionTargetFromHash();
 });
-
-window.addEventListener("pagehide", clearRandomPoemTransitionState);
 
 if (collectionForm) {
   collectionForm.addEventListener("submit", (event) => {
