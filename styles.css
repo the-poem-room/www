@@ -955,6 +955,21 @@ h3 {
   white-space: nowrap;
 }
 
+.archive-heading {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.archive-heading > div {
+  display: grid;
+  gap: 4px;
+  width: fit-content;
+}
+
+#poems-title {
+  white-space: nowrap;
+}
+
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1440,6 +1455,10 @@ h3 {
 
 #featured-collections-title {
   white-space: nowrap;
+}
+
+.featured-collections-heading > p {
+  max-width: none;
 }
 
 .featured-collections-list {
