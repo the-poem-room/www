@@ -1495,6 +1495,7 @@ h3 {
   font-size: var(--collection-title-size);
   font-weight: 700;
   letter-spacing: 0.03em;
+  text-align: center;
   text-wrap: balance;
 }
 
