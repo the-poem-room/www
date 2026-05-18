@@ -173,6 +173,7 @@ const poems = [
   },
   {
     title: "Alpha by Algorithm",
+    written: "17 June 2025",
     lines: [
       "He speaks in clips, in kicks, in clicks,\nin hustler creeds and party tricks.\nHe growls of war, of weight, of wealth—\nbut shouts the loudest at himself.",
       "He barks \"You're weak!\"—a schoolyard sneer,\nfrom behind sunglasses and fear.\nA temple built on abs and flash,\na god of protein shakes and cash.",
