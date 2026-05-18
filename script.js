@@ -410,6 +410,7 @@ const poems = [
   },
   {
     title: "Factory Hits",
+    written: "14 April 2025",
     lines: [
       "The crowd swears Taylor bled it out herself,\neach comma wrung from heartbreak.\nTheh crowd swears Ed hummed his hook in the shower,\nand the shampoo bottle clapped.",
       "But really—\nit's ten Swedes in a windowless room,\narguing whether \"oh-oh-oh\"\nshould come before or after \"baby.\"\nThere's a spreadsheet for syllables.\nThere's a quota for metaphors.\nThere's a dartboard labeled *bridge*.",
