@@ -69,6 +69,7 @@ let headerLayoutUpdatePending = false;
 const poems = [
   {
     title: "a broken metronome",
+    written: "19th August 2025",
     lines: [
       "click. click—\nthen silence.\nA room holds its breath like a barline stretched thin.\nI count with my ribs, find four in the flutter of three.\nThe lamp hums a shaky tempo; rain plays triplets on glass.\nI pencil a beat on the desk, wood answering skin.\nTime is elastic when no one's watching.\nI practice the piece that won't still\nuntil the ending learns to arrive\nFashionably late, but exactly right.",
       "*— Lilith*",
@@ -4994,6 +4995,14 @@ function formatPoemStats(poem) {
   return `${stats.lineCount} line${stats.lineCount === 1 ? "" : "s"} · ${stats.wordCount} word${stats.wordCount === 1 ? "" : "s"} · ${stats.readMinutes} min read`;
 }
 
+function formatPoemWrittenDate(poem) {
+  if (!poem?.written) {
+    return "";
+  }
+
+  return `Written ${String(poem.written).trim()}`;
+}
+
 function getNextPoem(poemOrSlug) {
   const slug = typeof poemOrSlug === "string" ? poemOrSlug : getPoemSlug(poemOrSlug);
   const index = poemIndexBySlug.get(slug);
@@ -5215,7 +5224,20 @@ function updateReaderMeta(poem) {
   }
 
   readerMeta.hidden = false;
-  readerMeta.textContent = formatPoemStats(poem);
+  readerMeta.replaceChildren();
+
+  const statsLine = document.createElement("p");
+  statsLine.className = "poem-meta-line";
+  statsLine.textContent = formatPoemStats(poem);
+  readerMeta.append(statsLine);
+
+  const writtenDate = formatPoemWrittenDate(poem);
+  if (writtenDate) {
+    const dateLine = document.createElement("p");
+    dateLine.className = "poem-meta-line poem-meta-date";
+    dateLine.textContent = writtenDate;
+    readerMeta.append(dateLine);
+  }
 }
 
 function updateReaderArrowLink(currentSlug, direction, context = getReaderContextFromSearchParams()) {
