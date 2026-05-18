@@ -825,6 +825,17 @@ h1 {
   line-height: 1.55;
 }
 
+.poem-meta {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: var(--label-size);
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+  text-wrap: balance;
+}
+
 h2 {
   font-size: var(--section-title-size);
   line-height: 1.12;

@@ -128,6 +128,59 @@ function getStanzaLineCount(stanzaText) {
     .length;
 }
 
+const POEM_READING_WPM = 100;
+
+function stripPoemCountFormatting(text) {
+  return String(text || "").replace(/(\*\*\*|\*\*|\*|~~)/g, "");
+}
+
+function countPoemWords(text) {
+  const matches = stripPoemCountFormatting(text).match(/[\p{L}\p{N}]+(?:[’'\-][\p{L}\p{N}]+)*/gu);
+  return matches ? matches.length : 0;
+}
+
+function getPoemStats(poem) {
+  const poemLines = Array.isArray(poem?.lines) ? poem.lines : [];
+  let lineCount = 0;
+  let wordCount = 0;
+
+  poemLines.forEach((stanza, stanzaIndex) => {
+    const stanzaText = typeof stanza === "string" ? stanza : String(stanza.text || "");
+    const stanzaLines = stanzaText.split("\n");
+
+    stanzaLines.forEach((line, lineIndex) => {
+      const trimmed = String(line || "").trim();
+
+      if (!trimmed) {
+        return;
+      }
+
+      const isSignature =
+        stanzaIndex === poemLines.length - 1 &&
+        lineIndex === stanzaLines.length - 1 &&
+        isSignatureLine(line);
+
+      if (isSignature) {
+        return;
+      }
+
+      lineCount += 1;
+      wordCount += countPoemWords(line);
+    });
+  });
+
+  return {
+    lineCount,
+    wordCount,
+    readMinutes: Math.max(1, Math.ceil(wordCount / POEM_READING_WPM)),
+  };
+}
+
+function formatPoemStats(poem) {
+  const stats = getPoemStats(poem);
+  return `${stats.lineCount} line${stats.lineCount === 1 ? "" : "s"} · ${stats.wordCount} word${stats.wordCount === 1 ? "" : "s"} · ${stats.readMinutes} min read`;
+}
+
 function renderPoemNavigation(poem) {
   const poemLines = Array.isArray(poem?.lines) ? poem.lines : [];
   const items = poemLines
@@ -247,6 +300,7 @@ function poemPageTemplate(poem, previousPoem, nextPoem) {
   const slug = poem.slug || slugify(title);
   const description = `Read "${title}" in The Poem Room.`;
   const subtitle = poem.subtitle ? renderInlineHtml(String(poem.subtitle)) : "";
+  const poemStats = formatPoemStats(poem);
   const previousSlug = previousPoem ? (previousPoem.slug || slugify(previousPoem.title)) : "";
   const nextSlug = nextPoem ? (nextPoem.slug || slugify(nextPoem.title)) : "";
   const previousLink = previousPoem
@@ -356,6 +410,7 @@ ${previousLink}${nextLink}        <div class="reader-top-links">
         <p class="eyebrow">reading room</p>
         <h1 id="poem-title">${escapeHtml(title)}</h1>
         ${subtitle ? `<p class="poem-subtitle">${subtitle}</p>` : ""}
+        <p class="poem-meta">${escapeHtml(poemStats)}</p>
         <div class="reader-actions">
           <button
             class="favourite-button"

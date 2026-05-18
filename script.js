@@ -10,6 +10,7 @@ const featuredCollectionsList = document.querySelector("[data-featured-collectio
 const reader = document.querySelector("#poem-reader");
 const readerTitle = document.querySelector("[data-reader-title]");
 const readerSubtitle = document.querySelector("[data-reader-subtitle]");
+const readerMeta = document.querySelector("[data-reader-meta]");
 const readerPoem = document.querySelector("[data-reader-poem]");
 const readerClose = document.querySelector("[data-reader-close]");
 const readerActions = document.querySelector("[data-reader-actions]");
@@ -35,6 +36,7 @@ const lineNumberButtons = document.querySelectorAll("[data-line-number-option]")
 const miniMapButtons = document.querySelectorAll("[data-mini-map-option]");
 
 const poemPageSlug = document.body?.dataset?.poemSlug || "";
+const POEM_READING_WPM = 100;
 const favouritesKey = "poem-room-favourites";
 const favouriteOrderKey = "poem-room-favourite-order";
 const collectionsKey = "poem-room-collections";
@@ -4941,6 +4943,57 @@ function getPoemSlug(poem) {
   return poem.slug || slugify(poem.title);
 }
 
+function stripPoemCountFormatting(text) {
+  return String(text || "").replace(/(\*\*\*|\*\*|\*|~~)/g, "");
+}
+
+function countPoemWords(text) {
+  const matches = stripPoemCountFormatting(text).match(/[\p{L}\p{N}]+(?:[’'\-][\p{L}\p{N}]+)*/gu);
+  return matches ? matches.length : 0;
+}
+
+function getPoemStats(poem) {
+  const poemLines = Array.isArray(poem?.lines) ? poem.lines : [];
+  let lineCount = 0;
+  let wordCount = 0;
+
+  poemLines.forEach((stanza, stanzaIndex) => {
+    const stanzaText = typeof stanza === "string" ? stanza : String(stanza.text || "");
+    const stanzaLines = stanzaText.split("\n");
+
+    stanzaLines.forEach((line, lineIndex) => {
+      const trimmed = String(line || "").trim();
+
+      if (!trimmed) {
+        return;
+      }
+
+      const isSignature =
+        stanzaIndex === poemLines.length - 1 &&
+        lineIndex === stanzaLines.length - 1 &&
+        isSignatureLine(line);
+
+      if (isSignature) {
+        return;
+      }
+
+      lineCount += 1;
+      wordCount += countPoemWords(line);
+    });
+  });
+
+  return {
+    lineCount,
+    wordCount,
+    readMinutes: Math.max(1, Math.ceil(wordCount / POEM_READING_WPM)),
+  };
+}
+
+function formatPoemStats(poem) {
+  const stats = getPoemStats(poem);
+  return `${stats.lineCount} line${stats.lineCount === 1 ? "" : "s"} · ${stats.wordCount} word${stats.wordCount === 1 ? "" : "s"} · ${stats.readMinutes} min read`;
+}
+
 function getNextPoem(poemOrSlug) {
   const slug = typeof poemOrSlug === "string" ? poemOrSlug : getPoemSlug(poemOrSlug);
   const index = poemIndexBySlug.get(slug);
@@ -5154,6 +5207,15 @@ function updateReaderBackLink(currentSlug, context = getReaderContextFromSearchP
   backLink.href = details.href;
   backLink.title = details.text;
   backLink.setAttribute("aria-label", details.text);
+}
+
+function updateReaderMeta(poem) {
+  if (!readerMeta || !poem) {
+    return;
+  }
+
+  readerMeta.hidden = false;
+  readerMeta.textContent = formatPoemStats(poem);
 }
 
 function updateReaderArrowLink(currentSlug, direction, context = getReaderContextFromSearchParams()) {
@@ -7373,6 +7435,7 @@ function renderPoem(poem) {
       appendFormattedText(readerSubtitle, poem.subtitle);
     }
   }
+  updateReaderMeta(poem);
   readerPoem.innerHTML = "";
   readerActions.innerHTML = "";
   readerActions.append(createFavouriteButton(slug, poem.title));
@@ -7401,6 +7464,7 @@ function refreshReaderActions() {
       appendFormattedText(readerSubtitle, poem.subtitle);
     }
   }
+  updateReaderMeta(poem);
 
   readerActions.innerHTML = "";
   readerActions.append(createFavouriteButton(slug, poem.title));
