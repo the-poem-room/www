@@ -475,6 +475,7 @@ const poems = [
   },
   {
     title: "Forgetting the Shape of Me",
+    written: "27 September 2025",
     lines: [
       "Feeling the feelings of others\nfor so long\nthat I am forgetting which\nare mine,",
       "standing in a narrow hallway,\nair tasting of damp wood and old metal,\nfingertips resting on a cold brass hinge\nthat does not open\nbut remembers opening,\npipes muttering behind the walls.",
@@ -505,6 +506,7 @@ const poems = [
   },
   {
     title: "Fuck ICE",
+    written: "25 April 2025",
     lines: [
       "Let's not do the cable-news dance.\nLet's not stand at the podium,\nbeneath the flags and the blue-lit gloss,\nand pretend this is difficult.",
       "It isn't.",
@@ -547,6 +549,7 @@ const poems = [
   },
   {
     title: "Glitch in the Static",
+    written: "1 June 2025",
     lines: [
       "Statistically,\nI shouldn't be here.\nIt's harder to make a whole universe\nthan one stray mind in the dark.\nGiven infinite time,\nbrains like mine\noutnumber planets.",
       "And yet here I am,\ntrying to remember\nif I left the light on in the kitchen\nbefore the cold claims its final flicker.",
@@ -558,6 +561,7 @@ const poems = [
   },
   {
     title: "Group Chat (Muted)",
+    written: "27 July 2025",
     lines: [
       "**Logic:**\ncan we stay on topic",
       "**Emotion:**\nthis *is* the topic",
@@ -603,6 +607,7 @@ const poems = [
   },
   {
     title: "Half the World Away, Yet Here",
+    written: "1 March 2025",
     lines: [
       "I was eleven\nwhen the calendar split\ninto *before* and *after*.",
       "Year 6 ended mid-sentence—\nno SATs, no leavers' day—\njust empty desks,\nforgotten jumpers,\nand the smell of pencil shavings\ntrapped in the dark.",
@@ -621,6 +626,7 @@ const poems = [
   },
   {
     title: "Hedonic Calculus",
+    written: "20 September 2025",
     lines: [
       "This morning,\nI wanted toast.\nBentham whispers: *weigh the pleasures, weigh the pains.*",
       "Pleasure: warmth, crunch,\njam dripping off the edge like a sunrise.\nPain: sticky fingers,\ncrumbs in my bed for the next three weeks.",
@@ -639,6 +645,7 @@ const poems = [
   },
   {
     title: "House, Year 3025",
+    written: "2 December 2025",
     lines: [
       "in 1000 years\nmy house will be",
       "a shuffle of bricks\nhalf asleep\nunder a dune",
@@ -655,6 +662,7 @@ const poems = [
   },
   {
     title: "How Do You Want Me?",
+    written: "22 February 2025",
     lines: [
       "I ask, and you say:\n\"Just be yourself.\"\nAs if I haven't spent years\ntwisting into versions\nof me you might want.",
       "I hold your hand.",
@@ -672,6 +680,7 @@ const poems = [
   },
   {
     title: "How I Stayed Still",
+    written: "23 December 2025",
     lines: [
       "today,\ni\ncouldn't\nget\nout\nof\nbed —\nthe sheet\ncold\nas\nthought",
       "no why\ncame near",
@@ -702,6 +711,7 @@ const poems = [
   },
   {
     title: "How To",
+    written: "2 August 2025",
     lines: [
       "**1. Symptoms:**\n\u00a0\u00a0\u00a0\u00a0You spot two men holding hands.\n\u00a0\u00a0\u00a0\u00a0Your heart attempts a drum solo.\n\u00a0\u00a0\u00a0\u00a0A 90s sitcom laugh track boots up in your skull.",
       "**2. Diagnosis:**\n\u00a0\u00a0\u00a0\u00a0Not an emergency.\n\u00a0\u00a0\u00a0\u00a0Just attraction existing in the open air, like oxygen or pigeons.",
@@ -717,6 +727,7 @@ const poems = [
   },
   {
     title: "I Cherish Fully",
+    written: "6 April 2025",
     lines: [
       "I cherish, fully—\nnot in halves or borrowed time—\nbut like the hush of turning pages\nin the books you've left behind.",
       "I believe\nin dog-eared truths\ncreased between the moments\nwe dared to read each other out loud.",
@@ -727,6 +738,7 @@ const poems = [
   },
   {
     title: "I Don't Owe My Time To Anyone",
+    written: "3 November 2025",
     lines: [
       "I don’t owe my time to anyone.\nNot the bells that split the morning like *ritual*,\nnot the collar biting at my neck like *penance*,\nnot the white walls that smell of bleach and silence,\nnot the corridor clocks that sermonise in seconds,\ncounting out my youth in fluorescent faith.\nThe hum of lights tunnels through thought,\nAnd every tick feels like confession.",
       "They say we earn our freedom by degrees.\nGCSEs: a fraction of choice.\nA Levels: a little more.\nLike believers reward for obedience.\nAs if liberty were *salvation*,\nnot birthright.",
@@ -750,6 +762,7 @@ const poems = [
   },
   {
     title: "I love you",
+    written: "15 January 2026",
     lines: [
       "I love you\nthe way rain loves pavement—\nwithout checing names,\nwithout deciding which stone earns it.",
       "When I say *I love you*\nI don't mean a promise with conditions.\nI don't mean a door\nthat opens only if you say it back.\nI mean what moss means to a wall,\nwhat light means to a window,\nwhat gravity means to dust.",
@@ -772,6 +785,7 @@ const poems = [
   },
   {
     title: "I, The Dictator of the Universe",
+    written: "1 October 2025",
     subtitle: "(a moral thought experiment)",
     lines: [
       "I never wanted the throne.\nIt rose beneath me like gravity,\nthe stars demanded someone\nto decide what burns, and what endures.",
@@ -791,6 +805,7 @@ const poems = [
   },
   {
     title: "Improvisation, Not Itinerary",
+    written: "18 June 2025",
     lines: [
       "Don't audtition for bed and then cast a life.\nDon't hire a heartbeat to fill a role you wrote\nbefore you met the actor.",
       "This isn't functional.\nYou are not a vending machine;\nthere's no slot for tenderness,\nno button marked \"partner — A3.\"",
@@ -804,6 +819,7 @@ const poems = [
   },
   {
     title: "Interactive Learning",
+    written: "30 September 2025",
     lines: [
       "My philosophy teacher said,\nI should be more *interactive*,\nso I threw a paper ball at him.",
       "He caught it.\nPaused.\n*sighed*.",
@@ -819,6 +835,7 @@ const poems = [
   },
   {
     title: "Is there life on Mars?",
+    written: "24 January 2025",
     lines: [
       "Not with mortgages\nor milk left out.",
       "Maybe a microbe\nclinging to dust.",
@@ -828,6 +845,7 @@ const poems = [
   },
   {
     title: "Lilith",
+    written: "26 October 2025",
     lines: [
       "it turns out you weren't a revelation,\njust a recognition.\nsomething I kept circling\nuntil the shape stopped pretending\nit was anything else.",
       "Lilith.\nthe name knows how to sit in my mouth.\nall soft edges.\nno explanation required.\nfeminine in the way breathing is.\nnot decorative.\nnot obedient.",
@@ -842,6 +860,7 @@ const poems = [
   },
   {
     title: "Make Him a Sandwich (Episode 69)",
+    written: "4 December 2025",
     lines: [
       "Hello and welcome\nto the 69th episode \nof the *Make Him a Sandwich* podcast,",
       "hosted by popular conservative pundit\nLilith Foxcroft —\nwhich is really funny,\nbecause I'm definitely not conservative,",
@@ -971,6 +990,7 @@ const poems = [
   },
   {
     title: "None of the Above",
+    written: "16 September 2025",
     lines: [
       "If you expect a *man*—\n(whatever that means)\n—you will be\ndevastatingly.\ndisappointment.",
       "What is a *man*?\na jawline.\na silence.\na violence.\n[none of the above].",
@@ -1143,6 +1163,7 @@ const poems = [
   },
   {
     title: "Parallax",
+    written: "1 August 2025",
     lines: [
       "From the far end of the train\nI am sir.\nUnder the platform's sodium light\nI am miss.\nOn the form where a box wants an X,\nI am error until corrected.",
       "Change the observer; change the result.",
@@ -1547,6 +1568,7 @@ desire.`,
   },
   {
     title: "Taking Off the Label",
+    written: "22 August 2025",
     lines: [
       "She calls the year a bin of receipts—\nsmall proofs of two people—\nand tips it into the dark.\n\"Wasted,\" she says, and the word lands\nlike a lid.",
       "I am still holding the label\nthat cinched my chest: boyfriend,\na collar that glittered then tightened\nuntil breathing felt like a verdict.\nEvery time it buckled, I edited myself:\ndrafts on drafts, sharpened commas,\nkindness proofread by a committe of friends.\nMy heart, meanwhile, ran laps.",
@@ -4751,6 +4773,7 @@ my outline.`,
   },
   {
     title: "Wobblefluff and Bumblebee's Moonlit Jig",
+    written: "3 July 2025",
     lines: [
       `In the pickle-patch beneath violet skies,
 Wobblefluff wobbled on warm spaghetti pies.
