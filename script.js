@@ -443,6 +443,7 @@ const poems = [
   },
   {
     title: "FIELD GUIDE",
+    written: "17 June 2025",
     lines: [
       "my body's a room with every light on.\na radio tuuned to all stations at once.\ni'm trying to sit still\nbut my thoughts spin chairs.",
       "in year seven, i learned\nhow to pretend i was listening.\nnod at the right time,\nunderline the date,\ndraw galaxies on the margins.",
