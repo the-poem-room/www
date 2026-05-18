@@ -127,6 +127,7 @@ const poems = [
   },
   {
     title: "Ad Approved by the Algorithm",
+    written: "14 July 2025",
     lines: [
       "Welcome, child, to **BattleTits3**,\nAn \"educational\" game (for free!)\nWhere warriors jiggle to earn their place\nIn Candy Kingdom's sacred space.\nInstall now! No age check here—\nJust swipe the add and click \"appear.\"",
       "Scroll again and you shall find\nA quiz to help you \"know your mind.\"\n\"Do you like green?\" You're probably gay.\n\"Do bees distract you?\" ADHD today!\n\"Are you sad sometimes?\" Oh, that's autism—\nDiagnosed by **Jeff's Brain Prism™**.",
