@@ -1418,22 +1418,12 @@ h3 {
 }
 
 #featured-collections-title {
-  display: grid;
-  width: fit-content;
-  gap: 0.08em;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.03em;
   white-space: normal;
-  line-height: 0.98;
-}
-
-#featured-collections-title span:first-child {
-  color: var(--muted);
-  font-size: 0.82em;
-  letter-spacing: 0.05em;
-}
-
-#featured-collections-title span:last-child {
-  line-height: 1.02;
+  line-height: 0.94;
 }
 
 .featured-collections-list {
