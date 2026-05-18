@@ -5719,6 +5719,7 @@ function setFontSize(size, { preserveScrollPosition = false } = {}) {
     });
 
     scheduleHeaderLayoutModeUpdate();
+    scheduleCollectionMenuPositioning();
   };
 
   if (preserveScrollPosition) {
@@ -6520,10 +6521,12 @@ function createCollectionMenu(slug) {
   panel.hidden = true;
 
   button.addEventListener("click", () => {
-    const shouldOpen = panel.hidden;
+    if (panel.hidden) {
+      openCollectionMenu(button, panel);
+      return;
+    }
+
     closeCollectionMenus();
-    panel.hidden = !shouldOpen;
-    button.setAttribute("aria-expanded", String(shouldOpen));
   });
 
   wrapper.append(button);
@@ -6533,13 +6536,98 @@ function createCollectionMenu(slug) {
   return wrapper;
 }
 
+function openCollectionMenu(button, panel) {
+  closeCollectionMenus();
+  panel.hidden = false;
+  button.setAttribute("aria-expanded", "true");
+  positionCollectionMenuPanel(panel);
+}
+
 function closeCollectionMenus() {
   document.querySelectorAll(".collection-menu-panel").forEach((panel) => {
     panel.hidden = true;
+    panel.style.position = "";
+    panel.style.left = "";
+    panel.style.top = "";
+    panel.style.right = "";
+    panel.style.bottom = "";
+    panel.style.visibility = "";
+    panel.style.maxWidth = "";
+    panel.style.maxHeight = "";
+    panel.style.overflowY = "";
   });
 
   document.querySelectorAll(".collection-menu-button").forEach((button) => {
     button.setAttribute("aria-expanded", "false");
+  });
+}
+
+function positionCollectionMenuPanel(panel) {
+  if (!panel || panel.hidden) {
+    return;
+  }
+
+  const menu = panel.closest(".collection-menu");
+  const button = menu?.querySelector(".collection-menu-button");
+
+  if (!button) {
+    return;
+  }
+
+  const viewportPadding = 12;
+  const menuGap = 8;
+
+  panel.style.position = "fixed";
+  panel.style.right = "auto";
+  panel.style.bottom = "auto";
+  panel.style.left = "0px";
+  panel.style.top = "0px";
+  panel.style.visibility = "hidden";
+  panel.style.maxWidth = `calc(100vw - ${viewportPadding * 2}px)`;
+  panel.style.maxHeight = `calc(100vh - ${viewportPadding * 2}px)`;
+  panel.style.overflowY = "auto";
+
+  const buttonRect = button.getBoundingClientRect();
+  const panelWidth = Math.min(panel.offsetWidth, window.innerWidth - viewportPadding * 2);
+  const panelHeight = Math.min(panel.offsetHeight, window.innerHeight - viewportPadding * 2);
+
+  let left = buttonRect.right - panelWidth;
+  if (left < viewportPadding) {
+    left = buttonRect.left;
+  }
+  left = Math.max(viewportPadding, Math.min(left, window.innerWidth - viewportPadding - panelWidth));
+
+  const spaceBelow = window.innerHeight - buttonRect.bottom - viewportPadding;
+  const spaceAbove = buttonRect.top - viewportPadding;
+  let top = buttonRect.bottom + menuGap;
+
+  if (panelHeight > spaceBelow && spaceAbove > spaceBelow) {
+    top = buttonRect.top - menuGap - panelHeight;
+  }
+
+  top = Math.max(viewportPadding, Math.min(top, window.innerHeight - viewportPadding - panelHeight));
+
+  panel.style.left = `${Math.round(left)}px`;
+  panel.style.top = `${Math.round(top)}px`;
+  panel.style.visibility = "";
+}
+
+function positionOpenCollectionMenus() {
+  document
+    .querySelectorAll(".collection-menu-panel:not([hidden])")
+    .forEach((panel) => positionCollectionMenuPanel(panel));
+}
+
+let collectionMenuPositionFrame = 0;
+
+function scheduleCollectionMenuPositioning() {
+  if (collectionMenuPositionFrame) {
+    return;
+  }
+
+  collectionMenuPositionFrame = window.requestAnimationFrame(() => {
+    collectionMenuPositionFrame = 0;
+    positionOpenCollectionMenus();
   });
 }
 
@@ -6566,6 +6654,10 @@ function renderCollectionMenuPanel(panel, slug) {
 
     panel.append(button);
   });
+
+  if (!panel.hidden) {
+    positionCollectionMenuPanel(panel);
+  }
 }
 
 function refreshCollectionMenus() {
@@ -6577,6 +6669,8 @@ function refreshCollectionMenus() {
       renderCollectionMenuPanel(panel, slug);
     }
   });
+
+  positionOpenCollectionMenus();
 }
 
 document.addEventListener("click", (event) => {
@@ -6584,6 +6678,9 @@ document.addEventListener("click", (event) => {
     closeCollectionMenus();
   }
 });
+
+window.addEventListener("resize", scheduleCollectionMenuPositioning, { passive: true });
+window.addEventListener("scroll", scheduleCollectionMenuPositioning, { passive: true, capture: true });
 
 function saveFavourites() {
   localStorage.setItem(favouritesKey, JSON.stringify([...favouriteSlugs]));
@@ -6603,14 +6700,34 @@ function createFavouriteButton(slug, title) {
   button.className = "favourite-button";
   button.type = "button";
   button.dataset.favouriteSlug = slug;
-  button.addEventListener("click", () => {
-    toggleFavourite(slug);
-  });
 
   updateFavouriteButton(button, title);
 
   return button;
 }
+
+function handleFavouriteButtonClick(event) {
+  const button = event.target.closest(".favourite-button");
+
+  if (!button || event.defaultPrevented) {
+    return;
+  }
+
+  if (typeof event.button === "number" && event.button !== 0) {
+    return;
+  }
+
+  const slug = button.dataset.favouriteSlug;
+
+  if (!slug) {
+    return;
+  }
+
+  event.preventDefault();
+  toggleFavourite(slug);
+}
+
+document.addEventListener("click", handleFavouriteButtonClick);
 
 function updateFavouriteButton(button, title) {
   const active = isFavourite(button.dataset.favouriteSlug);
@@ -6658,6 +6775,10 @@ function getOrderedFavouriteSlugs() {
 }
 
 function toggleFavourite(slug) {
+  if (!slug) {
+    return;
+  }
+
   const wasFavourite = isFavourite(slug);
 
   if (isFavourite(slug)) {
@@ -7338,10 +7459,12 @@ function initializePoemPageControls() {
 
   if (button && panel) {
     button.addEventListener("click", () => {
-      const shouldOpen = panel.hidden;
+      if (panel.hidden) {
+        openCollectionMenu(button, panel);
+        return;
+      }
+
       closeCollectionMenus();
-      panel.hidden = !shouldOpen;
-      button.setAttribute("aria-expanded", String(shouldOpen));
     });
   }
 }
