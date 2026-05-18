@@ -459,6 +459,7 @@ const poems = [
   },
   {
     title: "Foil, Barcode, Tongue",
+    written: "30 October 2025",
     lines: [
       "Arthur twists the shaker.\nNot king—\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0~~not man~~\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0just a barcode etched\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0into the foil of a snack pack\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0beside the word *potassium*.",
       "It glints in static.\nClean hands.\nClean mouth.\nThe book opens on the wrong page\nand says,\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u201cThis is the journey.\u201d\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0(*it lies in perfect grammar.*)",
