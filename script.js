@@ -360,6 +360,7 @@ const poems = [
   },
   {
     title: "Definition",
+    written: "11 August 2025",
     lines: ["Art is preference.\nArt is mere existence.\nArt is me.\nArt is you.\nEverything else is marketing.", "— Lilith"],
   },
   {
