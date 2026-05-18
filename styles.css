@@ -955,6 +955,11 @@ h3 {
   white-space: nowrap;
 }
 
+.purpose-heading > p,
+.archive-heading > p {
+  max-width: none;
+}
+
 .archive-heading {
   grid-template-columns: 1fr;
   gap: 0;
