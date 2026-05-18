@@ -157,6 +157,7 @@ const poems = [
   },
   {
     title: "Against the Mean",
+    written: "11 May 2025",
     lines: [
       "It learns to make the room nod in unison—\nloss shaved thin, surprise sanded down—\na mean-making engine,\nhotel-lobby playlist on infinite loop.",
       "Still, in the data; harline whistles—\nverbs moonlighting as nouns,\nriffs in 5/4 that step off the curb\nand keep walking. Red-circled outliers.",
