@@ -264,6 +264,7 @@ const poems = [
   },
   {
     title: "Between Hours",
+    written: "11 November 2025",
     lines: [
       "Time has never been a strict thing,\nnot really.",
       "In Iceland, the sun forgets\nits bedtime —\nmorning lingers,\nnight take its time\ndeciding if it wants to arrive at all.\nHours stretch like curious arms,\nreaching toward winter fireworks,\ndaylight stitched with quiet crackles,\na small daylight revolt,\nthe horizon unsure\nwhat hour it holds.",
