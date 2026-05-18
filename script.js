@@ -423,6 +423,7 @@ const poems = [
   },
   {
     title: "Fictions We Carry",
+    written: "4 June 2025",
     lines: [
       "He learns desire from pixels:\nmute bodies on command,\nclips like templates,\neach pause a chance to swap her out\nfor the next.\nNo backstory,\nno mess,\njust fragments—\nand slowly,\nthe fragments replace the person.",
       "She learns intimacy from pages:\nthe villain with soft eyes,\nthe captor who secretly loves,\nthe man who bruises, then apologises\nwith roses.\nEach chapter whispers:\ndevotion is proven by suffering,\nromance is waiting for cruelty\nto turn into care—\nand slowly, \nthe cage replaces the comfort.",
